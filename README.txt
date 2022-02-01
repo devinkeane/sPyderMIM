@@ -17,6 +17,9 @@ It takes in a .txt file that is a just a list of "mim numbers," each of which co
 disease listed in the OMIM (Online Mendelian Inheritance in Men) Database.  In this version,
 the output is a .png of a graph where the source nodes are diseases listed in OMIM.  Additionaly, 
 it exports a .csv table which can be used for further graph theory analysis in other programs.
+
+The next version will include the ability to generate graphs using genes, phenotypes, or both as
+the source nodes.
               
   |   |                           
   |   |   __|   _` |   _` |   _ \ 
@@ -24,6 +27,6 @@ it exports a .csv table which can be used for further graph theory analysis in o
   \___/ ____/ \__,_| \__, | \___| 
                      |___/        
                         
-~$ python GenoPheno -i <input_list.txt> -o <output_file.csv>
+~$ python GenoPheno -i <input_list.txt> -o <output_file.csv> -a <api_key>
 
 GenoPheno (c) 2022-01-27 by Devin Keane
