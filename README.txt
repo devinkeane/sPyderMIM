@@ -25,8 +25,14 @@ the source nodes.
   |   |   __|   _` |   _` |   _ \ 
   |   | \__ \  (   |  (   |   __/ 
   \___/ ____/ \__,_| \__, | \___| 
-                     |___/        
-                        
+                     |___/
+
+1) Obtain an API key through OMIM:
+  --> https://www.omim.org/api
+
+
+2) Execute with the following syntax/options:
+
 ~$ python GenoPheno -i <input_list.txt> -o <output_file.csv> -a <api_key>
 
 GenoPheno (c) 2022-01-27 by Devin Keane
