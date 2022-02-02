@@ -8,12 +8,12 @@
 #   ______________________________________________________________|
 #                                        (ツ)_/¯   - * B E T A * -
 #  (c) 2022-01-27 by Devin Keane
+#  rev 1.1 --> 2022-02-02
 #  Feltus Lab
 #  Department of Genetics and Biochemistry, Clemson University
 
 # ---------------------------------------------------------------------------
 # Import libraries
-import scipy
 import numpy as np
 import pandas as pd
 import argparse
@@ -47,18 +47,36 @@ url += '&include=clinicalSynopsis&format=json&apiKey='
 
 # Append API key from parsed command line arguments onto URL
 url += args.apikey
+
+url_geneMap = url.replace('clinicalSynopsis','geneMap')
+
 # ---------------------------------------------------------------------------
 # Load data into new data frame using pandas .read_json() module
 df = pd.read_json(url)
 
 # flatten data
 df2 = pd.json_normalize(df['omim'][0])
+# - - - - - - - - - -
+# load geneMap data using Python JSON module
+df_geneMap = pd.read_json(url_geneMap)
 
-# Transpose the data --> now each column represents a disease (MIM#)
+# flatten data
+df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0])
+df_geneMap2['entry.phenotypeMapList'] = pd.json_normalize(df_geneMap2['entry.phenotypeMapList'])
+
+# drop molecular basis
+# (not so data friendly gene id column, we will use the nested geneMap list from the
+# API request instead)
+df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
+
+# Transpose the clinical data --> now each column represents a disease (MIM#)
 df2_transposed = pd.DataFrame.transpose(df2)
 
+# Transpose the geneMap data --> now each column represents a disease (MIM#)
+df_geneMap2_transposed = pd.DataFrame.transpose(df_geneMap2)
+
 # Create a new data frame that will be the output and call it "gpn" (genotype/phenotype network)
-gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type'])
+gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number'])
 
 # ---------------------------------------------------------------------------
 # The following function calculates how many total elements are found for a given
@@ -141,6 +159,7 @@ for j in range(len(df2_transposed.columns)):
             elif df2_transposed[j][row].count('\n') == 0:
                 gpn['Node_name'][k] = df2_transposed[j][row]
                 gpn['Node_type'][k] = df2_transposed.index[row]
+                gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
                 k += 1
                 i += 1
 
@@ -150,6 +169,7 @@ for j in range(len(df2_transposed.columns)):
                 for element in range(len(df2_transposed[j][row].split('\n'))):
                     gpn['Node_name'][k] = df2_transposed[j][row].split('\n')[element]
                     gpn['Node_type'][k] = df2_transposed.index[row]
+                    gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
                     k += 1
                 i += 1
 # ---------------------------------------------------------------------------
@@ -194,7 +214,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                           ⌒ *: ﾟ･✧* ･ﾟ✧ - * [1.0] 🅱 🅴 🆃 🅰 * -
+                           ⌒ *: ﾟ･✧* ･ﾟ✧ - * [1.1] 🅱 🅴 🆃 🅰 * -
                     (ツ)_/¯
 """
 print()
