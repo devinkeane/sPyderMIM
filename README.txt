@@ -39,7 +39,11 @@ the source nodes.
 ...
 ------
 
-3) Execute with the following syntax/options:
+3) Set up an Anaconda environment with the necessary dependencies:
+~$ conda create -n GenoPheno python=3.9 scipy pandas matplotlib networkx
+~$ conda activate GenoPheno
+
+4) Execute with the following syntax/options:
 
 ~$ python GenoPheno -i <input_list.txt> -o <output_file.csv> -a <api_key>
 
