@@ -11,6 +11,7 @@
 #  Feltus Lab
 #  Department of Genetics and Biochemistry, Clemson University
 
+# Import libraries
 import scipy
 import numpy as np
 import pandas as pd
@@ -18,32 +19,37 @@ import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 
+# Parse command line input and options
 parser = argparse.ArgumentParser(description='Calculate the volume of a cylinder')
 parser.add_argument('-i', '--input', type=str, help='MIM (OMIM) reference number list as .txt')
 parser.add_argument('-a', '--apikey', type=str, help='MIM reference number (OMIM)')
 parser.add_argument('-o', '--output', type=str, help='MIM reference number (OMIM)')
 args = parser.parse_args()
 
-
+# Assign parsed arguments into local variables
 input = args.input
 output = args.output
+
+# Populate a new dataframe with the input (.txt file of MIM numbers)
 mimdf = pd.read_csv(input, header=None)
 
-
+# Begin building the OMIM API request URL
 url = 'https://api.omim.org/api/entry?mimNumber='
+
+# Append the list of MIM numbers (now in "mimdf") onto URL
 for line in range(len(mimdf)):
     url += mimdf[0][line].astype(str)
     url += ','
 
+# Append clinical synopsis API request, JSON format option onto URL
 url += '&include=clinicalSynopsis&format=json&apiKey='
+
+# Append API key from parsed command line arguments onto URL
 url += args.apikey
 
-# consider adding this back to URL if needed in the future --> &include=geneMap
-
-# url = 'https://api.omim.org/api/entry?mimNumber=615349,225400,130050,130010,614170,130070,225410,606408,616471,615539,614557,618000,225320,617821,130000,612350,617174,130080,601776,229200,130060,130020&include=geneMap&include=clinicalSynopsis&apiKey=JWd5fb0yR1a3TOUFrqE3UA&format=json'
-
-# load data using Python JSON module
+# Load data into new data frame using pandas .read_json() module
 df = pd.read_json(url)
+
 # flatten data
 df2 = pd.json_normalize(df['omim'][0])
 df2_transposed = pd.DataFrame.transpose(df2)
@@ -51,7 +57,6 @@ df2_transposed = pd.DataFrame.transpose(df2)
 gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type'])
 
 # The following function counts how many nested items are in a given column in df2_transposed
-
 
 def count_elements(column):
     count = 0
