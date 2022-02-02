@@ -1,12 +1,10 @@
-# GenoPheno
-GenoPheno is a genotype/phenotype network generator that uses the OMIM database in order to construct a relationship graph that links diseases by common genes and phenotypes.
-   ___                       _                             _               _     
+  ___                       _                             _               _
   | _ \    ___    __ _    __| |   _ __     ___            | |_    __ __   | |_   
   |   /   / -_)  / _` |  / _` |  | '  \   / -_)     _     |  _|   \ \ /   |  _|  
   |_|_\   \___|  \__,_|  \__,_|  |_|_|_|  \___|   _(_)_   _\__|   /_\_\   _\__|  
 _|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
 "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'  
-                                                     [ G e n o P h e n o ]   
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø
 
 GenoPheno is a genotype/phenotype network generator that uses the OMIM database
 in order to construct a relationship graph that links diseases by nodes that represent
@@ -30,8 +28,18 @@ the source nodes.
 1) Obtain an API key through OMIM:
   --> https://www.omim.org/api
 
+2) Create list of OMIM reference ids ("MIM" numbers):
 
-2) Execute with the following syntax/options:
+(i.e.)
+~$ vim input_list.txt
+------
+615291              [input_list.txt]
+614505                      |
+120580      <---------------`
+...
+------
+
+3) Execute with the following syntax/options:
 
 ~$ python GenoPheno -i <input_list.txt> -o <output_file.csv> -a <api_key>
 

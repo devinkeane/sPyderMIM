@@ -11,16 +11,12 @@
 #  Feltus Lab
 #  Department of Genetics and Biochemistry, Clemson University
 
+import scipy
 import numpy as np
 import pandas as pd
 import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
-
-
-
-# import json
-# import csv
 
 parser = argparse.ArgumentParser(description='Calculate the volume of a cylinder')
 parser.add_argument('-i', '--input', type=str, help='MIM (OMIM) reference number list as .txt')
@@ -142,15 +138,12 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-
-       (ツ)_/¯                            1.0 - * B E T A * -
+                           ⌒ *: ﾟ･✧* ･ﾟ✧ - * [1.0] 🅱 🅴 🆃 🅰 * -
+                    (ツ)_/¯
 """
-print()
 print()
 print('Thank you for using...')
 print(logo)
-print()
-print()
 print('                 ...Your network table was saved as \"',output,'\" with ',len(gpn),' total rows.')
 print('                    Your network summary graph was saved as \"',graph_output_name,'\".')
 print()
