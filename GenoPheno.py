@@ -9,6 +9,7 @@
 #                                        (ツ)_/¯   - * B E T A * -
 #  (c) 2022-01-27 by Devin Keane
 #  rev 1.1 --> 2022-02-02
+#  rev 1.2 --> 2022-02-03
 #  Feltus Lab
 #  Department of Genetics and Biochemistry, Clemson University
 
@@ -76,7 +77,7 @@ df2_transposed = pd.DataFrame.transpose(df2)
 df_geneMap2_transposed = pd.DataFrame.transpose(df_geneMap2)
 
 # Create a new data frame that will be the output and call it "gpn" (genotype/phenotype network)
-gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number'])
+gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 # ---------------------------------------------------------------------------
 # The following function calculates how many total elements are found for a given
@@ -155,9 +156,9 @@ for j in range(len(df2_transposed.columns)):
                  i += 1
 
             # If the cell is not null but no '\n' is found, there is only one element in the cell.
-            # Add this element to the 'Node_name' column of gpn at row k.
+            # Add this element to the 'Node_name_temp' column of gpn at row k.
             elif df2_transposed[j][row].count('\n') == 0:
-                gpn['Node_name'][k] = df2_transposed[j][row]
+                gpn['Node_name_temp'][k] = df2_transposed[j][row]
                 gpn['Node_type'][k] = df2_transposed.index[row]
                 gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
                 k += 1
@@ -167,7 +168,7 @@ for j in range(len(df2_transposed.columns)):
             # so add each of these elements to the 'Node_name' column of gpn at row k.
             elif df2_transposed[j][row].count('\n') > 0:
                 for element in range(len(df2_transposed[j][row].split('\n'))):
-                    gpn['Node_name'][k] = df2_transposed[j][row].split('\n')[element]
+                    gpn['Node_name_temp'][k] = df2_transposed[j][row].split('\n')[element]
                     gpn['Node_type'][k] = df2_transposed.index[row]
                     gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
                     k += 1
@@ -179,15 +180,29 @@ for j in range(len(df2_transposed.columns)):
 # So, for each row in gpn...
 for i in range(len(gpn)):
     # if it is a list, ignore it
-    if isinstance(gpn['Node_name'][i], list):
+    if isinstance(gpn['Node_name_temp'][i], list):
         pass
     # Otherwise, if it is a string and '{' can be found in it, cut that off and everything
     # that comes after it as well.
     else:
-        if isinstance(gpn['Node_name'][i], str):
-            if gpn['Node_name'][i].count('{') > 0:
-                gpn['Node_name'][i] = gpn['Node_name'][i].split(' {', 1)[0]
+        if isinstance(gpn['Node_name_temp'][i], str):
+            if gpn['Node_name_temp'][i].count('{') > 0:
+                gpn['Node_name_temp'][i] = gpn['Node_name_temp'][i].split(' {', 1)[0]
 # ---------------------------------------------------------------------------
+# Create Parenthetical Column
+for i in range(len(gpn)):
+    if gpn['Node_name_temp'][i].find('(') > 0:
+        temp = gpn['Node_name_temp'][i].split(' (')[-1]
+        gpn['Parenthetical'][i] = '('+temp
+
+# Eliminate parentheticals, create permanent 'Node_name' column
+for i in range(len(gpn)):
+    if gpn['Node_name_temp'][i].find('(') > 0:
+        gpn['Node_name'][i] = gpn['Node_name_temp'][i].split(' (')[0]
+    else:
+        gpn['Node_name'][i] = gpn['Node_name_temp'][i]
+gpn.drop(columns='Node_name_temp',inplace=True)
+
 # GRAPHING THE DATA
 
 # Create a NetworkX object called "G" where 'Superphenotype' is the source node
@@ -205,6 +220,7 @@ plt.savefig(graph_output_name)
 
 # Save the gpn as a csv using the same filename, but with extension '.csv'
 gpn.to_csv(output)
+#df2_transposed.to_csv('testing.csv')
 # ---------------------------------------------------------------------------
 # Print logo and output message
 # ------------------------------
@@ -214,7 +230,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                           ⌒ *: ﾟ･✧* ･ﾟ✧ - * [1.1] 🅱 🅴 🆃 🅰 * -
+                           ⌒ *: ﾟ･✧* ･ﾟ✧ - * [1.2] 🅱 🅴 🆃 🅰 * -
                     (ツ)_/¯
 """
 print()
