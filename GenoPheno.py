@@ -8,11 +8,12 @@
 #   ______________________________________________________________|
 #                                        (ツ)_/¯   - * B E T A * -
 #  (c) 2022-01-27 by Devin Keane
-#  rev 1.1 --> 2022-02-02
-#  rev 1.2 --> 2022-02-03
 #  Feltus Lab
 #  Department of Genetics and Biochemistry, Clemson University
-
+#  ----------------------
+#  rev 1.1 --> 2022-02-02
+#  rev 1.2 --> 2022-02-03
+#  rev 1.3 --> 2022-02-04
 # ---------------------------------------------------------------------------
 # Import libraries
 import numpy as np
@@ -20,6 +21,7 @@ import pandas as pd
 import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
+from string import ascii_lowercase
 # ---------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description='Calculate the volume of a cylinder')
@@ -34,6 +36,15 @@ output = args.output
 # ---------------------------------------------------------------------------
 # Populate a new dataframe with the input (.txt file of MIM numbers)
 mimdf = pd.read_csv(input, header=None)
+
+# If mim.txt contains over 20 mims, it cannot be run due to API request limits
+if len(mimdf) > 20:
+    print()
+    print()
+    print('Sorry, your query contains over 20 MIM numbers.   (ง ͠° ͟ʖ ͡°)')
+    print('Please try again with a maximum of 20 MIM numbers')
+    print()
+    exit(-1)
 
 # Begin building the OMIM API request URL
 url = 'https://api.omim.org/api/entry?mimNumber='
@@ -187,7 +198,7 @@ for i in range(len(gpn)):
     else:
         if isinstance(gpn['Node_name_temp'][i], str):
             if gpn['Node_name_temp'][i].count('{') > 0:
-                gpn['Node_name_temp'][i] = gpn['Node_name_temp'][i].split(' {', 1)[0]
+                gpn['Node_name_temp'][i] = gpn['Node_name_temp'][i].split(' {', 1)[0].replace(';', '')
 # ---------------------------------------------------------------------------
 # Create Parenthetical Column
 for i in range(len(gpn)):
@@ -210,7 +221,20 @@ gpn.drop(columns='Node_name_temp',inplace=True)
 G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
 
 # Draw a graph with G, setting node color to green and size to 7
-nx.draw(G, node_size=7, node_color='green')
+plt.figure(figsize=(50,50))
+pos= nx.spring_layout(G)
+nx.draw(G, node_size=300, pos=pos,node_color='green',with_labels=False)
+
+labels = {}
+for idx, node in enumerate(G.nodes()):
+    if node in gpn['Superphenotype'].unique():
+        labels[node] = node
+
+bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
+nx.draw_networkx_labels(G, pos, labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
+
+
+
 
 # Name the graph output file based on the input argument for the file name.
 # Append '.png' to the filename and save the figure as that filename.
@@ -230,8 +254,8 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                           ⌒ *: ﾟ･✧* ･ﾟ✧ - * [1.2] 🅱 🅴 🆃 🅰 * -
-                    (ツ)_/¯
+                           ⌒*: ﾟ･✧* ･ﾟ✧ - * [1.3] 🅱 🅴 🆃 🅰 * -
+        ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ
 """
 print()
 print('Thank you for using...')
