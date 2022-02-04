@@ -12,7 +12,7 @@ genes and phenotypes.
 The program appears to function properly so far, but this is the beta version first release.
 It takes in a .txt file that is a just a list of "mim numbers," each of which correspond to a
 disease listed in the OMIM (Online Mendelian Inheritance in Men) Database.  In this version,
-the output is a .png of a graph where the source nodes are diseases listed in OMIM.  Additionaly, 
+the output is a .png of a graph where the source nodes are diseases listed in OMIM.  Additionally,
 it exports a .csv table which can be used for further graph theory analysis in other programs.
 
 The next version will include the ability to generate graphs using genes, phenotypes, or both as
