@@ -1,9 +1,9 @@
-      ____                 __                __       __
-     / __ \___  ____ _____/ /___ ___  ___   / /__  __/ /_
-    / /_/ / _ \/ __ `/ __  / __ `__ \/ _ \ / __/ |/_/ __/
-   / _, _/  __/ /_/ / /_/ / / / / / /  __// /__>  </ /_
-  /_/ |_|\___/\__,_/\__,_/_/ /_/ /_/\___(_)__/_/|_|\__/
-                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø
+    ____                 __
+   / __ \___  ____ _____/ /___ ___  ___
+  / /_/ / _ \/ __ `/ __  / __ `__ \/ _ \
+ / _, _/  __/ /_/ / /_/ / / / / / /  __/
+/_/ |_|\___/\__,_/\__,_/_/ /_/ /_/\___/
+                                    ₲Ɇ₦Ø₱ⱧɆ₦Ø
 
 GenoPheno is a genotype/phenotype network generator that uses the OMIM database
 in order to construct a relationship graph that links diseases by nodes that represent
@@ -11,7 +11,7 @@ genes and phenotypes.
 
 The program appears to function properly so far, but this is the beta version first release.
 It takes in a .txt file that is a just a list of "mim numbers," each of which correspond to a
-disease listed in the OMIM (Online Mendelian Inheritance in Men) Database.  In this version,
+disease listed in the OMIM (Online Mendelian Inheritance in Man) Database.  In this version,
 the output is a .png of a graph where the source nodes are diseases listed in OMIM.  Additionally,
 it exports a .csv table which can be used for further graph theory analysis in other programs.
 
