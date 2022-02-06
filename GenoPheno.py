@@ -275,10 +275,11 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
 o---O                                ⌒*: ﾟ･✧* ･ﾟ✧ - * [1.4] 🅱 🅴 🆃 🅰 * - 
 O---o           ╰( ͡° ͜ʖ ͡° )つ──☆*:・,+------------------------------------------+
  O-o                                |  (c) 2022-01-27 Devin Keane              |
-  O                                 |  Department of Genetics and Biochemistry |◉‿◉)つ
- o-O                                |  Clemson University                      |
-o---O                               |                                          | 
-O---o                               |  Last rev: 2022-02-06                    |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                               |                                          |
+                                    |  Last rev: 2022-02-06                    |
                           (✿◠‿◠)    +------------------------------------------+
                                                          ─=≡Σ((( つ◕ل͜◕)つ
 """
