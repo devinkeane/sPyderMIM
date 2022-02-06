@@ -12,11 +12,11 @@ disease listed in the OMIM Database.  In the current version, the output is a .p
 where the source nodes are diseases listed in OMIM.  Additionally, it exports a .csv table which
 can be used for further graph theory analysis in other programs.  However, the future goal in
 development of this program is to provide a purely command line interface that can allow for
-graph theory analysis to be upscaled and applied to larger data sets than could be handed
+graph theory analysis to be upscaled and applied to larger data sets than could be handled
 in GUI-based programs.
 
-Version 2.0 will include the ability to generate graphs using genes, phenotypes, or both as
-the source nodes, whereas the current version only exports maps using phenotypes as the source
+Version 2.0 will include the options to generate graphs using genes, phenotypes, or both as
+the source nodes, whereas the current version only exports a map that uses both as the source
 node.
 
   |   |                           
