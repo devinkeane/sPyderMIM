@@ -1,9 +1,7 @@
-    ____                 __
-   / __ \___  ____ _____/ /___ ___  ___
-  / /_/ / _ \/ __ `/ __  / __ `__ \/ _ \
- / _, _/  __/ /_/ / /_/ / / / / / /  __/
-/_/ |_|\___/\__,_/\__,_/_/ /_/ /_/\___/
-                                    ₲Ɇ₦Ø₱ⱧɆ₦Ø
+ ___   ____   __    ___   _      ____
+| |_) | |_   / /\  | | \ | |\/| | |_
+|_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
+                               ₲Ɇ₦Ø₱ⱧɆ₦Ø
 
 GenoPheno is a genotype/phenotype network generator that uses the OMIM (Online Mendelian
 Inheritance in Man) database in order to construct a relationship graph that links diseases

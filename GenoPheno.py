@@ -14,6 +14,7 @@
 #  rev 1.1 --> 2022-02-02
 #  rev 1.2 --> 2022-02-03
 #  rev 1.3 --> 2022-02-04
+#  rev 1.4 --> 2022-02-06
 # ---------------------------------------------------------------------------
 # Import libraries
 import numpy as np
@@ -214,17 +215,36 @@ for i in range(len(gpn)):
         gpn['Node_name'][i] = gpn['Node_name_temp'][i]
 gpn.drop(columns='Node_name_temp',inplace=True)
 
+gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
+
+
+for i in range(len(mimdf)):
+    gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList']['phenotypeMap.ensemblIDs'].split(',')[0]
+    gpn2['Node_type'][i] = 'phenotypeMap.ensemblIDs'
+    gpn2['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
+    gpn2['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
+
+# Drop temporary columns
+gpn = pd.concat([gpn,gpn2], ignore_index=True)
+gpn.drop(columns = 'Node_name_temp', inplace = True)
+
 # GRAPHING THE DATA
 
 # Create a NetworkX object called "G" where 'Superphenotype' is the source node
 # and 'Node_name' is the target node.
 G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
 
-# Draw a graph with G, setting node color to green and size to 7
-plt.figure(figsize=(50,50))
-pos= nx.spring_layout(G)
-nx.draw(G, node_size=300, pos=pos,node_color='green',with_labels=False)
 
+# Draw a graph with G using a color map that distinguishes between genes and phenotypes
+plt.figure(figsize=(50,50))
+color_map = []
+for node in G:
+    if node.find('ENSG'):
+        color_map.append('green')
+    else:
+        color_map.append('red')
+pos= nx.spring_layout(G)
+nx.draw(G, node_color=color_map, node_size=300, pos=pos,with_labels=False)
 labels = {}
 for idx, node in enumerate(G.nodes()):
     if node in gpn['Superphenotype'].unique():
@@ -232,9 +252,6 @@ for idx, node in enumerate(G.nodes()):
 
 bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
 nx.draw_networkx_labels(G, pos, labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
-
-
-
 
 # Name the graph output file based on the input argument for the file name.
 # Append '.png' to the filename and save the figure as that filename.
@@ -254,7 +271,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                           ⌒*: ﾟ･✧* ･ﾟ✧ - * [1.3] 🅱 🅴 🆃 🅰 * -
+                           ⌒*: ﾟ･✧* ･ﾟ✧ - * [1.4] 🅱 🅴 🆃 🅰 * -
         ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ
 """
 print()
