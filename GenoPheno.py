@@ -25,7 +25,7 @@ import networkx as nx
 from string import ascii_lowercase
 # ---------------------------------------------------------------------------
 # Parse command line input and options
-parser = argparse.ArgumentParser(description='Calculate the volume of a cylinder')
+parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Build a genotype/Phenotype network using an OMIM API key! * ")
 parser.add_argument('-i', '--input', type=str, help='MIM (OMIM) reference number list as .txt')
 parser.add_argument('-a', '--apikey', type=str, help='MIM reference number (OMIM)')
 parser.add_argument('-o', '--output', type=str, help='MIM reference number (OMIM)')
