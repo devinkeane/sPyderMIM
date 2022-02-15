@@ -19,6 +19,19 @@ Version 2.0 will include the options to generate graphs using genes, phenotypes,
 the source nodes, whereas the current version only exports a map that uses both as the source
 node.
 
+** Upcoming changes in 2.0: **
+
+    * I'm going to split GenoPheno.py into multiple python scripts that can be executed with a PBS
+    or bash script together.  I will include an example of this workflow in the updated README.txt.
+
+    * One program will be used to generate a table, and a separate program will allow for graph
+    analysis on the table produced.
+
+        * This will allow me to add an increasing amount of command line arguments and functionality
+        that offers more options for graphing the table.
+
+    * After this, I hope to add a script that will concatenate any .csv tables created.
+
   |   |                           
   |   |   __|   _` |   _` |   _ \ 
   |   | \__ \  (   |  (   |   __/ 

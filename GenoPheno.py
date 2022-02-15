@@ -6,7 +6,7 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                        (ツ)_/¯   - * B E T A * -
+#                                     (ツ)_/¯   - * Version 1.4 * -
 #  (c) 2022-01-27 by Devin Keane
 #  Feltus Lab
 #  Department of Genetics and Biochemistry, Clemson University
@@ -15,7 +15,9 @@
 #  rev 1.2 --> 2022-02-03
 #  rev 1.3 --> 2022-02-04
 #  rev 1.4 --> 2022-02-06
-# ---------------------------------------------------------------------------
+#
+# ------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------
 # Import libraries
 import numpy as np
 import pandas as pd
@@ -23,7 +25,7 @@ import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 from string import ascii_lowercase
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Build a genotype/phenotype network using an OMIM API key and a simple list of OMIM reference IDs! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.txt>  (list of MIM reference numbers, no headers, each MIM separated by a new line)')
@@ -34,10 +36,12 @@ args = parser.parse_args()
 # Assign parsed arguments into local variables
 input = args.input
 output = args.output
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------
 # Populate a new dataframe with the input (.txt file of MIM numbers)
 mimdf = pd.read_csv(input, header=None)
-
+# ------------------------------------------------------------------------------------------------------
+# Error --> MIM Exceeded Max |
+# ---------------------------+
 # If mim.txt contains over 20 mims, it cannot be run due to API request limits
 if len(mimdf) > 20:
     print()
@@ -46,6 +50,9 @@ if len(mimdf) > 20:
     print('Please try again with a maximum of 20 MIM numbers')
     print()
     exit(-1)
+# ------------------------------------------------------------------------------------------------------
+# Inserting the MIM numbers into the API request URL and retrieving data |
+# -----------------------------------------------------------------------+
 
 # Begin building the OMIM API request URL
 url = 'https://api.omim.org/api/entry?mimNumber='
@@ -63,7 +70,7 @@ url += args.apikey
 
 url_geneMap = url.replace('clinicalSynopsis','geneMap')
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------
 # Load data into new data frame using pandas .read_json() module
 df = pd.read_json(url)
 
@@ -88,13 +95,12 @@ df2_transposed = pd.DataFrame.transpose(df2)
 # Transpose the geneMap data --> now each column represents a disease (MIM#)
 df_geneMap2_transposed = pd.DataFrame.transpose(df_geneMap2)
 
-# Create a new data frame that will be the output and call it "gpn" (genotype/phenotype network)
-gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
-# ---------------------------------------------------------------------------
-# The following function calculates how many total elements are found for a given
-# column of df2_transposed without having to flatten all nested lists:
-# ---------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------------------
+# The following function calculates how many total elements are found for a  |
+# given column of df2_transposed without having to flatten all nested lists: |
+# ---------------------------------------------------------------------------+
 def count_elements(column):
     # Initialize the count
     count = 0
@@ -123,9 +129,15 @@ def count_elements(column):
             i += 1
 
     return count
-# ---------------------------------------------------------------------------------------------
-# Populating a fresh genotype/phenotype dataframe with data from df2_transposed (OMIM API data)
-# ---------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------+
+# Populating a fresh genotype/phenotype dataframe with data from df2_transposed (OMIM API data) |
+# ----------------------------------------------------------------------------------------------+
+
+# Create a new data frame that will be the output and call it "gpn" (genotype/phenotype network)
+gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
+
 # We need to find the total amount of items in df2_transposed in order to build
 # a new data frame that will ultimately be the genotype/phenotype table, which
 # we will call "gpn".
@@ -217,23 +229,26 @@ gpn.drop(columns='Node_name_temp',inplace=True)
 
 gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
-
+# Parsing ENSMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
 for i in range(len(mimdf)):
     gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList']['phenotypeMap.ensemblIDs'].split(',')[0]
     gpn2['Node_type'][i] = 'phenotypeMap.ensemblIDs'
     gpn2['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
     gpn2['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
 
-# Drop temporary columns
+# Append gpn2 to gpn
 gpn = pd.concat([gpn,gpn2], ignore_index=True)
+
+# Drop the temporary columns we were using earlier
 gpn.drop(columns = 'Node_name_temp', inplace = True)
 
-# GRAPHING THE DATA
+# ---------------------------------------------------------------------------
+# GRAPHING THE DATA |
+# ------------------+
 
 # Create a NetworkX object called "G" where 'Superphenotype' is the source node
 # and 'Node_name' is the target node.
 G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
-
 
 # Draw a graph with G using a color map that distinguishes between genes and phenotypes
 plt.figure(figsize=(50,50))
@@ -252,6 +267,9 @@ for idx, node in enumerate(G.nodes()):
 
 bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
 nx.draw_networkx_labels(G, pos, labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
+# ---------------------------------------------------------------------------
+# Save output to files |
+# ---------------------+
 
 # Name the graph output file based on the input argument for the file name.
 # Append '.png' to the filename and save the figure as that filename.
@@ -262,23 +280,24 @@ plt.savefig(graph_output_name)
 # Save the gpn as a csv using the same filename, but with extension '.csv'
 gpn.to_csv(output)
 #df2_transposed.to_csv('testing.csv')
+
 # ---------------------------------------------------------------------------
-# Print logo and output message
-# ------------------------------
+# Print logo and output message |
+# ------------------------------+
 logo = """
 
 O---o    ___|                       _ \   |
 O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
- o-O   ______________________________________________________________|
-o---O                                      |     Version 1.4     |           ✧ - ･ﾟ*
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 1.4  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
-O---o                        ･ﾟ✧    |                                          |
+O---o                        'ﾟ✧    |                                          |
                                     |  Last rev: 2022-02-06                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
