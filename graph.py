@@ -69,7 +69,7 @@ for idx, node in enumerate(G.nodes()):
     if node in lst_overlap_2:
         gene_labels[node] = node
 
-bbox2 = dict(fc="yellow", ec="black", boxstyle="round", lw=2)
+bbox2 = dict(fc="yellow", ec="black", boxstyle="circle", lw=2)
 nx.draw_networkx_labels(G, pos, labels=gene_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox2)
 
 
@@ -77,7 +77,7 @@ for idx, node in enumerate(G.nodes()):
     if node in lst_neighbors_2:
         neighbor_labels[node] = node
 
-bbox3 = dict(fc="red", ec="black", boxstyle="roundtooth", lw=2)
+bbox3 = dict(fc="red", ec="black", boxstyle="sawtooth", lw=2)
 nx.draw_networkx_labels(G, pos, labels=neighbor_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox3)
 
 
