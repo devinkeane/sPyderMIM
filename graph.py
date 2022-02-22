@@ -7,24 +7,28 @@ import pandas as pd
 import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
-from string import ascii_lowercase
+
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
-parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.txt>  (list of MIM reference numbers, no headers, each MIM separated by a new line)')
-parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.png>')
+parser.add_argument('-i', '--input', type=str, required=True ,help='<INPUT_FILENAME.txt>  (list of MIM reference numbers, no headers, each MIM separated by a new line)')
+parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"subtype\", "\"overlapping\", \"interactors\", or \"all\" ')
+parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_FILENAME.png>')
 args = parser.parse_args()
 
 # Assign parsed arguments into local variables
 input = args.input
 output = args.output
+labels = args.labels
 
 # ---------------------------------------------------------------------------
 # GRAPHING THE DATA |
 # ------------------+
 
 gpn = pd.read_csv(input)
-print(gpn)
+print('Processing your input table:')
+print()
+print(gpn.drop(columns='Unnamed: 0'))
 
 # Create a NetworkX object called "G" where 'Superphenotype' is the source node
 # and 'Node_name' is the target node.
@@ -35,6 +39,7 @@ lst_neighbors = gpn[gpn['Node_type'] == 'Intact_first_neighbors']['Node_name'].r
 lst_new = []
 lst_overlap_2 = []
 lst_neighbors_2 = []
+
 for i in range(len(lst_overlap)):
     lst_new += [lst_overlap[i]]
     lst_overlap_2 += [lst_overlap[i]]
@@ -47,38 +52,41 @@ plt.figure(figsize=(50,50))
 color_map = []
 for node in G:
     if node in lst_overlap_2:
-        color_map.append('red')
+        color_map.append('yellow')
     elif node in lst_neighbors_2:
-        color_map.append('blue')
+        color_map.append('red')
     else:
         color_map.append('green')
 pos= nx.spring_layout(G)
 nx.draw(G, node_color=color_map, node_size=300, pos=pos,with_labels=False)
+
+
 superphenotype_labels = {}
 neighbor_labels = {}
 gene_labels = {}
 
-for idx, node in enumerate(G.nodes()):
-    if node in gpn['Superphenotype'].unique():
-        superphenotype_labels[node] = node
+if labels == 'all' or labels == 'subtype':
+    for idx, node in enumerate(G.nodes()):
+        if node in gpn['Superphenotype'].unique():
+            superphenotype_labels[node] = node
+    bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
+    nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
 
-bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
-nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
+if labels == 'all' or labels == 'overlapping':
+    for idx, node in enumerate(G.nodes()):
+        if node in lst_overlap_2:
+            gene_labels[node] = node
 
-for idx, node in enumerate(G.nodes()):
-    if node in lst_overlap_2:
-        gene_labels[node] = node
+    bbox2 = dict(fc="yellow", ec="black", boxstyle="circle", lw=2)
+    nx.draw_networkx_labels(G, pos, labels=gene_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox2)
 
-bbox2 = dict(fc="yellow", ec="black", boxstyle="circle", lw=2)
-nx.draw_networkx_labels(G, pos, labels=gene_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox2)
+if labels == 'all' or labels == 'interactors':
+    for idx, node in enumerate(G.nodes()):
+        if node in lst_neighbors_2:
+            neighbor_labels[node] = node
 
-
-for idx, node in enumerate(G.nodes()):
-    if node in lst_neighbors_2:
-        neighbor_labels[node] = node
-
-bbox3 = dict(fc="red", ec="black", boxstyle="sawtooth", lw=2)
-nx.draw_networkx_labels(G, pos, labels=neighbor_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox3)
+    bbox3 = dict(fc="red", ec="black", boxstyle="sawtooth", lw=2)
+    nx.draw_networkx_labels(G, pos, labels=neighbor_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox3)
 
 
 
