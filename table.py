@@ -6,20 +6,17 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                     (ツ)_/¯   - * Version 1.4 * -
-#  Last rev: 2022-02-18
+#                                      (ツ)_/¯  - * Version 3.0 * -
+#  [ O m i m   T a b l e   M a k e r ]
+#
+# Last rev: 2022-02-26
 # ------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------
 # Import libraries
 import numpy as np
 import pandas as pd
 import argparse
-import json
-import requests
-import ast
-import matplotlib.pyplot as plt
-import networkx as nx
-from string import ascii_lowercase
+
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Build a genotype/phenotype network using an OMIM API key and a simple list of OMIM reference IDs! * ")
@@ -31,6 +28,20 @@ args = parser.parse_args()
 # Assign parsed arguments into local variables
 input = args.input
 output = args.output
+# ------------------------------------------------------------------------------------------------------
+# Print opening screen  |
+# ----------------------+
+
+logo = """
+     ___|                       _ \   |
+    |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+   ______________________________________________________________|
+                                      (ツ)_/¯  - * Version 3.0 * -
+  [ O m i m   T a b l e   M a k e r ]
+"""
+print(logo)
 # ------------------------------------------------------------------------------------------------------
 # Populate a new dataframe with the input (.txt file of MIM numbers)
 mimdf = pd.read_csv(input, header=None)
@@ -186,11 +197,11 @@ for j in range(len(df2_transposed.columns)):
                 k += 1
                 i += 1
 
-            # Otherwise, the amount of elemnts should be equal to n + 1,
-            # so add each of these elements to the 'Node_name' column of gpn at row k.
+            # Otherwise, the amount of elements should be equal to n + 1,
+            # so add each of these elements to the 'Node_name_temp' column of gpn at row k.
             elif df2_transposed[j][row].count('\n') > 0:
                 for element in range(len(df2_transposed[j][row].split('\n'))):
-                    gpn['Node_name_temp'][k] = df2_transposed[j][row].split('\n')[element]
+                    gpn['Node_name_temp'][k] = df2_transposed[j][row].split('\n')[element].replace(';','')
                     gpn['Node_type'][k] = df2_transposed.index[row]
                     gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
                     k += 1
@@ -211,7 +222,7 @@ for i in range(len(gpn)):
             if gpn['Node_name_temp'][i].count('{') > 0:
                 gpn['Node_name_temp'][i] = gpn['Node_name_temp'][i].split(' {', 1)[0].replace(';', '')
 # ---------------------------------------------------------------------------
-# Create Parenthetical Column
+# Create parenthetical column
 for i in range(len(gpn)):
     if gpn['Node_name_temp'][i].find('(') > 0:
         if gpn['Node_name_temp'][i].find('({') > 0:
@@ -244,10 +255,47 @@ for i in range(len(mimdf)):
     gpn2['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
     gpn2['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
 
-# Append gpn2 to gpn
+gpn3 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
+
+for i in range(len(mimdf)):
+    gpn3['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList']['phenotypeMap.approvedGeneSymbols']
+    gpn3['Node_type'][i] = 'phenotypeMap.approvedGeneSymbols'
+    gpn3['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
+    gpn3['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
+
+# Append gpn3 and gpn2 to gpn
 gpn = pd.concat([gpn,gpn2], ignore_index=True)
+gpn = pd.concat([gpn,gpn3], ignore_index=True)
 
 ensembl_ids = (gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs'])['Node_name'].reset_index(drop=True)
+
+
+# Save the gpn as a csv using the same filename, but with extension '.csv'
+gpn.to_csv(output)
+#df2_transposed.to_csv('testing.csv')
+
+# Print output message
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print()
+print('  ...Your network table was saved as \"',output,'\" with ',len(gpn),' total rows using ',len(mimdf),' MIMs.')
+print()
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print()
+
+# End of program
+
+"""
+#  ---------------------------------------------------------------------------------------
+#  ---------------------------------------------------------------------------------------
+#   **  The portion of code below has been removed but will remain here commented out   **
+#   **  since it might very well be useful in future development.  -DK :)  2022-02-26   **
+#  ---------------------------------------------------------------------------------------
+#  ---------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------------------
+# Intact Material | ** This section is being transferred to a separate program of its own **
+#-----------------+
 
 
 intact_url = ''
@@ -265,10 +313,11 @@ for i in range(len(ensembl_ids)):
             genes_and_overlap.append(temp.external_name[j])
 
 
-""" For testing: (remove later)
-for i in genes_and_overlap:
-    print(i)
-"""
+
+# For testing: (remove later)
+# for i in genes_and_overlap:
+#    print(i)
+
 
 genes_and_overlap_node_name = []
 genes_and_overlap_node_type = []
@@ -306,7 +355,6 @@ for i in range(len(mimdf)):
     ensembl_df['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
     ensembl_df['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
 
-
 for i in range(len(genes_and_overlap_df)):
     genes_and_overlap_df['Superphenotype'][i] = genes_and_overlap_superphenotype[i]
     genes_and_overlap_df['Node_name'][i] = genes_and_overlap_node_name[i]
@@ -314,9 +362,11 @@ for i in range(len(genes_and_overlap_df)):
     genes_and_overlap_df['MIM_number'][i] = genes_and_overlap_mim_number[i]
 
 gpn = pd.concat([gpn, genes_and_overlap_df], ignore_index=True)
+
+
 # -------------------------------------------------------------------------------
-# First neighbors | ** ADD CODE HERE **
-# ----------------+
+# First neighbors |
+# ----------------+                         (but will remain here commented out)
 
 #intact_url2 = "https://www.ebi.ac.uk/intact/ws/interactor/findInteractor/col25a"
 import json
@@ -354,17 +404,5 @@ for i in range(len(unique_list)):
 gpn = pd.concat([gpn,neighbors_df],ignore_index=True)
 gpn.drop(columns = 'Node_name_temp', inplace = True)
 print(neighbors_df)
-# Save the gpn as a csv using the same filename, but with extension '.csv'
-gpn.to_csv(output)
-#df2_transposed.to_csv('testing.csv')
+"""
 
-
-# Print output message
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
-print()
-print('                 ...Your network table was saved as \"',output,'\" with ',len(gpn),' total rows.')
-print()
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
-print()
-
-# End of program

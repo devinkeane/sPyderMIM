@@ -1,3 +1,10 @@
+#!/usr/bin/python
+#
+#           C o n c a t . p y |
+#           ------------------+
+#                 [ GenoPheno ]
+#                                      Last rev: 2022-02-26
+# ------------------------------------------------------------------------------------------------------
 # Import libraries
 import numpy as np
 import pandas as pd
@@ -34,13 +41,12 @@ gpn.to_csv(output)
 # Print output message |
 # ---------------------+
 print()
-print('________________________+')
-print('                        |')
-print('  [G e n o P h e n o ]  |')
-print('                        |')
+print('           C o n c a t . p y |')
+print('           ------------------+')
+print('                 [ GenoPheno ]')
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
-print('                 ...Your network graph was saved as \"',output,'\" with ',len(gpn),' total nodes.')
+print('                 ...Your combined table was saved as \"',output,'\" with ',len(gpn),' total rows.')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
