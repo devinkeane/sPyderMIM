@@ -29,10 +29,12 @@ gpn = pd.DataFrame()
 # and append each of these to the master (gpn) dataframe
 for i in range(len(args.input)):
     temp = pd.read_csv(args.input[i])
-    gpn = pd.concat([gpn,temp])
+    gpn = pd.concat([gpn,temp],ignore_index=True)
+
 
 # Drop the unwanted default index that arises after using the pd.concat method :(
 gpn.drop(columns='Unnamed: 0',inplace=True)
+
 
 # Print final .csv table to output
 gpn.to_csv(output)

@@ -103,18 +103,10 @@ for i in conversion2:
     ensembl_map_temp += [i.split('\t')[0]]
     if '\t' in i:
         protein_map_temp += [i.split('\t')[1]]
-print()
-print(protein_map_temp)
 
 for i in range(len(protein_map_temp)):
     if len(protein_map_temp[i]) == 6:
         protein_map += [protein_map_temp[i]]
-
-
-
-
-print(ensembl_map)
-print(protein_map)
 
 intact_url = ''
 dictionary = {}
@@ -150,10 +142,6 @@ for i in range(len(ensembl_ids_list_unique)):
     print(i, 'OMIM Gene:         ', protein_map[i], '             ENSMBL ID:         ', ensembl_ids_list_unique[i],           '              Total Rows:          ', len(tempdf), 'df rows:  ', len(df2) + len(df))
 
 df = pd.concat([df, df2], axis=0, ignore_index=True)
-
-
-
-
 
 
 """

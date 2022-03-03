@@ -98,7 +98,7 @@ for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
     df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0][i])
     temp = pd.DataFrame.transpose(df_geneMap2)
     df_geneMap2_transposed = pd.concat([df_geneMap2_transposed, temp], axis=1,ignore_index=True)
-print(df_geneMap2_transposed)
+
 # drop molecular basis
 # (not so data friendly gene id column, we will use the nested geneMap list from the
 # API request instead)
@@ -255,8 +255,6 @@ ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'No
 
 gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
-print('checkpoint: line 252\n',df_geneMap2_transposed[0]['entry.phenotypeMapList'])
-print('Length of mimdf:  ',len(mimdf))
 # Parsing ENSMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
 for i in range(len(mimdf)):
     gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['ensemblIDs'].split(',')[0]
@@ -278,6 +276,10 @@ gpn = pd.concat([gpn,gpn3], ignore_index=True)
 
 ensembl_ids = (gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs'])['Node_name'].reset_index(drop=True)
 
+gpn.drop(columns='Node_name_temp',inplace=True)
+
+# Print a preview of gpn to output
+print(gpn)
 
 # Save the gpn as a csv using the same filename, but with extension '.csv'
 gpn.to_csv(output)
