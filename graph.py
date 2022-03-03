@@ -13,7 +13,7 @@ import networkx as nx
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
 parser.add_argument('-m', '--mode', type=str, required=True , help='\"gpn\" or \"protein_interactions\"(genotype/phenotype or protein interactions type)')
 parser.add_argument('-i', '--input', type=str, required=True ,help='<INPUT_FILENAME.csv>  (Input table)')
-parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"subtype\", "\"overlapping\", \"interactors\", or \"all\" ')
+parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"subtype\", \"overlapping\", \"interactors\", or \"all\" ')
 parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_FILENAME.png>')
 args = parser.parse_args()
 
@@ -100,17 +100,18 @@ elif mode == 'protein_interactions':
     print()
     print(protein_df.drop(columns='Unnamed: 0'))
 
-    # Create a NetworkX object called "G" where 'Superphenotype' is the source node
-    # and 'Node_name' is the target node.
-    G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB')
-    plt.figure(figsize=(50, 50))
+    # Create a NetworkX object called "G" where 'moleculeA' is the source node
+    # and 'moleculeB' is the target node.
+    G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB',edge_attr='intactMiscore', create_using=nx.MultiGraph())
+    plt.figure(figsize=(100, 100))
+    plt.tight_layout()
     pos = nx.spring_layout(G)
 
 
     if labels == 'all' or labels == 'protein_interactions':
-        nx.draw(G, node_color='lightblue', node_size=300, pos=pos, with_labels=True)
+        nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=True)
     else:
-        nx.draw(G, node_color='green', node_size=300, pos=pos, with_labels=False)
+        nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=False)
 
 
 
@@ -127,11 +128,7 @@ plt.savefig(graph_output_name)
 # ---------------------------------------------------------------------------
 # Print logo and output message |
 # ------------------------------+
-num_nodes = 0
-if mode == 'protein_interactions':
-    num_nodes = len(protein_df)
-elif mode == 'gpn':
-    num_nodes = len(gpn)
+num_nodes = G.number_of_nodes()
 
 logo = """
 
@@ -140,14 +137,14 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 1.4  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 3.1  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
 O---o                        'ﾟ✧    |                                          |
-                                    |  Last rev: 2022-02-21                    |
+                                    |  Last rev: 2022-03-22                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
     ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
@@ -157,7 +154,7 @@ print('Thank you for using...')
 print(logo)
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
-print('                 ...Your network graph was saved as \"',output,'\" with ', num_nodes,' total nodes.')
+print('     ...Your network graph was saved as \"',output,'\" with ', num_nodes,' total nodes.')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()

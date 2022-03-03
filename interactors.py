@@ -5,12 +5,22 @@ import json
 import requests
 import ast
 import matplotlib.pyplot as plt
-
 from io import BytesIO
+
+logo = """
+      _______           __   ____      __                       __                 
+     / ____(_)___  ____/ /  /  _/___  / /____  _________ ______/ /_____  __________
+    / /_  / / __ \/ __  /   / // __ \/ __/ _ \/ ___/ __ `/ ___/ __/ __ \/ ___/ ___/
+   / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
+  /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
+
+                                                        [ G e n o P h e n o ]                           
+"""
+print(logo)
 
 
 # Parse command line input and options
-parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Build a genotype/phenotype network using an OMIM API key and a simple list of OMIM reference IDs! * ")
+parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Find first interactors for the genes in your genotype/phenotype table! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (phenotype table with ENSEMBL IDs)')
 parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
 args = parser.parse_args()
@@ -57,15 +67,62 @@ for i in ensembl_ids_list:
     else:
         ensembl_ids_list_unique += [i]
 
+query_string = ''
+print(ensembl_ids_list_unique)
+for i in ensembl_ids_list_unique:
+    query_string += i
+    query_string += ' '
 
+import urllib.parse
+import urllib.request
+
+url = 'https://www.uniprot.org/uploadlists/'
+
+params = {
+'from': 'ENSEMBL_ID',
+'to': 'ACC',
+'format': 'tab',
+'query': query_string
+}
+
+data = urllib.parse.urlencode(params)
+data = data.encode('utf-8')
+req = urllib.request.Request(url, data)
+with urllib.request.urlopen(req) as f:
+   response = f.read()
+
+conversion = response.decode('utf-8')
+conversion2 = conversion.split('\n')
+
+protein_map_temp = []
+ensembl_map_temp = []
+protein_map = []
+ensembl_map = []
+
+for i in conversion2:
+    ensembl_map_temp += [i.split('\t')[0]]
+    if '\t' in i:
+        protein_map_temp += [i.split('\t')[1]]
+print()
+print(protein_map_temp)
+
+for i in range(len(protein_map_temp)):
+    if len(protein_map_temp[i]) == 6:
+        protein_map += [protein_map_temp[i]]
+
+
+
+
+print(ensembl_map)
+print(protein_map)
 
 intact_url = ''
 dictionary = {}
 df = pd.DataFrame()
-k = 0
+
 for i in range(len(ensembl_ids_list_unique)):
     intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?intraSpeciesFilter=true&draw=50&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-    intact_url += ensembl_ids_list_unique[i]
+    intact_url += protein_map[i]
     r = requests.post(intact_url)
     response = r.json()
     dictionary.update(response)
@@ -75,13 +132,32 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df = pd.concat([df,tempdf],axis=0,ignore_index=True)
 
-    print(i,'OMIM Gene:         ',gene_ids_list_unique[i],'             ENSMBL ID:         ',ensembl_ids_list_unique[i],'              Total Rows:          ',len(tempdf), 'df rows:  ', len(df))
+intact_url = ''
+dictionary = {}
+df2 = pd.DataFrame()
+for i in range(len(ensembl_ids_list_unique)):
+    intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?intraSpeciesFilter=true&draw=50&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
+    intact_url += ensembl_ids_list_unique[i]
+    r = requests.post(intact_url)
+    response = r.json()
+    dictionary.update(response)
+    tempdf = pd.DataFrame.from_dict(dictionary['data'])
+    if i == 0:
+        df2 = pd.DataFrame.from_dict(dictionary['data'])
+    else:
+        df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
+
+    print(i, 'OMIM Gene:         ', protein_map[i], '             ENSMBL ID:         ', ensembl_ids_list_unique[i],           '              Total Rows:          ', len(tempdf), 'df rows:  ', len(df2) + len(df))
+
+df = pd.concat([df, df2], axis=0, ignore_index=True)
+
 
 
 
 
 
 """
+# Potentially useful code for the future, leftover from migration from table.py
     for j in range(len(temp_df)):
         df.loc[k] = [temp_df['moleculeA'][j], temp_df['moleculeB'][j]]
         k += 1

@@ -6,10 +6,10 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                      (ツ)_/¯  - * Version 3.0 * -
+#                                      (ツ)_/¯  - * Version 3.1 * -
 #  [ O m i m   T a b l e   M a k e r ]
 #
-# Last rev: 2022-02-26
+# Last rev: 2022-03-02
 # ------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------
 # Import libraries
@@ -38,8 +38,8 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                                      (ツ)_/¯  - * Version 3.0 * -
-  [ O m i m   T a b l e   M a k e r ]
+                                      (ツ)_/¯  - * Version 3.1 * -
+  [ O M I M   T a b l e   M a k e r ]
 """
 print(logo)
 # ------------------------------------------------------------------------------------------------------
@@ -53,9 +53,13 @@ if len(mimdf) > 20:
     print()
     print()
     print('Sorry, your query contains over 20 MIM numbers.   (ง ͠° ͟ʖ ͡°)')
-    print('Please try again with a maximum of 20 MIM numbers')
+    print()
+    print('Please limit your MIM list to 20 numbers per \".txt\" file.')
+    print('You can then use \"concat.py\" to combine each of these outputs')
+    print('into one table if you need to query more than 20 MIMs.')
     print()
     exit(-1)
+
 # ------------------------------------------------------------------------------------------------------
 # Inserting the MIM numbers into the API request URL and retrieving data |
 # -----------------------------------------------------------------------+
@@ -88,11 +92,13 @@ df2 = pd.json_normalize(df['omim'][0])
 # - - - - - - - - - -
 # load geneMap data using Python JSON module
 df_geneMap = pd.read_json(url_geneMap)
-
+df_geneMap2_transposed = pd.DataFrame()
 # flatten data
-df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0])
-df_geneMap2['entry.phenotypeMapList'] = pd.json_normalize(df_geneMap2['entry.phenotypeMapList'])
-
+for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
+    df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0][i])
+    temp = pd.DataFrame.transpose(df_geneMap2)
+    df_geneMap2_transposed = pd.concat([df_geneMap2_transposed, temp], axis=1,ignore_index=True)
+print(df_geneMap2_transposed)
 # drop molecular basis
 # (not so data friendly gene id column, we will use the nested geneMap list from the
 # API request instead)
@@ -101,11 +107,9 @@ df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
 # Transpose the clinical data --> now each column represents a disease (MIM#)
 df2_transposed = pd.DataFrame.transpose(df2)
 
-# Transpose the geneMap data --> now each column represents a disease (MIM#)
-df_geneMap2_transposed = pd.DataFrame.transpose(df_geneMap2)
 
 
-
+# ------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------
 # The following function calculates how many total elements are found for a  |
 # given column of df2_transposed without having to flatten all nested lists: |
@@ -139,6 +143,9 @@ def count_elements(column):
 
     return count
 # -----------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------
+
+
 
 # ----------------------------------------------------------------------------------------------+
 # Populating a fresh genotype/phenotype dataframe with data from df2_transposed (OMIM API data) |
@@ -248,9 +255,11 @@ ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'No
 
 gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
+print('checkpoint: line 252\n',df_geneMap2_transposed[0]['entry.phenotypeMapList'])
+print('Length of mimdf:  ',len(mimdf))
 # Parsing ENSMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
 for i in range(len(mimdf)):
-    gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList']['phenotypeMap.ensemblIDs'].split(',')[0]
+    gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['ensemblIDs'].split(',')[0]
     gpn2['Node_type'][i] = 'phenotypeMap.ensemblIDs'
     gpn2['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
     gpn2['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
@@ -258,7 +267,7 @@ for i in range(len(mimdf)):
 gpn3 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 for i in range(len(mimdf)):
-    gpn3['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList']['phenotypeMap.approvedGeneSymbols']
+    gpn3['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['approvedGeneSymbols']
     gpn3['Node_type'][i] = 'phenotypeMap.approvedGeneSymbols'
     gpn3['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
     gpn3['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
@@ -291,13 +300,9 @@ print()
 #   **  since it might very well be useful in future development.  -DK :)  2022-02-26   **
 #  ---------------------------------------------------------------------------------------
 #  ---------------------------------------------------------------------------------------
-
-
 # -------------------------------------------------------------------------------------------------
-# Intact Material | ** This section is being transferred to a separate program of its own **
+# Intact Material | ** This section is being transferred to interactors.py **
 #-----------------+
-
-
 intact_url = ''
 genes_and_overlap = []
 for i in range(len(ensembl_ids)):
@@ -311,21 +316,14 @@ for i in range(len(ensembl_ids)):
             pass
         else:
             genes_and_overlap.append(temp.external_name[j])
-
-
-
 # For testing: (remove later)
 # for i in genes_and_overlap:
 #    print(i)
-
-
 genes_and_overlap_node_name = []
 genes_and_overlap_node_type = []
 genes_and_overlap_superphenotype = []
 genes_and_overlap_mim_number = []
-
 intact_url = ''
-
 for i in range(len(ensembl_ids)):
     intact_url = 'https://rest.ensembl.org/overlap/id/'
     intact_url += ensembl_ids[i]
@@ -340,34 +338,26 @@ for i in range(len(ensembl_ids)):
             genes_and_overlap_node_type.append('associated_and_overlapping_genes')
             genes_and_overlap_superphenotype.append(df2_transposed[i][3].split('; ')[-1])
             genes_and_overlap_mim_number.append(df_geneMap2_transposed[i]['entry.mimNumber'])
-
 genes_and_overlap_df = pd.DataFrame(index=range(len(genes_and_overlap_node_name)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
-
 for i in range(len(genes_and_overlap_df)):
     genes_and_overlap_df['Node_name'][i] = genes_and_overlap_node_name[i]
     genes_and_overlap_df['Node_type'][i] = genes_and_overlap_node_type[i]
     genes_and_overlap_df['Superphenotype'][i] = genes_and_overlap_superphenotype[i]
     genes_and_overlap_df['MIM_number'][i] = genes_and_overlap_mim_number[i]
-
 for i in range(len(mimdf)):
     ensembl_df['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList']['phenotypeMap.ensemblIDs'].split(',')[0]
     ensembl_df['Node_type'][i] = 'phenotypeMap.ensemblIDs'
     ensembl_df['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
     ensembl_df['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
-
 for i in range(len(genes_and_overlap_df)):
     genes_and_overlap_df['Superphenotype'][i] = genes_and_overlap_superphenotype[i]
     genes_and_overlap_df['Node_name'][i] = genes_and_overlap_node_name[i]
     genes_and_overlap_df['Node_type'][i] = genes_and_overlap_node_type[i]
     genes_and_overlap_df['MIM_number'][i] = genes_and_overlap_mim_number[i]
-
 gpn = pd.concat([gpn, genes_and_overlap_df], ignore_index=True)
-
-
 # -------------------------------------------------------------------------------
 # First neighbors |
 # ----------------+                         (but will remain here commented out)
-
 #intact_url2 = "https://www.ebi.ac.uk/intact/ws/interactor/findInteractor/col25a"
 import json
 import requests
@@ -376,10 +366,8 @@ unique_list = []
 superphenotype_list = []
 mim_list = []
 for i in range(len(genes_and_overlap_df)):
-
     intact_url2 = 'https://www.ebi.ac.uk/intact/ws/interactor/findInteractor/'
     intact_url2 += str(genes_and_overlap_df['Node_name'][i])
-
     df_new = json.loads(requests.get(intact_url2).text)
     array = {}
     for j in range(len(df_new['content'])):
@@ -394,15 +382,12 @@ for i in range(len(genes_and_overlap_df)):
             unique_list.append(j)
 # -------------------------------------------------------------------------------
 neighbors_df = pd.DataFrame(index=range(len(unique_list)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
-
 for i in range(len(unique_list)):
     neighbors_df['Node_name'][i] = unique_list[i]
     neighbors_df['Node_type'][i] = 'Intact_first_neighbors'
     neighbors_df['Superphenotype'][i] = superphenotype_list[i]
     neighbors_df['MIM_number'][i] = mim_list[i]
-
 gpn = pd.concat([gpn,neighbors_df],ignore_index=True)
 gpn.drop(columns = 'Node_name_temp', inplace = True)
 print(neighbors_df)
 """
-
