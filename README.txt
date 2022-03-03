@@ -7,15 +7,16 @@ GenoPheno is a workflow suite and genotype/phenotype network generator that uses
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
 links diseases by genes and phenotypes.  The workflow also utilizes the IntAct API, which
 allows the user to find the protein products for the genes associated with each MIM number
-and the proteins known to interact with each of this.  Large tables and network graphs can
-be constructed in order to investigate dozens of diseases
+and the proteins known to interact with each of these.  Large tables and network graphs can
+be constructed in order to investigate large batches of disease subtypes.
 
 table.py takes in a .txt file that is a list of "Phenotype MIM numbers," each of which correspond
-to a disease subtype listed in the OMIM Database.  A disease subtype in the OMIM database is
-defined by a gene that is known to give rise to a set of phenotypes, which are classified
-together under the clinical data for that subtype in the OMIM database.  The only required
-input for this workflow is a .txt file(s) that is a simple list of phenotype MIM numbers that
-the user has collected for diseases they wish to investigate, each separated by a new line.
+to a disease subtype listed in the OMIM Database, collected by the user.  A disease subtype in
+the OMIM database is defined by a gene that is known to give rise to a set of phenotypes, which
+are classified together under the clinical data for that subtype in the OMIM database.  The only
+required input for this workflow is a .txt file(s) that is a simple list of phenotype MIM numbers
+which the user has collected for diseases they wish to investigate, each separated by a new line
+(maximum of 20 mims per file, due to API call limits, and 5000 total mims per day).
 
 interactors.py uses the output from table.py to find the protein products of each gene and
 their protein interactors.
@@ -24,9 +25,9 @@ graph.py is able to take in the .csv output from either table.py or interactors.
 generate a network graph of phenototypes or protein interactors, respectively.
 
 Output from these tables can be used as edge list input for other programs, such as Cytoscape!
-However, the goal of this program is to provide a purely command line interface that can allow
-for graph theory analysis to be upscaled and applied to larger data sets than could be handled
-in GUI-based programs.
+However, the goal of this program is to provide a purely command line based interface that can
+allow for graph theory analysis to be upscaled and applied to larger data sets than could be
+handled in GUI-based programs.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -36,17 +37,19 @@ in GUI-based programs.
     table.py, but it will still remain on GitHub for the time being.  table.py
     may later be renamed to GenoPheno.py after the original version is removed.
 
-    ->  GenoPheno currently only takes in lists of "Phenotype MIM numbers" as the
-    starting input of the workflow.  DO NOT use "Gene/Locus MIM numbers" as these
-    will cause the program to crash.
+    ->  GenoPheno only takes in lists of "Phenotype MIM numbers" as the
+    starting input of the workflow.  DO NOT use "Gene/Locus MIM numbers" as
+    these will cause the program to crash.  Future versions of the program will
+    aim to ignore these MIM numbers.
 
-    ->  When creating a .txt list mim numbers, ONLY USE MIM numbers with
-    the "#" prefix.  The current version of this program does not process MIM
-    numbers with the "+", "%", or "^" prefixes.
+    ->  When creating a .txt list mim numbers, ONLY USE MIM numbers with the "#"
+    prefix.  This program does not process MIM numbers with the "+", "%", or "^"
+    prefixes as these are irrelevent to the objectives of this software.
 
     ->  DO NOT use mim numbers for listings where "susceptibility to" is
-    is included in the subtype title.  The current version of this program
-    does not support MIM numbers for this or individual genes.
+    is included in the subtype title.  This program does not support MIM numbers
+    for this nor MIM numbers that correspond to individual genes rather than
+    subtypes.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -74,10 +77,14 @@ in GUI-based programs.
 ------
 --------------------------------------------------------------------------------------------
 
-3) Set up an Anaconda environment with the necessary dependencies:
+3) Set up an Anaconda environment with the necessary dependencies (Anaconda required):
 
 ~$ conda create -n GenoPheno python=3.9 scipy pandas matplotlib networkx
 ~$ conda activate GenoPheno
+
+** Note: these dependencies reflect an earlier version of the program, so you may need to
+install others in your Anaconda environment, depending on your error output.  I am currently
+working on updating this for the README file. -- DK 2022-03-03 **
 
 --------------------------------------------------------------------------------------------
 
@@ -108,7 +115,7 @@ in GUI-based programs.
 ----------------------+            |
                                    |
                                    V
-~$ python3 graph.py -i <input_file.csv> -l <labels_option> -m <mode> -o <output_file.png>
+~$ python3 graph.py -i <input_file.csv> -m <mode> -l <labels_option> -o <output_file.png>
 
 graph.py options:
 
@@ -127,4 +134,4 @@ graph.py options:
                         <OUTPUT_FILENAME.png>
 
 
-GenoPheno (c) 2022-01-27 by Devin Keane
+GenoPheno (c) 2022-01-27 by Devin Keane / Clemson University
