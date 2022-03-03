@@ -105,7 +105,7 @@ elif mode == 'protein_interactions':
     G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB',edge_attr='intactMiscore', create_using=nx.MultiGraph())
     plt.figure(figsize=(100, 100))
     plt.tight_layout()
-    pos = nx.spring_layout(G)
+    pos = nx.kamada_kawai_layout(G)
 
 
     if labels == 'all' or labels == 'protein_interactions':
@@ -144,7 +144,7 @@ O---o                               +------------------------------------------+
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
 O---o                        'ﾟ✧    |                                          |
-                                    |  Last rev: 2022-03-22                    |
+                                    |  Last rev: 2022-03-02                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
     ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'

@@ -29,7 +29,7 @@ gpn = pd.DataFrame()
 # and append each of these to the master (gpn) dataframe
 for i in range(len(args.input)):
     temp = pd.read_csv(args.input[i])
-    gpn = pd.concat([gpn,temp], ignore_index=True)
+    gpn = pd.concat([gpn,temp])
 
 # Drop the unwanted default index that arises after using the pd.concat method :(
 gpn.drop(columns='Unnamed: 0',inplace=True)
