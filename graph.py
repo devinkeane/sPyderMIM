@@ -49,7 +49,9 @@ if mode == 'gpn':
         lst_neighbors_2 += [lst_neighbors[i]]
 
     # Draw a graph with G using a color map that distinguishes between genes and phenotypes
-    plt.figure(figsize=(50,50))
+    plt.figure(figsize=(100,100))
+    plt.tight_layout()
+    pos = nx.kamada_kawai_layout(G)
 
     color_map = []
     for node in G:

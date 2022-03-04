@@ -42,14 +42,15 @@ handled in GUI-based programs.
     these will cause the program to crash.  Future versions of the program will
     aim to ignore these MIM numbers.
 
-    ->  When creating a .txt list mim numbers, ONLY USE MIM numbers with the "#"
+    ->  When creating a .txt list of mim numbers, ONLY USE MIM numbers with the "#"
     prefix.  This program does not process MIM numbers with the "+", "%", or "^"
-    prefixes as these are irrelevent to the objectives of this software.
+    prefixes as these are irrelevent to the objectives of this software and the
+    program will crash if these types of MIM numbers are used.
 
     ->  DO NOT use mim numbers for listings where "susceptibility to" is
     is included in the subtype title.  This program does not support MIM numbers
     for this nor MIM numbers that correspond to individual genes rather than
-    subtypes.
+    subtypes.  These will also cause the current version to crash.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
