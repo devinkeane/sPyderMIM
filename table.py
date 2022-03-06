@@ -6,7 +6,7 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                      (ツ)_/¯  - * Version 3.1 * -
+#                                      (ツ)_/¯  - * Version 3.2 * -
 #  [ O m i m   T a b l e   M a k e r ]
 #
 # Last rev: 2022-03-02
@@ -38,7 +38,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                                      (ツ)_/¯  - * Version 3.1 * -
+                                      (ツ)_/¯  - * Version 3.2 * -
   [ O M I M   T a b l e   M a k e r ]
 """
 print(logo)
@@ -98,6 +98,8 @@ for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
     df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0][i])
     temp = pd.DataFrame.transpose(df_geneMap2)
     df_geneMap2_transposed = pd.concat([df_geneMap2_transposed, temp], axis=1,ignore_index=True)
+df_geneMap2_transposed.to_csv('df_geneMap2_transposed_test.csv')
+
 
 # drop molecular basis
 # (not so data friendly gene id column, we will use the nested geneMap list from the
@@ -108,44 +110,15 @@ df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
 df2_transposed = pd.DataFrame.transpose(df2)
 
 
-
-# ------------------------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------------------
-# The following function calculates how many total elements are found for a  |
-# given column of df2_transposed without having to flatten all nested lists: |
-# ---------------------------------------------------------------------------+
-def count_elements(column):
-    # Initialize the count
-    count = 0
-
-    # df2_transposed is structured in such a way that we need to begin on index 5
-    # in order to access the phenotypic data that we will populate gpn with
-    i = 5
-
-    # For each row in df2_transposed, starting at row 5:
-    for row in range(len(df2_transposed) - 5):
-
-        # If the current cell is null/float/integer, nothing happens to the count
-        if pd.isnull(df2_transposed[column].iloc[i]) | pd.api.types.is_float(
-                df2_transposed[column].iloc[i]) | pd.api.types.is_integer(df2_transposed[column].iloc[i]):
-            i += 1
-
-        # If the cell is not null but no '\n' is found, there is only one element in the cell
-        # Thus, only add one to the count
-        elif df2_transposed[column].iloc[i].count('\n') == 0:
-            count += 1
-            i += 1
-
-        # Otherwise, the amount of elemnts should be equal to n + 1
-        elif df2_transposed[column].iloc[i].count('\n') > 0:
-            count += df2_transposed[column].iloc[i].count('\n') + 1
-            i += 1
-
-    return count
-# -----------------------------------------------------------------------------------------------
-# -----------------------------------------------------------------------------------------------
+df2_transposed.to_csv('df2_transposed_test.csv')
 
 
+bad_mim_count = 0
+
+for i in df2_transposed.columns:
+    if isinstance(df2_transposed[i]['entry.clinicalSynopsis.inheritance'],float):
+        print('No clinical data found...        MIM # :    ',df2_transposed[i]['entry.mimNumber'])
+        bad_mim_count += 1
 
 # ----------------------------------------------------------------------------------------------+
 # Populating a fresh genotype/phenotype dataframe with data from df2_transposed (OMIM API data) |
@@ -154,35 +127,11 @@ def count_elements(column):
 # Create a new data frame that will be the output and call it "gpn" (genotype/phenotype network)
 gpn = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
-# We need to find the total amount of items in df2_transposed in order to build
-# a new data frame that will ultimately be the genotype/phenotype table, which
-# we will call "gpn".
-
-# Count the total amount of elements across by calling count_elements() on each column
-total_elements = 0
-for i in range(len(df2_transposed.columns)):
-    total_elements += count_elements(i)
-
-# Now we can prepare gpn as a data frame of n rows, where n = total_elements
-for i in range(total_elements):
-    dfa = pd.DataFrame([[np.nan] * len(gpn.columns)], columns=gpn.columns)
-    gpn = pd.concat([gpn,dfa], ignore_index=True)
-
-# Create the variable k, which will represent the iteration of the index of gpn
-# as we populate it with data from df2_transposed.
-k = 0
-
-# For each column in d2_transposed (each column is a disease)...
-for j in range(len(df2_transposed.columns)):
-
-    # take each element in that column and add it to the 'Superphenotype' column
-    # of gpn at row k, but only if something is there (not null)
-    for i in range(count_elements(j)):
-        if pd.notnull(df2_transposed[j][3]):
-            gpn['Superphenotype'][k] = df2_transposed[j][3].split('; ')[-1]
-            k += 1
+empty_row_df = pd.DataFrame([[np.nan] * len(gpn.columns)],columns=gpn.columns)
 
 # Reset indices:  go back to the top row of gpn and row at index 5 on df2_transposed
+
+
 k = 0
 i = 5
 
@@ -193,26 +142,35 @@ for j in range(len(df2_transposed.columns)):
 
             # If the current cell is null/float/integer, skip it
             if pd.isnull(df2_transposed[j][row]) | pd.api.types.is_float(df2_transposed[j][row]) | pd.api.types.is_integer(df2_transposed[j][row]):
-                 i += 1
+                 pass
 
             # If the cell is not null but no '\n' is found, there is only one element in the cell.
             # Add this element to the 'Node_name_temp' column of gpn at row k.
             elif df2_transposed[j][row].count('\n') == 0:
-                gpn['Node_name_temp'][k] = df2_transposed[j][row]
-                gpn['Node_type'][k] = df2_transposed.index[row]
-                gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
-                k += 1
-                i += 1
+                tempdf = empty_row_df
+                tempdf['Node_name_temp'] = df2_transposed[j][row]
+                tempdf['Node_type'] = df2_transposed.index[row]
+                tempdf['MIM_number'] = df_geneMap2_transposed[j]['entry.mimNumber']
+
+                tempdf['Superphenotype'] = df2_transposed[j][3].split('; ')[-1]
+
+                gpn = pd.concat([gpn, tempdf], ignore_index=True)
 
             # Otherwise, the amount of elements should be equal to n + 1,
             # so add each of these elements to the 'Node_name_temp' column of gpn at row k.
             elif df2_transposed[j][row].count('\n') > 0:
                 for element in range(len(df2_transposed[j][row].split('\n'))):
-                    gpn['Node_name_temp'][k] = df2_transposed[j][row].split('\n')[element].replace(';','')
-                    gpn['Node_type'][k] = df2_transposed.index[row]
-                    gpn['MIM_number'][k] = df_geneMap2_transposed[j]['entry.mimNumber']
+                    tempdf = empty_row_df
+                    tempdf['Node_name_temp'] = df2_transposed[j][row].split('\n')[element].replace(';','')
+                    tempdf['Node_type'] = df2_transposed.index[row]
+                    tempdf['MIM_number'] = df_geneMap2_transposed[j]['entry.mimNumber']
+
+
+                    tempdf['Superphenotype'] = df2_transposed[j][3].split('; ')[-1]
+                    gpn = pd.concat([gpn, tempdf], ignore_index=True)
                     k += 1
-                i += 1
+
+
 # ---------------------------------------------------------------------------
 # Now, we need to clean up the Node_name column data in gpn by cutting the
 # off the indentifiers and other data that follows it.
@@ -256,19 +214,28 @@ ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'No
 gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 # Parsing ENSMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
+bad_mim_count2 = 0
+print()
 for i in range(len(mimdf)):
-    gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['ensemblIDs'].split(',')[0]
-    gpn2['Node_type'][i] = 'phenotypeMap.ensemblIDs'
-    gpn2['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
-    gpn2['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
+    if isinstance(df_geneMap2_transposed[i]['entry.phenotypeMapList'],float):
+        print('No ENSEMBL/Gene ID found...      MIM # :    ',df_geneMap2_transposed[i]['entry.mimNumber'])
+        bad_mim_count2 += 1
+    else:
+        gpn2['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['ensemblIDs'].split(',')[0]
+        gpn2['Node_type'][i] = 'phenotypeMap.ensemblIDs'
+        gpn2['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
+        gpn2['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
 
 gpn3 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 for i in range(len(mimdf)):
-    gpn3['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['approvedGeneSymbols']
-    gpn3['Node_type'][i] = 'phenotypeMap.approvedGeneSymbols'
-    gpn3['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
-    gpn3['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
+    if isinstance(df_geneMap2_transposed[i]['entry.phenotypeMapList'],float):
+        pass
+    else:
+        gpn3['Node_name'][i] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][0]['phenotypeMap']['approvedGeneSymbols']
+        gpn3['Node_type'][i] = 'phenotypeMap.approvedGeneSymbols'
+        gpn3['Superphenotype'][i] = df2_transposed[i][3].split('; ')[-1]
+        gpn3['MIM_number'][i] = df_geneMap2_transposed[i]['entry.mimNumber']
 
 # Append gpn3 and gpn2 to gpn
 gpn = pd.concat([gpn,gpn2], ignore_index=True)
@@ -277,10 +244,12 @@ gpn = pd.concat([gpn,gpn3], ignore_index=True)
 ensembl_ids = (gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs'])['Node_name'].reset_index(drop=True)
 
 gpn.drop(columns='Node_name_temp',inplace=True)
-
+gpn.dropna(how='all',inplace=True)
+gpn.reset_index(inplace=True,drop=True)
 # Print a preview of gpn to output
+print()
 print(gpn)
-
+print()
 # Save the gpn as a csv using the same filename, but with extension '.csv'
 gpn.to_csv(output)
 #df2_transposed.to_csv('testing.csv')
@@ -288,7 +257,11 @@ gpn.to_csv(output)
 # Print output message
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
-print('  ...Your network table was saved as \"',output,'\" with ',len(gpn),' total rows using ',len(mimdf),' MIMs.')
+print('  ...Your network table was saved as \"',output,'\" with ',len(gpn),' total rows from your list of ',len(mimdf),' MIMs.')
+print()
+print('  ',len(mimdf)-bad_mim_count,' of ',len(mimdf),' MIMs contained phenotypic data.')
+print()
+print('  ',len(mimdf)-bad_mim_count2,' of ',len(mimdf),' MIMs contained ENSEMBL/Gene IDs.')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()

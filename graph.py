@@ -1,4 +1,4 @@
-# last rev: 02-18-21
+# last rev: 03-03-06
 
 
 # Import libraries
@@ -139,14 +139,14 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 3.1  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 3.2  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
 O---o                        'ﾟ✧    |                                          |
-                                    |  Last rev: 2022-03-02                    |
+                                    |  Last rev: 2022-03-06                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
     ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
