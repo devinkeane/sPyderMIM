@@ -74,7 +74,7 @@ be listed in your output.  They should still be avoided if possible.  **
 
 --------------------------------------------------------------------------------------------
 
-2) Create list of OMIM reference ids ("MIM" numbers) (20 MAXIMUM!):
+2) Create list of OMIM reference ids ("MIM" numbers) (20 MAXIMUM if input is for table.py instead of GenoPheno.sh):
 
 (i.e.)
 ~$ vim input_list.txt
@@ -98,12 +98,59 @@ working on updating this for the README file. -- DK 2022-03-03 **
 --------------------------------------------------------------------------------------------
 
 4) Execute with the following syntax/options:
+
+--------------------------------------------------------------------------------------------
+ [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
+--------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
+                                      than 20.  Alternatively, you can use separate programs
+                                      in the suite individually, but table.py will require
+                                      that your MIM list is less than 20, due to the number
+                                      of MIMs allowed per API call.  split_lists.py will
+                                      create a directory and split your list into multiple
+                                      20 MIM lists if you are using individual programs in
+                                      the suite.  Read further for usage on all programs in
+                                      the suite.
+
+
+                                   +---------- list of > 20 OMIM MIM numbers
+                                   |
+                                   V
+
+~$ ./GenoPheno.sh <large_input_mim_list.txt> <OMIM_API_key> <project_name>
+
+                                                   ^                ^
+                                                   |                |
+        Your API key obtained from OMIM -----------+                |
+                                                                    |
+        Project name for automatically naming multiple files  ------+
+
+--------------------------------------------------------------------------------------------
+ [ s p l i t _ l i s t . p y ]  |
+--------------------------------+
+
+~$ python3 split_list.py -i <big_mim_list.txt> -o <project_name>
+
+Output:
+    * ./project_name_separate_lists/project_name0.txt
+    * ./project_name_separate_lists/project_name1.txt
+    * ./project_name_separate_lists/project_name2.txt
+    * ...
 --------------------------------------------------------------------------------------------
  [ t a b l e . p y ]  |
 ----------------------+
 
 
-~$ python3 table.py -i <input_list.txt> -o <output_file.csv> -a <api_key>
+~$ python3 table.py -i <./project_name_separate_lists/project_name0.txt> -o <output_file.csv> -a <api_key>
+~$ python3 table.py -i <./project_name_separate_lists/project_name1.txt> -o <output_file.csv> -a <api_key>
+~$ python3 table.py -i <./project_name_separate_lists/project_name2.txt> -o <output_file.csv> -a <api_key>
+* ...                                                                             ^
+                                                                                  |
+-------------------------------------------------------------------------------   |   ------
+ [ c o n c a t . p y ]  |          ----- table.py or interactors.py output  ------+
+------------------------+          |         (two or more allowed as input to concat.py)
+                                   |
+                                   V
+~$ python3 concat.py -i <input_file.csv> <input_file2.csv> -o <output_file.csv>
 
 --------------------------------------------------------------------------------------------
  [ i n t e r a c t o r s . p y ]  |    ----- table.py output
@@ -112,12 +159,6 @@ working on updating this for the README file. -- DK 2022-03-03 **
                                        V
 ~$ python3 interactors.py -i <input_file.csv> -o <output_file.csv>
 
---------------------------------------------------------------------------------------------
- [ c o n c a t . p y ]  |          ----- table.py or interactors.py output
-------------------------+          |         (two or more allowed as input to concat.py)
-                                   |
-                                   V
-~$ python3 concat.py -i <input_file.csv> <input_file2.csv> -o <output_file.csv>
 
 --------------------------------------------------------------------------------------------
  [ g r a p h . p y ]  |            ----- table.py, interactors.py, or concat.py output
