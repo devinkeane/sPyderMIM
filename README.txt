@@ -22,7 +22,7 @@ interactors.py uses the output from table.py to find the protein products of eac
 their protein interactors.
 
 graph.py is able to take in the .csv output from either table.py or interactors.py and
-generate a network graph of phenototypes or protein interactors, respectively.
+generate a network graph of phenotypes or protein interactors, respectively.
 
 Output from these tables can be used as edge list input for other programs, such as Cytoscape!
 However, the goal of this program is to provide a purely command line based interface that can
@@ -31,7 +31,7 @@ handled in GUI-based programs.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-** IMPORTANT NOTES FOR VERSION 3.1 ! **   <-- Read first to ensure functionality
+** IMPORTANT NOTES FOR VERSION 3.2 ! **   <-- Read first to ensure functionality
 ---------------------------------------
     ->  GenoPheno.py, the original version of the program, has been replaced by
     table.py, but it will still remain on GitHub for the time being.  table.py
@@ -42,21 +42,21 @@ handled in GUI-based programs.
     these will cause the program to crash.  Future versions of the program will
     aim to ignore these MIM numbers.
 
-    ->  When creating a .txt list of mim numbers, ONLY USE MIM numbers with the "#"
+    ->  When creating a .txt list of MIM numbers, ONLY USE MIM numbers with the "#"
     prefix.  This program does not process MIM numbers with the "+", "%", or "^"
     prefixes as these are irrelevent to the objectives of this software and the
     program will crash if these types of MIM numbers are used.
 
-    ->  Do not use mim numbers for listings where "susceptibility to" is
+    ->  Do not use MIM numbers for listings where "susceptibility to" is
     is included in the subtype title.  This program does not support MIM numbers
     for this nor MIM numbers that correspond to individual genes rather than
     subtypes.
 
-    ->  Do not use mim numbers that correspond to multiple genes.  These MIM numbers
+    ->  Do not use MIM numbers that correspond to multiple genes.  These MIM numbers
     represent families of sub-phenotypes that are each associated with a single gene.
-    You must first find the Gene/Locus MIM number associated with this MIM number, then
-    select and use the phenotypic MIM numbers for the subtypes that are listed under
-    it.
+    You must first find the Gene/Locus MIM number associated with this kind of MIM
+    number, then select and use the phenotype MIM numbers for the subtypes that are
+    listed under it.
 
 ** table.py will likely continue to process your MIM list and problematic MIMs will
 be listed in your output.  They should still be avoided if possible.  **
