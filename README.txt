@@ -47,11 +47,19 @@ handled in GUI-based programs.
     prefixes as these are irrelevent to the objectives of this software and the
     program will crash if these types of MIM numbers are used.
 
-    ->  DO NOT use mim numbers for listings where "susceptibility to" is
+    ->  Do not use mim numbers for listings where "susceptibility to" is
     is included in the subtype title.  This program does not support MIM numbers
     for this nor MIM numbers that correspond to individual genes rather than
-    subtypes.  These will also cause the current version to crash.
+    subtypes.
 
+    ->  Do not use mim numbers that correspond to multiple genes.  These MIM numbers
+    represent families of sub-phenotypes that are each associated with a single gene.
+    You must first find the Gene/Locus MIM number associated with this MIM number, then
+    select and use the phenotypic MIM numbers for the subtypes that are listed under
+    it.
+
+** table.py will likely continue to process your MIM list and problematic MIMs will
+be listed in your output.  They should still be avoided if possible.  **
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
   |   |

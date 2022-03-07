@@ -13,7 +13,7 @@ import networkx as nx
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
 parser.add_argument('-m', '--mode', type=str, required=True , help='\"gpn\" or \"protein_interactions\"(genotype/phenotype or protein interactions type)')
 parser.add_argument('-i', '--input', type=str, required=True ,help='<INPUT_FILENAME.csv>  (Input table)')
-parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"subtype\", \"overlapping\", \"interactors\", or \"all\" ')
+parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"all\" or \"none\"')
 parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_FILENAME.png>')
 args = parser.parse_args()
 
@@ -36,24 +36,28 @@ if mode == 'gpn':
     # and 'Node_name' is the target node.
     G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
 
+    """
     lst_overlap = gpn[gpn['Node_type'] == 'associated_and_overlapping_genes']['Node_name'].reset_index(drop=True)
     lst_neighbors = gpn[gpn['Node_type'] == 'Intact_first_neighbors']['Node_name'].reset_index(drop=True)
     lst_new = []
     lst_overlap_2 = []
     lst_neighbors_2 = []
-
+    
+    
     for i in range(len(lst_overlap)):
         lst_new += [lst_overlap[i]]
         lst_overlap_2 += [lst_overlap[i]]
         lst_new += [lst_neighbors[i]]
         lst_neighbors_2 += [lst_neighbors[i]]
+    """
 
     # Draw a graph with G using a color map that distinguishes between genes and phenotypes
     plt.figure(figsize=(100,100))
     plt.tight_layout()
-    pos = nx.kamada_kawai_layout(G)
 
-    color_map = []
+    """
+    # This portion of the code may be deprecated or altered in the future
+    # --------------------------------------------------------------------
     for node in G:
         if node in lst_overlap_2:
             color_map.append('yellow')
@@ -61,21 +65,34 @@ if mode == 'gpn':
             color_map.append('red')
         else:
             color_map.append('green')
-    pos= nx.spring_layout(G)
-    nx.draw(G, node_color=color_map, node_size=300, pos=pos,with_labels=False)
+    # --------------------------------------------------------------------
+    """
+    pos = nx.kamada_kawai_layout(G)
+    # pos= nx.spring_layout(G)
+    nx.draw(G, node_color='green', node_size=300, pos=pos,with_labels=False)
 
+
+
+    #color_map = []
 
     superphenotype_labels = {}
+    Node_name_labels = {}
     neighbor_labels = {}
     gene_labels = {}
+
 
     if labels == 'all' or labels == 'subtype':
         for idx, node in enumerate(G.nodes()):
             if node in gpn['Superphenotype'].unique():
                 superphenotype_labels[node] = node
-        bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
-        nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
+            if node in gpn['Node_name'].unique():
+                Node_name_labels[node] = node
 
+        bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
+
+        nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
+        nx.draw_networkx_labels(G, pos, labels=Node_name_labels, font_size=14, font_color='black', font_family='copperplate')
+    """
     if labels == 'all' or labels == 'overlapping':
         for idx, node in enumerate(G.nodes()):
             if node in lst_overlap_2:
@@ -92,7 +109,7 @@ if mode == 'gpn':
         bbox3 = dict(fc="red", ec="black", boxstyle="sawtooth", lw=2)
         nx.draw_networkx_labels(G, pos, labels=neighbor_labels, font_size=14, font_color='black', font_family='copperplate',bbox=bbox3)
 
-
+    """
 # ---------------------------------------------------------------------------
 
 
@@ -159,4 +176,26 @@ print()
 print('     ...Your network graph was saved as \"',output,'\" with ', num_nodes,' total nodes.')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print()
+spiderweb_ascii_art = """
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \\
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+                                                                 \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                                                                __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+"""
+
+
+print(spiderweb_ascii_art)
 print()
