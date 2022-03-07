@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____
 | |_) | |_   / /\  | | \ | |\/| | |_
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
-                               ₲Ɇ₦Ø₱ⱧɆ₦Ø
+                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.0
 
 GenoPheno is a workflow suite and genotype/phenotype network generator that uses the OMIM
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
@@ -31,7 +31,7 @@ handled in GUI-based programs.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-** IMPORTANT NOTES FOR VERSION 3.2 ! **   <-- Read first to ensure functionality
+** IMPORTANT NOTES FOR VERSION 4.0 ! **   <-- Read first to ensure functionality
 ---------------------------------------
     ->  GenoPheno.py, the original version of the program, has been replaced by
     table.py, but it will still remain on GitHub for the time being.  table.py
