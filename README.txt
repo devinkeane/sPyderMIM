@@ -34,13 +34,15 @@ handled in GUI-based programs.
 ** IMPORTANT NOTES FOR VERSION 4.0 ! **   <-- Read first to ensure functionality
 ---------------------------------------
     ->  GenoPheno.py, the original version of the program, has been replaced by
-    table.py, but it will still remain on GitHub for the time being.  table.py
-    may later be renamed to GenoPheno.py after the original version is removed.
+    GenoPheno.sh.  The whole workflow can now be ran entirely through GenoPheno.sh,
+    but you can also use any of the programs in the suite individually or to include
+    in your own workflow script.
 
     ->  GenoPheno only takes in lists of "Phenotype MIM numbers" as the
     starting input of the workflow.  DO NOT use "Gene/Locus MIM numbers" as
     these will cause the program to crash.  Future versions of the program will
-    aim to ignore these MIM numbers.
+    aim to ignore these MIM numbers.  See "Usage" below for instructions on how
+    to use GenoPheno.sh as well as each individual program in the suite.
 
     ->  When creating a .txt list of MIM numbers, ONLY USE MIM numbers with the "#"
     prefix.  This program does not process MIM numbers with the "+", "%", or "^"
@@ -58,8 +60,8 @@ handled in GUI-based programs.
     number, then select and use the phenotype MIM numbers for the subtypes that are
     listed under it.
 
-** table.py will likely continue to process your MIM list and problematic MIMs will
-be listed in your output.  They should still be avoided if possible.  **
+** GenoPheno.sh and table.py will likely continue to process your MIM list and problematic
+MIMs will be listed in your output.  They should still be avoided if possible.  **
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
   |   |
