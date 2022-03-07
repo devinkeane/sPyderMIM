@@ -98,8 +98,6 @@ for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
     df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0][i])
     temp = pd.DataFrame.transpose(df_geneMap2)
     df_geneMap2_transposed = pd.concat([df_geneMap2_transposed, temp], axis=1,ignore_index=True)
-df_geneMap2_transposed.to_csv('df_geneMap2_transposed_test.csv')
-
 
 # drop molecular basis
 # (not so data friendly gene id column, we will use the nested geneMap list from the
@@ -108,10 +106,6 @@ df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
 
 # Transpose the clinical data --> now each column represents a disease (MIM#)
 df2_transposed = pd.DataFrame.transpose(df2)
-
-
-df2_transposed.to_csv('df2_transposed_test.csv')
-
 
 bad_mim_count = 0
 
