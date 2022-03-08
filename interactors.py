@@ -143,6 +143,24 @@ for i in range(len(ensembl_ids_list_unique)):
 
 df = pd.concat([df, df2], axis=0, ignore_index=True)
 
+print(df)
+
+print('Process complete.')
+print()
+print('File saved as \"',output,'\" with ',len(df.columns),' columns and ',len(df),' rows.')
+print()
+print('                                                    	⊂(◉‿◉)つ  ♡  ')
+
+print()
+# Save the gpn as a csv
+df.to_csv(output)
+
+# END PROGRAM
+
+
+
+
+
 
 """
 # Potentially useful code for the future, leftover from migration from table.py
@@ -310,7 +328,5 @@ gpn = pd.concat([gpn,neighbors_df],ignore_index=True)
 gpn.drop(columns = 'Node_name_temp', inplace = True)
 print(neighbors_df)
 """
-print(df)
-# Save the gpn as a csv using the same filename, but with extension '.csv'
-df.to_csv(output)
+
 
