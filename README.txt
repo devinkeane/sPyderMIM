@@ -185,5 +185,5 @@ graph.py options:
   -o OUTPUT, --output OUTPUT
                         <OUTPUT_FILENAME.png>
 
-
+--------------------------------------------------------------
 GenoPheno (c) 2022-01-27 by Devin Keane / Clemson University
