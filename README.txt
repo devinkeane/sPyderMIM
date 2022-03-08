@@ -121,7 +121,7 @@ working on updating this for the README file. -- DK 2022-03-03 **
                                       the suite.
 
 
-                                   +---------- list of > 20 OMIM MIM numbers
+                                   +---------- list of OMIM MIM numbers, maximum of 5,000
                                    |
                                    V
 

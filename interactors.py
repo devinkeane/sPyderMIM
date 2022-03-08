@@ -139,7 +139,7 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
-    print(i, 'OMIM Gene:         ', protein_map[i], '             ENSMBL ID:         ', ensembl_ids_list_unique[i],           '              Total Rows:          ', len(tempdf), 'df rows:  ', len(df2) + len(df))
+    print(i, 'OMIM Gene:         ', protein_map[i], '            ENSMBL ID:         ', ensembl_ids_list_unique[i],           '              Interactions:          ', len(tempdf), '       Total Interactions:  ', len(df2) + len(df))
 
 df = pd.concat([df, df2], axis=0, ignore_index=True)
 
