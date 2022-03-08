@@ -5,8 +5,8 @@
 
 GenoPheno is a workflow suite and genotype/phenotype network generator that uses the OMIM
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
-links diseases by genes and phenotypes.  The workflow also utilizes the IntAct API, which
-allows the user to find the protein products for the genes associated with each MIM number
+links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API,
+which allows the user to find the protein products for the genes associated with each MIM number
 and the proteins known to interact with each of these.  Large tables and network graphs can
 be constructed in order to investigate large batches of disease subtypes.
 
@@ -14,12 +14,19 @@ table.py takes in a .txt file that is a list of "Phenotype MIM numbers," each of
 to a disease subtype listed in the OMIM Database, collected by the user.  A disease subtype in
 the OMIM database is defined by a gene that is known to give rise to a set of phenotypes, which
 are classified together under the clinical data for that subtype in the OMIM database.  The only
-required input for this workflow is a .txt file(s) that is a simple list of phenotype MIM numbers
+required input for this workflow is a .txt file that is a simple list of phenotype MIM numbers
 which the user has collected for diseases they wish to investigate, each separated by a new line
-(maximum of 20 mims per file, due to API call limits, and 5000 total mims per day).
+(maximum of 20 mims per file, due to API call limits for table.py and 5000 total mims when using
+GenoPheno.sh).
+
+split_list.py will split any MIM list that is greater than 20 into separate lists of 20 or less,
+which can then be used as input for table.py.  GenoPheno.sh will perform this step automatically.
 
 interactors.py uses the output from table.py to find the protein products of each gene and
 their protein interactors.
+
+concat.py will automatically combine multiple .csv outputs from either table.py or
+interactors.py.  The output can be used as as single input for graph.py.
 
 graph.py is able to take in the .csv output from either table.py or interactors.py and
 generate a network graph of phenotypes or protein interactors, respectively.
@@ -33,6 +40,7 @@ handled in GUI-based programs.
 --------------------------------------------------------------------------------------------
 ** IMPORTANT NOTES FOR VERSION 4.0 ! **   <-- Read first to ensure functionality
 ---------------------------------------
+
     ->  GenoPheno.py, the original version of the program, has been replaced by
     GenoPheno.sh.  The whole workflow can now be ran entirely through GenoPheno.sh,
     but you can also use any of the programs in the suite individually or to include
@@ -40,12 +48,13 @@ handled in GUI-based programs.
 
     ->  GenoPheno only takes in lists of "Phenotype MIM numbers" as the
     starting input of the workflow.  DO NOT use "Gene/Locus MIM numbers" as
-    these will cause the program to crash.  Future versions of the program will
-    aim to ignore these MIM numbers.  See "Usage" below for instructions on how
-    to use GenoPheno.sh as well as each individual program in the suite.
+    these will cause the program to crash.  Even though these MIMs cannot be used, you
+    can usually locate phenotype MIMs from the phenotypic series that these MIMs are
+    associated with.  See "Usage" below for instructions on how to use GenoPheno.sh as
+    well as how to use each individual program in the suite.
 
     ->  When creating a .txt list of MIM numbers, ONLY USE MIM numbers with the "#"
-    prefix.  This program does not process MIM numbers with the "+", "%", or "^"
+    prefix.  This program does not process MIM numbers with the "+", "%", "*", or "^"
     prefixes as these are irrelevent to the objectives of this software and the
     program will crash if these types of MIM numbers are used.
 
@@ -57,16 +66,15 @@ handled in GUI-based programs.
 
     ->  For MIM numbers where "susceptibility to" is included in the subtype title,
     this program will fetch the ENSML and gene IDs.  However, these MIMs tend to lack
-    phenotypic data since they describe a genes that indirectly influence individuals'
+    phenotypic data since they describe genes that indirectly influence individuals'
     susceptibility to a disease, not the genes that give rise to the phenotypes
     themselves.
 
 
 
-
 GenoPheno.sh and table.py should continue to process your MIM list and problematic
 MIMs will be listed in your output and ignored if unusable.  Following the instructions
-above to avoid problematic MIMs will ensure optimal program output.
+above to avoid problematic MIMs will ensure optimal program functionality and output.
 
 
 --------------------------------------------------------------------------------------------
@@ -91,7 +99,7 @@ above to avoid problematic MIMs will ensure optimal program output.
 615291              [input_list.txt]
 614505                      |
 120580      <---------------`
-...
+and so on ...
 ------
 --------------------------------------------------------------------------------------------
 
@@ -99,10 +107,6 @@ above to avoid problematic MIMs will ensure optimal program output.
 
 ~$ conda create -n GenoPheno python=3.9 scipy pandas matplotlib networkx
 ~$ conda activate GenoPheno
-
-** Note: these dependencies reflect an earlier version of the program, so you may need to
-install others in your Anaconda environment, depending on your error output.  I am currently
-working on updating this for the README file. -- DK 2022-03-03 **
 
 --------------------------------------------------------------------------------------------
 
@@ -113,12 +117,12 @@ working on updating this for the README file. -- DK 2022-03-03 **
 --------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
                                       than 20.  Alternatively, you can use separate programs
                                       in the suite individually, but table.py will require
-                                      that your MIM list is less than 20, due to the number
-                                      of MIMs allowed per API call.  split_lists.py will
-                                      create a directory and split your list into multiple
-                                      20 MIM lists if you are using individual programs in
-                                      the suite.  Read further for usage on all programs in
-                                      the suite.
+                                      that your MIM list has 20 or less MIMS, due to the
+				    number of MIMs allowed per API call.  split_lists.py
+				    will create a directory and split your list into
+				    multiple 20 MIM lists if you are using individual
+				    programs in the suite.  Read further for usage on all
+				    programs included in this repository.
 
 
                                    +---------- list of OMIM MIM numbers, maximum of 5,000
@@ -143,7 +147,7 @@ Output:
     * ./project_name_separate_lists/project_name0.txt
     * ./project_name_separate_lists/project_name1.txt
     * ./project_name_separate_lists/project_name2.txt
-    * ...
+    * etc...
 --------------------------------------------------------------------------------------------
  [ t a b l e . p y ]  |
 ----------------------+
@@ -151,8 +155,7 @@ Output:
 
 ~$ python3 table.py -i <./project_name_separate_lists/project_name0.txt> -o <output_file.csv> -a <api_key>
 ~$ python3 table.py -i <./project_name_separate_lists/project_name1.txt> -o <output_file.csv> -a <api_key>
-~$ python3 table.py -i <./project_name_separate_lists/project_name2.txt> -o <output_file.csv> -a <api_key>
-* ...                                                                             ^
+~$ python3 table.py -i <./project_name_separate_lists/project_name2.txt> -o <output_file.csv> -a <api_key>                                                                         ^
                                                                                   |
 -------------------------------------------------------------------------------   |   ------
  [ c o n c a t . p y ]  |          ----- table.py or interactors.py output  ------+
