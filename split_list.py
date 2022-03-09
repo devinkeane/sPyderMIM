@@ -29,6 +29,8 @@ opening_screen = """
 print()
 print(opening_screen)
 print()
+print('Splitting list into separate OMIM API compatible lists of 20 maximum MIMs...')
+print()
 
 
 my_file = open(input, "r")

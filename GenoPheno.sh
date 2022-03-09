@@ -27,8 +27,8 @@ $CONCAT_COMMAND
 
 python3 interactors.py -i $3_concatenated.csv -o $3_interactors.csv
 
-python3 graph.py -i $3_interactors.csv -m protein_interactions -l all -o $3_interactors.png
-python3 graph.py -i $3_concatenated.csv -m gpn -l all -o $3_phenotypes.png
+python3 graph.py -i $3_interactors.csv -m geno -l all -o $3_interactors.png
+python3 graph.py -i $3_concatenated.csv -m pheno -l all -o $3_phenotypes.png
 
 rm -R ./$3_MIM_directory/
 rm -R ./$3_separate_tables/

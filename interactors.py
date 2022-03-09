@@ -35,11 +35,13 @@ gpn = pd.read_csv(input)
 gpn.drop(columns='Unnamed: 0',inplace=True)
 print()
 print('--------------------------------------------------------------------')
+print()
 print('	ʕっ•ᴥ•ʔっ        Your input table...   ')
 print()
 print()
 print(gpn)
 print()
+print('Searching for interactors:')
 print()
 print('Extracting approved gene symbols from input table:')
 print()
@@ -68,7 +70,11 @@ for i in ensembl_ids_list:
         ensembl_ids_list_unique += [i]
 
 query_string = ''
+
+print()
 print(ensembl_ids_list_unique)
+print()
+
 for i in ensembl_ids_list_unique:
     query_string += i
     query_string += ' '
@@ -143,8 +149,11 @@ for i in range(len(ensembl_ids_list_unique)):
 
 df = pd.concat([df, df2], axis=0, ignore_index=True)
 
+print()
+print()
 print(df)
-
+print()
+print()
 print('Process complete.')
 print()
 print('File saved as \"',output,'\" with ',len(df.columns),' columns and ',len(df),' rows.')

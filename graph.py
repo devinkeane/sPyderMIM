@@ -11,7 +11,7 @@ import networkx as nx
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
-parser.add_argument('-m', '--mode', type=str, required=True , help='\"gpn\" or \"protein_interactions\"(genotype/phenotype or protein interactions type)')
+parser.add_argument('-m', '--mode', type=str, required=True , help='\"geno\" (find protein interactor overlap) or \"pheno\" (find OMIM phenotypic overlap)')
 parser.add_argument('-i', '--input', type=str, required=True ,help='<INPUT_FILENAME.csv>  (Input table)')
 parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"all\" or \"none\"')
 parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_FILENAME.png>')
@@ -26,7 +26,7 @@ mode = args.mode
 # ---------------------------------------------------------------------------
 # GRAPHING THE DATA |
 # ------------------+
-if mode == 'gpn':
+if mode == 'pheno':
     gpn = pd.read_csv(input)
     print('Processing your input table:')
     print()
@@ -113,7 +113,7 @@ if mode == 'gpn':
 # ---------------------------------------------------------------------------
 
 
-elif mode == 'protein_interactions':
+elif mode == 'geno':
     protein_df = pd.read_csv(input)
     print('Processing your input table:')
     print()
@@ -177,6 +177,7 @@ print('     ...Your network graph was saved as \"',output,'\" with ', num_nodes,
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
+
 spiderweb_ascii_art = """
                                                                  \   ,'|`-.   /
                                                                   \,' _|_  ','
@@ -184,18 +185,39 @@ spiderweb_ascii_art = """
                                                               -._/_/_'.|,'_\__\_,-
                                                                  | | ,-*." |  |
                                                               ___|,+' /|\`.|  |
-                                                                 \  \/ | \/`. |___
+             [  G e n o  ]                                       \  \/ | \/`. |___
                                                                   \ /`.|,'\  /
                                                                    Y.  |   \/
                                                                    | `.|_,'
                                                                    |
                                                                    |
-                                                                __ |
+                  Network spun.                                 __ |
                                                                 __\|,-
                                                                 ,-`=--.       
                                                                  /=8\
 """
 
+spiderweb_ascii_art2 = """
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \\
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+                                    [  P h e n o  ]              \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+"""
 
-print(spiderweb_ascii_art)
+if mode == 'geno':
+    print(spiderweb_ascii_art)
+if mode == 'pheno':
+    print(spiderweb_ascii_art2)
 print()
