@@ -41,8 +41,6 @@ print()
 print()
 print(gpn)
 print()
-print('Searching for interactors:')
-print()
 print('Extracting approved gene symbols from input table:')
 print()
 gene_ids_list = []
@@ -73,8 +71,10 @@ query_string = ''
 
 print()
 print(ensembl_ids_list_unique)
-print()
 
+print()
+print('Searching for interactors:')
+print()
 for i in ensembl_ids_list_unique:
     query_string += i
     query_string += ' '
