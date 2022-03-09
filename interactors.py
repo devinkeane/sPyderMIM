@@ -151,6 +151,8 @@ df = pd.concat([df, df2], axis=0, ignore_index=True)
 
 print()
 print()
+print('Saving output table:')
+print()
 print(df)
 print()
 print()
