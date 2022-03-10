@@ -169,7 +169,7 @@ Output:
 ~$ python3 table.py -i <./project_name_separate_lists/project_name0.txt> -o <output_file.csv> -a <api_key>
 ~$ python3 table.py -i <./project_name_separate_lists/project_name1.txt> -o <output_file.csv> -a <api_key>
 ~$ python3 table.py -i <./project_name_separate_lists/project_name2.txt> -o <output_file.csv> -a <api_key>
-									      A
+									                                              A
                                                                                   |
 -------------------------------------------------------------------------------   |   ------
  [ c o n c a t . p y ]  |          +---- table.py or interactors.py output  ------+
