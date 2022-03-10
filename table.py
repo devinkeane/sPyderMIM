@@ -249,15 +249,16 @@ gpn.to_csv(output)
 #df2_transposed.to_csv('testing.csv')
 
 # Print output message
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
-print('  ...Your network table was saved as \"',output,'\" with ',len(gpn),' total rows from your list of ',len(mimdf),' MIMs.')
+print('  ...Your network table was saved as \"',output,'\"')
+print('  with ',len(gpn),' total rows from your list of ',len(mimdf),' MIMs.')
 print()
 print('  ',len(mimdf)-bad_mim_count,' of ',len(mimdf),' MIMs contained phenotypic data.')
 print()
 print('  ',len(mimdf)-bad_mim_count2,' of ',len(mimdf),' MIMs contained ENSEMBL/Gene IDs.')
 print()
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
 
 # End of program
