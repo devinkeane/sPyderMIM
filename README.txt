@@ -8,33 +8,45 @@ GenoPheno is a workflow suite and genotype/phenotype network generator that uses
 links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API,
 which allows the user to find the protein products for the genes associated with each MIM number
 and the proteins known to interact with each of these.  Large tables and network graphs can
-be constructed in order to investigate large batches of disease subtypes.
+be constructed in order to investigate large batches of disease subtypes.  The user only needs
+to provide an obtained OMIM API key and a list of OMIM reference numbers ("phenotypic MIM numbers").
 
-table.py takes in a .txt file that is a list of "Phenotype MIM numbers," each of which correspond
-to a disease subtype listed in the OMIM Database, collected by the user.  A disease subtype in
-the OMIM database is defined by a gene that is known to give rise to a set of phenotypes, which
-are classified together under the clinical data for that subtype in the OMIM database.  The only
-required input for this workflow is a .txt file that is a simple list of phenotype MIM numbers
-which the user has collected for diseases they wish to investigate, each separated by a new line
-(maximum of 20 mims per file, due to API call limits for table.py and 5000 total mims when using
-GenoPheno.sh).
-
-split_list.py will split any MIM list that is greater than 20 into separate lists of 20 or less,
-which can then be used as input for table.py.  GenoPheno.sh will perform this step automatically.
-
-interactors.py uses the output from table.py to find the protein products of each gene and
-their protein interactors.
-
-concat.py will automatically combine multiple .csv outputs from either table.py or
-interactors.py.  The output can be used as as single input for graph.py.
-
-graph.py is able to take in the .csv output from either table.py or interactors.py and
-generate a network graph of phenotypes or protein interactors, respectively.
-
-Output from these tables can be used as edge list input for other programs, such as Cytoscape!
-However, the goal of this program is to provide a purely command line based interface that can
+These output tables can be used as edge list input for other programs, such as Cytoscape.
+However, the goal of our program is to provide a purely command line based interface that can
 allow for graph theory analysis to be upscaled and applied to larger data sets than could be
 handled in GUI-based programs.
+
+_________________________________________________________________________________________________
+                           
+_|_  _. |_  |  _    ._     
+ |_ (_| |_) | (/_ o |_) \/ takes in a .txt file that is a list of "Phenotype MIM numbers," each of 
+                    |   /  which correspond to a disease subtype listed in the OMIM Database,
+collected by the user.  A disease subtype in the OMIM database is defined by a gene that is known to give rise to a set of phenotypes, which are classified together under the clinical data for that subtype in the OMIM database.  The only required input for this workflow is a .txt file that is
+a simple list of phenotype MIM numbers which the user has collected for diseases they wish to
+investigate, each separated by a new line (maximum of 20 mims per file, due to API call limits
+for table.py and 5000 total mims when using GenoPheno.sh).
+
+ _ _ |._|_  |. __|_  _   
+_\|_)|| | __||_\ | .|_)\/  will split any MIM list that is greater than 20 into separate lists 
+  |                 |  /   of 20 or less, which can then be used as input for table.py.
+			  GenoPheno.sh will perform this step automatically.       
+                      
+ o ._ _|_  _  ._ _.  _ _|_  _  ._  _   ._     
+ | | | |_ (/_ | (_| (_  |_ (_) |  _> o |_) \/ 
+                                       |   /  uses the output from table.py to find the protein
+					    products of each gene and their protein interactors.                   
+  _  _  ._   _  _. _|_   ._     
+ (_ (_) | | (_ (_|  |_ o |_) \/  will automatically combine multiple .csv outputs from either
+                         |   /   table.py or interactors.py. The output can be used as as single
+			        input for graph.py.
+  _  ._ _. ._  |_    ._     
+ (_| | (_| |_) | | o |_) \/  is able to take in the .csv output from either table.py or interactors.py 
+  _|       |         |   /   and generate a network graph of phenotypes or protein interactors,
+			    respectively.
+  __              _                           
+ /__  _  ._   _  |_) |_   _  ._   _     _ |_  
+ \_| (/_ | | (_) |   | | (/_ | | (_) o _> | |  will run the whole workflow automatically on a list of
+					     up to 5,000 MIMs, saving one large
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -91,7 +103,8 @@ above to avoid problematic MIMs will ensure optimal program functionality and ou
 
 --------------------------------------------------------------------------------------------
 
-2) Create list of OMIM reference ids ("MIM" numbers) (20 MAXIMUM if input is for table.py instead of GenoPheno.sh):
+2) Create list of OMIM reference ids ("MIM" numbers) (20 MAXIMUM if input is for table.py,
+5000 MAXIMUM if using GenoPheno.sh):
 
 (i.e.)
 ~$ vim input_list.txt
