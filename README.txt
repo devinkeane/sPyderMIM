@@ -98,7 +98,7 @@ above to avoid problematic MIMs will ensure optimal program functionality and ou
 ------
 615291              [input_list.txt]
 614505                      |
-120580      <---------------`
+120580      <---------------+
 and so on ...
 ------
 --------------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ and so on ...
 
 ~$ ./GenoPheno.sh <large_input_mim_list.txt> <OMIM_API_key> <project_name>
 
-                                                   ^                ^
+                                                   A                A
                                                    |                |
         Your API key obtained from OMIM -----------+                |
                                                                     |
@@ -155,17 +155,18 @@ Output:
 
 ~$ python3 table.py -i <./project_name_separate_lists/project_name0.txt> -o <output_file.csv> -a <api_key>
 ~$ python3 table.py -i <./project_name_separate_lists/project_name1.txt> -o <output_file.csv> -a <api_key>
-~$ python3 table.py -i <./project_name_separate_lists/project_name2.txt> -o <output_file.csv> -a <api_key>                                                                         ^
+~$ python3 table.py -i <./project_name_separate_lists/project_name2.txt> -o <output_file.csv> -a <api_key>
+									      A
                                                                                   |
 -------------------------------------------------------------------------------   |   ------
- [ c o n c a t . p y ]  |          ----- table.py or interactors.py output  ------+
-------------------------+          |         (two or more allowed as input to concat.py)
+ [ c o n c a t . p y ]  |          +---- table.py or interactors.py output  ------+
+------------------------+          |          (two or more files allowed as input to concat.py)
                                    |
                                    V
-~$ python3 concat.py -i <input_file.csv> <input_file2.csv> -o <output_file.csv>
+~$ python3 concat.py -i <input_file.csv> <input_file2.csv> <and_so_on...> -o <output_file.csv>
 
 --------------------------------------------------------------------------------------------
- [ i n t e r a c t o r s . p y ]  |    ----- table.py output
+ [ i n t e r a c t o r s . p y ]  |    +---- table.py output
 ----------------------------------+    |
                                        |
                                        V
@@ -173,7 +174,7 @@ Output:
 
 
 --------------------------------------------------------------------------------------------
- [ g r a p h . p y ]  |            ----- table.py, interactors.py, or concat.py output
+ [ g r a p h . p y ]  |            +---- table.py, interactors.py, or concat.py output
 ----------------------+            |
                                    |
                                    V
@@ -183,17 +184,34 @@ graph.py options:
 
   -h, --help            show this help message and exit
 
-  -m MODE, --mode MODE  argumnents: "gpn" or "protein_interactions"
-                        (genotype/phenotype or protein interactions type)
+  -m MODE, --mode MODE  "geno" (find protein interactor overlap)
+
+					or 
+
+		       "pheno" (find OMIM phenotypic overlap)
 
   -i INPUT, --input INPUT
+
                         <INPUT_FILENAME.csv> (Input table)
 
   -l LABELS, --labels LABELS
+
                         arguments: "subtype", "overlapping", "interactors", or "all"
 
   -o OUTPUT, --output OUTPUT
+
                         <OUTPUT_FILENAME.png>
 
 --------------------------------------------------------------
-GenoPheno (c) 2022-01-27 by Devin Keane / Clemson University
+
+                         __,,,,_
+          _ __..-;''`--/'/ /.',-`-.
+      (`/' ` |  \ \ \\ / / / / .-'/`,_
+     /'`\ \   |  \ | \| // // / -.,/_,'-,
+    /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
+   /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
+   `-`  f/ ;      / __/ \__ `/ |__/ |
+        `-'      |  -| =|\_  \  |-' |
+            _ __/   /_..-' `  ),'  //
+          fL ((__.-'((___..-'' \__.'
+				    (c) 2022-01-27 Devin Keane / Clemson University
