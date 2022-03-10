@@ -22,6 +22,30 @@ input = args.input
 output = args.output
 labels = args.labels
 mode = args.mode
+# ---------------------------------------------------------------------------
+# TITLE SCREEN / LOGO |
+# --------------------+
+
+logo = """
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 4.0  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                        'ﾟ✧    |                                          |
+                                    |  Last rev: 2022-03-07                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+"""
+print(logo)
 
 # ---------------------------------------------------------------------------
 # GRAPHING THE DATA |
@@ -149,28 +173,10 @@ plt.savefig(graph_output_name)
 # ------------------------------+
 num_nodes = G.number_of_nodes()
 
-logo = """
 
-O---o    ___|                       _ \   |
-O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
- O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
-  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
- o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 4.0  |    ✧ - ･ﾟ*
-O---o                               +------------------------------------------+ 
- O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
-  O                                 |  Feltus Lab                              |◉‿◉)つ
- o-O                                |  Department of Genetics and Biochemistry |
-o---O                               |  Clemson University                      | 
-O---o                        'ﾟ✧    |                                          |
-                                    |  Last rev: 2022-03-07                    |
-                                    +------------------------------------------+
-                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
-    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
-"""
 print()
-print('Thank you for using...')
-print(logo)
+
+
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
 print('     ...Your network graph was saved as \"',output,'\" with ', num_nodes,' total nodes.')
