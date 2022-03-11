@@ -41,7 +41,7 @@ print()
 print()
 print(gpn)
 print()
-print('Extracting approved gene symbols from input table:')
+print('Extracting ENSEMBL IDs from input table:')
 print()
 gene_ids_list = []
 gene_ids_list_unique = []
@@ -73,7 +73,7 @@ query_string = ''
 print(ensembl_ids_list_unique)
 
 print()
-print('Searching for interactors:')
+print('Searching for protein interactors for each ENSEMBL gene product:')
 print()
 for i in ensembl_ids_list_unique:
     query_string += i
@@ -145,7 +145,7 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
-    print(i, 'OMIM Gene:', protein_map[i], '| ENSMBL ID:', ensembl_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    print(i,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Gene product:', protein_map[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
 
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
 
