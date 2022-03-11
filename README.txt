@@ -132,8 +132,8 @@ and so on ...
    -. .-.   .-. .-.   .-. .-.   .     than 20.  Alternatively, you can use separate programs
   ||\|||\ /|||\|||\ /|||\|||\ /|      in the suite individually, but table.py will require
   |/ \|||\|||/ \|||\|||/ \|||\||      that your MIM list has 20 or less MIMS, due to the
-  ~   `-~ `-`   `-~ `-`   `-~ `-	  number of MIMs allowed per API call.  split_lists.py
-				                      will create a directory and split your list into multiple
+  ~   `-~ `-`   `-~ `-`   `-~ `-      number of MIMs allowed per API call.  split_lists.py
+                                      will create a directory and split your list into multiple
   20 MIM lists if you are using individual programs in the suite.  Read further for usage on
   all programs included in this repository.
 
