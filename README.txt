@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____
 | |_) | |_   / /\  | | \ | |\/| | |_
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
-                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.0
+                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.1
 
 GenoPheno is a workflow suite and genotype/phenotype network generator that uses the OMIM
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
@@ -52,7 +52,7 @@ _\|_)|| | __||_\ | .|_)\/  will split any MIM list that is greater than 20 into 
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-** IMPORTANT NOTES FOR VERSION 4.0 ! **   <-- Read first to ensure functionality
+** IMPORTANT NOTES FOR VERSION 4.1 ! **   <-- Read first to ensure functionality
 ---------------------------------------
 
     ->  GenoPheno.py, the original version of the program, has been replaced by

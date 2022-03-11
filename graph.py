@@ -33,13 +33,13 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 4.0  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 4.1  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
-O---o                        'ﾟ✧    |                                          |
+O---o                       .'✧     |                                          |
                                     |  Last rev: 2022-03-07                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ

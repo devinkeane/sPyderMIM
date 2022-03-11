@@ -14,7 +14,7 @@ logo = """
    / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
   /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
 
-                                                        [ G e n o P h e n o ]  4.0                         
+                                                        [ G e n o P h e n o ]  4.1                         
 """
 print(logo)
 
@@ -113,7 +113,7 @@ for i in conversion2:
 for i in range(len(protein_map_temp)):
     if len(protein_map_temp[i]) == 6:
         protein_map += [protein_map_temp[i]]
-
+"""
 intact_url = ''
 dictionary = {}
 df = pd.DataFrame()
@@ -129,7 +129,7 @@ for i in range(len(ensembl_ids_list_unique)):
         df = pd.DataFrame.from_dict(dictionary['data'])
     else:
         df = pd.concat([df,tempdf],axis=0,ignore_index=True)
-
+"""
 intact_url = ''
 dictionary = {}
 df2 = pd.DataFrame()
@@ -145,26 +145,26 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
-    print(i, 'OMIM Gene:', protein_map[i], '| ENSMBL ID:', ensembl_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2) + len(df))
+    print(i, 'OMIM Gene:', protein_map[i], '| ENSMBL ID:', ensembl_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
 
-df = pd.concat([df, df2], axis=0, ignore_index=True)
+#df = pd.concat([df, df2], axis=0, ignore_index=True)
 
 print()
 print()
 print('Saving output table:')
 print()
-print(df)
+print(df2)
 print()
 print()
 print('Process complete.')
 print()
-print('File saved as \"',output,'\" with ',len(df.columns),' columns and ',len(df),' rows.')
+print('File saved as \"',output,'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
 print()
 print('                                                    	⊂(◉‿◉)つ  ♡  ')
 
 print()
 # Save the gpn as a csv
-df.to_csv(output)
+df2.to_csv(output)
 
 # END PROGRAM
 
