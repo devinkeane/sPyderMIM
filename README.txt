@@ -21,8 +21,10 @@ ________________________________________________________________________________
 _|_  _. |_  |  _    ._     
  |_ (_| |_) | (/_ o |_) \/ takes in a .txt file that is a list of "Phenotype MIM numbers," each of 
                     |   /  which correspond to a disease subtype listed in the OMIM Database,
-collected by the user.  A disease subtype in the OMIM database is defined by a gene that is known to give rise to a set of phenotypes, which are classified together under the clinical data for that subtype in the OMIM database.  The only required input for this workflow is a .txt file that is
-a simple list of phenotype MIM numbers which the user has collected for diseases they wish to
+collected by the user.  A disease subtype in the OMIM database is defined by a gene that is known
+to give rise to a set of phenotypes, which are classified together under the clinical data for that
+subtype in the OMIM database.  The only required input for this workflow is a .txt file that is a
+simple list of phenotype MIM numbers which the user has collected for diseases they wish to
 investigate, each separated by a new line (maximum of 20 mims per file, due to API call limits
 for table.py and 5000 total mims when using GenoPheno.sh).
 
