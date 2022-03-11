@@ -190,10 +190,6 @@ print()
 
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
-print('     ...Your network graph was saved as \"',output,'\" with ', num_nodes,' total nodes.')
-print()
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
-print()
 
 spiderweb_ascii_art = """
                                                                  \   ,'|`-.   /
@@ -237,4 +233,10 @@ if mode == 'geno':
     print(spiderweb_ascii_art)
 if mode == 'pheno':
     print(spiderweb_ascii_art2)
+print()
+print()
+print('     ...image saved as \"',output,'\" with ', num_nodes,' total nodes.')
+print()
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print()
 print()
