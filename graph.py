@@ -8,15 +8,15 @@ import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 
-# matplotlib font manager for graphs
+# Importing fonts --> matplotlib font manager for graph output
 import matplotlib.font_manager as font_manager
 # Add every font at the specified location
-font_dir = ['./fonts']
+font_dir = ['./fonts/copperplate']
 for font in font_manager.findSystemFonts(font_dir):
     font_manager.fontManager.addfont(font)
 
 # Set font family globally
-font_manager.rcParams['font.family'] = 'Copperplate'
+font_manager.rcParams['font.family'] = 'copperplate'
 
 
 # ------------------------------------------------------------------------------------------------------
