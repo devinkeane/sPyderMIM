@@ -8,6 +8,17 @@ import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 
+# matplotlib font manager for graphs
+import matplotlib.font_manager as font_manager
+# Add every font at the specified location
+font_dir = ['./fonts']
+for font in font_manager.findSystemFonts(font_dir):
+    font_manager.fontManager.addfont(font)
+
+# Set font family globally
+font_manager.rcParams['font.family'] = 'Copperplate'
+
+
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
