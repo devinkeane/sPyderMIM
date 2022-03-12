@@ -59,7 +59,7 @@ ________________________________________________________________________________
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-** IMPORTANT NOTES FOR VERSION 4.1 ! **   <-- Read first to ensure functionality
+** IMPORTANT NOTES FOR VERSION 4.2 ! **   <-- Read first to ensure functionality
 ---------------------------------------
 
     ->  GenoPheno.py, the original version of the program, has been replaced by
