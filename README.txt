@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____
 | |_) | |_   / /\  | | \ | |\/| | |_
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
-                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.1
+                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.2
 
 GenoPheno is a workflow suite and genotype/phenotype network generator that uses the OMIM
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
@@ -43,7 +43,15 @@ ________________________________________________________________________________
 
                                                 ʕっ•ᴥ•ʔっ
  [ g r a p h . p y ] is able to take in the .csv output from either table.py or interactors.py
- and generate a network graph of phenotypes or protein interactors, respectively.
+ and generate a network graph of phenotypes or protein interactors, respectively.  The output is
+ a high resolution visualization of your network and a summary .txt file featuring:
+
+        1) top 20 nodes by connectivity degree
+        2) top 20 nodes by betweenness centrality
+        3) the top 10 nodes in Modularity Class 0 by Eigenvector centrality.
+        4) network diameter of largest component
+        5) triadic closure
+        6) number of total nodes and edges
 
                                                  ⊂(◉‿◉)つ
  [ G e n o P h e n o . s h ]  will run the whole workflow automatically on a list of
@@ -225,6 +233,11 @@ graph.py options:
   -o OUTPUT, --output OUTPUT
 
                         <OUTPUT_FILENAME.png>
+
+
+Output:
+    * ./project_name_NETWORK_SUMMARY.txt
+    * ./project_name.png
 
 --------------------------------------------------------------
 

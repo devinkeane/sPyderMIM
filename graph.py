@@ -1,4 +1,4 @@
-# last rev: 03-03-06
+# last rev: 03-03-12
 
 
 # Import libraries
@@ -7,6 +7,7 @@ import pandas as pd
 import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
+from operator import itemgetter, attrgetter
 
 # Importing fonts --> matplotlib font manager for graph output
 import matplotlib.font_manager as font_manager
@@ -44,14 +45,14 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 4.1  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 4.2  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
 O---o                       .'✧     |                                          |
-                                    |  Last rev: 2022-03-10                    |
+                                    |  Last rev: 2022-03-12                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
     ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
@@ -67,6 +68,8 @@ if mode == 'pheno':
     print()
     print(gpn.drop(columns='Unnamed: 0'))
 
+    print()
+    print('Defining source and target nodes...')
     # Create a NetworkX object called "G" where 'Superphenotype' is the source node
     # and 'Node_name' is the target node.
     G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
@@ -85,7 +88,7 @@ if mode == 'pheno':
         lst_new += [lst_neighbors[i]]
         lst_neighbors_2 += [lst_neighbors[i]]
     """
-
+    print('Creating layout...')
     # Draw a graph with G using a color map that distinguishes between genes and phenotypes
     plt.figure(figsize=(100,100))
     plt.tight_layout()
@@ -104,6 +107,7 @@ if mode == 'pheno':
     """
     pos = nx.kamada_kawai_layout(G)
     # pos= nx.spring_layout(G)
+    print('Constructing network visualization...')
     nx.draw(G, node_color='green', node_size=300, pos=pos,with_labels=False)
 
 
@@ -114,8 +118,7 @@ if mode == 'pheno':
     Node_name_labels = {}
     neighbor_labels = {}
     gene_labels = {}
-
-
+    print('Creating labels...')
     if labels == 'all' or labels == 'subtype':
         for idx, node in enumerate(G.nodes()):
             if node in gpn['Superphenotype'].unique():
@@ -124,6 +127,8 @@ if mode == 'pheno':
                 Node_name_labels[node] = node
 
         bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
+
+
 
         nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
         nx.draw_networkx_labels(G, pos, labels=Node_name_labels, font_size=14, font_color='black', font_family='copperplate')
@@ -154,21 +159,27 @@ elif mode == 'geno':
     print()
     print(protein_df.drop(columns='Unnamed: 0'))
 
+    print()
+    print('Defining source and target nodes...')
+    print()
     # Create a NetworkX object called "G" where 'moleculeA' is the source node
     # and 'moleculeB' is the target node.
-    G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB',edge_attr='intactMiscore', create_using=nx.MultiGraph())
+    G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB',edge_attr='intactMiscore') #  ,create_using=nx.MultiGraph()
     plt.figure(figsize=(100, 100))
     plt.tight_layout()
     pos = nx.kamada_kawai_layout(G)
 
+    print()
+    print('Creating labels...')
 
     if labels == 'all' or labels == 'protein_interactions':
         nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=True)
     else:
         nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=False)
 
-
-
+print()
+print('Saving your output...')
+print()
 # ---------------------------------------------------------------------------
 # Save output to files |
 # ---------------------+
@@ -188,8 +199,7 @@ num_nodes = G.number_of_nodes()
 print()
 
 
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
-print()
+
 
 spiderweb_ascii_art = """
                                                                  \   ,'|`-.   /
@@ -228,6 +238,112 @@ spiderweb_ascii_art2 = """
                                                                 ,-`=--.       
                                                                  /=8\
 """
+print('Calculating connectivity statistics for summary file...')
+print()
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
+print()
+components = nx.connected_components(G)
+largest_component = max(components, key=len)
+
+subgraph = nx.subgraph(G, largest_component)
+diameter = nx.diameter(subgraph)
+
+triadic_closure = nx.transitivity(G)
+
+degree_dict = dict(nx.degree(G,G.nodes))
+nx.set_node_attributes(G,degree_dict,'degree')
+sorted_degree = sorted(degree_dict.items(),key=itemgetter(1),reverse=True)
+
+betweenness_dict = nx.betweenness_centrality(G)
+eigenvector_dict = nx.eigenvector_centrality(G)
+
+nx.set_node_attributes(G,betweenness_dict,'betweenness')
+nx.set_node_attributes(G,eigenvector_dict,'eigenvector')
+
+sorted_betweenness = sorted(betweenness_dict.items(), key=itemgetter(1),reverse=True)
+
+communities = nx.community.greedy_modularity_communities(G)
+modularity_dict = {} # Create a blank dictionary
+for i,c in enumerate(communities): # Loop through the list of communities, keeping track of the number for the community
+    for name in c: # Loop through each person in a community
+        modularity_dict[name] = i # Create an entry in the dictionary for the person, where the value is which group they belong to.
+
+# Now you can add modularity information like we did the other metrics
+nx.set_node_attributes(G, modularity_dict, 'modularity')
+
+
+
+
+summary_title = """                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+------------------------------------------------------------------------------
+"""
+summary_file = open(output.split('.')[0]+'_NETWORK_SUMMARY.txt', 'w')
+print(summary_title, file = summary_file)
+print('', file= summary_file)
+print(nx.info(G), file= summary_file)
+print('', file= summary_file)
+print('     Network diameter of largest component:  ', diameter, file = summary_file)
+print('                           Triadic closure:  ', triadic_closure, file = summary_file)
+print('', file= summary_file)
+print('  ____        _             _      ', file = summary_file)
+print('   L|op  20  [|\|odes  by  [|)egree ', file = summary_file)
+print('   ---------------------------------', file = summary_file)
+print('', file= summary_file)
+print('Node  |  Degree', file= summary_file)
+print('', file= summary_file)
+
+for d in sorted_degree[:20]:
+    print(str(d[0])+':   '+str(d[1]), file= summary_file)
+
+print('', file= summary_file)
+print('', file= summary_file)
+print('  ____        _             _              _ ', file = summary_file)
+print('   L|op  20  [|\|odes  by  [|}etweenness  ((entrality', file = summary_file)
+print('   --------------------------------------------------', file = summary_file)
+print('', file= summary_file)
+print('Node  |  Betweenness Centrality', file= summary_file)
+print('', file= summary_file)
+
+for b in sorted_betweenness[:20]:
+    print(str(b[0])+':   '+str(b[1]), file= summary_file)
+print('', file= summary_file)
+
+print("   _ _             _      ", file= summary_file)
+print("  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)", file= summary_file)
+print(' -------------------------------------------------------------------------------', file = summary_file)
+print('', file = summary_file)
+print('Node | Eigenvector Centrality', file = summary_file)
+print('', file = summary_file)
+for i in range(len(communities)):
+    # First get a list of just the nodes in that class
+    class0 = [n for n in G.nodes() if G.nodes[n]['modularity'] == i]
+
+    # Then create a dictionary of the eigenvector centralities of those nodes
+    class0_eigenvector = {n: G.nodes[n]['eigenvector'] for n in class0}
+
+    # Then sort that dictionary and print the first 5 results
+    class0_sorted_by_eigenvector = sorted(class0_eigenvector.items(), key=itemgetter(1), reverse=True)
+    print('', file=summary_file)
+    print('CLASS '+str(i)+':', file = summary_file)
+    print('-------', file=summary_file)
+    for node in class0_sorted_by_eigenvector[:10]:
+        print(str(node[0])+":   "+str(node[1]), file= summary_file)
+
+"""
+print('', file = summary_file)
+print('', file = summary_file)
+print('Classes:', file = summary_file)
+for i,c in enumerate(communities): # Loop through the list of communities
+    if len(c) > 10: # Filter out modularity classes with 10 or fewer nodes
+        print('Class '+str(i)+':', list(c), file= summary_file) # Print out the classes and their members
+"""
+summary_file.close()
 
 if mode == 'geno':
     print(spiderweb_ascii_art)
@@ -236,6 +352,8 @@ if mode == 'pheno':
 print()
 print()
 print('     ...image saved as \"',output,'\" with ', num_nodes,' total nodes.')
+print()
+print('     Summary file saved as \"'+output.split('.')[0]+'_NETWORK_SUMMARY.txt\"  *:･ﾟ✧')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
