@@ -159,10 +159,12 @@ and so on ...
         Project name for automatically naming multiple files  ------+
 
 Output:
-    * project_name_concatentated.csv  (OMIM genotype/phenotype table)
-    * project_name_interactors.csv  (Intact protein interactors table)
-    * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
-    * project_name_interactors.png  (High resolution Intact protein interactors labeled graph)
+   * project_name_concatentated.csv  (OMIM genotype/phenotype table)
+   * project_name_interactors.csv  (Intact protein interactors table)
+   * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
+   * project_name_interactors.png  (High resolution Intact protein interactors labeled graph)
+   * project_name_phenotypes_NETWORK_SUMMARY.png  (Genotype/phenotype network statistical analysis)
+   * project_name_interactors_NETWORK_SUMMARY.png  (Protein interactor network statistical analysis)
 
 --------------------------------------------------------------------------------------------
  [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
