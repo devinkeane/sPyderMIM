@@ -48,7 +48,7 @@ ________________________________________________________________________________
 
         1) top 20 nodes by connectivity degree
         2) top 20 nodes by betweenness centrality
-        3) the top 10 nodes in Modularity Class 0 by Eigenvector centrality.
+        3) the top 10 nodes in each modularity class by Eigenvector centrality.
         4) network diameter of largest component
         5) triadic closure
         6) number of total nodes and edges
