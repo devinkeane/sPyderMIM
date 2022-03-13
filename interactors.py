@@ -105,9 +105,10 @@ ensembl_map_temp = []
 protein_map = []
 ensembl_map = []
 
+# Troubleshoot in Jupyter notebook.  Protein IDs mismatch  <----  FIX ME
 for i in conversion2:
-    ensembl_map_temp += [i.split('\t')[0]]
     if '\t' in i:
+        ensembl_map_temp += [i.split('\t')[0]]
         protein_map_temp += [i.split('\t')[1]]
 
 for i in range(len(protein_map_temp)):
@@ -145,7 +146,7 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
-    print(i,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Gene product:', protein_map[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    print(i,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
 
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
 
