@@ -2,6 +2,13 @@
 | |_) | |_   / /\  | | \ | |\/| | |_
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
                                ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.2
+--------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+  .-. . . .  . .  . .-. .-. . . |
+  `-. | | |\/| |\/| |-| |(   |  |
+  `-' `-' '  ` '  ` ` ' ' '  `  |                            
+--------------------------------+
 
 GenoPheno is a workflow suite and genotype/phenotype network generator that uses the OMIM
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
@@ -17,11 +24,14 @@ allow for graph theory analysis to be upscaled and applied to larger data sets t
 handled in GUI-based programs.
 
 _________________________________________________________________________________________________
-
-                                           ─=≡Σ((( つ◕ل͜◕)つ
+  .-. .   .     .-. .-. .-. .-. .-. |
+  |-| |   |     `-.  |  |-| |(  `-. |
+  ` ' `-' `-'   `-'  '  ` ' ' ' `-' |
+------------------------------------+     ─=≡Σ((( つ◕ل͜◕)つ
 
  [ s p l i t _ l i s t . p y] will split any MIM list that is greater than 20 into separate
- lists of 20 or less, which can then be used as input for table.py.  GenoPheno.sh will perform
+ lists of 20 or less, which can then be used as input for table.py.  This is necessary because
+ OMIM API calls are limited to 20 MIM numbers per request.  GenoPheno.sh will perform
  this step automatically.
 
                                                  (⌐⊙_⊙)
@@ -56,8 +66,9 @@ ________________________________________________________________________________
         6) number of total nodes and edges
 
                                                  ⊂(◉‿◉)つ
- [ G e n o P h e n o . s h ]  will run the whole workflow automatically on a list of
- up to 5,000 MIMs.
+ [ G e n o P h e n o . s h ]  will run the whole workflow automatically on a list of up to
+ 5,000 MIMs.  Just provide the name of your .txt MIM list file, your OMIM API key, and your
+ desired project name.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
