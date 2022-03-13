@@ -17,17 +17,30 @@ which allows the user to find the protein products for the genes associated with
 and the proteins known to interact with each of these.  Large tables and network graphs can
 be constructed in order to investigate large batches of disease subtypes.  The user only needs
 to provide an obtained OMIM API key and a list of OMIM reference numbers ("phenotypic MIM numbers").
+The output features:
 
-These output tables can be used as edge list input for other programs, such as Cytoscape.
-However, the goal of our program is to provide a purely command line based interface that can
-allow for graph theory analysis to be upscaled and applied to larger data sets than could be
-handled in GUI-based programs.
+   * OMIM genotype/phenotype edge list table (.csv)
+   * Intact protein interactors edge list table (.csv)
+   * High resolution OMIM genotype/phenotype labeled graph (.png)
+   * High resolution Intact protein interactors labeled graph (.png)
+   * Genotype/phenotype network statistical analysis (.txt)
+   * Protein interactor network statistical analysis (.txt)
+   * Genotype/phenotype network graph exchange XML (.gexf)
+   * Protein interactor network graph exchange XML (.gexf)
+
+Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
+software is to provide a purely command line based workflow that can allow for graph theory
+analysis to be upscaled and applied to larger data sets than could be handled in GUI-based
+programs.
 
 _________________________________________________________________________________________________
-  .-. .   .     .-. .-. .-. .-. .-. |
-  |-| |   |     `-.  |  |-| |(  `-. |
-  ` ' `-' `-'   `-'  '  ` ' ' ' `-' |
-------------------------------------+     ─=≡Σ((( つ◕ل͜◕)つ
+   __                                           |
+  |__)_ _  _  _.|_ _  _    |\/| _ _ |_  _ _ _   |
+  | \(-|_)(_)_)||_(_)| \/  |  |(-||||_)(-| _)   |
+       |               /                        |
+------------------------------------------------+
+
+                                            ─=≡Σ((( つ◕ل͜◕)つ
 
  [ s p l i t _ l i s t . p y] will split any MIM list that is greater than 20 into separate
  lists of 20 or less, which can then be used as input for table.py.  This is necessary because
@@ -55,8 +68,8 @@ ________________________________________________________________________________
                                                 ʕっ•ᴥ•ʔっ
  [ g r a p h . p y ] is able to take in the .csv output from either table.py or interactors.py
  and generate a network graph of phenotypes or protein interactors, respectively.  The output is
- a high resolution visualization of your network and a summary .txt file featuring multiple
- calculations:
+ a high resolution .png visualization of your network, a .gexf export of your network, and a
+ summary .txt file featuring multiple calculations:
 
         1) top 20 nodes by connectivity degree
         2) top 20 nodes by betweenness centrality
@@ -158,10 +171,10 @@ and so on ...
   20 MIM lists if you are using individual programs in the suite.  Read further for usage on
   all programs included in this repository.
 
-
                                    +---------- list of OMIM MIM numbers, maximum of 5,000
                                    |
-                                   V
+                                   |
+Input:                             V
 
 ~$ ./GenoPheno.sh <large_input_mim_list.txt> <OMIM_API_key> <project_name>
 
@@ -172,12 +185,15 @@ and so on ...
         Project name for automatically naming multiple files  ------+
 
 Output:
+
    * project_name_concatentated.csv  (OMIM genotype/phenotype table)
    * project_name_interactors.csv  (Intact protein interactors table)
    * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
    * project_name_interactors.png  (High resolution Intact protein interactors labeled graph)
-   * project_name_phenotypes_NETWORK_SUMMARY.png  (Genotype/phenotype network statistical analysis)
-   * project_name_interactors_NETWORK_SUMMARY.png  (Protein interactor network statistical analysis)
+   * project_name_phenotypes_NETWORK_SUMMARY.txt  (Genotype/phenotype network statistical analysis)
+   * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
+   * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
+   * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
 
 --------------------------------------------------------------------------------------------
  [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
@@ -255,9 +271,9 @@ graph.py options:
 Output:
     * ./project_name_NETWORK_SUMMARY.txt
     * ./project_name.png
+    * ./project_name.gexf
 
 --------------------------------------------------------------
-
                          __,,,,_
           _ __..-;''`--/'/ /.',-`-.
       (`/' ` |  \ \ \\ / / / / .-'/`,_
@@ -270,5 +286,5 @@ Output:
           fL ((__.-'((___..-'' \__.'
 
 				    (c) 2022-01-27 Devin Keane / Feltus Lab
-                                          Department of Genetics & Biochemistry
-                                          Clemson University
+                                   Department of Genetics & Biochemistry
+                                   Clemson University

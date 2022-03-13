@@ -1,4 +1,4 @@
-# last rev: 03-03-12
+# last rev: 03-03-13
 
 
 # Import libraries
@@ -8,6 +8,8 @@ import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 from operator import itemgetter, attrgetter
+from datetime import datetime
+from networkx.algorithms.flow import shortest_augmenting_path
 
 # Importing fonts --> matplotlib font manager for graph output
 import matplotlib.font_manager as font_manager
@@ -18,6 +20,7 @@ for font in font_manager.findSystemFonts(font_dir):
 
 # Set font family globally
 font_manager.rcParams['font.family'] = 'copperplate'
+
 
 
 # ------------------------------------------------------------------------------------------------------
@@ -52,7 +55,7 @@ O---o                               +------------------------------------------+
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
 O---o                       .'✧     |                                          |
-                                    |  Last rev: 2022-03-12                    |
+                                    |  Last rev: 2022-03-13                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
     ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
@@ -176,30 +179,68 @@ elif mode == 'geno':
         nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=True)
     else:
         nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=False)
+num_nodes = G.number_of_nodes()
 
+
+# ---------------------------------------------------------------------------
+# Summary statistics calculation |
+# -------------------------------+
+
+print('Calculating connectivity statistics for summary file...')
 print()
-print('Saving your output...')
+print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
+components = nx.connected_components(G)
+largest_component = max(components, key=len)
+
+subgraph = nx.subgraph(G, largest_component)
+diameter = nx.diameter(subgraph)
+
+transitivity = nx.transitivity(G)
+
+degree_dict = dict(nx.degree(G,G.nodes))
+nx.set_node_attributes(G,degree_dict,'degree')
+sorted_degree = sorted(degree_dict.items(),key=itemgetter(1),reverse=True)
+
+betweenness_dict = nx.betweenness_centrality(G)
+eigenvector_dict = nx.eigenvector_centrality(G)
+
+nx.set_node_attributes(G,betweenness_dict,'betweenness')
+nx.set_node_attributes(G,eigenvector_dict,'eigenvector')
+
+sorted_betweenness = sorted(betweenness_dict.items(), key=itemgetter(1),reverse=True)
+
+communities = nx.community.greedy_modularity_communities(G)
+node_connectivity = nx.node_connectivity(G,flow_func=shortest_augmenting_path)
+modularity_dict = {} # Create a blank dictionary
+for i,c in enumerate(communities): # Loop through the list of communities, keeping track of the number for the community
+    for name in c: # Loop through each person in a community
+        modularity_dict[name] = i # Create an entry in the dictionary for the person, where the value is which group they belong to.
+
+# Now you can add modularity information like we did the other metrics
+nx.set_node_attributes(G, modularity_dict, 'modularity')
+
 # ---------------------------------------------------------------------------
 # Save output to files |
 # ---------------------+
-
+print()
+print('Saving your output...')
+print()
 # Name the graph output file based on the input argument for the file name.
 # Append '.png' to the filename and save the figure as that filename.
 graph_output_name = output.split('.')[0]
 graph_output_name += '.png'
 plt.savefig(graph_output_name)
 
+gexf_output_name = output.split('.')[0]
+gexf_output_name += '.gexf'
+nx.write_gexf(G, gexf_output_name)
+
 # ---------------------------------------------------------------------------
 # Print logo and output message |
 # ------------------------------+
-num_nodes = G.number_of_nodes()
-
 
 print()
-
-
-
 
 spiderweb_ascii_art = """
                                                                  \   ,'|`-.   /
@@ -238,41 +279,6 @@ spiderweb_ascii_art2 = """
                                                                 ,-`=--.       
                                                                  /=8\
 """
-print('Calculating connectivity statistics for summary file...')
-print()
-print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
-print()
-components = nx.connected_components(G)
-largest_component = max(components, key=len)
-
-subgraph = nx.subgraph(G, largest_component)
-diameter = nx.diameter(subgraph)
-
-triadic_closure = nx.transitivity(G)
-
-degree_dict = dict(nx.degree(G,G.nodes))
-nx.set_node_attributes(G,degree_dict,'degree')
-sorted_degree = sorted(degree_dict.items(),key=itemgetter(1),reverse=True)
-
-betweenness_dict = nx.betweenness_centrality(G)
-eigenvector_dict = nx.eigenvector_centrality(G)
-
-nx.set_node_attributes(G,betweenness_dict,'betweenness')
-nx.set_node_attributes(G,eigenvector_dict,'eigenvector')
-
-sorted_betweenness = sorted(betweenness_dict.items(), key=itemgetter(1),reverse=True)
-
-communities = nx.community.greedy_modularity_communities(G)
-modularity_dict = {} # Create a blank dictionary
-for i,c in enumerate(communities): # Loop through the list of communities, keeping track of the number for the community
-    for name in c: # Loop through each person in a community
-        modularity_dict[name] = i # Create an entry in the dictionary for the person, where the value is which group they belong to.
-
-# Now you can add modularity information like we did the other metrics
-nx.set_node_attributes(G, modularity_dict, 'modularity')
-
-
-
 
 summary_title = """                                            
                                             __                               
@@ -281,15 +287,18 @@ summary_title = """
   | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
   | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
                                                                           /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.2          /
 ------------------------------------------------------------------------------
 """
 summary_file = open(output.split('.')[0]+'_NETWORK_SUMMARY.txt', 'w')
 print(summary_title, file = summary_file)
 print('', file= summary_file)
+print('Calculation date/time:  ',datetime.now(), file= summary_file)
 print(nx.info(G), file= summary_file)
 print('', file= summary_file)
+print('                         Node connectivity:  ', node_connectivity, file = summary_file)
 print('     Network diameter of largest component:  ', diameter, file = summary_file)
-print('                           Triadic closure:  ', triadic_closure, file = summary_file)
+print('                              Transitivity:  ', transitivity, file = summary_file)
 print('', file= summary_file)
 print('  ____        _             _      ', file = summary_file)
 print('   L|op  20  [|\|odes  by  [|)egree ', file = summary_file)
@@ -353,7 +362,9 @@ print()
 print()
 print('     ...image saved as \"',output,'\" with ', num_nodes,' total nodes.')
 print()
-print('     Summary file saved as \"'+output.split('.')[0]+'_NETWORK_SUMMARY.txt\"  *:･ﾟ✧')
+print('     Summary file saved as \"'+output.split('.')[0]+'_NETWORK_SUMMARY.txt\"')
+print()
+print('     Graph exchange XML file saved as \"'+gexf_output_name+'  *:･ﾟ✧')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
