@@ -17,8 +17,14 @@ allow for graph theory analysis to be upscaled and applied to larger data sets t
 handled in GUI-based programs.
 
 _________________________________________________________________________________________________
-                                            ─=≡Σ((( つ◕ل͜◕)つ
 
+                                           ─=≡Σ((( つ◕ل͜◕)つ
+
+ [ s p l i t _ l i s t . p y] will split any MIM list that is greater than 20 into separate
+ lists of 20 or less, which can then be used as input for table.py.  GenoPheno.sh will perform
+ this step automatically.
+
+                                                 (⌐⊙_⊙)
  [ t a b l e . p y ] takes in a .txt file that is a list of "Phenotype MIM numbers," each of
  which correspond to a disease subtype listed in the OMIM Database, collected by the user.  A
  disease subtype in the OMIM database is defined by a gene that is known to give rise to a set
@@ -28,23 +34,19 @@ ________________________________________________________________________________
  each separated by a new line (maximum of 20 mims per file, due to API call limits for table.py
  and 5000 total mims when using GenoPheno.sh).
 
-                                                 (✿◠‿◠)
- [ s p l i t _ l i s t . p y] will split any MIM list that is greater than 20 into separate
- lists of 20 or less, which can then be used as input for table.py.  GenoPheno.sh will perform
- this step automatically.
-
                                                ༼ つ ╹ ╹ ༽つ
  [ i n t e r a c t o r s . p y ]  uses the output from table.py to find the protein products
  of each gene and their protein interactors.
 
-                                                 (⌐⊙_⊙)
+                                                 (✿◠‿◠)
  [ c o n c a t . p y ] will automatically combine multiple .csv outputs from either
  table.py or interactors.py. The output can be used as as single input for graph.py.
 
                                                 ʕっ•ᴥ•ʔっ
  [ g r a p h . p y ] is able to take in the .csv output from either table.py or interactors.py
  and generate a network graph of phenotypes or protein interactors, respectively.  The output is
- a high resolution visualization of your network and a summary .txt file featuring:
+ a high resolution visualization of your network and a summary .txt file featuring multiple
+ calculations:
 
         1) top 20 nodes by connectivity degree
         2) top 20 nodes by betweenness centrality
@@ -137,10 +139,10 @@ and so on ...
 --------------------------------------------------------------------------------------------
  [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
 --------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
-   -. .-.   .-. .-.   .-. .-.   .     than 20.  Alternatively, you can use separate programs
-  ||\|||\ /|||\|||\ /|||\|||\ /|      in the suite individually, but table.py will require
-  |/ \|||\|||/ \|||\|||/ \|||\||      that your MIM list has 20 or less MIMS, due to the
-  ~   `-~ `-`   `-~ `-`   `-~ `-      number of MIMs allowed per API call.  split_lists.py
+  -. .-.   .-. .-.   .-. .-.   .      than 20.  Alternatively, you can use separate programs
+ ||\|||\ /|||\|||\ /|||\|||\ /|       in the suite individually, but table.py will require
+ |/ \|||\|||/ \|||\|||/ \|||\||       that your MIM list has 20 or less MIMS, due to the
+ ~   `-~ `-`   `-~ `-`   `-~ `-       number of MIMs allowed per API call.  split_lists.py
                                       will create a directory and split your list into multiple
   20 MIM lists if you are using individual programs in the suite.  Read further for usage on
   all programs included in this repository.
@@ -168,11 +170,13 @@ Output:
 
 --------------------------------------------------------------------------------------------
  [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
---------------------------------+   split_list.py in order divide the MIM input list
-                                    into separate lists of 20 MIMs or less whidh can be
-                                    used as input into table.py.  You can do the same if
-                                    you are using programs in the repository individually
-                                    or using them to build your own script.
+--------------------------------+   split_list.py in order to divide your MIM input list
+                                    into separate lists of 20 MIMs or less, which can then
+                                    be used as input for table.py.  If you are using the
+				  programs in the repository individually for your own
+				  workflow or script, you can use split_list.py to divide
+				  your MIM list into separate input MIM lists for table.py.
+
 
 ~$ python3 split_list.py -i <big_mim_list.txt> -o <project_name>
 
@@ -254,4 +258,6 @@ Output:
             _ __/   /_..-' `  ),'  //
           fL ((__.-'((___..-'' \__.'
 
-				    (c) 2022-01-27 Devin Keane / Clemson University
+				    (c) 2022-01-27 Devin Keane / Feltus Lab
+                                          Department of Genetics & Biochemistry
+                                          Clemson University
