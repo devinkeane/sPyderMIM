@@ -1,5 +1,13 @@
+#                               ,--.
+#   ,---. ,--.--. ,--,--. ,---. |  ,---.      ,---.,--. ,--.
+#  | .-. ||  .--'' ,-.  || .-. ||  .-.  |    | .-. |\  '  /
+#  ' '-' '|  |   \ '-'  || '-' '|  | |  |.--.| '-' ' \   '
+#  .`-  / `--'    `--`--'|  |-' `--' `--''--'|  |-'.-'  /
+#  `---'                 `--'                `--'  `---'
+#                                [  G e n o P h e n o  ]
+#
 # last rev: 03-03-13
-
+# ------------------------------------------------------------------------------------------------------
 
 # Import libraries
 import numpy as np
@@ -10,18 +18,10 @@ import networkx as nx
 from operator import itemgetter, attrgetter
 from datetime import datetime
 from networkx.algorithms.flow import shortest_augmenting_path
-
-# Importing fonts --> matplotlib font manager for graph output
-import matplotlib.font_manager as font_manager
-# Add every font at the specified location
-font_dir = ['./fonts/copperplate']
-for font in font_manager.findSystemFonts(font_dir):
-    font_manager.fontManager.addfont(font)
-
-# Set font family globally
-font_manager.rcParams['font.family'] = 'copperplate'
-
-
+import itertools
+import threading
+import time
+import sys
 
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
@@ -37,6 +37,35 @@ input = args.input
 output = args.output
 labels = args.labels
 mode = args.mode
+# ------------------------------------------------------------------------------------------------------
+# Importing fonts --> matplotlib font manager for graph output
+import matplotlib.font_manager as font_manager
+# Add every font at the specified location
+font_dir = ['./fonts/copperplate']
+for font in font_manager.findSystemFonts(font_dir):
+    font_manager.fontManager.addfont(font)
+
+# Set font family globally
+font_manager.rcParams['font.family'] = 'copperplate'
+# ------------------------------------------------------------------------------------------------------
+done = False
+# Loading bar animation function
+def animate():
+
+
+    for c in itertools.cycle(['|', '/', '-', '\\']):
+        if done:
+            break
+        sys.stdout.write('\r( ͡°_ʖ ͡°) Calculating... ' + c)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    sys.stdout.write('\r( ͡° ͜ʖ ͡°)_/¯ Calculation complete! ✔')
+
+
+calculation_wait_animation = threading.Thread(target=animate)
+
+# ------------------------------------------------------------------------------------------------------
+
 # ---------------------------------------------------------------------------
 # TITLE SCREEN / LOGO |
 # --------------------+
@@ -77,7 +106,15 @@ if mode == 'pheno':
     # and 'Node_name' is the target node.
     G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
 
+    print('Creating layout...')
+    # Draw a graph with G using a color map that distinguishes between genes and phenotypes
+    plt.figure(figsize=(100,100))
+    plt.tight_layout()
+
     """
+    # This portion of the code may be deprecated or altered in the future
+    # --------------------------------------------------------------------
+    
     lst_overlap = gpn[gpn['Node_type'] == 'associated_and_overlapping_genes']['Node_name'].reset_index(drop=True)
     lst_neighbors = gpn[gpn['Node_type'] == 'Intact_first_neighbors']['Node_name'].reset_index(drop=True)
     lst_new = []
@@ -90,15 +127,8 @@ if mode == 'pheno':
         lst_overlap_2 += [lst_overlap[i]]
         lst_new += [lst_neighbors[i]]
         lst_neighbors_2 += [lst_neighbors[i]]
-    """
-    print('Creating layout...')
-    # Draw a graph with G using a color map that distinguishes between genes and phenotypes
-    plt.figure(figsize=(100,100))
-    plt.tight_layout()
+    
 
-    """
-    # This portion of the code may be deprecated or altered in the future
-    # --------------------------------------------------------------------
     for node in G:
         if node in lst_overlap_2:
             color_map.append('yellow')
@@ -108,6 +138,7 @@ if mode == 'pheno':
             color_map.append('green')
     # --------------------------------------------------------------------
     """
+
     pos = nx.kamada_kawai_layout(G)
     # pos= nx.spring_layout(G)
     print('Constructing network visualization...')
@@ -190,6 +221,11 @@ print('Calculating connectivity statistics for summary file...')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
+
+# Begin loading spinner animation
+calculation_wait_animation.start()
+
+
 components = nx.connected_components(G)
 largest_component = max(components, key=len)
 
@@ -220,65 +256,7 @@ for i,c in enumerate(communities): # Loop through the list of communities, keepi
 # Now you can add modularity information like we did the other metrics
 nx.set_node_attributes(G, modularity_dict, 'modularity')
 
-# ---------------------------------------------------------------------------
-# Save output to files |
-# ---------------------+
-print()
-print('Saving your output...')
-print()
-# Name the graph output file based on the input argument for the file name.
-# Append '.png' to the filename and save the figure as that filename.
-graph_output_name = output.split('.')[0]
-graph_output_name += '.png'
-plt.savefig(graph_output_name)
 
-gexf_output_name = output.split('.')[0]
-gexf_output_name += '.gexf'
-nx.write_gexf(G, gexf_output_name)
-
-# ---------------------------------------------------------------------------
-# Print logo and output message |
-# ------------------------------+
-
-print()
-
-spiderweb_ascii_art = """
-                                                                 \   ,'|`-.   /
-                                                                  \,' _|_  ','
-                                                                  /'.' | `,' \\
-                                                              -._/_/_'.|,'_\__\_,-
-                                                                 | | ,-*." |  |
-                                                              ___|,+' /|\`.|  |
-             [  G e n o  ]                                       \  \/ | \/`. |___
-                                                                  \ /`.|,'\  /
-                                                                   Y.  |   \/
-                                                                   | `.|_,'
-                                                                   |
-                                                                   |
-                  Network spun.                                 __ |
-                                                                __\|,-
-                                                                ,-`=--.       
-                                                                 /=8\
-"""
-
-spiderweb_ascii_art2 = """
-                                                                 \   ,'|`-.   /
-                                                                  \,' _|_  ','
-                                                                  /'.' | `,' \\
-                                                              -._/_/_'.|,'_\__\_,-
-                                                                 | | ,-*." |  |
-                                                              ___|,+' /|\`.|  |
-                                    [  P h e n o  ]              \  \/ | \/`. |___
-                                                                  \ /`.|,'\  /
-                                                                   Y.  |   \/
-                                                                   | `.|_,'
-                                                                   |
-                                                                   |
-                  Network spun.                                 __ |
-                                                                __\|,-
-                                                                ,-`=--.       
-                                                                 /=8\
-"""
 
 summary_title = """                                            
                                             __                               
@@ -343,6 +321,76 @@ for i in range(len(communities)):
     print('-------', file=summary_file)
     for node in class0_sorted_by_eigenvector[:10]:
         print(str(node[0])+":   "+str(node[1]), file= summary_file)
+
+# End loading bar
+done = True
+time.sleep(2)
+
+
+
+
+# ---------------------------------------------------------------------------
+# Save output to files |
+# ---------------------+
+print()
+print()
+print()
+print('Saving your output...')
+print()
+# Name the graph output file based on the input argument for the file name.
+# Append '.png' to the filename and save the figure as that filename.
+graph_output_name = output.split('.')[0]
+graph_output_name += '.png'
+plt.savefig(graph_output_name)
+
+gexf_output_name = output.split('.')[0]
+gexf_output_name += '.gexf'
+nx.write_gexf(G, gexf_output_name)
+
+# ---------------------------------------------------------------------------
+# Print logo and output message |
+# ------------------------------+
+
+print()
+
+spiderweb_ascii_art = """
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \\
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  G e n o  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+"""
+
+spiderweb_ascii_art2 = """
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \\
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+                                    [  P h e n o  ]              \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+"""
+
 
 """
 print('', file = summary_file)

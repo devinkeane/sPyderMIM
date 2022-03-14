@@ -6,6 +6,28 @@ import requests
 import ast
 import matplotlib.pyplot as plt
 from io import BytesIO
+import itertools
+import threading
+import time
+import sys
+
+done = False
+# Loading bar animation function
+def animate():
+
+
+    for c in itertools.cycle(['|', '/', '-', '\\']):
+        if done:
+            sys.stdout.write('')
+            break
+        sys.stdout.write('\r(⌐ ͡■ ͜ʖ ͡■) Working on it... ' + c)
+        sys.stdout.write('\r')
+        sys.stdout.flush()
+        time.sleep(0.1)
+    sys.stdout.write('\r( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔')
+
+searching_wait_animation = threading.Thread(target=animate)
+
 
 logo = """
       _______           __   ____      __                       __                 
@@ -75,6 +97,8 @@ print(ensembl_ids_list_unique)
 print()
 print('Searching for protein interactors for each ENSEMBL gene product:')
 print()
+# Begin waiting animation
+searching_wait_animation.start()
 for i in ensembl_ids_list_unique:
     query_string += i
     query_string += ' '
@@ -147,6 +171,9 @@ for i in range(len(ensembl_ids_list_unique)):
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
     print(i,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+
+done = True
+time.sleep(2)
 
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
 
