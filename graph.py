@@ -77,7 +77,7 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 4.2  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 4.3  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
@@ -101,15 +101,25 @@ if mode == 'pheno':
     print(gpn.drop(columns='Unnamed: 0'))
 
     print()
-    print('Defining source and target nodes...')
+    sys.stdout.write('Defining source and target nodes...')
+
     # Create a NetworkX object called "G" where 'Superphenotype' is the source node
     # and 'Node_name' is the target node.
     G = nx.from_pandas_edgelist(gpn,source = 'Superphenotype', target = 'Node_name')
 
-    print('Creating layout...')
+    sys.stdout.flush()
+    sys.stdout.write('\rDefining source and target nodes... ✔')
+    print()
+
+    sys.stdout.write('Creating layout...')
     # Draw a graph with G using a color map that distinguishes between genes and phenotypes
     plt.figure(figsize=(100,100))
+    sys.stdout.flush()
     plt.tight_layout()
+
+
+
+
 
     """
     # This portion of the code may be deprecated or altered in the future
@@ -141,19 +151,29 @@ if mode == 'pheno':
 
     pos = nx.kamada_kawai_layout(G)
     # pos= nx.spring_layout(G)
-    print('Constructing network visualization...')
+    sys.stdout.flush()
+    sys.stdout.write('\rCreating layout... ✔')
+    print()
+
+    sys.stdout.write('Constructing network visualization...')
+
     nx.draw(G, node_color='green', node_size=300, pos=pos,with_labels=False)
 
 
-
     #color_map = []
-
+    sys.stdout.flush()
+    sys.stdout.write('\rConstructing network visualization... ✔')
+    print()
+    sys.stdout.flush()
     superphenotype_labels = {}
     Node_name_labels = {}
     neighbor_labels = {}
     gene_labels = {}
-    print('Creating labels...')
+
+
+
     if labels == 'all' or labels == 'subtype':
+        sys.stdout.write('Creating labels...')
         for idx, node in enumerate(G.nodes()):
             if node in gpn['Superphenotype'].unique():
                 superphenotype_labels[node] = node
@@ -166,6 +186,10 @@ if mode == 'pheno':
 
         nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white', font_family='copperplate',bbox=bbox)
         nx.draw_networkx_labels(G, pos, labels=Node_name_labels, font_size=14, font_color='black', font_family='copperplate')
+
+        sys.stdout.write('\rCreating labels... ✔')
+        sys.stdout.flush()
+        print()
     """
     if labels == 'all' or labels == 'overlapping':
         for idx, node in enumerate(G.nodes()):
@@ -194,30 +218,57 @@ elif mode == 'geno':
     print(protein_df.drop(columns='Unnamed: 0'))
 
     print()
-    print('Defining source and target nodes...')
-    print()
+    sys.stdout.write('Defining source and target nodes...')
+
     # Create a NetworkX object called "G" where 'moleculeA' is the source node
     # and 'moleculeB' is the target node.
     G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB',edge_attr='intactMiscore') #  ,create_using=nx.MultiGraph()
+
+
+    sys.stdout.write('\rDefining source and target nodes... ✔')
+
+    print()
+    sys.stdout.write('\rCreating layout...')
     plt.figure(figsize=(100, 100))
     plt.tight_layout()
     pos = nx.kamada_kawai_layout(G)
 
+    sys.stdout.flush()
+    sys.stdout.write('\rCreating layout... ✔')
     print()
-    print('Creating labels...')
+
+
 
     if labels == 'all' or labels == 'protein_interactions':
+        sys.stdout.write('Creating labels...')
+        sys.stdout.flush()
+        sys.stdout.write('\rCreating labels... ✔')
+        sys.stdout.flush()
+        print()
+        sys.stdout.write('Constructing network visualization...')
         nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=True)
+        sys.stdout.flush()
+        sys.stdout.write('\rConstructing network visualization... ✔')
+        sys.stdout.flush()
+        print()
+
+
     else:
+        sys.stdout.write('Creating network visualization...')
+        sys.stdout.flush()
         nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=False)
+        sys.stdout.flush()
+        sys.stdout.write('\rCreating network visualization... ✔')
+        sys.stdout.flush()
+        print()
 num_nodes = G.number_of_nodes()
 
 
 # ---------------------------------------------------------------------------
 # Summary statistics calculation |
 # -------------------------------+
-
-print('Calculating connectivity statistics for summary file...')
+print()
+print('Calculating connectivity statistics for summary file:')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
@@ -265,7 +316,7 @@ summary_title = """
   | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
   | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
                                                                           /  
-                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.2          /
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.3          /
 ------------------------------------------------------------------------------
 """
 summary_file = open(output.split('.')[0]+'_NETWORK_SUMMARY.txt', 'w')
