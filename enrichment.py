@@ -85,6 +85,7 @@ toppGene_command += 'id_conversion.json'
     #dictionary.update(response)
 
 print('Converting gene IDs to Entrez:')
+print('------------------------------')
 print()
 os.system(toppGene_command)
 print()
@@ -95,7 +96,9 @@ for i in range(len(data['Genes'])):
     entrez_list += [data['Genes'][i]['Entrez']]
 print()
 print('Performing enrichment analysis on Entrez IDs:')
+print('---------------------------------------------')
 print()
+
 toppGene_command2 = 'curl -H \'Content-Type: text/json\' -d \'{\"Genes\":['
 
 for i in range(len(entrez_list)):
@@ -108,7 +111,7 @@ for i in range(len(entrez_list)):
 toppGene_command2 += ']}\' https://toppgene.cchmc.org/API/enrich > ToppGene_response.json'
 
 os.system(toppGene_command2)
-print()
+
 data2 = pd.read_json('ToppGene_response.json')
 
 data3 = pd.json_normalize(data2['Annotations'])
@@ -117,16 +120,21 @@ final_df = data3[data3['QValueFDRBH'] < 0.0001].sort_values(by='QValueFDRBH')
 
 deletion_command = 'rm ToppGene_response.json'
 os.system(deletion_command)
+
+print()
+print('-------------------------------------------------------------------------------------')
+print('-------------------------------------------------------------------------------------')
 print()
 print('Your output table:')
+
 print(final_df)
 print()
 
 
 final_df.to_csv('test2.csv')
 
-print('Your enrichment analysis was saved as \"'+output+'\"')
-print('Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 0.0001')
+print('     * Your enrichment analysis was saved as \"'+output+'\"')
+print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 0.0001')
 print()
 print('-------------------------------------------------------------------------------------')
 print()
