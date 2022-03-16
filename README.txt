@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____
 | |_) | |_   / /\  | | \ | |\/| | |_
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
-                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 4.3
+                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 5.0
 --------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------
@@ -14,9 +14,11 @@ GenoPheno is a workflow suite and genotype/phenotype network generator that uses
 (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
 links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API,
 which allows the user to find the protein products for the genes associated with each MIM number
-and the proteins known to interact with each of these.  Large tables and network graphs can
-be constructed in order to investigate large batches of disease subtypes.  The user only needs
-to provide an obtained OMIM API key and a list of OMIM reference numbers ("phenotypic MIM numbers").
+and the proteins known to interact with each of these.  Additionally, GenoPheno uses the
+ToppGene API in order to perform enrichment analysis on all of the genes that encode for
+these products.  The user only needs to provide an obtained OMIM API key and a list of OMIM
+reference numbers ("phenotypic MIM numbers").
+
 The output features:
 
    * OMIM genotype/phenotype edge list table (.csv)
@@ -27,6 +29,7 @@ The output features:
    * Protein interactor network statistical analysis (.txt)
    * Genotype/phenotype network graph exchange XML (.gexf)
    * Protein interactor network graph exchange XML (.gexf)
+   * Protein interactor enrichment analysis (.csv)
 
 Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
 software is to provide a purely command line based workflow that can allow for graph theory
@@ -40,8 +43,7 @@ ________________________________________________________________________________
        |               /                        |
 ------------------------------------------------+
 
-                                            ─=≡Σ((( つ◕ل͜◕)つ
-
+                                                 ⊂(◉‿◉)つ
  [ s p l i t _ l i s t . p y] will split any MIM list that is greater than 20 into separate
  lists of 20 or less, which can then be used as input for table.py.  This is necessary because
  OMIM API calls are limited to 20 MIM numbers per request.  GenoPheno.sh will perform
@@ -76,17 +78,23 @@ ________________________________________________________________________________
         3) the top 10 nodes in each modularity class by Eigenvector centrality.
         4) network diameter of largest component
         5) triadic closure
-        6) number of total nodes and edges
+        6) number of total nodes and edges        ,,,
+                                                \(ʘ‿ʘ)/
+ [ e n r i c h m e n t . s h ]  creates a unique list of all interacters found from your
+ output table from interactors.py, then performs enrichment analysis on the list using
+ the ToppGene enrichment API.  Results have been automatically filtered and sorted in
+ ascending order by FDR/B&H Q value < 0.0001.
 
-                                                 ⊂(◉‿◉)つ
+                                             ─=≡Σ((( つ◕ل͜◕)つ
+
  [ G e n o P h e n o . s h ]  will run the whole workflow automatically on a list of up to
  5,000 MIMs.  Just provide the name of your .txt MIM list file, your OMIM API key, and your
  desired project name.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-** IMPORTANT NOTES FOR VERSION 4.3 ! **   <-- Read first to ensure functionality
----------------------------------------
+** IMPORTANT NOTES! **   <-- Read first to ensure functionality
+----------------------
 
     ->  GenoPheno.py, the original version of the program, has been replaced by
     GenoPheno.sh.  The whole workflow can now be ran entirely through GenoPheno.sh,
@@ -194,6 +202,7 @@ Output:
    * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
    * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
    * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
+   * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis)
 
 --------------------------------------------------------------------------------------------
  [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
@@ -272,6 +281,14 @@ Output:
     * ./project_name_NETWORK_SUMMARY.txt
     * ./project_name.png
     * ./project_name.gexf
+
+--------------------------------------------------------------------------------------------
+ [ e n r i c h m e n t . p y ]  |       +---- interactors.py output
+--------------------------------+       |
+                                        |
+                                        V
+
+~$ python3 enrichment.py -i <input_file.csv> -o <output_file.csv>
 
 --------------------------------------------------------------
                          __,,,,_
