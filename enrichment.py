@@ -131,7 +131,7 @@ print(final_df)
 print()
 
 
-final_df.to_csv('test2.csv')
+final_df.to_csv(output)
 
 print('     * Your enrichment analysis was saved as \"'+output+'\"')
 print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 0.0001')
