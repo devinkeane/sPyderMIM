@@ -116,7 +116,7 @@ data2 = pd.read_json('ToppGene_response.json')
 
 data3 = pd.json_normalize(data2['Annotations'])
 
-final_df = data3[data3['QValueFDRBH'] < 0.0001].sort_values(by='QValueFDRBH')
+final_df = data3[data3['QValueFDRBH'] < 0.000001].sort_values(by='QValueFDRBH')
 
 deletion_command = 'rm ToppGene_response.json'
 os.system(deletion_command)
@@ -134,7 +134,7 @@ print()
 final_df.to_csv('test2.csv')
 
 print('     * Your enrichment analysis was saved as \"'+output+'\"')
-print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 0.0001')
+print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6')
 print()
 print('-------------------------------------------------------------------------------------')
 print()
