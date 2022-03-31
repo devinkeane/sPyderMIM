@@ -83,7 +83,7 @@ ________________________________________________________________________________
  [ e n r i c h m e n t . s h ]  creates a unique list of all interacters found from your
  output table from interactors.py, then performs enrichment analysis on the list using
  the ToppGene enrichment API.  Results have been automatically filtered and sorted in
- ascending order by FDR/B&H Q value < 0.0001.
+ ascending order by FDR/B&H Q value < 10e-6.
 
                                              ─=≡Σ((( つ◕ل͜◕)つ
 
