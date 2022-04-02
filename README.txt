@@ -80,7 +80,7 @@ ________________________________________________________________________________
         5) triadic closure
         6) number of total nodes and edges        ,,,
                                                 \(ʘ‿ʘ)/
- [ e n r i c h m e n t . s h ]  creates a unique list of all interacters found from your
+ [ e n r i c h m e n t . s h ]  creates a unique list of all interactors found from your
  output table from interactors.py, then performs enrichment analysis on the list using
  the ToppGene enrichment API.  Results have been automatically filtered and sorted in
  ascending order by FDR/B&H Q value < 10e-6.
