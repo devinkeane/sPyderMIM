@@ -7,7 +7,7 @@
 #  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
 #                                                                                          |
 #  ----------------------------------------------------------------------------------------+
-#                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  5.0
+#                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  5.1
 #
 #                                                        Created: 2022-03-15
 #
@@ -38,51 +38,88 @@ logo = """
   `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
                                                                                           |
   ----------------------------------------------------------------------------------------+
-                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  5.0
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  5.1
 """
 print(logo)
 
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Perform enrichment analysis on your protein interactors edge list! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (protein interactors table from interactors.py \"geno\" mode)')
+parser.add_argument('-m', '--mode', type=str, help='\"primary\" (table.py output) or \"interactors\" (interactors.py output)')
 parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
 args = parser.parse_args()
 
 # Assign parsed arguments into local variables
 input = args.input
 output = args.output
+mode = args.mode
 
-interactors_df = pd.read_csv(input)
+if mode == 'primary':
+    gpn = pd.read_csv(args.input)
+    gene_ids_list = []
+    gene_ids_list_unique = []
+    for i in range(len(gpn[gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols'].reset_index())):
+        gene_ids_list += [gpn[gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols'].reset_index()['Node_name'][i]]
 
-interactors_list_unique = []
+    for i in gene_ids_list:
+        if i in gene_ids_list_unique:
+            pass
+        else:
+            gene_ids_list_unique += [i]
 
-interactors_list_A = list(interactors_df['moleculeA'])
-interactors_list_B = list(interactors_df['moleculeB'])
+    toppGene_command = 'curl -H \'Content-Type: text/json\' -d \'{\"Symbols\":['
 
-interactors_list_total = interactors_list_A + interactors_list_B
-
-for i in interactors_list_total:
-    if i in interactors_list_unique:
-        pass
-    else:
-        interactors_list_unique += [i]
-
-toppGene_command = 'curl -H \'Content-Type: text/json\' -d \'{\"Symbols\":['
-
-for i in range(len(interactors_list_unique)):
-    toppGene_command += '\"'
-    toppGene_command += interactors_list_unique[i]
-    if i < len(interactors_list_unique)-1:
-        toppGene_command += '\",'
-    else:
+    for i in range(len(gene_ids_list_unique)):
         toppGene_command += '\"'
+        toppGene_command += gene_ids_list_unique[i]
+        if i < len(gene_ids_list_unique)-1:
+            toppGene_command += '\",'
+        else:
+            toppGene_command += '\"'
 
-toppGene_command += ']}\' https://toppgene.cchmc.org/API/lookup > '
-toppGene_command += 'id_conversion.json'
+    toppGene_command += ']}\' https://toppgene.cchmc.org/API/lookup > '
+    toppGene_command += 'id_conversion.json'
 
-    #r = requests.post(toppGene_url)
-    #response = r.json()
-    #dictionary.update(response)
+        #r = requests.post(toppGene_url)
+        #response = r.json()
+        #dictionary.update(response)
+
+
+
+if mode == 'interactors':
+    interactors_df = pd.read_csv(input)
+
+    interactors_list_unique = []
+
+    interactors_list_A = list(interactors_df['moleculeA'])
+    interactors_list_B = list(interactors_df['moleculeB'])
+
+
+
+    interactors_list_total = interactors_list_A + interactors_list_B
+
+    for i in interactors_list_total:
+        if i in interactors_list_unique:
+            pass
+        else:
+            interactors_list_unique += [i]
+
+    toppGene_command = 'curl -H \'Content-Type: text/json\' -d \'{\"Symbols\":['
+
+    for i in range(len(interactors_list_unique)):
+        toppGene_command += '\"'
+        toppGene_command += interactors_list_unique[i]
+        if i < len(interactors_list_unique)-1:
+            toppGene_command += '\",'
+        else:
+            toppGene_command += '\"'
+
+    toppGene_command += ']}\' https://toppgene.cchmc.org/API/lookup > '
+    toppGene_command += 'id_conversion.json'
+
+        #r = requests.post(toppGene_url)
+        #response = r.json()
+        #dictionary.update(response)
 
 print('Converting gene IDs to Entrez:')
 print('------------------------------')
@@ -118,7 +155,7 @@ data3 = pd.json_normalize(data2['Annotations'])
 
 final_df = data3[data3['QValueFDRBH'] < 0.000001].sort_values(by='QValueFDRBH')
 
-deletion_command = 'rm ToppGene_response.json'
+deletion_command = 'rm ToppGene_response.json id_conversion.json'
 os.system(deletion_command)
 
 print()
@@ -131,7 +168,7 @@ print(final_df)
 print()
 
 
-final_df.to_csv('test2.csv')
+final_df.to_csv(output)
 
 print('     * Your enrichment analysis was saved as \"'+output+'\"')
 print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6')
