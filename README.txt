@@ -29,7 +29,8 @@ The output features:
    * Protein interactor network statistical analysis (.txt)
    * Genotype/phenotype network graph exchange XML (.gexf)
    * Protein interactor network graph exchange XML (.gexf)
-   * Protein interactor enrichment analysis (.csv)
+   * Primary gene (OMIM genes) enrichment analysis (.csv)
+   * Protein interactor (IntAct genes) enrichment analysis (.csv)
 
 Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
 software is to provide a purely command line based workflow that can allow for graph theory
@@ -202,6 +203,7 @@ Output:
    * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
    * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
    * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
+   * project_name_primary_genes_enrichment.csv  (OMIM genes enrichment analysis)
    * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis)
 
 --------------------------------------------------------------------------------------------
