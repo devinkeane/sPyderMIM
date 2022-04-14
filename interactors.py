@@ -12,7 +12,6 @@ import time
 import sys
 import os
 
-
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Find first interactors for the genes in your genotype/phenotype table! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (phenotype table with ENSEMBL IDs)')
@@ -33,12 +32,17 @@ def animate():
     for c in itertools.cycle(['|', '/', '-', '\\']):
         if done:
             sys.stdout.write('')
+            sys.stdout.flush()
             break
         sys.stdout.write('\r(⌐ ͡■ ͜ʖ ͡■) Working on it... ' + c)
+        sys.stdout.flush()
         sys.stdout.write('\r')
         sys.stdout.flush()
         time.sleep(0.1)
+
     sys.stdout.write('\r( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔')
+    sys.stdout.flush()
+
 
 searching_wait_animation = threading.Thread(target=animate)
 
@@ -139,9 +143,37 @@ print()
 print('	ʕっ•ᴥ•ʔっ        Your input:   ')
 print()
 print()
-print(gpn)
+
+if mode == 'omim':
+    print(gpn)
+if mode == 'list':
+    my_file = open(input, "r")
+
+    # reading the file
+    data = my_file.read()
+    # replacing end splitting the text
+    # when newline ('\n') is seen.
+    input_list = data.split("\n")
+    if len(input_list) < 11:
+        for i in input_list:
+            print(i)
+    else:
+        k = 0
+        for i in input_list:
+            if k < 11:
+                print(i)
+                k += 1
+            else:
+                break
+    print('And so on...    *:･ﾟ✧')
+
+
+    my_file.close()
 print()
-print('Extracting ENSEMBL IDs from input:')
+if mode == 'omim':
+    print('Extracting ENSEMBL IDs from input:')
+if mode == 'list':
+    print('Converting input to ENSEMBL IDs:')
 print()
 gene_ids_list = []
 gene_ids_list_unique = []
@@ -166,6 +198,8 @@ for i in ensembl_ids_list:
         pass
     else:
         ensembl_ids_list_unique += [i]
+ensembl_ids_list_unique = list(filter(None, ensembl_ids_list_unique))
+
 
 query_string = ''
 
@@ -184,15 +218,20 @@ if len(ensembl_ids_list_unique) < 10:
 for i in ensembl_ids_list_unique:
     sys.stdout.write('\r'+i)
     time.sleep(sleep_float)
+    sys.stdout.flush()
+
 sys.stdout.write('\r ')
 time.sleep(0.2)
+sys.stdout.flush()
 sys.stdout.write('\r'+'ENSEMBL IDs extracted     ✔       '+'\n')
-
+sys.stdout.flush()
 print()
 print('Searching for protein interactors for each ENSEMBL gene product:')
 print()
+
 # Begin waiting animation
 searching_wait_animation.start()
+
 for i in ensembl_ids_list_unique:
     query_string += i
     query_string += ' '
@@ -263,9 +302,12 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
-    print(i,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    print(i+1,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+
+print()
 
 done = True
+
 time.sleep(2)
 
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
@@ -279,13 +321,15 @@ print()
 print()
 print('Process complete.')
 print()
-print('-------------------------------------------------------------------------------------------------------------')
-print()
+
 if mode == 'list':
-    print()
-    print('  *  '+str(len(bad_id_list))+' of your original input IDs failed to undergo conversion to ENSMBL IDs, which interactors.py requires.')
-    print()
-    print('           *  These IDs have been saved to \"{}_FAILED_IDs.txt\".'.format(output.split('.')[0]))
+    if len(bad_id_list) > 1:
+        print('-------------------------------------------------------------------------------------------------------------')
+        print()
+        print()
+        print('  *  '+str(len(bad_id_list)-1)+' of your original input IDs failed to undergo conversion to ENSMBL IDs, which interactors.py requires.')
+        print()
+        print('           *  These IDs have been saved to \"{}_FAILED_IDs.txt\".'.format(output.split('.')[0]))
 print()
 print('-------------------------------------------------------------------------------------------------------------')
 print()
