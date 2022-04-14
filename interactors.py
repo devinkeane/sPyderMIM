@@ -289,7 +289,7 @@ if mode == 'list':
 print()
 print('-------------------------------------------------------------------------------------------------------------')
 print()
-print('Your interactors list was saved as \"',output,'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
+print('Your interactors list was saved as \"'+output+'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
 print()
 print('                                                    	⊂(◉‿◉)つ  ♡  ')
 
