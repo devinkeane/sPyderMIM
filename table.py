@@ -6,7 +6,7 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                      (ツ)_/¯  - * Version 5.1 * -
+#                                      (ツ)_/¯  - * Version 5.2 * -
 #  [ O m i m   T a b l e   M a k e r ]
 #
 # Last rev: 2022-03-12
@@ -38,7 +38,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                                      (ツ)_/¯  - * Version 5.1 * -
+                                      (ツ)_/¯  - * Version 5.2 * -
   [ O M I M   T a b l e   M a k e r ]
 """
 print(logo)
@@ -166,7 +166,7 @@ for j in range(len(df2_transposed.columns)):
 
 
 # ---------------------------------------------------------------------------
-# Now, we need to clean up the Node_name column data in gpn by cutting the
+# Now, we need to clean up the Node_name_temp column data in gpn by cutting the
 # off the indentifiers and other data that follows it.
 
 # So, for each row in gpn...
@@ -190,7 +190,7 @@ for i in range(len(gpn)):
             temp = gpn['Node_name_temp'][i].split(' (')[-1]
             gpn['Parenthetical'][i] = '('+temp
 
-# Eliminate parentheticals, create permanent 'Node_name' column
+# Create permanent 'Node_name' column from 'Node_name_temp, but without the parentheticals
 for i in range(len(gpn)):
     if gpn['Node_name_temp'][i].find('(') > 0:
         if gpn['Node_name_temp'][i].find('({') > 0:
@@ -202,12 +202,13 @@ for i in range(len(gpn)):
         gpn['Node_name'][i] = gpn['Node_name_temp'][i]
 gpn.drop(columns='Node_name_temp',inplace=True)
 
-ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
+# Instantiate a new dataframe to populate with ENSEMBL ID info
+# ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
-
-gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 # Parsing ENSMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
+gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
+
 bad_mim_count2 = 0
 print()
 for i in range(len(mimdf)):

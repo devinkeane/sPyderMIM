@@ -10,9 +10,23 @@ import itertools
 import threading
 import time
 import sys
+import os
 
-done = False
+
+# Parse command line input and options
+parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Find first interactors for the genes in your genotype/phenotype table! * ")
+parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (phenotype table with ENSEMBL IDs)')
+parser.add_argument('-m', '--mode', type=str, help='\"omim\" (output from table.py) or \"list\" (simple .txt list of ENSG IDs)')
+parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
+args = parser.parse_args()
+
+# Assign parsed arguments into local variables
+input = args.input
+output = args.output
+mode = args.mode
+
 # Loading bar animation function
+done = False
 def animate():
 
 
@@ -36,34 +50,98 @@ logo = """
    / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
   /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
 
-                                                        [ G e n o P h e n o ]  5.1                         
+                                                        [ G e n o P h e n o ]  5.2                         
 """
 print(logo)
 
+gpn = pd.DataFrame()
 
-# Parse command line input and options
-parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Find first interactors for the genes in your genotype/phenotype table! * ")
-parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (phenotype table with ENSEMBL IDs)')
-parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
-args = parser.parse_args()
+if mode == 'omim':
+    gpn = pd.read_csv(input)
 
-# Assign parsed arguments into local variables
-input = args.input
-output = args.output
+    # Drop the unwanted default index that arises after using the pd.concat method :(
+    gpn.drop(columns='Unnamed: 0',inplace=True)
 
-gpn = pd.read_csv(input)
+if mode == 'list':
 
-# Drop the unwanted default index that arises after using the pd.concat method :(
-gpn.drop(columns='Unnamed: 0',inplace=True)
+    bashCommand = 'python3 ./convert_ids.py -i {} -s ENSG -o converted_ENSG.txt >/dev/null 2>&1'.format(input)
+    os.system(bashCommand)
+
+
+    bashCommand = 'python3 ./convert_ids.py -i {} -s HGNC -o converted_HGNC.txt >/dev/null 2>&1'.format(input)
+    os.system(bashCommand)
+
+
+
+    # opening the file in read mode
+    my_file = open('converted_ENSG.txt', "r")
+
+    # reading the file
+    data = my_file.read()
+
+    # replacing end splitting the text
+    # when newline ('\n') is seen.
+    ENSG_input_list = data.split("\n")
+
+    my_file.close()
+
+    my_file = open('converted_HGNC.txt', "r")
+
+    # reading the file
+    data = my_file.read()
+
+    # replacing end splitting the text
+    # when newline ('\n') is seen.
+    HGNC_input_list = data.split("\n")
+
+    my_file.close()
+
+    gpn = pd.DataFrame(index=range(len(ENSG_input_list)), columns=['Node_name', 'Node_type'])
+    gpn_ENSG = pd.DataFrame(index=range(len(ENSG_input_list)),columns=['Node_name','Node_type'])
+    gpn_HGNC = pd.DataFrame(index=range(len(ENSG_input_list)), columns=['Node_name', 'Node_type'])
+
+    for i in range(len(ENSG_input_list)):
+        gpn_ENSG['Node_name'][i] = ENSG_input_list[i]
+        gpn_ENSG['Node_type'][i] = 'phenotypeMap.ensemblIDs'
+
+    for i in range(len(HGNC_input_list)):
+        gpn_HGNC['Node_name'][i] = HGNC_input_list[i]
+        gpn_HGNC['Node_type'][i] = 'phenotypeMap.approvedGeneSymbols'
+
+    gpn = pd.concat([gpn_ENSG,gpn_HGNC])
+
+    my_file = open('converted_ENSG_FAILED_IDs.txt', "r")
+
+    # reading the file
+    data = my_file.read()
+
+    # replacing end splitting the text
+    # when newline ('\n') is seen.
+    bad_id_list = data.split("\n")
+
+    my_file.close()
+
+    bashCommand = 'mv ./converted_ENSG_FAILED_IDs.txt ./{}_FAILED_IDs.txt >/dev/null 2>&1'.format(output.split('.')[0])
+    os.system(bashCommand)
+
+    bashCommand = 'rm ./converted_HGNC_FAILED_IDs.txt >/dev/null 2>&1'
+    os.system(bashCommand)
+
+    bashCommand = 'rm ./converted_HGNC.txt >/dev/null 2>&1'
+    os.system(bashCommand)
+
+    bashCommand = 'rm ./converted_ENSG.txt >/dev/null 2>&1'
+    os.system(bashCommand)
+
 print()
 print('--------------------------------------------------------------------')
 print()
-print('	ʕっ•ᴥ•ʔっ        Your input table...   ')
+print('	ʕっ•ᴥ•ʔっ        Your input:   ')
 print()
 print()
 print(gpn)
 print()
-print('Extracting ENSEMBL IDs from input table:')
+print('Extracting ENSEMBL IDs from input:')
 print()
 gene_ids_list = []
 gene_ids_list_unique = []
@@ -91,8 +169,24 @@ for i in ensembl_ids_list:
 
 query_string = ''
 
+sleep_float = 0.1
+if len(ensembl_ids_list_unique) < 1000:
+    sleep_float = 0.0
+if len(ensembl_ids_list_unique) < 200:
+    sleep_float = 0.025
+if len(ensembl_ids_list_unique) < 50:
+    sleep_float = 0.1
+if len(ensembl_ids_list_unique) < 20:
+    sleep_float = 0.15
+if len(ensembl_ids_list_unique) < 10:
+    sleep_float = 0.2
 
-print(ensembl_ids_list_unique)
+for i in ensembl_ids_list_unique:
+    sys.stdout.write('\r'+i)
+    time.sleep(sleep_float)
+sys.stdout.write('\r ')
+time.sleep(0.2)
+sys.stdout.write('\r'+'ENSEMBL IDs extracted     ✔       '+'\n')
 
 print()
 print('Searching for protein interactors for each ENSEMBL gene product:')
@@ -129,7 +223,6 @@ ensembl_map_temp = []
 protein_map = []
 ensembl_map = []
 
-# Troubleshoot in Jupyter notebook.  Protein IDs mismatch  <----  FIX ME
 for i in conversion2:
     if '\t' in i:
         ensembl_map_temp += [i.split('\t')[0]]
@@ -186,7 +279,17 @@ print()
 print()
 print('Process complete.')
 print()
-print('File saved as \"',output,'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
+print('-------------------------------------------------------------------------------------------------------------')
+print()
+if mode == 'list':
+    print()
+    print('  *  '+str(len(bad_id_list))+' of your original input IDs failed to undergo conversion to ENSMBL IDs, which interactors.py requires.')
+    print()
+    print('           *  These IDs have been saved to \"{}_FAILED_IDs.txt\".'.format(output.split('.')[0]))
+print()
+print('-------------------------------------------------------------------------------------------------------------')
+print()
+print('Your interactors list was saved as \"',output,'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
 print()
 print('                                                    	⊂(◉‿◉)つ  ♡  ')
 
@@ -194,7 +297,8 @@ print()
 # Save the gpn as a csv
 df2.to_csv(output)
 
-# END PROGRAM
+# END OF PROGRAM
+
 
 
 

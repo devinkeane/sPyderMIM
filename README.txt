@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____
 | |_) | |_   / /\  | | \ | |\/| | |_
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
-                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 5.1
+                               ₲Ɇ₦Ø₱ⱧɆ₦Ø 5.2
 --------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------
@@ -85,6 +85,14 @@ ________________________________________________________________________________
  output table from interactors.py, then performs enrichment analysis on the list using
  the ToppGene enrichment API.  Results have been automatically filtered and sorted in
  ascending order by FDR/B&H Q value < 10e-6.
+                                                                   ^
+                                                                   ) )
+                                                /\__/\,''`'``'''`'; /
+                                               (Ф͡_ᴥ_Ф͡ )_,       ..,;
+[ c o n v e r t _ i d s . p y ] will convert any mixed or non-mixed set of genes IDs from
+virtually any database identifier type to virtually any other type.  See
+"README_conversion_IDs_list.TXT" for an exhaustive list of accepted IDs.
+
 
                                              ─=≡Σ((( つ◕ل͜◕)つ
 
@@ -150,8 +158,9 @@ above to avoid problematic MIMs will ensure optimal program functionality and ou
 2) Create list of OMIM reference ids ("MIM" numbers) (20 MAXIMUM if input is for table.py,
 5000 MAXIMUM if using GenoPheno.sh):
 
-(i.e.)
+(e.g.)
 ~$ vim input_list.txt
+
 ------
 615291              [input_list.txt]
 614505                      |
@@ -242,12 +251,69 @@ Output:
 ~$ python3 concat.py -i <input_file.csv> <input_file2.csv> <and_so_on...> -o <output_file.csv>
 
 --------------------------------------------------------------------------------------------
- [ i n t e r a c t o r s . p y ]  |    +---- table.py output
-----------------------------------+    |
-                                       |
-                                       V
-~$ python3 interactors.py -i <input_file.csv> -o <output_file.csv>
+ [ c o n v e r t _ i d s . p y ]  |      "convert_ids.py" will allows you to convert gene
+----------------------------------+      IDs from virtually any type (e.g., ENSG, HGNC, PDB,
+                                         etc.) to virtually any type that you desire.  Got a
+mixed list of IDs of all different types of IDs?  No problem!  Simply create a .txt file with
+no headers and enter each ID, separated by a new line.
 
+You can specify which type of symbol you want to convert your list to by specifying the "-s"
+option.  There is no need to specify the type of IDs since this is determined automatically,
+allowing for your input list to consist of any mixture of types.  IDs that were not successfully
+converted will be reported in an output file.
+
+For a full list of accepted IDs, reference "README_conversion_IDs_list.TXT".
+
+
+~$ python3 concat.py -i <gene_id_list.txt> -s <SYMBOL_TO_CONVERT_TO> -o <gene_id_list_converted.txt>
+                                                       A
+Input gene ID list example:                            |
+                                                       |
+------                                                 +----------  Required!
+ENSG00000084674                [gene_id_list.txt]
+CLEC2B                                |
+CUL2                                  |
+ENSG00000185176                       |
+ENSG00000117713       <---------------+
+1ANI
+and so on ...
+------
+
+Output:
+       *  <OUTPUT_FILENAME.txt>                               <--------  List of converted IDs
+       *  <OUTPUT_FILENAME>_<TARGET_SYMBOL>_FAILED_IDs.txt    <--------  IDs that failed to convert
+
+--------------------------------------------------------------------------------------------
+ [ i n t e r a c t o r s . p y ]  |    +---- table.py output (.csv) ("omim" mode)
+----------------------------------+    |               or
+                                       |     any_list.txt (text file of gene names)
+                                       V
+~$ python3 interactors.py -i <input_file> -m <MODE> -o <output_file.csv>
+                                                A
+                                                |
+                                                |
+        "list" or "omim" (required) ____________+
+
+interactors.py takes requires one of two modes, specified using the "-m" option:
+
+    1) "omim"
+                  "omim" mode finds protein interactors for all of the genes found in
+                  the table that table.py produces for output.
+
+    2) "list"
+                  "list" mode takes in a .txt file that you have created.  The list can
+                  contain mixed types of IDs from most databases, because interactors.py
+                  will use convert_ids.py to detect your ID types and convert them to the
+                  necessary format.  Create a list like the one in the example for
+                  "convert_ids.py" above.
+
+Output:
+       *  For "list" mode:
+              *   <OUTPUT_FILENAME>.csv
+              *   <OUTPUT_FILENAME>_FAILED_IDS.txt
+
+       *  For "omim" mode:
+              *   <OUTPUT_FILENAME>.csv
 
 --------------------------------------------------------------------------------------------
  [ g r a p h . p y ]  |            +---- table.py, interactors.py, or concat.py output
