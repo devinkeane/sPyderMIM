@@ -25,7 +25,7 @@ CONCAT_COMMAND+=" -o "
 CONCAT_COMMAND+=$3_concatenated.csv
 $CONCAT_COMMAND
 
-python3 interactors.py -i $3_concatenated.csv -o $3_interactors.csv
+python3 interactors.py -i $3_concatenated.csv -m omim -o $3_interactors.csv
 
 python3 graph.py -i $3_interactors.csv -m geno -l all -o $3_interactors.png
 python3 graph.py -i $3_concatenated.csv -m pheno -l all -o $3_phenotypes.png
