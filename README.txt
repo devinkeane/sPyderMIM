@@ -84,11 +84,10 @@ ________________________________________________________________________________
  [ e n r i c h m e n t . s h ]  creates a unique list of all interactors found from your
  output table from interactors.py, then performs enrichment analysis on the list using
  the ToppGene enrichment API.  Results have been automatically filtered and sorted in
- ascending order by FDR/B&H Q value < 10e-6.
-                                                                   ^
-                                                                   ) )
-                                                /\__/\,''`'``'''`'; /
-                                               (Ф͡_ᴥ_Ф͡ )_,       ..,;
+ ascending order by FDR/B&H Q value < 10e-6.                    ^
+                                                                ) )
+                                             /\__/\,''`'``'''`'; /
+                                            (Ф͡_ᴥ_Ф͡ )_,       ..,;
 [ c o n v e r t _ i d s . p y ] will convert any mixed or non-mixed set of genes IDs from
 virtually any database identifier type to virtually any other type.  See
 "README_conversion_IDs_list.TXT" for an exhaustive list of accepted IDs.
