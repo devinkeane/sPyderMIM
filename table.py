@@ -206,7 +206,7 @@ gpn.drop(columns='Node_name_temp',inplace=True)
 # ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 
-# Parsing ENSMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
+# Parsing ENSEMBL IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
 gpn2 = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 bad_mim_count2 = 0

@@ -131,7 +131,7 @@ virtually any database identifier type to virtually any other type.  See
     entries.
 
     ->  For MIM numbers where "susceptibility to" is included in the subtype title,
-    this program will fetch the ENSMBL and gene IDs.  However, these MIMs tend to lack
+    this program will fetch the ENSEMBL and gene IDs.  However, these MIMs tend to lack
     phenotypic data since they describe genes that indirectly influence individuals'
     susceptibility to a disease, not the genes that give rise to the phenotypes
     themselves.

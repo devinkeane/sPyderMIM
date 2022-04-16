@@ -302,7 +302,7 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
-    print(i+1,'| ENSMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    print(i+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
 
 print()
 
@@ -327,7 +327,7 @@ if mode == 'list':
         print('-------------------------------------------------------------------------------------------------------------')
         print()
         print()
-        print('  *  '+str(len(bad_id_list)-1)+' of your original input IDs failed to undergo conversion to ENSMBL IDs, which interactors.py requires.')
+        print('  *  '+str(len(bad_id_list)-1)+' of your original input IDs failed to undergo conversion to ENSEMBL IDs, which interactors.py requires.')
         print()
         print('           *  These IDs have been saved to \"{}_FAILED_IDs.txt\".'.format(output.split('.')[0]))
 print()
@@ -388,7 +388,7 @@ print('--------------------------------------------------')
 
 
 print()
-print('Extracting ENSMBL IDs...')
+print('Extracting ENSEMBL IDs...')
 print()
 
 ensembl_ids = []
@@ -397,11 +397,11 @@ for i in gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs']['Node_name']:
     print(i)
 print()
 print('--------------------------------------------------')
-print(len(ensembl_ids),' ENSMBL IDs imported from table')
+print(len(ensembl_ids),' ENSEMBL IDs imported from table')
 print('--------------------------------------------------')
 
 print()
-print('Finding overlapping genes for given ENSMBL IDs:')
+print('Finding overlapping genes for given ENSEMBL IDs:')
 print()
 intact_url = ''
 genes_and_overlap = []
