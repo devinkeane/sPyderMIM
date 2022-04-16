@@ -1,7 +1,13 @@
- ___   ____   __    ___   _      ____
-| |_) | |_   / /\  | | \ | |\/| | |_
-|_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__
-                               ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.3
+ ___   ____   __    ___   _      ____                          __,,,,_
+| |_) | |_   / /\  | | \ | |\/| | |_               _ __..-;''`--/'/ /.',-`-.
+|_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__           (`/' ` |  \ \ \\ / / / / .-'/`,_
+                             ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.3    /'`\ \   |  \ | \| // // / -.,/_,'-,
+                                              /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
+          C l e m s o n                      /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
+                                             `-`  f/ ;      / __/ \__ `/ |__/ |
+                  U n i v e r s i t y             `-'      |  -| =|\_  \  |-' |
+                                                      _ __/   /_..-' `  ),'  //
+                                                    fL ((__.-'((___..-'' \__.'
 --------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------
@@ -10,21 +16,42 @@
   `-' `-' '  ` '  ` ` ' ' '  `  |                            
 --------------------------------+
 
-GenoPheno is a workflow suite and genotype/phenotype network generator that uses the OMIM
-(Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
-links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API,
-which allows the user to find the protein products for the genes associated with each MIM number
-and the proteins known to interact with each of these.  Additionally, GenoPheno uses the
-ToppGene API in order to perform enrichment analysis on all of the genes that encode for
-these products.  The user only needs to provide an obtained OMIM API key and a list of OMIM
-reference numbers ("phenotypic MIM numbers").
+GenoPheno is an automated workflow for in silico hypothesis testing and a "Swiss army knife"
+of genomics analysis tools.  A user is free to utilize any of the tools in the repository,
+but they may also just use GenoPheno.sh to execute most of the suite altogether as one
+easily automated workflow.   The user only needs to provide an obtained OMIM API key and a list
+of OMIM reference numbers ("phenotypic MIM numbers" beginning with ""#").
 
-The output features:
+GenoPheno.sh is a genotype/phenotype network generator that uses the OMIM (Online Mendelian
+Inheritance in Man) database in order to construct a relationship graph that links diseases by
+genes and phenotypic outcomes.  The workflow also utilizes the IntAct API, which allows the user
+to find the protein products for the genes associated with each MIM number and the proteins
+known to interact with each of these.  Additionally, GenoPheno uses the ToppGene API in order to
+perform enrichment analysis on all the genes that encode for these products.  GenoPheno.sh
+automatically creates two enrichment analyses:
+
+    1)  for the genes obtained from OMIM
+
+    2)  for the genes encoding for all protein interactors of the OMIM Genes
+
+
+The major planned objectives for future versions of GenoPheno include:
+
+    *   Adding gene regulatory network discovery capability using GTEX eQTLs
+
+           *   prediction of upstream and downstream chromatin regulatory elements
+           *   mapping gene cross-talk directionally
+           *   linking DNA sequence with RNA expression across tissues
+
+    *   Adding potential drug discovery functionality
+
+
+A single workflow run using GenoPheno.sh features the following output:
 
    * OMIM genotype/phenotype edge list table (.csv)
-   * Intact protein interactors edge list table (.csv)
+   * IntAct protein interactors edge list table (.csv)
    * High resolution OMIM genotype/phenotype labeled graph (.png)
-   * High resolution Intact protein interactors labeled graph (.png)
+   * High resolution IntAct protein interactors labeled graph (.png)
    * Genotype/phenotype network statistical analysis (.txt)
    * Protein interactor network statistical analysis (.txt)
    * Genotype/phenotype network graph exchange XML (.gexf)
@@ -204,9 +231,9 @@ Input:                             V
 Output:
 
    * project_name_concatentated.csv  (OMIM genotype/phenotype table)
-   * project_name_interactors.csv  (Intact protein interactors table)
+   * project_name_interactors.csv  (IntAct protein interactors table)
    * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
-   * project_name_interactors.png  (High resolution Intact protein interactors labeled graph)
+   * project_name_interactors.png  (High resolution IntAct protein interactors labeled graph)
    * project_name_phenotypes_NETWORK_SUMMARY.txt  (Genotype/phenotype network statistical analysis)
    * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
    * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
@@ -358,17 +385,7 @@ Output:
 ~$ python3 enrichment.py -i <input_file.csv> -o <output_file.csv>
 
 --------------------------------------------------------------
-                         __,,,,_
-          _ __..-;''`--/'/ /.',-`-.
-      (`/' ` |  \ \ \\ / / / / .-'/`,_
-     /'`\ \   |  \ | \| // // / -.,/_,'-,
-    /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
-   /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
-   `-`  f/ ;      / __/ \__ `/ |__/ |
-        `-'      |  -| =|\_  \  |-' |
-            _ __/   /_..-' `  ),'  //
-          fL ((__.-'((___..-'' \__.'
 
-				    (c) 2022-01-27 Devin Keane / Feltus Lab
-                                   Department of Genetics & Biochemistry
-                                   Clemson University
+(c) 2022-01-27 Devin Keane / Feltus Lab
+               Department of Genetics & Biochemistry
+               Clemson University
