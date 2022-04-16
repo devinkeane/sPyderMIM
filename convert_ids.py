@@ -1,7 +1,10 @@
+
+
 import argparse
 import os
 import urllib.parse
 import urllib.request
+
 
 
 # Parse command line input and options
@@ -23,7 +26,7 @@ logo = """
  |/      / _  _ _  _  ||  \  /   _  _    _ _|_ _ ,_     _||     o=O  
  |/_     \__)(-| )(-  ||__/  \__(_)| )\/(-| |_(-|        ||    0===0     U n i v e r s i t y   
  |/__              _   __                            _ __||     O=o       
- |/ o   _____    '        --`        ₲Ɇ₦Ø₱ⱧɆ₦Ø  5.2    o ||      O          |\_/|
+ |/ o   _____    '        --`       ₲Ɇ₦Ø₱ⱧɆ₦Ø  v5.3    o ||      O          |\_/|
  |/______________________________________________________||      o=O      =( o O )=
  |┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴|    0===0       /\ " /\\
                                                                 O=o       | |\_/| |
@@ -32,6 +35,8 @@ logo = """
                                                                           (___|___)
 """
 print(logo)
+
+
 # opening the file in read mode
 my_file = open(input, "r")
 
@@ -64,11 +69,49 @@ result = r.json()['result']
 
 df = pd.DataFrame(result)
 
+incoming_id_list = []
+incoming_id_list2 = []
+for i in range(len(df)):
+    if df['incoming'][i] == 'None':
+        pass
+    else:
+        incoming_id_list += [df['incoming'][i]]
+
+
+
+for i in incoming_id_list:
+    if i == '':
+        pass
+    else:
+        incoming_id_list2 += [i]
+
+print('Your input list:')
+print()
+k=0
+print(len(incoming_id_list))
+
+
+for i in range(len(incoming_id_list2)):
+    if i < 6:
+        print(incoming_id_list2[i])
+        k += 1
+    else:
+        break
+
+
+if k > 5 & k < len(incoming_id_list2):
+    print('And so on...')
+print()
+
+
+
+
+
 bad_id_list = []
 
 textfile = open(output, "w")
 
-for i in range(len(df['converted'])):
+for i in range(len(df)):
     if df['converted'][i] == 'None':
         bad_id_list += [df['incoming'][i]]
     else:
@@ -76,17 +119,20 @@ for i in range(len(df['converted'])):
 
 textfile.close()
 
-bad_id_output = output.split('.')[0]+'_FAILED_IDs.txt'
+bad_id_output_filename = output.split('.')[0]+'_FAILED_IDs.txt'
 
-textfile = open(bad_id_output, "w")
+textfile = open(bad_id_output_filename, "w")
 
 for i in bad_id_list:
-    textfile.write(i + "\n")
+    if i == '':
+        pass
+    else:
+        textfile.write(i + "\n")
 textfile.close()
 
 print(' * Converted your list of',len(input_list),'gene IDs to',symbol+'.')
 print()
-print(' *',len(df)-len(bad_id_list)-1,'of',len(df)-1,'IDs were successfully converted and saved to \"'+output+'\".')
+print(' *',len(df)-len(bad_id_list),'of',len(df),'IDs were successfully converted and saved to \"'+output+'\".')
 print()
-print(' * A list of the',len(bad_id_list),'failed IDs was saved to \"'+bad_id_output+'\".')
+print(' * A list of the',len(bad_id_list),'failed IDs was saved to \"'+bad_id_output_filename+'\".')
 print()
