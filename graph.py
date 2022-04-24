@@ -290,7 +290,7 @@ nx.set_node_attributes(G,degree_dict,'degree')
 sorted_degree = sorted(degree_dict.items(),key=itemgetter(1),reverse=True)
 
 betweenness_dict = nx.betweenness_centrality(G)
-eigenvector_dict = nx.eigenvector_centrality(G)
+eigenvector_dict = nx.eigenvector_centrality_numpy(G)
 
 nx.set_node_attributes(G,betweenness_dict,'betweenness')
 nx.set_node_attributes(G,eigenvector_dict,'eigenvector')
