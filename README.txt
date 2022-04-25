@@ -197,7 +197,7 @@ and so on ...
 
 3) Set up an Anaconda environment with the necessary dependencies (Anaconda required):
 
-~$ conda create -n GenoPheno python=3.9 scipy=1.7 pandas matplotlib curl networkx
+~$ conda create -n GenoPheno python=3.9 scipy=1.7 pandas matplotlib curl networkx requests
 ~$ conda activate GenoPheno
 
 --------------------------------------------------------------------------------------------

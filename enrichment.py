@@ -136,24 +136,36 @@ print('Performing enrichment analysis on Entrez IDs:')
 print('---------------------------------------------')
 print()
 
-toppGene_command2 = 'curl -H \'Content-Type: text/json\' -d \'{\"Genes\":['
+final_df = pd.DataFrame()
 
-for i in range(len(entrez_list)):
-    toppGene_command2 += str(entrez_list[i])
-    if i < len(entrez_list)-1:
-        toppGene_command2 += ','
-    else:
-        pass
+chunked_list = []
+chunk_size = 2000
 
-toppGene_command2 += ']}\' https://toppgene.cchmc.org/API/enrich > ToppGene_response.json'
+for i in range(0, len(entrez_list), chunk_size):
+    chunked_list.append(entrez_list[i:i+chunk_size])
 
-os.system(toppGene_command2)
 
-data2 = pd.read_json('ToppGene_response.json')
+#  ** ** ADD LIMIT AND CHUNK LOOP HERE ** **
+for j in range(len(chunked_list)):
+    toppGene_command2 = 'curl -H \'Content-Type: text/json\' -d \'{\"Genes\":['
+    for i in range(len(chunked_list[j])):
+        toppGene_command2 += str(chunked_list[j][i])
+        if i < len(chunked_list[j])-1:
+            toppGene_command2 += ','
+        else:
+            pass
 
-data3 = pd.json_normalize(data2['Annotations'])
+    toppGene_command2 += ']}\' https://toppgene.cchmc.org/API/enrich > ToppGene_response.json'
 
-final_df = data3[data3['QValueFDRBH'] < 0.000001].sort_values(by='QValueFDRBH')
+    os.system(toppGene_command2)
+
+    data2 = pd.read_json('ToppGene_response.json')
+
+    data3 = pd.json_normalize(data2['Annotations'])
+
+    chunk_df = data3[data3['QValueFDRBH'] < 0.000001].sort_values(by='QValueFDRBH')
+
+    final_df = pd.concat([final_df,chunk_df])
 
 deletion_command = 'rm ToppGene_response.json id_conversion.json'
 os.system(deletion_command)
