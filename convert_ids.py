@@ -12,7 +12,7 @@ import pandas as pd
 
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Convert your list of gene IDs! ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_LIST_FILENAME.txt>')
-parser.add_argument('-s', '--symbol', type=str, help='ENSG, EMBL, etc. (see README_conversion_IDs_list.TXT for full list)')
+parser.add_argument('-s', '--symbol', type=str, help='ENSG, EMBL, etc. (see README_conversion_IDs_list.txt for full list)')
 parser.add_argument('-o', '--output', type=str, help='<OUTPUT_LIST_FILENAME>')
 args = parser.parse_args()
 
