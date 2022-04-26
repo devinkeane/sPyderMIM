@@ -33,6 +33,11 @@ python3 graph.py -i $3_concatenated.csv -m pheno -l all -o $3_phenotypes.png
 python3 enrichment.py -i $3_concatenated.csv -m primary -o $3_primary_genes_enrichment.csv
 python3 enrichment.py -i $3_interactors.csv  -m interactors -o $3_interactors_enrichment.csv
 
+NOW=$( date '+%F_%H%M%S' )
+mkdir $3_GENOPHENO_RESULTS_$NOW
+
+mv $3_concatenated.csv $3_interactors.csv $3_interactors.png $3_phenotypes.png $3_primary_genes_enrichment.csv $3_interactors_enrichment.csv $3_phenotypes_NETWORK_SUMMARY.txt $3_phenotypes.gexf $3_interactors_NETWORK_SUMMARY.txt $3_interactors.gexf $3_GENOPHENO_RESULTS_$NOW
+
 rm -R ./$3_MIM_directory/
 rm -R ./$3_separate_tables/
 rm file_list.txt

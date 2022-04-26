@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____                          __,,,,_
 | |_) | |_   / /\  | | \ | |\/| | |_               _ __..-;''`--/'/ /.',-`-.
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__           (`/' ` |  \ \ \\ / / / / .-'/`,_
-                             ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.3    /'`\ \   |  \ | \| // // / -.,/_,'-,
+                             ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.4    /'`\ \   |  \ | \| // // / -.,/_,'-,
                                               /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
           C l e m s o n                      /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
                                              `-`  f/ ;      / __/ \__ `/ |__/ |
@@ -228,7 +228,8 @@ Input:                             V
                                                                     |
         Project name for automatically naming multiple files  ------+
 
-Output:
+Output:  (all results are moved to a new folder
+          named after the project name, followed the a date/timestamp)
 
    * project_name_concatentated.csv  (OMIM genotype/phenotype table)
    * project_name_interactors.csv  (IntAct protein interactors table)

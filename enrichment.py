@@ -38,7 +38,7 @@ logo = """
   `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
                                                                                           |
   ----------------------------------------------------------------------------------------+
-                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v5.3
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v5.4
 """
 print(logo)
 
@@ -169,8 +169,10 @@ for j in range(len(chunked_list)):
 
     final_df = pd.concat([final_df,chunk_df])
 
-    deletion_command = 'rm ToppGene_response.json id_conversion.json'
-    os.system(deletion_command)
+
+deletion_command = 'rm ToppGene_response.json id_conversion.json'
+os.system(deletion_command)
+
 
 print()
 print('-------------------------------------------------------------------------------------')
@@ -178,11 +180,13 @@ print('-------------------------------------------------------------------------
 print()
 print('Your output table:')
 
+final_df = final_df.reset_index(drop=True)
+final_df.to_csv(output)
+
 print(final_df)
 print()
 
 
-final_df.to_csv(output)
 
 print('     * Your enrichment analysis was saved as \"'+output+'\"')
 print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6')
