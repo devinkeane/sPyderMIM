@@ -54,6 +54,8 @@ input = args.input
 output = args.output
 mode = args.mode
 
+toppGene_command = ''
+
 if mode == 'primary':
     gpn = pd.read_csv(args.input)
     gene_ids_list = []
@@ -139,7 +141,7 @@ print()
 final_df = pd.DataFrame()
 
 chunked_list = []
-chunk_size = 2000
+chunk_size = 1000
 
 for i in range(0, len(entrez_list), chunk_size):
     chunked_list.append(entrez_list[i:i+chunk_size])
@@ -167,8 +169,8 @@ for j in range(len(chunked_list)):
 
     final_df = pd.concat([final_df,chunk_df])
 
-deletion_command = 'rm ToppGene_response.json id_conversion.json'
-os.system(deletion_command)
+    deletion_command = 'rm ToppGene_response.json id_conversion.json'
+    os.system(deletion_command)
 
 print()
 print('-------------------------------------------------------------------------------------')
