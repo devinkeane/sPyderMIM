@@ -54,6 +54,12 @@ input = args.input
 output = args.output
 mode = args.mode
 
+
+sys.stdout.flush()
+print()
+print('Converting gene IDs to Entrez:')
+print('------------------------------')
+print()
 toppGene_command = ''
 
 if mode == 'primary':
@@ -123,10 +129,6 @@ if mode == 'interactors':
         #response = r.json()
         #dictionary.update(response)
 
-sys.stdout.flush()
-print('Converting gene IDs to Entrez:')
-print('------------------------------')
-print()
 os.system(toppGene_command)
 sys.stdout.flush()
 print()
