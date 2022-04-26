@@ -175,6 +175,7 @@ if mode == 'omim':
 if mode == 'list':
     print('Converting input to ENSEMBL IDs:')
 print()
+
 gene_ids_list = []
 gene_ids_list_unique = []
 
@@ -312,6 +313,7 @@ time.sleep(2)
 
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
 
+sys.stdout.flush()
 print()
 print()
 print('Saving output table:')

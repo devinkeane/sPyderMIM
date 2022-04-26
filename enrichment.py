@@ -123,6 +123,7 @@ if mode == 'interactors':
         #response = r.json()
         #dictionary.update(response)
 
+sys.stdout.flush()
 print('Converting gene IDs to Entrez:')
 print('------------------------------')
 print()
@@ -133,6 +134,9 @@ data = pd.read_json('id_conversion.json')
 entrez_list = []
 for i in range(len(data['Genes'])):
     entrez_list += [data['Genes'][i]['Entrez']]
+
+sys.stdout.flush()
+
 print()
 print('Performing enrichment analysis on Entrez IDs:')
 print('---------------------------------------------')
@@ -169,6 +173,7 @@ for j in range(len(chunked_list)):
 
     final_df = pd.concat([final_df,chunk_df])
 
+sys.stdout.flush()
 
 deletion_command = 'rm ToppGene_response.json id_conversion.json'
 os.system(deletion_command)
