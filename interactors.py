@@ -304,6 +304,7 @@ for i in range(len(ensembl_ids_list_unique)):
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
 
     print(i+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    sys.stdout.flush()
 
 print()
 

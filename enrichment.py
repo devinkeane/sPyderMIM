@@ -86,7 +86,7 @@ if mode == 'primary':
         #response = r.json()
         #dictionary.update(response)
 
-
+sys.stdout.flush()
 
 if mode == 'interactors':
     interactors_df = pd.read_csv(input)
@@ -128,6 +128,7 @@ print('Converting gene IDs to Entrez:')
 print('------------------------------')
 print()
 os.system(toppGene_command)
+sys.stdout.flush()
 print()
 data = pd.read_json('id_conversion.json')
 
@@ -162,9 +163,9 @@ for j in range(len(chunked_list)):
             pass
 
     toppGene_command2 += ']}\' https://toppgene.cchmc.org/API/enrich > ToppGene_response.json'
-
+    sys.stdout.flush()
     os.system(toppGene_command2)
-
+    sys.stdout.flush()
     data2 = pd.read_json('ToppGene_response.json')
 
     data3 = pd.json_normalize(data2['Annotations'])
@@ -177,7 +178,7 @@ sys.stdout.flush()
 
 deletion_command = 'rm ToppGene_response.json id_conversion.json'
 os.system(deletion_command)
-
+sys.stdout.flush()
 
 print()
 print('-------------------------------------------------------------------------------------')
