@@ -337,7 +337,7 @@ print('   ---------------------------------', file = summary_file)
 print('', file= summary_file)
 print('Node  |  Degree', file= summary_file)
 print('', file= summary_file)
-
+sys.stdout.flush()
 for d in sorted_degree[:20]:
     print(str(d[0])+':   '+str(d[1]), file= summary_file)
 
@@ -349,7 +349,7 @@ print('   --------------------------------------------------', file = summary_fi
 print('', file= summary_file)
 print('Node  |  Betweenness Centrality', file= summary_file)
 print('', file= summary_file)
-
+sys.stdout.flush()
 for b in sorted_betweenness[:20]:
     print(str(b[0])+':   '+str(b[1]), file= summary_file)
 print('', file= summary_file)
@@ -379,7 +379,7 @@ for i in range(len(communities)):
 done = True
 time.sleep(2)
 
-
+sys.stdout.flush()
 
 
 # ---------------------------------------------------------------------------
@@ -470,3 +470,4 @@ print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
 print()
+sys.stdout.flush()
