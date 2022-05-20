@@ -1,7 +1,7 @@
  ___   ____   __    ___   _      ____                          __,,,,_
 | |_) | |_   / /\  | | \ | |\/| | |_               _ __..-;''`--/'/ /.',-`-.
 |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__           (`/' ` |  \ \ \\ / / / / .-'/`,_
-                             ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.4    /'`\ \   |  \ | \| // // / -.,/_,'-,
+                             ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.5    /'`\ \   |  \ | \| // // / -.,/_,'-,
                                               /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
           C l e m s o n                      /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
                                              `-`  f/ ;      / __/ \__ `/ |__/ |
@@ -131,13 +131,13 @@ virtually any database identifier type to virtually any other type.  See
 ** IMPORTANT NOTES! **   <-- Read first to ensure functionality
 ----------------------
 
-    ->  GenoPheno.py, the original version of the program, has been replaced by
-    GenoPheno.sh.  The whole workflow can now be ran entirely through GenoPheno.sh,
-    but you can also use any of the programs in the suite individually or include
+    ->  GenoPheno.sh is the main program that will execute the entire workflow automatically.
+    Additionally, you can also use any of the programs in the suite individually or include
     them in your own workflow script!
 
-           ~$ GenoPheno.sh <YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>
-
+           ~$ GenoPheno.sh <MIM_LIST.TXT><YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>  (do not use file
+                                                                                  extension for
+                                                                                  project name)
     ->  GenoPheno only takes in lists of "Phenotype MIM numbers" as the
     starting input of the workflow.  DO NOT use "Gene/Locus MIM numbers" as
     these will cause the program to crash.  Even though these MIMs cannot be used, you
@@ -150,22 +150,13 @@ virtually any database identifier type to virtually any other type.  See
     prefixes as these are irrelevent to the objectives of this software and the
     program will crash if these types of MIM numbers are used.
 
-    ->  Do not use phenotypic MIM numbers that correspond to multiple Gene/Locus MIM
-    numbers.  Though uncommon, sometimes MIMs are organized this way, and using this
-    kind of MIM may cause the program to crash.  You must first access the OMIM entries
-    for each of these Gene/Locus MIM numbers individually.  From there, you can select
-    and use the phenotype MIM numbers for the subtypes that are listed under these
-    entries.
-
     ->  For MIM numbers where "susceptibility to" is included in the subtype title,
     this program will fetch the ENSEMBL and gene IDs.  However, these MIMs tend to lack
     phenotypic data since they describe genes that indirectly influence individuals'
     susceptibility to a disease, not the genes that give rise to the phenotypes
     themselves.
 
-GenoPheno.sh and table.py should continue to process your MIM list and problematic
-MIMs will be listed in your output and ignored if unusable.  Following the instructions
-above to avoid problematic MIMs will ensure optimal program functionality and output.
+Following the instructions above will ensure optimal program functionality and output.
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
