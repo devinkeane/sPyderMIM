@@ -269,11 +269,11 @@ Output:
 ~$ python3 concat.py -i <input_file.csv> <input_file2.csv> <and_so_on...> -o <output_file.csv>
 
 --------------------------------------------------------------------------------------------
- [ c o n v e r t _ i d s . p y ]  |      "convert_ids.py" will allows you to convert gene
+ [ c o n v e r t _ i d s . p y ]  |      "convert_ids.py" will allow you to convert gene
 ----------------------------------+      IDs from virtually any type (e.g., ENSG, HGNC, PDB,
                                          etc.) to virtually any type that you desire.  Got a
-mixed list of IDs of all different types of IDs?  No problem!  Simply create a .txt file with
-no headers and enter each ID, separated by a new line.
+mixed list of IDs of all different types?  No problem!  Simply create a .txt file with one
+column of gene IDs and no header.
 
 You can specify which type of symbol you want to convert your list to by specifying the "-s"
 option.  There is no need to specify the type of IDs since this is determined automatically,
@@ -281,9 +281,10 @@ allowing for your input list to consist of any mixture of types.  IDs that were 
 converted will be reported in an output file.
 
 For a full list of accepted IDs, reference "README_conversion_IDs_list.TXT".
+Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost
 
 
-~$ python3 concat.py -i <gene_id_list.txt> -s <SYMBOL_TO_CONVERT_TO> -o <gene_id_list_converted.txt>
+~$ python3 convert_ids.py -i <gene_id_list.txt> -s <SYMBOL_TO_CONVERT_TO> -o <gene_id_list_converted.txt>
                                                        A
 Input gene ID list example:                            |
                                                        |
