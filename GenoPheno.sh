@@ -6,7 +6,10 @@ ls ./$3_MIM_directory > file_list.txt
 TABLE_COMMAND="python3 table.py -i "
 
 ITERATION=0
-
+if [[ -d $3_separate_tables ]]
+then
+    rm -R $3_separate_tables
+fi
 mkdir $3_separate_tables
 while read p; do
   TABLE_COMMAND="python3 table.py -i "
