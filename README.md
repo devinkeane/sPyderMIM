@@ -363,6 +363,7 @@ Output:
 * For "omim" mode:
   * <OUTPUT_FILENAME>.csv
 
+<!-- end the list -->
 
     --------------------------------------------------------------------------------------------
      [ g r a p h . p y ]  |            +---- table.py, interactors.py, or concat.py output
