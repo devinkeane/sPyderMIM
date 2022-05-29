@@ -400,6 +400,7 @@ Output:
 * ./project_name.png
 * ./project_name.gexf
 
+<!-- end the list -->
 
     --------------------------------------------------------------------------------------------
      [ e n r i c h m e n t . p y ]  |       +---- interactors.py output
