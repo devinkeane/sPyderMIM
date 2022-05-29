@@ -343,14 +343,14 @@ interactors.py takes requires one of two modes, specified using the "-m" option:
      "convert_ids.py" above.
 
 
-    for example, vim list.txt:
-    ------
-    ENSG00000185176
-    CUL2
-    1ANI
-    and so on...
-    ------
-
+        (e.g.) vim list.txt:
+    
+        ------
+        ENSG00000185176
+        CUL2
+        1ANI
+        and so on...
+        ------
     
 
 Output:
