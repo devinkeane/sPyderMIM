@@ -342,6 +342,7 @@ interactors.py takes requires one of two modes, specified using the "-m" option:
     necessary format.  Create a list like the one in the example for
      "convert_ids.py" above.
 
+<!-- end the list -->
 
          (e.g.) vim list.txt:
          
