@@ -318,6 +318,7 @@ Output:
 * <OUTPUT_FILENAME>_<TARGET_SYMBOL>_FAILED_IDs.txt  
   * (IDs that failed to convert)
 
+<!-- end the list -->
 
     --------------------------------------------------------------------------------------------
      [ i n t e r a c t o r s . p y ]  |    +---- table.py output (.csv) ("omim" mode)
