@@ -200,14 +200,15 @@ Following the instructions above will ensure optimal program functionality and o
 --------------------------------------------------------------------------------------------
 
 4) Execute with the following syntax/options:
-
-
+   
+  
+    --------------------------------------------------------------------------------------------
     [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
     --------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
       -. .-.   .-. .-.   .-. .-.   .      than 20.  Alternatively, you can use separate programs
      ||\|||\ /|||\|||\ /|||\|||\ /|       in the suite individually, but table.py will require
      |/ \|||\|||/ \|||\|||/ \|||\||       that your MIM list has 20 or less MIMS, due to the
-     ~   `-~ `-`   `-~ `-`   `-~ `-       number of MIMs allowed per API call.  split_lists.py
+     ~   '-~ '-'   '-~ '-'   '-~ '-       number of MIMs allowed per API call.  split_lists.py
                                           will create a directory and split your list into multiple
       20 MIM lists if you are using individual programs in the suite.  Read further for usage on
       all programs included in this repository.
