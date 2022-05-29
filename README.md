@@ -335,7 +335,7 @@ interactors.py takes requires one of two modes, specified using the "-m" option:
 1) "omim"
    * "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
 
-2) ####"list"
+2) "list"
     * "list" mode takes in a .txt file that you have created.  The list can
     contain mixed types of IDs from most databases, because interactors.py
     will use convert_ids.py to detect your ID types and convert them to the
@@ -352,8 +352,8 @@ interactors.py takes requires one of two modes, specified using the "-m" option:
     1ANI
     and so on...
     ------
+
     
---------------------------------------------------------------------------------------------
 
 Output:
 * For "list" mode:
