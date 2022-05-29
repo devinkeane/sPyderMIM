@@ -82,21 +82,28 @@ url += '&include=clinicalSynopsis&format=json&apiKey='
 # Append API key from parsed command line arguments onto URL
 url += args.apikey
 
+# Create a second URL for the gene map API, simply by replacing 'clinicalSynopsis' with 'geneMap'
+# at the the '&include' statement in the API URL
 url_geneMap = url.replace('clinicalSynopsis','geneMap')
 
 # ------------------------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------------------
+# Making the API requests and storing the data in a dataframe  |
+# -------------------------------------------------------------+
+
 
 # Load data into new data frame using pandas .read_json() module
 df = pd.read_json(url)
 
-# flatten data
+# flatten data (data is entirely nested at one column 'omim' and one row @ index 0)
 df2 = pd.json_normalize(df['omim'][0])
 # - - - - - - - - - -
 # load geneMap data using Python JSON module
 df_geneMap = pd.read_json(url_geneMap)
+
+# This dataframe may be renamed in the future.  It ends up being the final dataframe that
+# exported, but it is no longer transposed as a result of changes to the code over time.
 df_geneMap2_transposed = pd.DataFrame()
+
 # flatten data
 for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
     df_geneMap2 = pd.json_normalize(df_geneMap['omim'][0][i])
@@ -111,6 +118,14 @@ if 'entry.clinicalSynopsis.molecularBasis' in df2.columns:
 
 # Transpose the clinical data --> now each column represents a disease (MIM#)
 df2_transposed = pd.DataFrame.transpose(df2)
+
+
+# The following section may be changed or removed.  It was put in place to keep
+# track of failed MIMs to print to output.  However, previous changes I made to
+# parsing appear have fixed the program so that it does not ever seem to fail on
+# any phenotypic MIM (those which begin with the '#' symbol).  It is worth noting
+# that this part of the code appeared to be imperfect anyway and would need to
+# be modified if I decide to keep  it.
 
 bad_mim_count = 0
 
@@ -207,7 +222,7 @@ for i in range(len(gpn)):
         gpn['Node_name'][i] = gpn['Node_name_temp'][i]
 gpn.drop(columns='Node_name_temp',inplace=True)
 
-# Instantiate a new dataframe to populate with ENSEMBL ID info
+# Instantiate a new dataframe to populate with ENSEMBL ID info   ** MARKED FOR POSSIBLE REMOVAL **
 # ensembl_df = pd.DataFrame(index=range(len(mimdf)),columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 
@@ -230,6 +245,7 @@ for i in range(len(df_geneMap2_transposed.columns)):
             gpn2['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
             k += 1
 
+# Parsing HUGO gene symbol IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
 gpn3 = pd.DataFrame(index=gpn,columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 k = 0
 for i in range(len(df_geneMap2_transposed.columns)):
@@ -242,22 +258,29 @@ for i in range(len(df_geneMap2_transposed.columns)):
             gpn3['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
             gpn3['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
             k += 1
-
-# Append gpn3 and gpn2 to gpn
+# Concatenate by appending ENSEMBL IDs (gpn2) and HUGO symbols (gpn3) to original data frame (gpn)
 gpn = pd.concat([gpn,gpn2], ignore_index=True)
 gpn = pd.concat([gpn,gpn3], ignore_index=True)
 
+# -------------------------------------------------+
+# Printing output and saving the dataframe to file |
+# -------------------------------------------------+
+
+# Create a list of ENSEMBL IDs from GPN to use for output reporting.
 ensembl_ids = (gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs'])['Node_name'].reset_index(drop=True)
 
 gpn.drop(columns='Node_name_temp',inplace=True)
 gpn.dropna(how='all',inplace=True)
 gpn.reset_index(inplace=True,drop=True)
+
 # Print a preview of gpn to output
 print()
 print(gpn)
 print()
+
 # Save the gpn as a csv using the same filename, but with extension '.csv'
 gpn.to_csv(output)
+
 #df2_transposed.to_csv('testing.csv')
 
 # Print output message

@@ -1,11 +1,7 @@
-
-
 import argparse
 import os
 import urllib.parse
 import urllib.request
-
-
 
 # Parse command line input and options
 import pandas as pd
@@ -78,7 +74,6 @@ for i in range(len(df)):
         incoming_id_list += [df['incoming'][i]]
 
 
-
 for i in incoming_id_list:
     if i == '':
         pass
@@ -102,10 +97,6 @@ for i in range(len(incoming_id_list2)):
 if k > 5 & k < len(incoming_id_list2):
     print('And so on...')
 print()
-
-
-
-
 
 bad_id_list = []
 

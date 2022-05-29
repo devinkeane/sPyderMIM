@@ -41,7 +41,7 @@ lst = my_file.read().splitlines()
 chunked_list = []
 chunk_size = 20
 
-
+# build a list of lists, each of length 'chunk_size':
 for i in range(0, len(lst), chunk_size):
     chunked_list.append(lst[i:i+chunk_size])
 
@@ -57,13 +57,18 @@ rm_command = 'rm -R {}_MIM_directory'.format(output)
 # if the directory for split lists has not yet already been created, create one based on the project name
 if not os.path.exists(newpath):
     os.makedirs(newpath)
-# otherwise, remove the directory that exists and stZart fresh by creating a new one
+
+# otherwise, remove the directory that exists and start fresh by creating a new one
 else:
     os.system(rm_command)
     os.makedirs(newpath)
+
+# Create a dictionary of chunked lists, each of 'chunk_size',
 for i in range(len(chunked_list)):
     dictionary['./{}_MIM_directory/'.format(output)+output+"{0}.txt".format(i)] = chunked_list[i]
     print(str(output) + str(i) + '.txt')
 print()
+
+# save output to file
 for i in dictionary:
     save_to_file(dictionary[i], i)

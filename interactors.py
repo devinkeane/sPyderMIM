@@ -24,6 +24,7 @@ input = args.input
 output = args.output
 mode = args.mode
 
+# -------------------------------------------------------------------------------------------
 # Loading bar animation function
 done = False
 def animate():
@@ -39,14 +40,16 @@ def animate():
         sys.stdout.write('\r')
         sys.stdout.flush()
         time.sleep(0.1)
-
+    sys.stdout.flush()
+    sys.stdout.write('\r                           ')
     sys.stdout.write('\r( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔')
     sys.stdout.flush()
 
-
 searching_wait_animation = threading.Thread(target=animate)
 
+# -------------------------------------------------------------------------------------------
 
+# create and print logo
 logo = """
       _______           __   ____      __                       __                 
      / ____(_)___  ____/ /  /  _/___  / /____  _________ ______/ /_____  __________
@@ -57,8 +60,13 @@ logo = """
                                                        [ G e n o P h e n o ]  v5.5                         
 """
 print(logo)
+# -------------------------------------------------------------------------------------------
 
+# instantiate a dataframe
 gpn = pd.DataFrame()
+
+
+# import genes, either from an OMIM table for from a simple .txt list
 
 if mode == 'omim':
     gpn = pd.read_csv(input)
@@ -75,16 +83,13 @@ if mode == 'list':
     bashCommand = 'python3 ./convert_ids.py -i {} -s HGNC -o converted_HGNC.txt >/dev/null 2>&1'.format(input)
     os.system(bashCommand)
 
-
-
     # opening the file in read mode
     my_file = open('converted_ENSG.txt', "r")
 
     # reading the file
     data = my_file.read()
 
-    # replacing end splitting the text
-    # when newline ('\n') is seen.
+    # replacing end splitting the text when newline ('\n') is seen.
     ENSG_input_list = data.split("\n")
 
     my_file.close()
