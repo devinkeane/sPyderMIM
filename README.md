@@ -202,8 +202,6 @@ Following the instructions above will ensure optimal program functionality and o
 4) Execute with the following syntax/options:
 
 
-
-    --------------------------------------------------------------------------------------------
     [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
     --------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
       -. .-.   .-. .-.   .-. .-.   .      than 20.  Alternatively, you can use separate programs
