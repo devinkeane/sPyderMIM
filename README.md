@@ -120,7 +120,7 @@ programs.
 
 <span style="font-size:larger;"><b>[ c o n v e r t _ i d s . p y ]</b></span> will convert any mixed or non-mixed set of genes IDs from
 virtually any database identifier type to virtually any other type.  See
-"README_conversion_IDs_list.TXT" for an exhaustive list of accepted IDs.
+[README_conversion_IDs_list,txt](README_conversion_IDs_list.txt) for an exhaustive list of accepted IDs.
 
 
                                              ─=≡Σ((( つ◕ل͜◕)つ
@@ -233,15 +233,15 @@ Output:  (all results are moved to a new folder
           named after the project name, followed the a date/timestamp)
 
    * project_name_concatentated.csv  (OMIM genotype/phenotype table)
-     * project_name_interactors.csv  (IntAct protein interactors table)
-     * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
-     * project_name_interactors.png  (High resolution IntAct protein interactors labeled graph)
-     * project_name_phenotypes_NETWORK_SUMMARY.txt  (Genotype/phenotype network statistical analysis)
-     * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
-     * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
-     * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
-     * project_name_primary_genes_enrichment.csv  (OMIM genes enrichment analysis)
-     * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis)
+   * project_name_interactors.csv  (IntAct protein interactors table)
+   * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
+   * project_name_interactors.png  (High resolution IntAct protein interactors labeled graph)
+   * project_name_phenotypes_NETWORK_SUMMARY.txt  (Genotype/phenotype network statistical analysis)
+   * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
+   * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
+   * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
+   * project_name_primary_genes_enrichment.csv  (OMIM genes enrichment analysis)
+   * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis)
 
     --------------------------------------------------------------------------------------------
      [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
@@ -257,10 +257,11 @@ Output:  (all results are moved to a new folder
 
 Output:
 * ./project_name_MIM_directory/project_name0.txt
-  * ./project_name_MIM_directory/project_name1.txt
-  * ./project_name_MIM_directory/project_name2.txt
-  * etc...
+* ./project_name_MIM_directory/project_name1.txt
+* ./project_name_MIM_directory/project_name2.txt
+* etc...
 
+<!-- end the list -->
 
     --------------------------------------------------------------------------------------------
      [ t a b l e . p y ]  |
