@@ -35,7 +35,7 @@ automatically creates two enrichment analyses:
     2)  for the genes encoding for all protein interactors of the OMIM Genes
 
 
-###The major planned objectives for future versions of GenoPheno include:
+### The major planned objectives for future versions of GenoPheno include:
 
     *   Adding gene regulatory network discovery capability using GTEX eQTLs
 
@@ -46,7 +46,7 @@ automatically creates two enrichment analyses:
     *   Adding potential drug discovery functionality
 
 
-###A single workflow run using GenoPheno.sh features the following output:
+### A single workflow run using GenoPheno.sh features the following output:
 
      * OMIM genotype/phenotype edge list table (.csv)
      * IntAct protein interactors edge list table (.csv)
@@ -143,7 +143,7 @@ convert_ids.py performs gene name conversions by using g:Profiler's [ g:Convert 
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-##IMPORTANT NOTES!!!
+## IMPORTANT NOTES!!!
 ### ** Read first to ensure functionality **
 ___
 * GenoPheno.sh is the main program that will execute the entire workflow automatically.
@@ -184,12 +184,12 @@ Following the instructions above will ensure optimal program functionality and o
                          |___/
 --------------------------------------------------------------------------------------------
 
-1) ####Obtain an API key through OMIM:  https://www.omim.org/api
+1) #### Obtain an API key through OMIM:  https://www.omim.org/api
 
 --------------------------------------------------------------------------------------------
 
-2) ####Create list of OMIM reference ids ("MIM" numbers)
-   ####(20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using GenoPheno.sh):
+2) #### Create list of OMIM reference ids ("MIM" numbers)
+   #### (20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using GenoPheno.sh):
 
 
 ~$  ` vim input_list.txt `
@@ -202,7 +202,7 @@ Following the instructions above will ensure optimal program functionality and o
     ------
 --------------------------------------------------------------------------------------------
 
-3) ####Set up an Anaconda environment with the necessary dependencies (Anaconda required):
+3) #### Set up an Anaconda environment with the necessary dependencies (Anaconda required):
 
 
 ~$ ` conda create -n GenoPheno python=3.9 scipy=1.7 pandas matplotlib curl networkx requests`
@@ -211,7 +211,7 @@ Following the instructions above will ensure optimal program functionality and o
 
 --------------------------------------------------------------------------------------------
 
-4) ####Execute with the following syntax/options:
+4) #### Execute with the following syntax/options:
     
 --------------------------------------------------------------------------------------------
 
@@ -305,8 +305,8 @@ Output:
     allowing for your input list to consist of any mixture of types.  IDs that were not successfully
     converted will be reported in an output file.
     
-####For a full list of accepted IDs, reference [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt).
-####Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost
+#### For a full list of accepted IDs, reference [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt).
+#### Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost
 
     
     ~$ python3 convert_ids.py -i <gene_id_list.txt> -s <SYMBOL_TO_CONVERT_TO> -o <gene_id_list_converted.txt>
@@ -346,7 +346,7 @@ Output:
     
 interactors.py takes requires one of two modes, specified using the "-m" option:
 
-1) "omim"
+### 1) "omim"
    * "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
 
 2) "list"
