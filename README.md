@@ -35,7 +35,7 @@ automatically creates two enrichment analyses:
     2)  for the genes encoding for all protein interactors of the OMIM Genes
 
 
-The major planned objectives for future versions of GenoPheno include:
+###The major planned objectives for future versions of GenoPheno include:
 
     *   Adding gene regulatory network discovery capability using GTEX eQTLs
 
@@ -46,7 +46,7 @@ The major planned objectives for future versions of GenoPheno include:
     *   Adding potential drug discovery functionality
 
 
-A single workflow run using GenoPheno.sh features the following output:
+###A single workflow run using GenoPheno.sh features the following output:
 
      * OMIM genotype/phenotype edge list table (.csv)
      * IntAct protein interactors edge list table (.csv)
@@ -63,6 +63,8 @@ Edge list and .gexf output can be used in other programs.  However, an ultimate 
 software is to provide a purely command line based workflow that can allow for graph theory
 analysis to be upscaled and applied to larger data sets than could be handled in GUI-based
 programs.
+
+---
 
     _________________________________________________________________________________________________
        __                                           |
@@ -87,9 +89,13 @@ programs.
  each separated by a new line (maximum of 20 mims per file, due to API call limits for table.py
  and 5000 total mims when using GenoPheno.sh).
 
+table.py uses the [OMIM rest API](https://www.omim.org/help/api) to retreive genetic and clinical data.
+
                                                ༼ つ ╹ ╹ ༽つ
  <span style="font-size:larger;"><b>[ i n t e r a c t o r s . p y ]</b></span>  uses the output from table.py to find the protein products
  of each gene and their protein interactors.
+
+interactors.py uses EBI's [IntAct API](https://www.ebi.ac.uk/intact/documentation/technical_corner)
 
                                                  (✿◠‿◠)
  <span style="font-size:larger;"><b>[ c o n c a t . p y ]</b></span> will automatically combine multiple .csv outputs from either
@@ -108,10 +114,14 @@ programs.
         5) triadic closure
         6) number of total nodes and edges        ,,,
                                                 \(ʘ‿ʘ)/
- <span style="font-size:larger;"><b>[ e n r i c h m e n t . s h ]</b></span>  creates a unique list of all interactors found from your
+graph.py uses the [NetworkX](https://networkx.org/documentation/stable/index.html) Python library to create graph objects.
+
+<span style="font-size:larger;"><b>[ e n r i c h m e n t . p y ]</b></span>  creates a unique list of all interactors found from your
  output table from interactors.py, then performs enrichment analysis on the list using
  the ToppGene enrichment API.  Results have been automatically filtered and sorted in
  ascending order by FDR/B&H Q value < 10e-6.
+
+enrichment.py utilizes the Computational Medicine Center's [ToppGene API](https://toppgene.cchmc.org/API/) in order to perform enrichment analysis.
  
                                                                  ^
                                                                 ) )
@@ -122,6 +132,8 @@ programs.
 virtually any database identifier type to virtually any other type.  See
 [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt) for an exhaustive list of accepted IDs.
 
+convert_ids.py performs gene name conversions by using g:Profiler's [ g:Convert API](https://biit.cs.ut.ee/gprofiler/page/apis).
+
 
                                              ─=≡Σ((( つ◕ل͜◕)つ
 
@@ -131,14 +143,14 @@ virtually any database identifier type to virtually any other type.  See
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-#IMPORTANT NOTES!!!  
+##IMPORTANT NOTES!!!
 ### ** Read first to ensure functionality **
 ___
 * GenoPheno.sh is the main program that will execute the entire workflow automatically.
 Additionally, you can also use any of the programs in the suite individually or include
 them in your own workflow script!
 
-       ~$ GenoPheno.sh <MIM_LIST.TXT><YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>  (do not use file
+       ~$ GenoPheno.sh <MIM_LIST.TXT> <YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>  (do not use file
                                                                               extension for
                                                                               project name)
 * GenoPheno only takes in lists of "Phenotype MIM numbers" as the
@@ -172,12 +184,12 @@ Following the instructions above will ensure optimal program functionality and o
                          |___/
 --------------------------------------------------------------------------------------------
 
-1) Obtain an API key through OMIM:  https://www.omim.org/api
+1) ####Obtain an API key through OMIM:  https://www.omim.org/api
 
 --------------------------------------------------------------------------------------------
 
-2) Create list of OMIM reference ids ("MIM" numbers) (20 MAXIMUM if input is for table.py,
-5000 MAXIMUM if using GenoPheno.sh):
+2) ####Create list of OMIM reference ids ("MIM" numbers)
+   ####(20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using GenoPheno.sh):
 
 
 ~$  ` vim input_list.txt `
@@ -190,7 +202,7 @@ Following the instructions above will ensure optimal program functionality and o
     ------
 --------------------------------------------------------------------------------------------
 
-3) Set up an Anaconda environment with the necessary dependencies (Anaconda required):
+3) ####Set up an Anaconda environment with the necessary dependencies (Anaconda required):
 
 
 ~$ ` conda create -n GenoPheno python=3.9 scipy=1.7 pandas matplotlib curl networkx requests`
@@ -199,15 +211,15 @@ Following the instructions above will ensure optimal program functionality and o
 
 --------------------------------------------------------------------------------------------
 
-4) Execute with the following syntax/options:
+4) ####Execute with the following syntax/options:
     
 --------------------------------------------------------------------------------------------
 
     
-    --------------------------------------------------------------------------------------------
-    [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
-    --------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
-     -. .-.   .-. .-.   .-. .-.   .      than 20.  Alternatively, you can use separate programs
+     --------------------------------------------------------------------------------------------
+     [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
+     -------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
+     -. .-.   .-. .-.   .-. .-.   .       than 20.  Alternatively, you can use separate programs
      ||\|||\ /|||\|||\ /|||\|||\ /|       in the suite individually, but table.py will require
      |/ \|||\|||/ \|||\|||/ \|||\||       that your MIM list has 20 or less MIMS, due to the
      ~   '-~ '-'   '-~ '-'   '-~ '-       number of MIMs allowed per API call.  split_lists.py
@@ -253,7 +265,7 @@ Output:  (all results are moved to a new folder
 			    	  your MIM list into separate input MIM lists for table.py.
 
 
-~$ `python3 split_list.py -i <big_mim_list.txt> -o <project_name>`
+    ~$ python3 split_list.py -i <big_mim_list.txt> -o <project_name>
 
 Output:
 * ./project_name_MIM_directory/project_name0.txt
@@ -267,10 +279,10 @@ Output:
      [ t a b l e . p y ]  |
     ----------------------+
     
-    
-~$ `python3 table.py -i <./project_name_MIM_directory/project_name0.txt> -o <output_file.csv> -a <api_key>`
-~$ `python3 table.py -i <./project_name_MIM_directory/project_name1.txt> -o <output_file.csv> -a <api_key>`
-~$ `python3 table.py -i <./project_name_MIM_directoryproject_name2.txt> -o <output_file.csv> -a <api_key>`
+
+    python3 table.py -i <./project_name_MIM_directory/project_name0.txt> -o <output_file.csv> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directory/project_name1.txt> -o <output_file.csv> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directoryproject_name2.txt> -o <output_file.csv> -a <api_key>
     
                                                                                       A
                                                                                       |
@@ -279,7 +291,7 @@ Output:
     ------------------------+          |          (two or more files allowed as input to concat.py)
                                        |
                                        V
-~$ `python3 concat.py -i <input_file.csv> <input_file2.csv> <and_so_on...> -o <output_file.csv>`
+    ~$ python3 concat.py -i <input_file.csv> <input_file2.csv> <and_so_on...> -o <output_file.csv>`
 
     --------------------------------------------------------------------------------------------
      [ c o n v e r t _ i d s . p y ]  |      "convert_ids.py" will allow you to convert gene
@@ -293,8 +305,8 @@ Output:
     allowing for your input list to consist of any mixture of types.  IDs that were not successfully
     converted will be reported in an output file.
     
-For a full list of accepted IDs, reference [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt).
-Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost
+####For a full list of accepted IDs, reference [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt).
+####Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost
 
     
     ~$ python3 convert_ids.py -i <gene_id_list.txt> -s <SYMBOL_TO_CONVERT_TO> -o <gene_id_list_converted.txt>
