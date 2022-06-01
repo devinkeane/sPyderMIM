@@ -267,22 +267,21 @@ Output:  (all results are moved to a new folder
 
     ~$ python3 split_list.py -i <big_mim_list.txt> -o <project_name>
 
-Output:
-* ./project_name_MIM_directory/project_name0.txt
-* ./project_name_MIM_directory/project_name1.txt
-* ./project_name_MIM_directory/project_name2.txt
-* etc...
+    Output:
+    * ./project_name_MIM_directory/project_name0.txt
+    * ./project_name_MIM_directory/project_name1.txt ---+
+    * ./project_name_MIM_directory/project_name2.txt    |
+    * etc...                                            |
+                                                        |
+                                                        |
+    -------------------------------------------------   |   -----------------------------------
+     [ t a b l e . p y ]  |                             |
+    ----------------------+                             |
+                                                        V
 
-<!-- end the list -->
-
-    --------------------------------------------------------------------------------------------
-     [ t a b l e . p y ]  |
-    ----------------------+
-    
-
-    python3 table.py -i <./project_name_MIM_directory/project_name0.txt> -o <output_file.csv> -a <api_key>
-    python3 table.py -i <./project_name_MIM_directory/project_name1.txt> -o <output_file.csv> -a <api_key>
-    python3 table.py -i <./project_name_MIM_directoryproject_name2.txt> -o <output_file.csv> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directory/project_name0.txt> -o <output_file0.csv> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directory/project_name1.txt> -o <output_file1.csv> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directoryproject_name2.txt> -o <output_file2.csv> -a <api_key>
     
                                                                                       A
                                                                                       |
@@ -347,10 +346,10 @@ Output:
 interactors.py takes requires one of two modes, specified using the "-m" option:
 
 ### 1) "omim"
-   * "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
+* "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
 
-2) "list"
-    * "list" mode takes in a .txt file that you have created.  The list can
+### 2) "list"
+* "list" mode takes in a .txt file that you have created.  The list can
     contain mixed types of IDs from most databases, because interactors.py
     will use convert_ids.py to detect your ID types and convert them to the
     necessary format.  Create a list like the one in the example for
@@ -402,7 +401,7 @@ Output:
     
       -l LABELS, --labels LABELS
     
-                            arguments: "subtype", "overlapping", "interactors", or "all"
+                            arguments: arguments: "all" or "none"
     
       -o OUTPUT, --output OUTPUT
     
@@ -425,6 +424,9 @@ Output:
     ~$ python3 enrichment.py -i <input_file.csv> -o <output_file.csv>
     
     --------------------------------------------------------------
+Output:
+* Enrichment analysis (.csv)
+  * filtered by FDR/B&H Q value < 10e-6 in ascending order.
 
 ---
 
