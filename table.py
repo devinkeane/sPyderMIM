@@ -198,28 +198,40 @@ for i in range(len(gpn)):
     # that comes after it as well.
     else:
         if isinstance(gpn['Node_name_temp'][i], str):
-            if gpn['Node_name_temp'][i].count('{') > 0:
-                gpn['Node_name_temp'][i] = gpn['Node_name_temp'][i].split(' {', 1)[0].replace(';', '')
+            if gpn['Node_name_temp'][i].endswith('}'):
+                gpn['Node_name_temp'][i] = gpn['Node_name_temp'][i].rsplit(' {', -1)[0].replace(';', '')
 # ---------------------------------------------------------------------------
 # Create parenthetical column
 for i in range(len(gpn)):
-    if gpn['Node_name_temp'][i].find('(') > 0:
-        if gpn['Node_name_temp'][i].find('({') > 0:
-            gpn['Node_name'][i] = gpn['Node_name_temp'][i]
-        else:
-            temp = gpn['Node_name_temp'][i].split(' (')[-1]
-            gpn['Parenthetical'][i] = '('+temp
-
-# Create permanent 'Node_name' column from 'Node_name_temp, but without the parentheticals
-for i in range(len(gpn)):
-    if gpn['Node_name_temp'][i].find('(') > 0:
-        if gpn['Node_name_temp'][i].find('({') > 0:
-            if gpn['Node_name_temp'][i].find(') ') == 0:
-                gpn['Node_name'][i] = gpn['Node_name_temp'][i]
-        else:
-            gpn['Node_name'][i] = gpn['Node_name_temp'][i].split(' (')[0]
+    if gpn['Node_name_temp'][i].endswith(')'):
+        temp = gpn['Node_name_temp'][i].split(' (')[-1]
+        gpn['Parenthetical'][i] = '('+temp
+        gpn['Node_name'][i] = gpn['Node_name_temp'][i].rsplit(' (',1)[0]
     else:
         gpn['Node_name'][i] = gpn['Node_name_temp'][i]
+
+"""
+# Create permanent 'Node_name' column from 'Node_name_temp, but without the parentheticals
+for i in range(len(gpn)):
+    # if there are any parentheses in the string:
+    if gpn['Node_name_temp'][i].find('(') > 0:
+        # if there are any with the bracket thingies...
+        if gpn['Node_name_temp'][i].find('({') > 0:
+            # if the string does not end with parentheses, just copy the string to the permanent "Node_name" column
+            if gpn['Node_name_temp'][i].find(') ') == 0:
+                gpn['Node_name'][i] = gpn['Node_name_temp'][i]
+        # and if there are no parentheses
+        else:
+            # if the string ends in parentheses, transfer the part without parentheses to the permanent "Node_name column
+            if gpn['Node_name_temp'][i].endswith(')'):
+                gpn['Node_name'][i] = gpn['Node_name_temp'][i].split(' (')[0]
+            # otherwise just transfer the whole string
+            else:
+                gpn['Node_name'][i] = gpn['Node_name_temp'][i]
+
+    else:
+        gpn['Node_name'][i] = gpn['Node_name_temp'][i]
+"""
 gpn.drop(columns='Node_name_temp',inplace=True)
 
 # Instantiate a new dataframe to populate with ENSEMBL ID info   ** MARKED FOR POSSIBLE REMOVAL **
