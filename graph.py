@@ -298,7 +298,7 @@ nx.set_node_attributes(G,eigenvector_dict,'eigenvector')
 sorted_betweenness = sorted(betweenness_dict.items(), key=itemgetter(1),reverse=True)
 
 communities = nx.community.greedy_modularity_communities(G)
-node_connectivity = nx.node_connectivity(G,flow_func=shortest_augmenting_path)
+node_connectivity = nx.average_node_connectivity(G,flow_func=shortest_augmenting_path)
 modularity_dict = {} # Create a blank dictionary
 for i,c in enumerate(communities): # Loop through the list of communities, keeping track of the number for the community
     for name in c: # Loop through each person in a community
@@ -327,7 +327,7 @@ print('', file= summary_file)
 print('Total Nodes:  '+str(G.number_of_nodes()), file= summary_file)
 print('Total Edges:  '+str(G.number_of_edges()), file= summary_file)
 print('', file= summary_file)
-print('                         Node connectivisty:  ', node_connectivity, file = summary_file)
+print('                 Average node connectivity:  ', node_connectivity, file = summary_file)
 print('     Network diameter of largest component:  ', diameter, file = summary_file)
 print('                              Transitivity:  ', transitivity, file = summary_file)
 print('', file= summary_file)
