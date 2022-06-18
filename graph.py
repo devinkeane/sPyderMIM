@@ -274,7 +274,7 @@ print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+-
 print()
 
 # Begin loading spinner animation
-calculation_wait_animation.start()
+#calculation_wait_animation.start()
 
 
 components = nx.connected_components(G)
@@ -374,13 +374,13 @@ for i in range(len(communities)):
     print('-------', file=summary_file)
     for node in class0_sorted_by_eigenvector[:10]:
         print(str(node[0])+":   "+str(node[1]), file= summary_file)
-
+"""
 # End loading bar
 done = True
 time.sleep(2)
 
 sys.stdout.flush()
-
+"""
 
 # ---------------------------------------------------------------------------
 # Save output to files |
