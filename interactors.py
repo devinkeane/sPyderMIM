@@ -247,6 +247,7 @@ import urllib.request
 
 url = 'https://rest.uniprot.org/idmapping/run'
 
+
 params = {
 'from': 'ENSEMBL_ID',
 'to': 'ACC',
