@@ -242,6 +242,9 @@ searching_wait_animation.start()
 for i in ensembl_ids_list_unique:
     query_string += i
     query_string += ' '
+
+# The following portion of code is likely to be deprecated in the near future
+# G:Profiler now performs this task instead
 """
 import urllib.parse
 import urllib.request
