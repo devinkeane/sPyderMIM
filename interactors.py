@@ -12,6 +12,7 @@ import time
 import sys
 import os
 
+
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Find first interactors for the genes in your genotype/phenotype table! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (phenotype table with ENSEMBL IDs)')
@@ -241,7 +242,7 @@ searching_wait_animation.start()
 for i in ensembl_ids_list_unique:
     query_string += i
     query_string += ' '
-
+"""
 import urllib.parse
 import urllib.request
 
@@ -276,7 +277,7 @@ for i in conversion2:
 for i in range(len(protein_map_temp)):
     if len(protein_map_temp[i]) == 6:
         protein_map += [protein_map_temp[i]]
-"""
+
 intact_url = ''
 dictionary = {}
 df = pd.DataFrame()
