@@ -245,7 +245,7 @@ for i in ensembl_ids_list_unique:
 import urllib.parse
 import urllib.request
 
-url = 'https://www.uniprot.org/uploadlists/'
+url = 'https://rest.uniprot.org/idmapping/run'
 
 params = {
 'from': 'ENSEMBL_ID',
