@@ -315,6 +315,12 @@ gpn = pd.concat([gpn,gpn3], ignore_index=True)
 # Create a list of ENSEMBL IDs from GPN to use for output reporting.
 ensembl_ids = (gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs'])['Node_name'].reset_index(drop=True)
 
+
+gpn.drop(gpn[gpn.Node_type == 'entry.clinicalSynopsis.miscellaneous'].index, inplace=True)
+gpn.drop(gpn[gpn.Node_type == 'entry.titles.includedTitles'].index, inplace=True)
+gpn.drop(gpn[gpn.Node_type == 'entry.titles.alternativeTitles'].index, inplace=True)
+
+
 gpn.drop(columns='Node_name_temp',inplace=True)
 gpn.dropna(how='all',inplace=True)
 gpn.reset_index(inplace=True,drop=True)

@@ -327,19 +327,19 @@ print('', file= summary_file)
 print('Total Nodes:  '+str(G.number_of_nodes()), file= summary_file)
 print('Total Edges:  '+str(G.number_of_edges()), file= summary_file)
 print('', file= summary_file)
-print('                 Average node connectivity:  ', node_connectivity, file = summary_file)
+print('                 Average node connectivity:  ', format(node_connectivity,'.3E'), file = summary_file)
 print('     Network diameter of largest component:  ', diameter, file = summary_file)
-print('                              Transitivity:  ', transitivity, file = summary_file)
+print('                              Transitivity:  ', format(transitivity,'.3E'), file = summary_file)
 print('', file= summary_file)
 print('  ____        _             _      ', file = summary_file)
 print('   L|op  20  [|\|odes  by  [|)egree ', file = summary_file)
 print('   ---------------------------------', file = summary_file)
 print('', file= summary_file)
-print('Node  |  Degree', file= summary_file)
+print('{:>50} | {:>10}'.format('Node','Degree'), file= summary_file)
 print('', file= summary_file)
 sys.stdout.flush()
 for d in sorted_degree[:20]:
-    print(str(d[0])+':   '+str(d[1]), file= summary_file)
+    print('{:>50}   {:>10}'.format(str(d[0]), str(d[1])), file= summary_file)
 
 print('', file= summary_file)
 print('', file= summary_file)
@@ -347,18 +347,18 @@ print('  ____        _             _              _ ', file = summary_file)
 print('   L|op  20  [|\|odes  by  [|}etweenness  ((entrality', file = summary_file)
 print('   --------------------------------------------------', file = summary_file)
 print('', file= summary_file)
-print('Node  |  Betweenness Centrality', file= summary_file)
+print('{:>50} | {:>10}'.format('Node','Betweenness Centrality'), file= summary_file)
 print('', file= summary_file)
 sys.stdout.flush()
 for b in sorted_betweenness[:20]:
-    print(str(b[0])+':   '+str(b[1]), file= summary_file)
+    print('{:>50}   {:>10}'.format(str(b[0]), format(b[1],'.3E')), file= summary_file)
 print('', file= summary_file)
 
 print("   _ _             _      ", file= summary_file)
 print("  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)", file= summary_file)
 print(' -------------------------------------------------------------------------------', file = summary_file)
 print('', file = summary_file)
-print('Node | Eigenvector Centrality', file = summary_file)
+print('{:>50} | {:>10}'.format('Node','Eigenvector Centrality'), file = summary_file)
 print('', file = summary_file)
 for i in range(len(communities)):
     # First get a list of just the nodes in that class
@@ -373,7 +373,7 @@ for i in range(len(communities)):
     print('CLASS '+str(i)+':', file = summary_file)
     print('-------', file=summary_file)
     for node in class0_sorted_by_eigenvector[:10]:
-        print(str(node[0])+":   "+str(node[1]), file= summary_file)
+        print('{:>50}   {:>10}'.format(str(node[0]),format(node[1],'.3E')), file= summary_file)
 """
 # End loading bar
 done = True
