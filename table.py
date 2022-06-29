@@ -16,6 +16,7 @@
 import numpy as np
 import pandas as pd
 import argparse
+import requests
 
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
@@ -242,20 +243,50 @@ gpn.drop(columns='Node_name_temp',inplace=True)
 gpn2 = pd.DataFrame(index=gpn,columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
 
 bad_mim_count2 = 0
+no_ENSEMBL_list = []
 print()
 k = 0
+
 for i in range(len(df_geneMap2_transposed.columns)):
-    # Due to increased accuracy of the program, I intend to depracate this if branch.
+
     if isinstance(df_geneMap2_transposed[i]['entry.phenotypeMapList'],float):
         print('No ENSEMBL/Gene ID found...      MIM # :    ',df_geneMap2_transposed[i]['entry.mimNumber'])
         bad_mim_count2 += 1
     else:
         for j in range(len(df_geneMap2_transposed[i]['entry.phenotypeMapList'])):
-            gpn2['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['ensemblIDs'].split(',')[0]
-            gpn2['Node_type'][k] = 'phenotypeMap.ensemblIDs'
-            gpn2['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
-            gpn2['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
-            k += 1
+            if 'ensemblIDs' in df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']:
+
+                gpn2['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['ensemblIDs'].split(',')[0]
+                gpn2['Node_type'][k] = 'phenotypeMap.ensemblIDs'
+                gpn2['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
+                gpn2['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
+                k += 1
+
+            else:
+                r = requests.post(
+                    url='https://biit.cs.ut.ee/gprofiler/api/convert/convert/',
+                    json={
+                        'organism': 'hsapiens',
+                        'target': 'ENSG',
+                        'query': df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols'],
+                    }
+                )
+                result = r.json()['result']
+                ENSG_conversion_df = pd.DataFrame(result)
+                if ENSG_conversion_df['converted'][0] == 'None':
+                    no_ENSEMBL_list += [df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols']]
+                    print()
+                    print('No ENSEMBL ID found for approved gene symbol:  '+no_ENSEMBL_list[-1])
+                    print('Gene will not be included in results.')
+                    print()
+                else:
+                    gpn2['Node_name'][k] = ENSG_conversion_df['converted'][0]
+                    gpn2['Node_type'][k] = 'phenotypeMap.ensemblIDs'
+                    gpn2['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
+                    gpn2['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
+                    k += 1
+
+
 
 # Parsing HUGO gene symbol IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
 gpn3 = pd.DataFrame(index=gpn,columns=['Superphenotype', 'Node_name', 'Node_type', 'MIM_number','Parenthetical','Node_name_temp'])
@@ -265,11 +296,14 @@ for i in range(len(df_geneMap2_transposed.columns)):
         pass
     else:
         for j in range(len(df_geneMap2_transposed[i]['entry.phenotypeMapList'])):
-            gpn3['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols']
-            gpn3['Node_type'][k] = 'phenotypeMap.approvedGeneSymbols'
-            gpn3['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
-            gpn3['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
-            k += 1
+            if df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols'] in no_ENSEMBL_list:
+                print(df_geneMap2_transposed[i]['entry.phenotypeMapList'][i])
+            else:
+                gpn3['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols']
+                gpn3['Node_type'][k] = 'phenotypeMap.approvedGeneSymbols'
+                gpn3['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
+                gpn3['MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
+                k += 1
 # Concatenate by appending ENSEMBL IDs (gpn2) and HUGO symbols (gpn3) to original data frame (gpn)
 gpn = pd.concat([gpn,gpn2], ignore_index=True)
 gpn = pd.concat([gpn,gpn3], ignore_index=True)
@@ -304,6 +338,19 @@ print()
 print('  ',len(mimdf)-bad_mim_count,' of ',len(mimdf),' MIMs contained phenotypic data.')
 print()
 print('  ',len(mimdf)-bad_mim_count2,' of ',len(mimdf),' MIMs contained ENSEMBL/Gene IDs.')
+
+if len(no_ENSEMBL_list) > 0:
+    print()
+    print('   No corresponding ENSEMBL IDs found for HGNC gene symbol:')
+    print()
+    for i in no_ENSEMBL_list:
+        print('     * '+i)
+    if len(no_ENSEMBL_list) == 1:
+        print()
+        print('   This gene ID has been omitted from the output table.')
+    else:
+        print()
+        print('   These gene IDs have been omitted from the output table.')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
