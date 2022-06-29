@@ -297,7 +297,7 @@ for i in range(len(df_geneMap2_transposed.columns)):
     else:
         for j in range(len(df_geneMap2_transposed[i]['entry.phenotypeMapList'])):
             if df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols'] in no_ENSEMBL_list:
-                print(df_geneMap2_transposed[i]['entry.phenotypeMapList'][i])
+                pass
             else:
                 gpn3['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols']
                 gpn3['Node_type'][k] = 'phenotypeMap.approvedGeneSymbols'
