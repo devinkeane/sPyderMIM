@@ -26,10 +26,10 @@ import sys
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
-parser.add_argument('-m', '--mode', type=str, required=True , help='\"geno\" (find protein interactor overlap) or \"pheno\" (find OMIM phenotypic overlap)')
+parser.add_argument('-m', '--mode', type=str, required=True , help='\"interactors\" (find protein interactor overlap), \"omim_genes\" (find OMIM gene overlap), or \"omim_features\" (find OMIM clinical feature overlap)')
 parser.add_argument('-i', '--input', type=str, required=True ,help='<INPUT_FILENAME.csv>  (Input table)')
 parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"all\" or \"none\"')
-parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_FILENAME.png>')
+parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_NAME> (without file extension)')
 args = parser.parse_args()
 
 # Assign parsed arguments into local variables
@@ -77,7 +77,7 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 5.5  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 6.0  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
@@ -94,13 +94,16 @@ print(logo)
 # ---------------------------------------------------------------------------
 # GRAPHING THE DATA |
 # ------------------+
-if mode == 'pheno':
+G = nx.Graph()
+
+if mode == 'omim_genes':
     gpn = pd.read_csv(input)
     print('Processing your input table:')
     print()
     print(gpn.drop(columns='Unnamed: 0'))
-
     print()
+
+    gpn = gpn[gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols']
     sys.stdout.write('Defining source and target nodes...')
 
     # Create a NetworkX object called "G" where 'Superphenotype' is the source node
@@ -209,9 +212,73 @@ if mode == 'pheno':
 
     """
 # ---------------------------------------------------------------------------
+if mode == 'omim_features':
+    gpn = pd.read_csv(input)
+    print('Processing your input table:')
+    print()
+    print(gpn.drop(columns='Unnamed: 0'))
+    print()
+
+    sys.stdout.write('Defining source and target nodes...')
+
+    # Create a NetworkX object called "G" where 'Superphenotype' is the source node
+    # and 'Node_name' is the target node.
+    G = nx.from_pandas_edgelist(gpn, source='Superphenotype', target='Node_name')
+
+    sys.stdout.flush()
+    sys.stdout.write('\rDefining source and target nodes... ✔')
+    print()
+
+    sys.stdout.write('Creating layout...')
+    # Draw a graph with G using a color map that distinguishes between genes and phenotypes
+    plt.figure(figsize=(100, 100))
+    sys.stdout.flush()
+    plt.tight_layout()
+
+    pos = nx.kamada_kawai_layout(G)
+    # pos= nx.spring_layout(G)
+    sys.stdout.flush()
+    sys.stdout.write('\rCreating layout... ✔')
+    print()
+
+    sys.stdout.write('Constructing network visualization...')
+
+    nx.draw(G, node_color='green', node_size=300, pos=pos, with_labels=False)
+
+    # color_map = []
+    sys.stdout.flush()
+    sys.stdout.write('\rConstructing network visualization... ✔')
+    print()
+    sys.stdout.flush()
+    superphenotype_labels = {}
+    Node_name_labels = {}
+    neighbor_labels = {}
+    gene_labels = {}
+
+    if labels == 'all' or labels == 'subtype':
+        sys.stdout.write('Creating labels...')
+        for idx, node in enumerate(G.nodes()):
+            if node in gpn['Superphenotype'].unique():
+                superphenotype_labels[node] = node
+            if node in gpn['Node_name'].unique():
+                Node_name_labels[node] = node
+
+        bbox = dict(fc="blue", ec="black", boxstyle="square", lw=2)
+
+        nx.draw_networkx_labels(G, pos, labels=superphenotype_labels, font_size=14, font_color='white',
+                                font_family='copperplate', bbox=bbox)
+        nx.draw_networkx_labels(G, pos, labels=Node_name_labels, font_size=14, font_color='black',
+                                font_family='copperplate')
+
+        sys.stdout.write('\rCreating labels... ✔')
+        sys.stdout.flush()
+        print()
+
+# ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
 
-elif mode == 'geno':
+elif mode == 'interactors':
     protein_df = pd.read_csv(input)
     print('Processing your input table:')
     print()
@@ -298,7 +365,7 @@ nx.set_node_attributes(G,eigenvector_dict,'eigenvector')
 sorted_betweenness = sorted(betweenness_dict.items(), key=itemgetter(1),reverse=True)
 
 communities = nx.community.greedy_modularity_communities(G)
-node_connectivity = nx.average_node_connectivity(G,flow_func=shortest_augmenting_path)
+#node_connectivity = nx.average_node_connectivity(G,flow_func=shortest_augmenting_path)
 modularity_dict = {} # Create a blank dictionary
 for i,c in enumerate(communities): # Loop through the list of communities, keeping track of the number for the community
     for name in c: # Loop through each person in a community
@@ -316,10 +383,10 @@ summary_title = """
   | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
   | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
                                                                           /  
-                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v5.5          /
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v6.0          /
 ------------------------------------------------------------------------------
 """
-summary_file = open(output.split('.')[0]+'_NETWORK_SUMMARY.txt', 'w')
+summary_file = open(output+'_NETWORK_SUMMARY.txt', 'w')
 print(summary_title, file = summary_file)
 print('', file= summary_file)
 print('Calculation date/time:  ',datetime.now(), file= summary_file)
@@ -327,7 +394,7 @@ print('', file= summary_file)
 print('Total Nodes:  '+str(G.number_of_nodes()), file= summary_file)
 print('Total Edges:  '+str(G.number_of_edges()), file= summary_file)
 print('', file= summary_file)
-print('                 Average node connectivity:  ', format(node_connectivity,'.3E'), file = summary_file)
+#print('                 Average node connectivity:  ', format(node_connectivity,'.3E'), file = summary_file)
 print('     Network diameter of largest component:  ', diameter, file = summary_file)
 print('                              Transitivity:  ', format(transitivity,'.3E'), file = summary_file)
 print('', file= summary_file)
@@ -392,12 +459,10 @@ print('Saving your output...')
 print()
 # Name the graph output file based on the input argument for the file name.
 # Append '.png' to the filename and save the figure as that filename.
-graph_output_name = output.split('.')[0]
-graph_output_name += '.png'
+graph_output_name = output+'.png'
 plt.savefig(graph_output_name)
 
-gexf_output_name = output.split('.')[0]
-gexf_output_name += '.gexf'
+gexf_output_name = output+'.gexf'
 nx.write_gexf(G, gexf_output_name)
 
 # ---------------------------------------------------------------------------
@@ -455,15 +520,15 @@ for i,c in enumerate(communities): # Loop through the list of communities
 """
 summary_file.close()
 
-if mode == 'geno':
+if mode == 'interactors':
     print(spiderweb_ascii_art)
-if mode == 'pheno':
+if mode == 'omim_genes' or mode == 'omim_features':
     print(spiderweb_ascii_art2)
 print()
 print()
-print('     ...image saved as \"',output,'\" with ', num_nodes,' total nodes.')
+print('     ...image saved as \"'+output+'.png\" with ', num_nodes,' total nodes.')
 print()
-print('     Summary file saved as \"'+output.split('.')[0]+'_NETWORK_SUMMARY.txt\"')
+print('     Summary file saved as \"'+output+'_NETWORK_SUMMARY.txt\"')
 print()
 print('     Graph exchange XML file saved as \"'+gexf_output_name+'  *:･ﾟ✧')
 print()

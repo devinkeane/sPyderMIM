@@ -16,7 +16,7 @@ import os
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Find first interactors for the genes in your genotype/phenotype table! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (phenotype table with ENSEMBL IDs)')
-parser.add_argument('-m', '--mode', type=str, help='\"omim\" (output from table.py) or \"list\" (simple .txt list of ENSG IDs)')
+parser.add_argument('-m', '--mode', type=str, help='\"omim\" (genes or clinical data output from table.py) or \"list\" (simple .txt list of ENSG IDs)')
 parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
 args = parser.parse_args()
 
@@ -58,7 +58,7 @@ logo = """
    / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
   /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
 
-                                                       [ G e n o P h e n o ]  v5.5                         
+                                                       [ G e n o P h e n o ]  v6.0                         
 """
 print(logo)
 # -------------------------------------------------------------------------------------------
@@ -311,44 +311,51 @@ for i in range(len(ensembl_ids_list_unique)):
             'query': ensembl_ids_list_unique[i],
         }
     )
+
     result = r.json()['result']
 
+
     uniprot_conversion_df = pd.DataFrame(result)
-    intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-    for j in range(len(uniprot_conversion_df)):
 
-        # ---------------------------------------------------------------------
-        intact_url += uniprot_conversion_df['converted'][j]
-        intact_url += ','
-        #print(intact_url)
+    if uniprot_conversion_df['converted'][0] != 'None':
 
-    r = requests.post(intact_url)
-    while r.status_code == 500:
-        r = requests.post(intact_url)
-    response = r.json()
-    dictionary.update(response)
-    tempdf = pd.DataFrame.from_dict(dictionary['data'])
-
-    # if the response dataframe is empty, try using HGNC ID
-    # THIS PROCEDURE LEADS TO INACCURATE RESULTS AND IS PLANNED FOR REMOVAL
-    """
-    if len(tempdf) == 0:
         intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-        intact_url += gene_ids_list_unique[i]
+        for j in range(len(uniprot_conversion_df)):
+
+            # ---------------------------------------------------------------------
+            intact_url += uniprot_conversion_df['converted'][j]
+            intact_url += ','
+            #print(intact_url)
+
         r = requests.post(intact_url)
         while r.status_code == 500:
             r = requests.post(intact_url)
         response = r.json()
         dictionary.update(response)
         tempdf = pd.DataFrame.from_dict(dictionary['data'])
-    """
-    if i == 0:
-        df2 = pd.DataFrame.from_dict(dictionary['data'])
+
+        # if the response dataframe is empty, try using HGNC ID
+        # THIS PROCEDURE LEADS TO INACCURATE RESULTS AND IS PLANNED FOR REMOVAL
+        """
+        if len(tempdf) == 0:
+            intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
+            intact_url += gene_ids_list_unique[i]
+            r = requests.post(intact_url)
+            while r.status_code == 500:
+                r = requests.post(intact_url)
+            response = r.json()
+            dictionary.update(response)
+            tempdf = pd.DataFrame.from_dict(dictionary['data'])
+        """
+        if i == 0:
+            df2 = pd.DataFrame.from_dict(dictionary['data'])
+        else:
+            df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
+        sys.stdout.flush()
+        print(i+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+        sys.stdout.flush()
     else:
-        df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
-    sys.stdout.flush()
-    print(i+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
-    sys.stdout.flush()
+        print(i + 1, '| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions: 0 | Total Interactions:', len(df2))
 
 print()
 

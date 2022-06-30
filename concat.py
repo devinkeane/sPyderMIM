@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Combine your genotype/phenotype and/or interactors tables into a single one for graph analysis! * ")
-parser.add_argument('-i', '--input', nargs='+', type=str, help='<INPUT_FILENAME.txt>  (list of MIM reference numbers, no headers, each MIM separated by a new line)')
+parser.add_argument('-i', '--input', nargs='+', type=str, help='<INPUT_FILENAME_1.csv> <INPUT_FILENAME_2.csv> ... (two or more files to concatenate)')
 parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
 args = parser.parse_args()
 

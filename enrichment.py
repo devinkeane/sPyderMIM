@@ -7,7 +7,7 @@
 #  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
 #                                                                                          |
 #  ----------------------------------------------------------------------------------------+
-#                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  5.5
+#                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  6.0
 #
 #                                                        Created: 2022-03-15
 #
@@ -38,14 +38,14 @@ logo = """
   `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
                                                                                           |
   ----------------------------------------------------------------------------------------+
-                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v5.5
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v6.0
 """
 print(logo)
 
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Perform enrichment analysis on your protein interactors edge list! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (protein interactors table from interactors.py \"geno\" mode)')
-parser.add_argument('-m', '--mode', type=str, help='\"primary\" (table.py output) or \"interactors\" (interactors.py output)')
+parser.add_argument('-m', '--mode', type=str, help='\"omim\" (table.py output) or \"interactors\" (interactors.py output)')
 parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
 args = parser.parse_args()
 
@@ -62,7 +62,7 @@ print('------------------------------')
 print()
 toppGene_command = ''
 
-if mode == 'primary':
+if mode == 'omim':
     gpn = pd.read_csv(args.input)
     gene_ids_list = []
     gene_ids_list_unique = []
@@ -182,29 +182,40 @@ deletion_command = 'rm ToppGene_response.json id_conversion.json'
 os.system(deletion_command)
 sys.stdout.flush()
 
-print()
-print('-------------------------------------------------------------------------------------')
-print('-------------------------------------------------------------------------------------')
-print()
-print('Your output table:')
+if len(final_df) == 0:
+    print('-------------------------------------------------------------------------------------')
+    print()
+    print('          Sorry, your enrichment analysis did not produce results meeting the')
+    print('                     minimum threshold for statistical significance.')
+    print()
+    print('-------------------------------------------------------------------------------------')
 
-final_df = final_df.reset_index(drop=True)
-final_df.to_csv(output)
+else:
+    print()
+    print('-------------------------------------------------------------------------------------')
+    print('-------------------------------------------------------------------------------------')
+    print()
+    print('Your output table:')
 
-print(final_df)
-print()
+    final_df = final_df.reset_index(drop=True)
+    final_df.to_csv(output)
+
+    print(final_df)
+    print()
 
 
 
-print('     * Your enrichment analysis was saved as \"'+output+'\"')
-print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6')
-print()
-print('-------------------------------------------------------------------------------------')
-print()
-print('                        Thank you for using ₲Ɇ₦Ø₱ⱧɆ₦Ø    ❤')
-print()
-print('-------------------------------------------------------------------------------------')
-print()
+    print('     * Your enrichment analysis was saved as \"'+output+'\"')
+    print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6')
+    print()
+    print('-------------------------------------------------------------------------------------')
+    print()
+    print('                        Thank you for using ₲Ɇ₦Ø₱ⱧɆ₦Ø    ❤')
+    print()
+    print('-------------------------------------------------------------------------------------')
+    print()
+
+
 """
 final_output = pd.DataFrame()
 for i in range(len(data2)):

@@ -58,7 +58,7 @@ for i in range(int(num_batches)):
         f = open('../'+ project_name + '_EXPERIMENT/experiment_'+ str(i) + '.pbs', "w")
         f.write("""#!/bin/bash
 #PBS -N """ + project_name + """
-#PBS -l select=1:interconnect=25ge:ncpus=20:mem=100gb,walltime=48:00:00
+#PBS -l select=1:interconnect=fdr:ncpus=20:mem=100gb,walltime=48:00:00
 
 source activate GenoPheno
 cd /scratch1/dkeane2/GenoPheno

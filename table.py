@@ -23,7 +23,7 @@ import requests
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Build a genotype/phenotype network using an OMIM API key and a simple list of OMIM reference IDs! * ")
 parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.txt>  (list of MIM reference numbers, no headers, each MIM separated by a new line)')
 parser.add_argument('-a', '--apikey', type=str, help='paste your API key obtained from OMIM ( https://www.omim.org/api )')
-parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
+parser.add_argument('-o', '--output', type=str, help='<OUTPUT_NAME> (no file name extension!)')
 args = parser.parse_args()
 
 # Assign parsed arguments into local variables
@@ -39,7 +39,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                                      (ツ)_/¯  - * Version 5.5 * -
+                                      (ツ)_/¯  - * Version 6.0 * -
   [ O M I M   T a b l e   M a k e r ]
 """
 print(logo)
@@ -325,21 +325,37 @@ gpn.drop(columns='Node_name_temp',inplace=True)
 gpn.dropna(how='all',inplace=True)
 gpn.reset_index(inplace=True,drop=True)
 
+# divide the final table into output with genes and output with clinical features
+genes_gpn = gpn[gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols']
+genes_gpn = pd.concat([genes_gpn,  gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs']])
+genes_gpn.reset_index(inplace=True,drop=True)
+
+phenotypes_gpn = gpn.drop(index=gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs'].index)
+phenotypes_gpn = phenotypes_gpn.drop(index=phenotypes_gpn[phenotypes_gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols'].index)
+phenotypes_gpn.reset_index(inplace=True,drop=True)
+
 # Print a preview of gpn to output
 print()
-print(gpn)
+print(genes_gpn)
+print()
+print(phenotypes_gpn)
 print()
 
 # Save the gpn as a csv using the same filename, but with extension '.csv'
-gpn.to_csv(output)
+genes_gpn.to_csv(output+'_genes.csv')
+phenotypes_gpn.to_csv(output+'_clinical-features.csv')
 
 #df2_transposed.to_csv('testing.csv')
 
 # Print output message
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
-print('  ...Your network table was saved as \"',output,'\"')
-print('  with ',len(gpn),' total rows from your list of ',len(mimdf),' MIMs.')
+print('  ...Your genes table was saved as \"',output+'_genes.csv','\"')
+print('  with ',len(genes_gpn),' total rows ')
+print()
+print('  Your clinical data table was saved as \"',output+'_clinical-features.csv','\"')
+print('  with ',len(phenotypes_gpn),' total rows ')
+print()
 print()
 print('  ',len(mimdf)-bad_mim_count,' of ',len(mimdf),' MIMs contained phenotypic data.')
 print()
