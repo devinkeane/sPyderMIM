@@ -38,7 +38,7 @@ workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
     2)  for the genes encoding for all proteins that interact with each of the OMIM Genes
 
 
-<font size="4"><font color="aqua">A single workflow run using GenoPheno.sh features the following output, saved to a date/time-stamped folder: </font></font>
+<font size="4"><font color="aqua"> A single workflow run using GenoPheno.sh features the following output, saved to a date/time-stamped folder: </font></font>
 
      * OMIM gene edge list table (.csv)
      * OMIM clinical features edge list table (.csv)
