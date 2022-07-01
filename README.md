@@ -16,26 +16,52 @@
       `-' `-' '  ` '  ` ` ' ' '  `  |                            
     --------------------------------+
 
-GenoPheno is an automated workflow for in silico hypothesis testing and a "Swiss army knife"
-of genomics analysis tools.  A user is free to utilize any of the tools in the repository,
-pbut they may also just use GenoPheno.sh to execute most of the suite altogether as one
-easily automated workflow.   The user only needs to provide an obtained OMIM API key and a list
-of OMIM reference numbers ("phenotypic MIM numbers" beginning with ""#").
+<span style="font-family:Courier">
 
-GenoPheno.sh is a genotype/phenotype network generator that uses the OMIM (Online Mendelian
-Inheritance in Man) database in order to construct a relationship graph that links diseases by
-genes and phenotypic outcomes.  The workflow also utilizes the IntAct API, which allows the user
-to find the protein products for the genes associated with each MIM number and the proteins
-known to interact with each of these.  Additionally, GenoPheno uses the ToppGene API in order to
-perform enrichment analysis on all the genes that encode for these products.  GenoPheno.sh
-automatically creates two enrichment analyses:
+<font color="lime">GenoPheno is an automated workflow for in silico hypothesis testing.  It also serves as a
+"Swiss army knife" of genomics analysis tools.  A user is free to utilize any of the programs
+in the repository, but they may also just use GenoPheno.sh to execute most of the suite altogether
+as one easily automated workflow and in silico hypothesis testing platform.  The user only needs to
+provide API key obtained from OMIM and a list of OMIM reference numbers in a text file ("phenotypic
+MIM numbers" beginning with "#" prefix).</font>
+
+<font color="lime">GenoPheno.sh, the full workflow execution program, is a genotype/phenotype network generator that uses
+the OMIM (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
+links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API, which
+allows the user to find the protein products for the genes associated with each MIM number and the
+proteins \known to interact with each of these.  Additionally, GenoPheno uses the ToppGene API in order
+to perform enrichment analysis on all the genes that encode for these products.  By the end of the
+workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
 
     1)  for the genes obtained from OMIM
 
-    2)  for the genes encoding for all protein interactors of the OMIM Genes
+    2)  for the genes encoding for all proteins that interact with each of the OMIM Genes
 
 
-### The major planned objectives for future versions of GenoPheno include:
+<font size="4"><font color="aqua">A single workflow run using GenoPheno.sh features the following output, saved to a date/time-stamped folder:</font></font>
+
+     * OMIM gene edge list table (.csv)
+     * OMIM clinical features edge list table (.csv)
+     * IntAct protein interactors edge list table (.csv)
+     * High resolution OMIM gene labeled network image (.png)
+     * High resolution OMIM clinical data labeled network image (.png)
+     * High resolution IntAct protein interactors labeled network image (.png)
+     * OMIM gene network statistical analysis (.txt)
+     * OMIM clinical features network statistical analysis (.txt)
+     * Protein interactor network statistical analysis (.txt)
+     * OMIM gene network graph exchange file XML (.gexf)
+     * OMIM clinical features network graph exchange file XML (.gexf)
+     * Protein interactor network graph exchange file XML (.gexf)
+     * Primary gene (OMIM genes) enrichment analysis (.csv)
+     * Protein interactor (IntAct genes) enrichment analysis (.csv)
+
+
+<font color="lime">Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
+software is to provide a purely command line based workflow that can allow for graph theory
+analysis to be upscaled and applied to larger data sets than could be handled in GUI-based
+programs.</font>
+---
+<font size="5"><font color="aqua">The major planned objectives for future versions of GenoPheno include:</font></font>
 
     *   Adding gene regulatory network discovery capability using GTEX eQTLs
 
@@ -46,23 +72,7 @@ automatically creates two enrichment analyses:
     *   Adding potential drug discovery functionality
 
 
-### A single workflow run using GenoPheno.sh features the following output:
 
-     * OMIM genotype/phenotype edge list table (.csv)
-     * IntAct protein interactors edge list table (.csv)
-     * High resolution OMIM genotype/phenotype labeled graph (.png)
-     * High resolution IntAct protein interactors labeled graph (.png)
-     * Genotype/phenotype network statistical analysis (.txt)
-     * Protein interactor network statistical analysis (.txt)
-     * Genotype/phenotype network graph exchange XML (.gexf)
-     * Protein interactor network graph exchange XML (.gexf)
-     * Primary gene (OMIM genes) enrichment analysis (.csv)
-     * Protein interactor (IntAct genes) enrichment analysis (.csv)
-
-Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
-software is to provide a purely command line based workflow that can allow for graph theory
-analysis to be upscaled and applied to larger data sets than could be handled in GUI-based
-programs.
 
 ---
 
@@ -74,13 +84,15 @@ programs.
     ------------------------------------------------+
 
                                                  ⊂(◉‿◉)つ
- <span style="font-size:larger;"><b>[ s p l i t _ l i s t . p y ]</b></span> will split any MIM list that is greater than 20 into separate
+--- 
+<font size="3"><font color="aqua"><b>[ s p l i t _ l i s t . p y ]</b></span></font></font> <font color="lime">will split any MIM list that is greater than 20 into separate
  lists of 20 or less, which can then be used as input for table.py.  This is necessary because
  OMIM API calls are limited to 20 MIM numbers per request.  GenoPheno.sh will perform
  this step automatically.
 
+---
                                                  (⌐⊙_⊙)
- <span style="font-size:larger;"><b>[ t a b l e . p y ]</b></span> takes in a .txt file that is a list of "Phenotype MIM numbers," each of
+ <font size="3"><font color="aqua"><b>[ t a b l e . p y ]</b></span></font></font> takes in a .txt file that is a list of "Phenotype MIM numbers," each of
  which correspond to a disease subtype listed in the OMIM Database, collected by the user.  A
  disease subtype in the OMIM database is defined by a gene that is known to give rise to a set
  of phenotypes, which are classified together under the clinical data for that subtype in the
@@ -91,18 +103,22 @@ programs.
 
 table.py uses the [OMIM rest API](https://www.omim.org/help/api) to retreive genetic and clinical data.
 
+---
                                                ༼ つ ╹ ╹ ༽つ
- <span style="font-size:larger;"><b>[ i n t e r a c t o r s . p y ]</b></span>  uses the output from table.py to find the protein products
+ <font size="3"><font color="aqua"><b>[ i n t e r a c t o r s . p y ]</b></span></font></font>  uses the output from table.py to find the protein products
  of each gene and their protein interactors.
+
 
 interactors.py uses EBI's [IntAct API](https://www.ebi.ac.uk/intact/documentation/technical_corner)
 
+---
                                                  (✿◠‿◠)
- <span style="font-size:larger;"><b>[ c o n c a t . p y ]</b></span> will automatically combine multiple .csv outputs from either
+ <font size="3"><font color="aqua"><b>[ c o n c a t . p y ]</b></span></font></font> will automatically combine multiple .csv outputs from either
  table.py or interactors.py. The output can be used as as single input for graph.py.
 
+---
                                                 ʕっ•ᴥ•ʔっ
- <span style="font-size:larger;"><b>[ g r a p h . p y ]</b></span> is able to take in the .csv output from either table.py or interactors.py
+ <font size="3"><font color="aqua"><b>[ g r a p h . p y ]</b></span></font></font> is able to take in the .csv output from either table.py or interactors.py
  and generate a network graph of phenotypes or protein interactors, respectively.  The output is
  a high resolution .png visualization of your network, a .gexf export of your network, and a
  summary .txt file featuring multiple calculations:
@@ -114,9 +130,14 @@ interactors.py uses EBI's [IntAct API](https://www.ebi.ac.uk/intact/documentatio
         5) triadic closure
         6) number of total nodes and edges        ,,,
                                                 \(ʘ‿ʘ)/
+
+---
+
 graph.py uses the [NetworkX](https://networkx.org/documentation/stable/index.html) Python library to create graph objects.
 
-<span style="font-size:larger;"><b>[ e n r i c h m e n t . p y ]</b></span>  creates a unique list of all interactors found from your
+---
+
+<font size="3"><font color="aqua"><b>[ e n r i c h m e n t . p y ]</b></span></font></font>  creates a unique list of all interactors found from your
  output table from interactors.py, then performs enrichment analysis on the list using
  the ToppGene enrichment API.  Results have been automatically filtered and sorted in
  ascending order by FDR/B&H Q value < 10e-6.
@@ -128,7 +149,7 @@ enrichment.py utilizes the Computational Medicine Center's [ToppGene API](https:
                                              /\__/\,''`'``'''`'; /
                                             (Ф͡_ᴥ_Ф͡ )_,       ..,;
 
-<span style="font-size:larger;"><b>[ c o n v e r t _ i d s . p y ]</b></span> will convert any mixed or non-mixed set of genes IDs from
+<font size="3"><font color="aqua"><b>[ c o n v e r t _ i d s . p y ]</b></span></font></font> will convert any mixed or non-mixed set of genes IDs from
 virtually any database identifier type to virtually any other type.  See
 [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt) for an exhaustive list of accepted IDs.
 
@@ -137,43 +158,37 @@ convert_ids.py performs gene name conversions by using g:Profiler's [ g:Convert 
 
                                              ─=≡Σ((( つ◕ل͜◕)つ
 
-<span style="font-size:larger;"><b> [ G e n o P h e n o . s h ]</b></span>  will run the whole workflow automatically on a list of up to
+<font size="3"><font color="aqua"><b>[ G e n o P h e n o . s h ]</b></span></font></font>  will run the whole workflow automatically on a list of up to
  5,000 MIMs.  Just provide the name of your .txt MIM list file, your OMIM API key, and your
- desired project name.
+ desired project name. </font>
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-## IMPORTANT NOTES!!!
-### ** Read first to ensure functionality **
+<font size="5"><font color="lime">IMPORTANT NOTES!!!</font></font>
+
+<font size="4"><font color="aqua">** Read first to ensure functionality **</font></font>
 ___
-* GenoPheno.sh is the main program that will execute the entire workflow automatically.
+<font color="lime">* GenoPheno.sh is the main program that will execute the entire workflow automatically.
 Additionally, you can also use any of the programs in the suite individually or include
-them in your own workflow script!
+them in your own workflow script!</font>
+
 
        ~$ GenoPheno.sh <MIM_LIST.TXT> <YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>  (do not use file
                                                                               extension for
                                                                               project name)
-* GenoPheno only takes in lists of "Phenotype MIM numbers" as the
-starting input of the workflow.  DO NOT use "Gene/Locus MIM numbers" as
-these will cause the program to crash.  Even though these MIMs cannot be used, you
-can usually locate phenotype MIMs from the phenotypic series that these MIMs are
-associated with.  See "Usage" below for instructions on how to use GenoPheno.sh as
-well as how to use each individual program in the suite.
 
 
-* When creating a .txt list of MIM numbers, ONLY USE MIM numbers with the "#"
-prefix.  This program does not process MIM numbers with the "+", "%", "*", or "^"
-prefixes as these are irrelevent to the objectives of this software and the
-program will crash if these types of MIM numbers are used.
+<font color="lime">* GenoPheno is designed to take in lists of "Phenotype MIM numbers" as the starting input of the workflow.
+DO NOT use "Gene/Locus MIM numbers" as these will cause the program to crash.  This program does not process
+MIM numbers with the "+", "%", "*", or "^" prefixes as these are irrelevent to the objectives of this software
+and the program will crash if these types of MIM numbers are used.</font>
 
 
-* For MIM numbers where "susceptibility to" is included in the subtype title,
-this program will fetch the ENSEMBL and gene IDs.  However, these MIMs tend to lack
-phenotypic data since they describe genes that indirectly influence individuals'
-susceptibility to a disease, not the genes that give rise to the phenotypes
-themselves.
 
-Following the instructions above will ensure optimal program functionality and output.
+
+<font color="lime">Following the instructions above will ensure optimal program functionality and output.</font>
+
+#<Usage>
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -184,12 +199,13 @@ Following the instructions above will ensure optimal program functionality and o
                          |___/
 --------------------------------------------------------------------------------------------
 
-1) #### Obtain an API key through OMIM:  https://www.omim.org/api
+1) <font size="3"><font color="lime">Obtain an API key through OMIM:  https://www.omim.org/api </font></font>
 
 --------------------------------------------------------------------------------------------
 
-2) #### Create list of OMIM reference ids ("MIM" numbers)
-   #### (20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using GenoPheno.sh):
+2) <font size="3"><font color="lime">Create a list of OMIM reference ids ("MIM" numbers)
+
+(20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using GenoPheno.sh): </font></font>
 
 
 ~$  ` vim input_list.txt `
@@ -202,7 +218,7 @@ Following the instructions above will ensure optimal program functionality and o
     ------
 --------------------------------------------------------------------------------------------
 
-3) #### Set up an Anaconda environment with the necessary dependencies (Anaconda required):
+3) <font size="3"><font color="lime">Set up an Anaconda environment with the necessary dependencies (Anaconda required): </font></font>
 
 
 ~$ ` conda create -n GenoPheno python=3.9 scipy=1.7 pandas matplotlib curl networkx requests`
@@ -211,7 +227,7 @@ Following the instructions above will ensure optimal program functionality and o
 
 --------------------------------------------------------------------------------------------
 
-4) #### Execute with the following syntax/options:
+4) <font size="3"><font color="lime">Execute with the following syntax/options: </font></font>
     
 --------------------------------------------------------------------------------------------
 
@@ -241,7 +257,7 @@ Following the instructions above will ensure optimal program functionality and o
             Project name for automatically naming multiple files  ------+
 
 
-Output:  (all results are moved to a new folder
+<font color="lime">Output:  (all results are moved to a new folder
           named after the project name, followed the a date/timestamp)
 
    * project_name_concatentated.csv  (OMIM genotype/phenotype table)
@@ -253,7 +269,7 @@ Output:  (all results are moved to a new folder
    * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
    * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
    * project_name_primary_genes_enrichment.csv  (OMIM genes enrichment analysis)
-   * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis)
+   * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis) </font>
 
     --------------------------------------------------------------------------------------------
      [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
@@ -265,7 +281,7 @@ Output:  (all results are moved to a new folder
 			    	  your MIM list into separate input MIM lists for table.py.
 
 
-    ~$ python3 split_list.py -i <big_mim_list.txt> -o <project_name>
+    ~$ python3 split_list.py -i <big_mim_list.txt> -o <project_name>   <-- (no file extension needed)
 
     Output:
     * ./project_name_MIM_directory/project_name0.txt
@@ -279,10 +295,13 @@ Output:  (all results are moved to a new folder
     ----------------------+                             |
                                                         V
 
-    python3 table.py -i <./project_name_MIM_directory/project_name0.txt> -o <output_file0.csv> -a <api_key>
-    python3 table.py -i <./project_name_MIM_directory/project_name1.txt> -o <output_file1.csv> -a <api_key>
-    python3 table.py -i <./project_name_MIM_directoryproject_name2.txt> -o <output_file2.csv> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directory/project_name0.txt> -o <output_name_0> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directory/project_name1.txt> -o <output_name_1> -a <api_key>
+    python3 table.py -i <./project_name_MIM_directory/project_name2.txt> -o <output_name_2> -a <api_key>
     
+        Output: |     * output_name_genes_0.csv         * output_name_clinical-features_0.csv                                         
+        --------+     * output_name_genes_1.csv         * output_name_clinical-features_1.csv
+                      * output_name_genes_2.csv         * output_name_clinical-features_2.csv
                                                                                       A
                                                                                       |
     -------------------------------------------------------------------------------   |   ------
@@ -290,7 +309,106 @@ Output:  (all results are moved to a new folder
     ------------------------+          |          (two or more files allowed as input to concat.py)
                                        |
                                        V
-    ~$ python3 concat.py -i <input_file.csv> <input_file2.csv> <and_so_on...> -o <output_file.csv>`
+    ~$ python3 concat.py -i <input_file_0.csv> <input_file_1.csv> <and_so_on...> -o <output_file.csv>`
+
+
+    --------------------------------------------------------------------------------------------
+     [ i n t e r a c t o r s . p y ]  |    +---- table.py output (.csv) ("omim" mode)
+    ----------------------------------+    |               or
+                                           |     any_list.txt (text file of gene names)
+                                           V
+    ~$ python3 interactors.py -i <input_file> -m <MODE> -o <output_name>    <-- (no file extension)
+                                                    A
+                                                    |
+                                                    |
+            "list" or "omim" (required) ____________+
+    
+<font size="3"><font color="lime">interactors.py requires one of two modes, specified using the "-m" option:
+
+### 1) "omim"
+* "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
+
+### 2) "list"
+* "list" mode takes in a .txt file that you have created.  The list can
+    contain mixed types of IDs from most databases, because interactors.py
+    will use convert_ids.py to detect your ID types and convert them to the
+    necessary format.  Create a list like the one in the example for
+     "convert_ids.py" above. </font></font>
+
+<!-- end the list -->
+
+         (e.g.) vim list.txt:
+         
+         ------
+         ENSG00000185176
+         CUL2
+         1ANI
+         and so on...
+         ------
+    
+
+<font size="3"><font color="lime">Output:
+* For "list" mode:
+  * <font color="aqua"><OUTPUT_FILENAME>.csv
+  * <OUTPUT_FILENAME>_FAILED_IDS.txt</font>
+
+
+* For "omim" mode: </font>
+  * <font color="aqua"><OUTPUT_FILENAME>.csv </font> </font>
+
+<!-- end the list -->
+
+    --------------------------------------------------------------------------------------------
+     [ g r a p h . p y ]  |            +---- table.py, interactors.py, or concat.py output
+    ----------------------+            |
+                                       |
+                                       V
+    ~$ python3 graph.py -i <input_file.csv> -m <mode> -l <labels_option> -o <output_file.png>
+    
+    graph.py options:
+    
+      -h, --help            show this help message and exit
+    
+      -m MODE, --mode MODE  "list" (find protein interactors for a .txt file of most gene ID types)
+                                                                                                 A
+	    				                    or         (see README_conversion_IDs_list.txt)   ___|           
+    
+	    	                "omim" (find protein interactors for your table.py OMIM genes output edge list)
+    
+      -i INPUT, --input INPUT
+
+                        <INPUT_FILENAME.csv> (Input table)
+    
+      -l LABELS, --labels LABELS
+    
+                            arguments: arguments: "all" or "none"
+    
+      -o OUTPUT, --output OUTPUT
+    
+                            <OUTPUT_FILENAME.png>
+    
+    
+<font size="3"><font color="lime">Output:
+* ./project_name_NETWORK_SUMMARY.txt
+* ./project_name.png
+* ./project_name.gexf </font></font>
+
+<!-- end the list -->
+
+    --------------------------------------------------------------------------------------------
+     [ e n r i c h m e n t . p y ]  |       +---- interactors.py output
+    --------------------------------+       |
+                                            |
+                                            V
+    
+    ~$ python3 enrichment.py -i <input_file.csv> -o <output_file.csv>
+    
+    --------------------------------------------------------------
+<font size="3"><font color="lime">Output:
+* Enrichment analysis (.csv) </font>
+  * <font color="aqua">filtered by FDR/B&H Q value < 10e-6 in ascending order. </font></font>
+
+---
 
     --------------------------------------------------------------------------------------------
      [ c o n v e r t _ i d s . p y ]  |      "convert_ids.py" will allow you to convert gene
@@ -304,8 +422,9 @@ Output:  (all results are moved to a new folder
     allowing for your input list to consist of any mixture of types.  IDs that were not successfully
     converted will be reported in an output file.
     
-#### For a full list of accepted IDs, reference [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt).
-#### Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost
+<font size="3"><font color="lime">For a full list of accepted IDs, reference [README_conversion_IDs_list,txt](README_conversion_IDs_list.txt). </font></font>
+
+<font size="3"><font color="aqua"><b>Conversions were made using API calls to the g:Profiler web service: https://biit.cs.ut.ee/gprofiler/gost </font></font></b>
 
     
     ~$ python3 convert_ids.py -i <gene_id_list.txt> -s <SYMBOL_TO_CONVERT_TO> -o <gene_id_list_converted.txt>
@@ -321,116 +440,24 @@ Output:  (all results are moved to a new folder
     1ANI
     and so on ...
     ------
-
+<font size="3"><font color="lime">
 Output:
 * <OUTPUT_FILENAME.txt>
-  * (List of converted IDs) 
+  * <font color="aqua">(List of converted IDs) </font>
 
 
 * <OUTPUT_FILENAME>_<TARGET_SYMBOL>_FAILED_IDs.txt  
-  * (IDs that failed to convert)
+    * <font color="aqua"> (IDs that failed to convert) </font>
 
+</font></font>
 <!-- end the list -->
-
-    --------------------------------------------------------------------------------------------
-     [ i n t e r a c t o r s . p y ]  |    +---- table.py output (.csv) ("omim" mode)
-    ----------------------------------+    |               or
-                                           |     any_list.txt (text file of gene names)
-                                           V
-    ~$ python3 interactors.py -i <input_file> -m <MODE> -o <output_file.csv>
-                                                    A
-                                                    |
-                                                    |
-            "list" or "omim" (required) ____________+
-    
-interactors.py takes requires one of two modes, specified using the "-m" option:
-
-### 1) "omim"
-* "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
-
-### 2) "list"
-* "list" mode takes in a .txt file that you have created.  The list can
-    contain mixed types of IDs from most databases, because interactors.py
-    will use convert_ids.py to detect your ID types and convert them to the
-    necessary format.  Create a list like the one in the example for
-     "convert_ids.py" above.
-
-<!-- end the list -->
-
-         (e.g.) vim list.txt:
-         
-         ------
-         ENSG00000185176
-         CUL2
-         1ANI
-         and so on...
-         ------
-    
-
-Output:
-* For "list" mode:
-  * <OUTPUT_FILENAME>.csv
-  * <OUTPUT_FILENAME>_FAILED_IDS.txt
-
-
-* For "omim" mode:
-  * <OUTPUT_FILENAME>.csv
-
-<!-- end the list -->
-
-    --------------------------------------------------------------------------------------------
-     [ g r a p h . p y ]  |            +---- table.py, interactors.py, or concat.py output
-    ----------------------+            |
-                                       |
-                                       V
-    ~$ python3 graph.py -i <input_file.csv> -m <mode> -l <labels_option> -o <output_file.png>
-    
-    graph.py options:
-    
-      -h, --help            show this help message and exit
-    
-      -m MODE, --mode MODE  "geno" (find protein interactor overlap)
-    
-	    				                    or
-    
-	    	                "pheno" (find OMIM phenotypic overlap)
-    
-      -i INPUT, --input INPUT
-
-                        <INPUT_FILENAME.csv> (Input table)
-    
-      -l LABELS, --labels LABELS
-    
-                            arguments: arguments: "all" or "none"
-    
-      -o OUTPUT, --output OUTPUT
-    
-                            <OUTPUT_FILENAME.png>
-    
-    
-Output:
-* ./project_name_NETWORK_SUMMARY.txt
-* ./project_name.png
-* ./project_name.gexf
-
-<!-- end the list -->
-
-    --------------------------------------------------------------------------------------------
-     [ e n r i c h m e n t . p y ]  |       +---- interactors.py output
-    --------------------------------+       |
-                                            |
-                                            V
-    
-    ~$ python3 enrichment.py -i <input_file.csv> -o <output_file.csv>
-    
-    --------------------------------------------------------------
-Output:
-* Enrichment analysis (.csv)
-  * filtered by FDR/B&H Q value < 10e-6 in ascending order.
 
 ---
 
+<font color="gold">(c) 2022-01-27 Devin Keane / Feltus Lab</font>
 
-(c) 2022-01-27 Devin Keane / Feltus Lab
-               Department of Genetics & Biochemistry
-               Clemson University
+<font color="gold">Department of Genetics & Biochemistry</font>
+
+<font color="gold">Clemson University</font>
+
+</span>
