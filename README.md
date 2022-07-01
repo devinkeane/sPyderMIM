@@ -16,7 +16,7 @@
       `-' `-' '  ` '  ` ` ' ' '  `  |                            
     --------------------------------+
 
-<span style="font-family:Courier">
+
 
 <font color="lime">GenoPheno is an automated workflow for in silico hypothesis testing.  It also serves as a
 "Swiss army knife" of genomics analysis tools.  A user is free to utilize any of the programs
@@ -458,4 +458,3 @@ Output:
 
 <font color="gold">Clemson University</font>
 
-</span>
