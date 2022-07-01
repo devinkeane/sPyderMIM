@@ -56,11 +56,13 @@ workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
      * Protein interactor (IntAct genes) enrichment analysis (.csv)
 
 
-<font color="lime">Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
+<font color="lime"> Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
 software is to provide a purely command line based workflow that can allow for graph theory
 analysis to be upscaled and applied to larger data sets than could be handled in GUI-based
-programs.</font>
+programs. </font>
+
 ---
+
 <font size="5"><font color="aqua">The major planned objectives for future versions of GenoPheno include:</font></font>
 
     *   Adding gene regulatory network discovery capability using GTEX eQTLs
