@@ -47,7 +47,7 @@ else:
 
 for i in range(int(num_batches)):
     batch = random.sample(MIM_list, batch_size)
-    if len(experimental_MIM_list) > 0:
+    if experimental_MIM_list[0] == '\n':
         for j in experimental_MIM_list:
             batch += [j]
     print(batch)
