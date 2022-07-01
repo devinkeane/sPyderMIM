@@ -56,7 +56,7 @@ mkdir $3_GENOPHENO_RESULTS_$NOW
 sed -e 's/⌐|■ENSEMBLoID:n/ | ENSEMBL ID: /g' -e 's/( °_ʖ °)_\/¯lCalculation complete!/( °_ʖ °)_\/¯ Calculation complete!/g' -e 's/.*extracted.*/ENSEMBL IDs extracted	  ✔/g' EXECUTION_OUTPUT_temp.txt > EXECUTION_OUTPUT_$NOW.txt
 rm EXECUTION_OUTPUT_temp.txt
 
-mv $3_clinical-features_concatenated.csv $3_genes_NETWORK_SUMMARY.txt $3_genes.gexf $3_genes.png $3_genes_concatenated.csv $3_interactors.csv $3_interactors.png $3_clinical-features.png $3_interactors_enrichment.csv $3_clinical-features_NETWORK_SUMMARY.txt $3_clinical-features.gexf $3_interactors_NETWORK_SUMMARY.txt $3_interactors.gexf EXECUTION_OUTPUT_$NOW.txt $3_GENOPHENO_RESULTS_$NOW
+mv $3_clinical-features_concatenated.csv $3_genes_enrichment.csv $3_genes_NETWORK_SUMMARY.txt $3_genes.gexf $3_genes.png $3_genes_concatenated.csv $3_interactors.csv $3_interactors.png $3_clinical-features.png $3_interactors_enrichment.csv $3_clinical-features_NETWORK_SUMMARY.txt $3_clinical-features.gexf $3_interactors_NETWORK_SUMMARY.txt $3_interactors.gexf EXECUTION_OUTPUT_$NOW.txt $3_GENOPHENO_RESULTS_$NOW
 
 rm -R ./$3_MIM_directory/
 rm -R ./$3_separate_tables/
