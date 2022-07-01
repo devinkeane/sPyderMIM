@@ -19,7 +19,7 @@ num_batches  = int(input(' (✿◠‿◠)  Please tell me how many batches you w
 experimental_MIM_input = str(input(' (✿◠‿◠)  Please list the experimental MIMs to run against controls, separated by spaces:  '))
 API_key = str(input(' (✿◠‿◠)  Please enter your API key so I can run the experiment:  '))
 print(experimental_MIM_input)
-if experimental_MIM_input != '\n':
+if experimental_MIM_input != '':
     experimental_MIM_list = experimental_MIM_input.split(" ")
 else:
     experimental_MIM_list = []
