@@ -47,8 +47,9 @@ else:
 
 for i in range(int(num_batches)):
     batch = random.sample(MIM_list, batch_size)
-    for j in experimental_MIM_list:
-        batch += [j]
+    if len(experimental_MIM_list) > 0:
+        for j in experimental_MIM_list:
+            batch += [j]
     print(batch)
     f = open('../' + project_name + '_EXPERIMENT/MIM_batch_' + str(i)+'.txt', "w")
     for j in batch:

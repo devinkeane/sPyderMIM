@@ -260,16 +260,20 @@ and the program will crash if these types of MIM numbers are used.</font>
 <font color="lime">Output:  (all results are moved to a new folder
           named after the project name, followed the a date/timestamp)
 
-   * project_name_concatentated.csv  (OMIM genotype/phenotype table)
+   * project_name_genes.csv  (OMIM geno table)
+   * project_name_clinical-features.csv  (OMIM clinical features table)
    * project_name_interactors.csv  (IntAct protein interactors table)
-   * project_name_concatentated.png  (High resolution OMIM genotype/phenotype labeled graph)
+   * project_name_genes.png  (High resolution OMIM gene labeled graph)
+   * project_name_clinical-features.png  (High resolution OMIM clinical data labeled graph)
    * project_name_interactors.png  (High resolution IntAct protein interactors labeled graph)
-   * project_name_phenotypes_NETWORK_SUMMARY.txt  (Genotype/phenotype network statistical analysis)
-   * project_name_interactors_NETWORK_SUMMARY.txt  (Protein interactor network statistical analysis)
-   * project_name_phenotypes.gexf  (Genotype/phenotype network graph exchange XML)
+   * project_name_clinical-features_NETWORK_SUMMARY.txt  (OMIM clinical features network statistical analysis)
+   * project_name_genes_NETWORK_SUMMARY.txt  (OMIM genes network statistical analysis)
+   * project_name_interactors_NETWORK_SUMMARY.txt  (IntAct protein interactor network statistical analysis)
+   * project_name_clinical-features.gexf  (OMIM genes network graph exchange XML)
+   * project_name_genes.gexf  (OMIM clinical features network graph exchange XML)
    * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
-   * project_name_primary_genes_enrichment.csv  (OMIM genes enrichment analysis)
-   * project_name_interactors_enrichment.csv  (Protein interactors enrichment analysis) </font>
+   * project_name_genes_enrichment.csv  (OMIM genes enrichment analysis)
+   * project_name_interactors_enrichment.csv  (IntAct protein interactors enrichment analysis) </font>
 
     --------------------------------------------------------------------------------------------
      [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
