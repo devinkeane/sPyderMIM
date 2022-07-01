@@ -19,8 +19,13 @@ num_batches  = int(input(' (✿◠‿◠)  Please tell me how many batches you w
 experimental_MIM_input = str(input(' (✿◠‿◠)  Please list the experimental MIMs to run against controls, separated by spaces:  '))
 API_key = str(input(' (✿◠‿◠)  Please enter your API key so I can run the experiment:  '))
 print(experimental_MIM_input)
-experimental_MIM_list = experimental_MIM_input.split(" ")
-print(experimental_MIM_list)
+if experimental_MIM_input != '\n':
+    experimental_MIM_list = experimental_MIM_input.split(" ")
+else:
+    experimental_MIM_list = []
+
+if len(experimental_MIM_list) > 0:
+    print(experimental_MIM_list)
 #project_name = 'hypophosphatasia'
 project_name = project_name.upper()
 
@@ -47,7 +52,7 @@ else:
 
 for i in range(int(num_batches)):
     batch = random.sample(MIM_list, batch_size)
-    if experimental_MIM_list[0] == '\n':
+    if len(experimental_MIM_list) > 0:
         for j in experimental_MIM_list:
             batch += [j]
     print(batch)
