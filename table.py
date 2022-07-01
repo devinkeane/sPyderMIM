@@ -334,13 +334,6 @@ phenotypes_gpn = gpn.drop(index=gpn[gpn['Node_type'] == 'phenotypeMap.ensemblIDs
 phenotypes_gpn = phenotypes_gpn.drop(index=phenotypes_gpn[phenotypes_gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols'].index)
 phenotypes_gpn.reset_index(inplace=True,drop=True)
 
-# Print a preview of gpn to output
-print()
-print(genes_gpn)
-print()
-print(phenotypes_gpn)
-print()
-
 # Save the gpn as a csv using the same filename, but with extension '.csv'
 genes_gpn.to_csv(output+'_genes.csv')
 phenotypes_gpn.to_csv(output+'_clinical-features.csv')
