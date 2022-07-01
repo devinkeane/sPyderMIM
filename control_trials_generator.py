@@ -38,8 +38,9 @@ for i in range(len(MIM_list)):
     MIM_list[i] = MIM_list[i].replace("\n","")
     MIM_list[i] = int(MIM_list[i])
 
-for i in experimental_MIM_list:
-    MIM_list.remove(int(i))
+if len(experimental_MIM_list) > 0:
+    for i in experimental_MIM_list:
+        MIM_list.remove(int(i))
 
 print()
 print('\(✿◠‿◠)/  I\'m generating batches and running the experiment!')
