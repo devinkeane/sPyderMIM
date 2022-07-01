@@ -188,8 +188,6 @@ and the program will crash if these types of MIM numbers are used.</font>
 
 <font color="lime">Following the instructions above will ensure optimal program functionality and output.</font>
 
-#<Usage>
-
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
       |   |
