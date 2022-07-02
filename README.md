@@ -458,6 +458,56 @@ Output:
 
 ---
 
+    --------------------------------------------------------------------------------------------
+     [ c o n t r o l _ t r i a l s _ g e n e r a t o r . p y ]  |    * BETA *
+    ------------------------------------------------------------+ 
+                                         
+    The random controls trials generator was developed to test the ability of GenoPheno
+    to find overlap and clustering between genes and clinical data for diseases
+    that are thought to be related.
+    
+    It allows a user working on a supercomputing cluster to specify a set of MIMs of
+    interest which they can run through GenoPheno against a specified number of MIMs
+    randomly selected from the OMIM database.
+
+    For example, suppose a user runs an experiment with 3 MIMs corresponding to varieties
+    of hypophosphatasia agains 45 MIMs corresponding to Ehlers-Danlos Syndrome and
+    Osteogenesis imperfectica.  Using the random controls trials generator, the user
+    is able to run dozens of experiments testing the three hypophosphatasia MIMs against
+    45 randomly selected MIMs.
+
+    Alternatively, the user could specify that they do not want to include any experimental
+    MIMs in each batch by pressing "ENTER" when prompted to enter experimental MIMs
+    (hypophosphatasia, in this example).  In this case, the program will generate
+    experiments where each batch of MIMs simply contains 48 randomly selected MIMs, rather
+    than 45 randomly selected MIMs along with the specified experimental MIMs.
+
+    ---------------------------------------------------------------------------------
+    (e.g.)
+                                  ____
+                                 /\' .\    _____
+         C o n t r o l          /: \___\  / .  /\
+          T r i a l s           \' / . / /____/..\
+       G e n e r a t o r         \/___/  \'  '\  /
+               ( beta )                   \'__'\/
+
+
+     (✿◠‿◠)  Please enter a name for your experiment:  TEST_1
+     (✿◠‿◠)  Please tell me how many MIM numbers would you like to generate per batch:  48
+     (✿◠‿◠)  Please tell me how many batches you would like to generate:  10 
+     (✿◠‿◠)  Please list the experimental MIMs to run against controls, separated by spaces
+     (or press RETURN for none):  146300 241510 241500
+     (✿◠‿◠)  Please enter your API key so I can run the experiment:
+
+   ---------------------------------------------------------------------------------
+
+    In the given example above, 10 .pbs scripts will be generated, each running a GenoPheno
+    experiment containing 3 specified MIMs (Hypophosphatasia) and 45 randomly selected MIMs.
+    For now, computer cluster parameters cannot be specified.  By default, the .pbs
+    scripts will request "fdr" interconnect, 100gb RAM, 20 CPUs, and 60 hours of walltime.
+
+---
+
 <font color="gold">(c) 2022-01-27 Devin Keane / Feltus Lab</font>
 
 <font color="gold">Department of Genetics & Biochemistry</font>
