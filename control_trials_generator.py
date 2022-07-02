@@ -16,7 +16,7 @@ print()
 project_name = str(input(' (✿◠‿◠)  Please enter a name for your experiment:  '))
 batch_size = int(input(' (✿◠‿◠)  Please tell me how many MIM numbers would you like to generate per batch:  '))
 num_batches  = int(input(' (✿◠‿◠)  Please tell me how many batches you would like to generate:  '))
-experimental_MIM_input = str(input(' (✿◠‿◠)  Please list the experimental MIMs to run against controls, separated by spaces:  '))
+experimental_MIM_input = str(input(' (✿◠‿◠)  Please list the experimental MIMs to run against controls,\nseparated by spaces (or press RETURN for none):  '))
 API_key = str(input(' (✿◠‿◠)  Please enter your API key so I can run the experiment:  '))
 print(experimental_MIM_input)
 if experimental_MIM_input != '':
