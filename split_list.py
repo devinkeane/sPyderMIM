@@ -65,8 +65,8 @@ else:
 
 # Create a dictionary of chunked lists, each of 'chunk_size',
 for i in range(len(chunked_list)):
-    dictionary['./{}_MIM_directory/'.format(output)+output+"{0}.txt".format(i)] = chunked_list[i]
-    print(str(output) + str(i) + '.txt')
+    dictionary['./{}_MIM_directory/'.format(output)+output+"_{0}.txt".format(i)] = chunked_list[i]
+    print(str(output) + '_' + str(i) + '.txt')
 print()
 
 # save output to file

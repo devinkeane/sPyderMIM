@@ -14,7 +14,7 @@ mkdir $3_separate_tables
 
 while read p; do
   TABLE_COMMAND="python3 table.py -i "
-  TABLE_COMMAND+="./$3_MIM_directory/$p -a $2 -o ./$3_separate_tables/$3$ITERATION"; ITERATION=$(($ITERATION + 1))
+  TABLE_COMMAND+="./$3_MIM_directory/$p -a $2 -o ./$3_separate_tables/$3_$ITERATION"; ITERATION=$(($ITERATION + 1))
   $TABLE_COMMAND 2>&1 | tee -a >(col -pbf >>EXECUTION_OUTPUT_temp.txt)
 done<MIM_list.txt
 
