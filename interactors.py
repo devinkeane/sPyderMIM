@@ -305,7 +305,7 @@ job_ID = response.json()['jobId']
 
 
 response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
-while len(response2.json()['results']) == 0:
+while 'results' not in response2.json().columns:
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 
 
