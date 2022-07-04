@@ -106,9 +106,9 @@ if mode == 'list':
 
     my_file.close()
 
-    gpn = pd.DataFrame(index=range(len(ENSG_input_list)), columns=['Node_name', 'Node_type'])
-    gpn_ENSG = pd.DataFrame(index=range(len(ENSG_input_list)),columns=['Node_name','Node_type'])
-    gpn_HGNC = pd.DataFrame(index=range(len(ENSG_input_list)), columns=['Node_name', 'Node_type'])
+    gpn = pd.DataFrame(index=range(len(ENSG_input_list)), columns=['Node_name', 'Node_type', 'Gene_MIM_number','Phenotype_MIM_number'])
+    gpn_ENSG = pd.DataFrame(index=range(len(ENSG_input_list)),columns=['Node_name','Node_type', 'Gene_MIM_number','Phenotype_MIM_number'])
+    gpn_HGNC = pd.DataFrame(index=range(len(ENSG_input_list)), columns=['Node_name', 'Node_type', 'Gene_MIM_number','Phenotype_MIM_number'])
 
     for i in range(len(ENSG_input_list)):
         gpn_ENSG['Node_name'][i] = ENSG_input_list[i]
@@ -194,6 +194,7 @@ for i in gene_ids_list:
     else:
         gene_ids_list_unique += [i]
 
+
 ensembl_ids_list = []
 ensembl_ids_list_unique = []
 
@@ -206,6 +207,48 @@ for i in ensembl_ids_list:
     else:
         ensembl_ids_list_unique += [i]
 ensembl_ids_list_unique = list(filter(None, ensembl_ids_list_unique))
+
+
+gene_MIM_list = []
+gene_MIM_list_unique = []
+
+if mode == 'omim':
+    for i in range(len(gpn)):
+        gene_MIM_list += [gpn['Gene_MIM_number'][i]]
+
+    for i in gene_MIM_list:
+        if i in gene_MIM_list_unique:
+            pass
+        else:
+            gene_MIM_list_unique += [i]
+    gene_MIM_list_unique = list(filter(None, gene_MIM_list_unique))
+
+query_string = ''
+
+if mode == 'list':
+    for i in range(len(ensembl_ids_list_unique)):
+        if i < len(ensembl_ids_list_unique) - 1:
+            query_string += '\''+ensembl_ids_list_unique[i]+'\','
+        else:
+            query_string += '\'' + ensembl_ids_list_unique[i] + '\''
+
+    r = requests.post(
+    url='https://biit.cs.ut.ee/gprofiler/api/convert/convert/',
+    json={
+        'organism': 'hsapiens',
+        'target': 'MIM_GENE_ACC',
+        'query': ensembl_ids_list_unique
+    }
+    )
+    result = r.json()['result']
+
+    MIM_conversion_df = pd.DataFrame(result)
+
+    for i in MIM_conversion_df['converted']:
+        gene_MIM_list_unique += [i]
+
+
+
 
 
 query_string = ''
@@ -236,12 +279,35 @@ print()
 print('Searching for protein interactors for each ENSEMBL gene product:')
 print()
 
+
+
 # Begin waiting animation
 searching_wait_animation.start()
 
-for i in ensembl_ids_list_unique:
-    query_string += i
-    query_string += ' '
+query_string = '\''
+for i in range(len(gene_MIM_list_unique)):
+    query_string += str(gene_MIM_list_unique[i])
+    if i < len(gene_MIM_list_unique)-1:
+        query_string += ', '
+    else:
+        query_string += '\''
+
+params = {
+    'from': (None, 'MIM'),
+    'to': (None, 'UniProtKB'),
+    'ids': (None, query_string),
+}
+
+response = requests.Response()
+while response.status_code != 200:
+    response = requests.post('https://rest.uniprot.org/idmapping/run', params=params)
+job_ID = response.json()['jobId']
+
+
+response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
+while len(response2.json()['results']) == 0:
+    response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
+
 
 # The following portion of code is likely to be deprecated in the near future
 # G:Profiler now performs this task instead
@@ -300,62 +366,56 @@ for i in range(len(ensembl_ids_list_unique)):
 intact_url = ''
 dictionary = {}
 df2 = pd.DataFrame()
-for i in range(len(ensembl_ids_list_unique)):
+tempdf = pd.DataFrame()
+
+"""
+# ---------------------------------------------------------------------
+
+r = requests.post(
+    url='https://biit.cs.ut.ee/gprofiler/api/convert/convert/',
+    json={
+        'organism': 'hsapiens',
+        'target': 'UNIPROT_GN_ACC',
+        'query': ensembl_ids_list_unique[i],
+    }
+)
+
+result = r.json()['result']
+
+
+uniprot_conversion_df = pd.DataFrame(result)
+"""
+
+
+for j in range(len(response2.json()['results'])):
+
+
     # ---------------------------------------------------------------------
-
-    r = requests.post(
-        url='https://biit.cs.ut.ee/gprofiler/api/convert/convert/',
-        json={
-            'organism': 'hsapiens',
-            'target': 'UNIPROT_GN_ACC',
-            'query': ensembl_ids_list_unique[i],
-        }
-    )
-
-    result = r.json()['result']
-
-
-    uniprot_conversion_df = pd.DataFrame(result)
-
-    if uniprot_conversion_df['converted'][0] != 'None':
-
-        intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-        for j in range(len(uniprot_conversion_df)):
-
-            # ---------------------------------------------------------------------
-            intact_url += uniprot_conversion_df['converted'][j]
-            intact_url += ','
-            #print(intact_url)
-
+    intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
+    intact_url += response2.json()['results'][j]['to']['primaryAccession']
+    r = requests.post(intact_url)
+    while r.status_code == 500:
         r = requests.post(intact_url)
-        while r.status_code == 500:
-            r = requests.post(intact_url)
-        response = r.json()
-        dictionary.update(response)
-        tempdf = pd.DataFrame.from_dict(dictionary['data'])
+    response = r.json()
+    dictionary.update(response)
+    tempdf = pd.DataFrame.from_dict(dictionary['data'])
 
-        # if the response dataframe is empty, try using HGNC ID
-        # THIS PROCEDURE LEADS TO INACCURATE RESULTS AND IS PLANNED FOR REMOVAL
-        """
-        if len(tempdf) == 0:
-            intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-            intact_url += gene_ids_list_unique[i]
-            r = requests.post(intact_url)
-            while r.status_code == 500:
-                r = requests.post(intact_url)
-            response = r.json()
-            dictionary.update(response)
-            tempdf = pd.DataFrame.from_dict(dictionary['data'])
-        """
-        if i == 0:
-            df2 = pd.DataFrame.from_dict(dictionary['data'])
-        else:
-            df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
-        sys.stdout.flush()
-        print(i+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
-        sys.stdout.flush()
+
+    r = requests.post(intact_url)
+    while r.status_code == 500:
+        r = requests.post(intact_url)
+    response = r.json()
+    dictionary.update(response)
+    tempdf = pd.DataFrame.from_dict(dictionary['data'])
+
+    if j == 0:
+        df2 = pd.DataFrame.from_dict(dictionary['data'])
     else:
-        print(i + 1, '| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions: 0 | Total Interactions:', len(df2))
+        df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
+    sys.stdout.flush()
+    print(j+1,'| ENSEMBL ID:', ensembl_ids_list_unique[j], '| Approved Gene ID:', gene_ids_list_unique[j],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    sys.stdout.flush()
+
 
 print()
 
