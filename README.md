@@ -471,16 +471,16 @@ Output:
     randomly selected from the OMIM database.
 
     For example, suppose a user runs an experiment with 3 MIMs corresponding to varieties
-    of hypophosphatasia agains 45 MIMs corresponding to Ehlers-Danlos Syndrome and
-    Osteogenesis imperfectica.  Using the random controls trials generator, the user
+    of hypophosphatasia against 45 MIMs corresponding to Ehlers-Danlos Syndrome and
+    Osteogenesis Imperfectica.  Using the random controls trials generator, the user
     is able to run dozens of experiments testing the three hypophosphatasia MIMs against
     45 randomly selected MIMs.
 
     Alternatively, the user could specify that they do not want to include any experimental
-    MIMs in each batch by pressing "ENTER" when prompted to enter experimental MIMs
-    (hypophosphatasia, in this example).  In this case, the program will generate
+    MIMs in each batch by pressing "RETURN" when prompted to enter experimental MIMs
+    (hypophosphatasia, in the above example).  In this case, the program will generate
     experiments where each batch of MIMs simply contains 48 randomly selected MIMs, rather
-    than 45 randomly selected MIMs along with the specified experimental MIMs.
+    containing set of specified experimental MIMs together with the 45 random MIMs.
 
     ---------------------------------------------------------------------------------
     (e.g.)
