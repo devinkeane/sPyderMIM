@@ -69,14 +69,18 @@ for i in range(int(num_batches)):
 
 source activate GenoPheno
 cd /scratch1/dkeane2/GenoPheno
-git clone http://www.github.com/devinkeane/GenoPheno ../GenoPheno_""" + str(i) + """
+cp -R ../GenoPheno ../GenoPheno_""" + str(i) + """
 cd ../GenoPheno_""" + str(i) + """
 ./GenoPheno.sh ../""" + project_name + """_EXPERIMENT/MIM_batch_""" + str(i)+""".txt """+API_key+""" """ + project_name + """_""" + str(i))
     f.close()
 
 os.chdir('../')
 
+
+bashCommand1 = 'git clone http://github.com/devinkeane/GenoPheno'
+os.system(bashCommand1)
+
 for i in range(num_batches):
-    bashCommand1 = 'qsub ./'+ project_name +'_EXPERIMENT/experiment_'+ str(i) + '.pbs'
-    os.system(bashCommand1)
+    bashCommand2 = 'qsub ./'+ project_name +'_EXPERIMENT/experiment_'+ str(i) + '.pbs'
+    os.system(bashCommand2)
 
