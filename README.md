@@ -1,7 +1,7 @@
      ___   ____   __    ___   _      ____                          __,,,,_
     | |_) | |_   / /\  | | \ | |\/| | |_               _ __..-;''`--/'/ /.',-`-.
     |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__           (`/' ` |  \ \ \\ / / / / .-'/`,_
-                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v6.1    /'`\ \   |  \ | \| // // / -.,/_,'-,
+                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.0    /'`\ \   |  \ | \| // // / -.,/_,'-,
                                                   /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
               C l e m s o n                      /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
                                                  `-`  f/ ;      / __/ \__ `/ |__/ |
@@ -43,7 +43,8 @@ workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
      * OMIM gene edge list table (.csv)
      * OMIM clinical features edge list table (.csv)
      * IntAct protein interactors edge list table (.csv)
-     * High resolution OMIM gene labeled network image (.png)
+     * High resolution labeled network image of gene overlap between OMIM disorders (.png)
+     * High resolution labeled network image of genes interactions from OMIM disorders (.png)
      * High resolution OMIM clinical data labeled network image (.png)
      * High resolution IntAct protein interactors labeled network image (.png)
      * OMIM gene network statistical analysis (.txt)
@@ -264,13 +265,16 @@ and the program will crash if these types of MIM numbers are used.</font>
    * project_name_clinical-features.csv  (OMIM clinical features table)
    * project_name_interactors.csv  (IntAct protein interactors table)
    * project_name_genes.png  (High resolution OMIM gene labeled graph)
+   * project_name_omim_genes_interactions.png  (High resolution labeled graph of OMIM disease gene interactions)
    * project_name_clinical-features.png  (High resolution OMIM clinical data labeled graph)
    * project_name_interactors.png  (High resolution IntAct protein interactors labeled graph)
    * project_name_clinical-features_NETWORK_SUMMARY.txt  (OMIM clinical features network statistical analysis)
    * project_name_genes_NETWORK_SUMMARY.txt  (OMIM genes network statistical analysis)
+   * project_name_omim_genes_interactions_NETWORK_SUMMARY.txt  (OMIM gene interactions network statistical analysis)
    * project_name_interactors_NETWORK_SUMMARY.txt  (IntAct protein interactor network statistical analysis)
-   * project_name_clinical-features.gexf  (OMIM genes network graph exchange XML)
-   * project_name_genes.gexf  (OMIM clinical features network graph exchange XML)
+   * project_name_clinical-features.gexf  (OMIM clinical features network graph exchange XML)
+   * project_name_genes.gexf  (OMIM disease gene overlap network graph exchange XML)
+   * project_name_omim_genes_interactions.gexf  (OMIM disease gene interactions network graph exchange XML)
    * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
    * project_name_genes_enrichment.csv  (OMIM genes enrichment analysis)
    * project_name_interactors_enrichment.csv  (IntAct protein interactors enrichment analysis) </font>

@@ -6,7 +6,7 @@
 #  `---'                 `--'                `--'  `---'
 #                                [  G e n o P h e n o  ]
 #
-# last rev: 03-03-13
+# last rev: 2022-07-21
 # ------------------------------------------------------------------------------------------------------
 
 # Import libraries
@@ -26,8 +26,9 @@ import sys
 # ------------------------------------------------------------------------------------------------------
 # Parse command line input and options
 parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Apply graph theory to your network table! * ")
-parser.add_argument('-m', '--mode', type=str, required=True , help='\"interactors\" (find protein interactor overlap), \"omim_genes\" (find OMIM gene overlap), or \"omim_features\" (find OMIM clinical feature overlap)')
+parser.add_argument('-m', '--mode', type=str, required=True , help='\"interactors\" (find protein interactor overlap), \"omim_genes\" (find OMIM genes shared between OMIM diseases), \"omim_genes_interactions\" (find interactions between OMIM genes), or  \"omim_features\" (find OMIM clinical feature overlap)')
 parser.add_argument('-i', '--input', type=str, required=True ,help='<INPUT_FILENAME.csv>  (Input table)')
+parser.add_argument('-g', '--gene_list', required=False, type=str, default='none', help='<GENES_LIST.csv>  OMIM Genes List Output (only for \'omim_genes_interactions\' mode)')
 parser.add_argument('-l', '--labels', required=False, type=str, default='none', help='Labels --> arguments: \"all\" or \"none\"')
 parser.add_argument('-o', '--output', type=str, required=True , help='<OUTPUT_NAME> (without file extension)')
 args = parser.parse_args()
@@ -36,7 +37,10 @@ args = parser.parse_args()
 input = args.input
 output = args.output
 labels = args.labels
+gene_list = args.gene_list
 mode = args.mode
+
+
 # ------------------------------------------------------------------------------------------------------
 # Importing fonts --> matplotlib font manager for graph output
 import matplotlib.font_manager as font_manager
@@ -77,14 +81,14 @@ O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
  O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
   O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
  o-O   ______________________________________________________________|---------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 6.1  |    ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.0  |    ✧ - ･ﾟ*
 O---o                               +------------------------------------------+ 
  O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
   O                                 |  Feltus Lab                              |◉‿◉)つ
  o-O                                |  Department of Genetics and Biochemistry |
 o---O                               |  Clemson University                      | 
 O---o                       .'✧     |                                          |
-                                    |  Last rev: 2022-04-25                    |
+                                    |  Last rev: 2022-09-01                    |
                                     +------------------------------------------+
                          , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
     ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
@@ -304,6 +308,49 @@ elif mode == 'interactors':
     sys.stdout.write('\rCreating layout... ✔')
     print()
 
+if mode == 'omim_genes_interactions':
+    protein_df = pd.read_csv(input)
+    gene_list_df = pd.read_csv(gene_list)
+
+    print('Processing your input table:')
+    print()
+    print(protein_df.drop(columns='Unnamed: 0'))
+
+    protein_df.drop(columns='Unnamed: 0', axis=1, inplace=True)
+    genes_df = pd.read_csv(gene_list)
+
+    genes_list = []
+    genes_list = genes_df['Node_name'][genes_df.Node_type == 'phenotypeMap.approvedGeneSymbols'].tolist()
+
+    for i in range(len(protein_df.index)):
+        if protein_df['moleculeA'][i] in genes_list:
+            if protein_df['moleculeB'][i] in genes_list:
+                pass
+            else:
+                protein_df.drop(i, inplace=True)
+        else:
+            protein_df.drop(i, inplace=True)
+
+    protein_df.reset_index(drop=True,inplace=True)
+
+    print()
+    sys.stdout.write('Defining source and target nodes...')
+
+    # Create a NetworkX object called "G" where 'moleculeA' is the source node
+    # and 'moleculeB' is the target node.
+    G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB')  # ,create_using=nx.MultiGraph()
+
+    sys.stdout.write('\rDefining source and target nodes... ✔')
+
+    print()
+    sys.stdout.write('\rCreating layout...')
+    #plt.figure(figsize=(25, 25))
+    plt.tight_layout()
+    pos = nx.kamada_kawai_layout(G)
+
+    sys.stdout.flush()
+    sys.stdout.write('\rCreating layout... ✔')
+    print()
 
 
     if labels == 'all' or labels == 'protein_interactions':
@@ -313,7 +360,7 @@ elif mode == 'interactors':
         sys.stdout.flush()
         print()
         sys.stdout.write('Constructing network visualization...')
-        nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=True)
+        nx.draw(G, font_color='red', node_color='lightblue', pos=pos, with_labels=True)
         sys.stdout.flush()
         sys.stdout.write('\rConstructing network visualization... ✔')
         sys.stdout.flush()
@@ -323,11 +370,13 @@ elif mode == 'interactors':
     else:
         sys.stdout.write('Creating network visualization...')
         sys.stdout.flush()
-        nx.draw(G, font_color='red', node_color='lightblue', node_size=300, pos=pos, with_labels=False)
+        nx.draw(G, font_color='red', node_color='lightblue', node_size=500, pos=pos, with_labels=False,width=5)
         sys.stdout.flush()
         sys.stdout.write('\rCreating network visualization... ✔')
         sys.stdout.flush()
         print()
+
+
 num_nodes = G.number_of_nodes()
 
 
@@ -344,7 +393,9 @@ print()
 #calculation_wait_animation.start()
 
 
+
 components = nx.connected_components(G)
+
 largest_component = max(components, key=len)
 
 subgraph = nx.subgraph(G, largest_component)
@@ -384,7 +435,7 @@ summary_title = """
   | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
   | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
                                                                           /  
-                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v6.1          /
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.0          /
 ------------------------------------------------------------------------------
 """
 summary_file = open(output+'_NETWORK_SUMMARY.txt', 'w')
@@ -479,7 +530,7 @@ spiderweb_ascii_art = """
                                                               -._/_/_'.|,'_\__\_,-
                                                                  | | ,-*." |  |
                                                               ___|,+' /|\`.|  |
-             [  O M I M   G e n e s  ]                           \  \/ | \/`. |___
+             [  O M I M  ]                                       \  \/ | \/`. |___
                                                                   \ /`.|,'\  /
                                                                    Y.  |   \/
                                                                    | `.|_,'
@@ -522,9 +573,9 @@ for i,c in enumerate(communities): # Loop through the list of communities
 summary_file.close()
 
 if mode == 'interactors':
-    print(spiderweb_ascii_art)
-if mode == 'omim_genes' or mode == 'omim_features':
     print(spiderweb_ascii_art2)
+if mode == 'omim_genes' or mode == 'omim_features':
+    print(spiderweb_ascii_art)
 print()
 print()
 print('     ...image saved as \"'+output+'.png\" with ', num_nodes,' total nodes.')
