@@ -340,6 +340,12 @@ if mode == 'omim_genes_interactions':
     # and 'moleculeB' is the target node.
     G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB')  # ,create_using=nx.MultiGraph()
 
+    """
+    for i in genes_list:
+        if i not in G.nodes:
+            G.add_node(i,pos=nx.kamada_kawai_layout(i))
+    """
+
     sys.stdout.write('\rDefining source and target nodes... ✔')
 
     print()
@@ -370,7 +376,7 @@ if mode == 'omim_genes_interactions':
     else:
         sys.stdout.write('Creating network visualization...')
         sys.stdout.flush()
-        nx.draw(G, font_color='red', node_color='lightblue', node_size=500, pos=pos, with_labels=False,width=5)
+        nx.draw(G, font_color='red', node_color='lightblue', pos=pos, with_labels=False)
         sys.stdout.flush()
         sys.stdout.write('\rCreating network visualization... ✔')
         sys.stdout.flush()
