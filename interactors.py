@@ -310,7 +310,7 @@ response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 while 'results' not in response2.json():
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 response2 = requests.get(f'https://rest.uniprot.org/idmapping/results/'+job_ID+'/?size=500')
-print(response2.text)
+
 
 # The following portion of code is likely to be deprecated in the near future
 # G:Profiler now performs this task instead
