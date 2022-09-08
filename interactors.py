@@ -400,15 +400,6 @@ if len(response2.json()['failedIds']) > 0:
                 ensembl_ids_list_unique.remove(response2.json()['failedIds'][i])
                 gene_ids_list_unique.remove(response2.json()['failedIds'][i])
 
-print('len(response2[\'results\']:  ',len(response2.json()['results']))
-print('len(ensembl_ids_list_unique):     ',len(ensembl_ids_list_unique))
-print('len(gene_ids_list_unique):      ',len(gene_ids_list_unique))
-print('len(gene_ids_list):      ',len(gene_ids_list))
-print('len(ensembl_ids_list):      ',len(ensembl_ids_list))
-print('len(gene_MIM_list_unique):      ',len(gene_MIM_list_unique))
-print('len(gene_MIM_list):      ',len(gene_MIM_list))
-print(gene_MIM_list_unique)
-
 for j in range(len(response2.json()['results'])- len(response2.json()['failedIds'])):
 
     # ---------------------------------------------------------------------
