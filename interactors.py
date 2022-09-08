@@ -393,14 +393,16 @@ uniprot_conversion_df = pd.DataFrame(result)
 
 if len(response2.json()['failedIds']) > 0:
     for i in range(len(response2.json()['failedIds'])):
-        print('Failed to convert Gene MIM '+response2.json()['failedIds'][i]+' to UNIPROT ID')
+        print('⚠ Failed to convert Gene MIM '+response2.json()['failedIds'][i]+' to UNIPROT ID')
+        print()
         for j in range(len(gene_MIM_list_unique)):
             if gene_MIM_list_unique[j] == response2.json()['failedIds'][i]:
                 gene_MIM_list_unique.remove(response2.json()['failedIds'][i])
                 ensembl_ids_list_unique.remove(response2.json()['failedIds'][i])
                 gene_ids_list_unique.remove(response2.json()['failedIds'][i])
 
-for j in range(len(response2.json()['results'])- len(response2.json()['failedIds'])):
+i = 0
+for j in range(len(response2.json()['results'])):
 
     # ---------------------------------------------------------------------
     intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
@@ -427,7 +429,7 @@ for j in range(len(response2.json()['results'])- len(response2.json()['failedIds
     sys.stdout.flush()
 
     if j > 0:
-        if response2.json()['results'][j]['to'] == response2.json()['results'][j-1]['to']:
+        if response2.json()['results'][j]['from'] == response2.json()['results'][j-1]['from']:
             i = i - 1
 
     print(j+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
