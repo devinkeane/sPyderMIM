@@ -1,3 +1,5 @@
+# last rev 2022-09-07
+
 import numpy as np
 import pandas as pd
 import argparse
@@ -58,7 +60,7 @@ logo = """
    / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
   /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
 
-                                                       [ G e n o P h e n o ]  v7.0                         
+                                                       [ G e n o P h e n o ]  v7.1                         
 """
 print(logo)
 # -------------------------------------------------------------------------------------------
@@ -221,7 +223,7 @@ if mode == 'omim':
             pass
         else:
             gene_MIM_list_unique += [i]
-    gene_MIM_list_unique = list(filter(None, gene_MIM_list_unique))
+
 
 query_string = ''
 
@@ -307,7 +309,8 @@ job_ID = response.json()['jobId']
 response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 while 'results' not in response2.json():
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
-
+response2 = requests.get(f'https://rest.uniprot.org/idmapping/results/'+job_ID+'/?size=500')
+print(response2.text)
 
 # The following portion of code is likely to be deprecated in the near future
 # G:Profiler now performs this task instead
@@ -387,12 +390,30 @@ uniprot_conversion_df = pd.DataFrame(result)
 """
 
 
-for j in range(len(response2.json()['results'])):
 
+if len(response2.json()['failedIds']) > 0:
+    for i in range(len(response2.json()['failedIds'])):
+        print('Failed to convert Gene MIM '+response2.json()['failedIds'][i]+' to UNIPROT ID')
+        for j in range(len(gene_MIM_list_unique)):
+            if gene_MIM_list_unique[j] == response2.json()['failedIds'][i]:
+                gene_MIM_list_unique.remove(response2.json()['failedIds'][i])
+                ensembl_ids_list_unique.remove(response2.json()['failedIds'][i])
+                gene_ids_list_unique.remove(response2.json()['failedIds'][i])
+
+print('len(response2[\'results\']:  ',len(response2.json()['results']))
+print('len(ensembl_ids_list_unique):     ',len(ensembl_ids_list_unique))
+print('len(gene_ids_list_unique):      ',len(gene_ids_list_unique))
+print('len(gene_ids_list):      ',len(gene_ids_list))
+print('len(ensembl_ids_list):      ',len(ensembl_ids_list))
+print('len(gene_MIM_list_unique):      ',len(gene_MIM_list_unique))
+print('len(gene_MIM_list):      ',len(gene_MIM_list))
+print(gene_MIM_list_unique)
+
+for j in range(len(response2.json()['results'])- len(response2.json()['failedIds'])):
 
     # ---------------------------------------------------------------------
     intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-    intact_url += response2.json()['results'][j]['to']['primaryAccession']
+    intact_url += response2.json()['results'][j]['to']
     r = requests.post(intact_url)
     while r.status_code == 500:
         r = requests.post(intact_url)
@@ -413,8 +434,14 @@ for j in range(len(response2.json()['results'])):
     else:
         df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
     sys.stdout.flush()
-    print(j+1,'| ENSEMBL ID:', ensembl_ids_list_unique[j], '| Approved Gene ID:', gene_ids_list_unique[j],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+
+    if j > 0:
+        if response2.json()['results'][j]['to'] == response2.json()['results'][j-1]['to']:
+            i = i - 1
+
+    print(j+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
     sys.stdout.flush()
+    i = i+1
 
 
 print()
