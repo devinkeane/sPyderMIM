@@ -153,7 +153,9 @@ print()
 print()
 
 if mode == 'omim':
+    time.sleep(2)
     print(gpn)
+
 if mode == 'list':
     my_file = open(input, "r")
 
@@ -162,6 +164,7 @@ if mode == 'list':
     # replacing end splitting the text
     # when newline ('\n') is seen.
     input_list = data.split("\n")
+
     if len(input_list) < 11:
         for i in input_list:
             print(i)
@@ -389,17 +392,25 @@ result = r.json()['result']
 uniprot_conversion_df = pd.DataFrame(result)
 """
 
-
-
+# check for failed IDs and drop them from their respective mapped lists
 if len(response2.json()['failedIds']) > 0:
     for i in range(len(response2.json()['failedIds'])):
-        print('⚠ Failed to convert Gene MIM '+response2.json()['failedIds'][i]+' to UNIPROT ID')
+        print('⚠ Failed to convert Gene MIM '+response2.json()['failedIds'][i].replace('\'','')+' to UNIPROT ID ⚠')
         print()
         for j in range(len(gene_MIM_list_unique)):
-            if gene_MIM_list_unique[j] == response2.json()['failedIds'][i]:
-                gene_MIM_list_unique.remove(response2.json()['failedIds'][i])
-                ensembl_ids_list_unique.remove(response2.json()['failedIds'][i])
-                gene_ids_list_unique.remove(response2.json()['failedIds'][i])
+
+            if str(gene_MIM_list_unique[j]) == response2.json()['failedIds'][i].replace('\'',''):
+                gene_MIM_list_unique.pop(j)
+                ensembl_ids_list_unique.pop(j)
+                gene_ids_list_unique.pop(j)
+
+
+
+# Query each ID using the UNIPROT ID conversions in the response.
+
+# Print to output each respective ENSEMBL ID and HGNC symbol for each iterations,
+# using the same symbols when the next iteration contains another protein transcribed
+# by the same gene.
 
 i = 0
 for j in range(len(response2.json()['results'])):
@@ -484,7 +495,14 @@ df2.to_csv(output)
 
 
 """
+
+
 # Potentially useful code for the future, leftover from migration from table.py
+# This code will likely be discarded, however, in favor of the current Master's Thesis
+# plan.   -DK  2022-09-08
+
+
+  
     for j in range(len(temp_df)):
         df.loc[k] = [temp_df['moleculeA'][j], temp_df['moleculeB'][j]]
         k += 1
@@ -649,5 +667,3 @@ gpn = pd.concat([gpn,neighbors_df],ignore_index=True)
 gpn.drop(columns = 'Node_name_temp', inplace = True)
 print(neighbors_df)
 """
-
-
