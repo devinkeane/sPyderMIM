@@ -60,7 +60,7 @@ logo = """
    / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
   /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
 
-                                                       [ G e n o P h e n o ]  v7.1                         
+                                                       [ G e n o P h e n o ]  v7.2                         
 """
 print(logo)
 # -------------------------------------------------------------------------------------------
@@ -182,7 +182,7 @@ if mode == 'list':
     my_file.close()
 print()
 if mode == 'omim':
-    print('Extracting ENSEMBL IDs from input:')
+    print('Extracting Gene MIM IDs from input:')
 if mode == 'list':
     print('Converting input to ENSEMBL IDs:')
 print()
@@ -252,10 +252,6 @@ if mode == 'list':
     for i in MIM_conversion_df['converted']:
         gene_MIM_list_unique += [i]
 
-
-
-
-
 query_string = ''
 
 sleep_float = 0.1
@@ -270,32 +266,27 @@ if len(ensembl_ids_list_unique) < 20:
 if len(ensembl_ids_list_unique) < 10:
     sleep_float = 0.2
 
-for i in ensembl_ids_list_unique:
-    sys.stdout.write('\r'+i)
+for i in gene_MIM_list_unique:
+    sys.stdout.write('\r'+str(i))
     time.sleep(sleep_float)
     sys.stdout.flush()
 
 sys.stdout.write('\r ')
 time.sleep(0.2)
 sys.stdout.flush()
-sys.stdout.write('\r'+'ENSEMBL IDs extracted     ✔       '+'\n')
+sys.stdout.write('\r'+'Gene MIMs extracted     ✔       '+'\n')
 sys.stdout.flush()
 print()
-print('Searching for protein interactors for each ENSEMBL gene product:')
-print()
 
+sys.stdout.write('Converting MIM HGNC Gene IDs to UNIPROT IDs       ')
+sys.stdout.flush()
 
-
-# Begin waiting animation
-searching_wait_animation.start()
 
 query_string = '\''
 for i in range(len(gene_MIM_list_unique)):
     query_string += str(gene_MIM_list_unique[i])
     if i < len(gene_MIM_list_unique)-1:
         query_string += ', '
-    else:
-        query_string += '\''
 
 params = {
     'from': (None, 'MIM'),
@@ -313,6 +304,155 @@ response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 while 'results' not in response2.json():
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 response2 = requests.get(f'https://rest.uniprot.org/idmapping/results/'+job_ID+'/?size=500')
+
+sys.stdout.write('\r'+'Conversion to UNIPROT complete  ✔                         '+'\n')
+time.sleep(2)
+sys.stdout.flush()
+
+
+
+intact_url = ''
+dictionary = {}
+df2 = pd.DataFrame()
+tempdf = pd.DataFrame()
+
+
+# check for failed IDs and drop them from their respective mapped lists
+if 'failedIds' in response2.json():
+    for i in range(len(response2.json()['failedIds'])):
+        j = 0
+        for x in gene_MIM_list_unique[:]:
+            if str(x) == response2.json()['failedIds'][i]:
+                gene_MIM_list_unique.pop(j)
+                ensembl_ids_list_unique.pop(j)
+                gene_ids_list_unique.pop(j)
+                j -= 1
+            j += 1
+        print()
+        print('⚠ WARNING ⚠    Failed to convert Gene MIM ' + str(response2.json()['failedIds'][i]) + ' to UNIPROT ID')
+        print()
+
+
+# Query each ID using the UNIPROT ID conversions in the response.
+
+# Print to output each respective ENSEMBL ID and HGNC symbol for each iterations,
+# using the same symbols when the next iteration contains another protein transcribed
+# by the same gene.
+print()
+print('                                         ┌(◉ ͜ʖ◉)つ')
+print('         +-----------------------------------------------------------------------+')
+print('         |   Searching for proteins that interact with each OMIM gene product:   |')
+print('         +-----------------------------------------------------------------------+')
+print()
+
+# Begin waiting animation
+searching_wait_animation.start()
+
+i = 0
+for j in range(len(response2.json()['results'])):
+
+    # ---------------------------------------------------------------------
+    intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
+    intact_url += response2.json()['results'][j]['to']
+    r = requests.post(intact_url)
+    while r.status_code == 500:
+        r = requests.post(intact_url)
+    response = r.json()
+    dictionary.update(response)
+    tempdf = pd.DataFrame.from_dict(dictionary['data'])
+
+
+    r = requests.post(intact_url)
+    while r.status_code == 500:
+        r = requests.post(intact_url)
+    response = r.json()
+    dictionary.update(response)
+    tempdf = pd.DataFrame.from_dict(dictionary['data'])
+
+    if j == 0:
+        df2 = pd.DataFrame.from_dict(dictionary['data'])
+    else:
+        df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
+    sys.stdout.flush()
+
+    if j > 0:
+        if response2.json()['results'][j]['from'] == response2.json()['results'][j-1]['from']:
+            i = i - 1
+
+    print(j+1, '| Approved Gene ID:', gene_ids_list_unique[i], '| Gene Product (UNIPROT ID):', response2.json()['results'][j]['to'], '| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    sys.stdout.flush()
+    i = i+1
+
+
+print()
+
+done = True
+
+time.sleep(2)
+
+#df = pd.concat([df, df2], axis=0, ignore_index=True)
+
+sys.stdout.flush()
+print()
+print()
+print('Saving output table:')
+print()
+print(df2)
+print()
+print()
+print('Process complete.')
+print()
+
+if mode == 'list':
+    if len(bad_id_list) > 1:
+        print('-------------------------------------------------------------------------------------------------------------')
+        print()
+        print()
+        print('  *  '+str(len(bad_id_list)-1)+' of your original input IDs failed to undergo conversion to ENSEMBL IDs, which interactors.py requires.')
+        print()
+        print('           *  These IDs have been saved to \"{}_FAILED_IDs.txt\".'.format(output.split('.')[0]))
+print()
+print('-------------------------------------------------------------------------------------------------------------')
+print()
+print('Your interactors list was saved as \"'+output+'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
+print()
+print('                                                    	⊂(◉‿◉)つ  ♡  ')
+
+print()
+# Save the gpn as a csv
+df2.to_csv(output)
+
+# END OF PROGRAM
+
+
+
+
+
+# - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . -
+#                                                                                              ;
+# Potentially useful code for the future is below, leftover from various phases of devolopment ;
+# This code will likely be in favor of the evolving Master's Thesis plan                       ;
+#           -DK  2022-09-10                                                                    ;
+#                                                                                              ;
+# - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . -
+
+# ---------------------------------------------------------------------
+
+"""
+r = requests.post(
+    url='https://biit.cs.ut.ee/gprofiler/api/convert/convert/',
+    json={
+        'organism': 'hsapiens',
+        'target': 'UNIPROT_GN_ACC',
+        'query': ensembl_ids_list_unique[i],
+    }
+)
+
+result = r.json()['result']
+
+
+uniprot_conversion_df = pd.DataFrame(result)
+"""
 
 
 # The following portion of code is likely to be deprecated in the near future
@@ -369,137 +509,9 @@ for i in range(len(ensembl_ids_list_unique)):
     else:
         df = pd.concat([df,tempdf],axis=0,ignore_index=True)
 """
-intact_url = ''
-dictionary = {}
-df2 = pd.DataFrame()
-tempdf = pd.DataFrame()
-
-"""
-# ---------------------------------------------------------------------
-
-r = requests.post(
-    url='https://biit.cs.ut.ee/gprofiler/api/convert/convert/',
-    json={
-        'organism': 'hsapiens',
-        'target': 'UNIPROT_GN_ACC',
-        'query': ensembl_ids_list_unique[i],
-    }
-)
-
-result = r.json()['result']
-
-
-uniprot_conversion_df = pd.DataFrame(result)
-"""
-
-# check for failed IDs and drop them from their respective mapped lists
-if len(response2.json()['failedIds']) > 0:
-    for i in range(len(response2.json()['failedIds'])):
-        print('⚠ Failed to convert Gene MIM '+response2.json()['failedIds'][i].replace('\'','')+' to UNIPROT ID ⚠')
-        print()
-        for j in range(len(gene_MIM_list_unique)):
-
-            if str(gene_MIM_list_unique[j]) == response2.json()['failedIds'][i].replace('\'',''):
-                gene_MIM_list_unique.pop(j)
-                ensembl_ids_list_unique.pop(j)
-                gene_ids_list_unique.pop(j)
-
-
-
-# Query each ID using the UNIPROT ID conversions in the response.
-
-# Print to output each respective ENSEMBL ID and HGNC symbol for each iterations,
-# using the same symbols when the next iteration contains another protein transcribed
-# by the same gene.
-
-i = 0
-for j in range(len(response2.json()['results'])):
-
-    # ---------------------------------------------------------------------
-    intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
-    intact_url += response2.json()['results'][j]['to']
-    r = requests.post(intact_url)
-    while r.status_code == 500:
-        r = requests.post(intact_url)
-    response = r.json()
-    dictionary.update(response)
-    tempdf = pd.DataFrame.from_dict(dictionary['data'])
-
-
-    r = requests.post(intact_url)
-    while r.status_code == 500:
-        r = requests.post(intact_url)
-    response = r.json()
-    dictionary.update(response)
-    tempdf = pd.DataFrame.from_dict(dictionary['data'])
-
-    if j == 0:
-        df2 = pd.DataFrame.from_dict(dictionary['data'])
-    else:
-        df2 = pd.concat([df2, tempdf], axis=0, ignore_index=True)
-    sys.stdout.flush()
-
-    if j > 0:
-        if response2.json()['results'][j]['from'] == response2.json()['results'][j-1]['from']:
-            i = i - 1
-
-    print(j+1,'| ENSEMBL ID:', ensembl_ids_list_unique[i], '| Approved Gene ID:', gene_ids_list_unique[i],'| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
-    sys.stdout.flush()
-    i = i+1
-
-
-print()
-
-done = True
-
-time.sleep(2)
-
-#df = pd.concat([df, df2], axis=0, ignore_index=True)
-
-sys.stdout.flush()
-print()
-print()
-print('Saving output table:')
-print()
-print(df2)
-print()
-print()
-print('Process complete.')
-print()
-
-if mode == 'list':
-    if len(bad_id_list) > 1:
-        print('-------------------------------------------------------------------------------------------------------------')
-        print()
-        print()
-        print('  *  '+str(len(bad_id_list)-1)+' of your original input IDs failed to undergo conversion to ENSEMBL IDs, which interactors.py requires.')
-        print()
-        print('           *  These IDs have been saved to \"{}_FAILED_IDs.txt\".'.format(output.split('.')[0]))
-print()
-print('-------------------------------------------------------------------------------------------------------------')
-print()
-print('Your interactors list was saved as \"'+output+'\" with ',len(df2.columns),' columns and ',len(df2),' rows.')
-print()
-print('                                                    	⊂(◉‿◉)つ  ♡  ')
-
-print()
-# Save the gpn as a csv
-df2.to_csv(output)
-
-# END OF PROGRAM
-
-
-
-
-
 
 
 """
-
-
-# Potentially useful code for the future, leftover from migration from table.py
-# This code will likely be discarded, however, in favor of the current Master's Thesis
-# plan.   -DK  2022-09-08
 
 
   
