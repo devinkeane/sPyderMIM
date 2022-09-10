@@ -44,12 +44,14 @@ def animate():
         sys.stdout.flush()
         time.sleep(0.1)
     sys.stdout.flush()
-    sys.stdout.write('\r                           ')
+    sys.stdout.write('\r                                 ')
+    time.sleep(0.1)
     sys.stdout.write('\r( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔')
     sys.stdout.flush()
 
 searching_wait_animation = threading.Thread(target=animate)
 
+sys.stdout.flush()
 # -------------------------------------------------------------------------------------------
 
 # create and print logo
@@ -145,6 +147,7 @@ if mode == 'list':
     bashCommand = 'rm ./converted_ENSG.txt >/dev/null 2>&1'
     os.system(bashCommand)
 
+sys.stdout.flush()
 print()
 print('--------------------------------------------------------------------')
 print()
@@ -152,8 +155,10 @@ print('	ʕっ•ᴥ•ʔっ        Your input:   ')
 print()
 print()
 
+sys.stdout.flush()
+time.sleep(2)
 if mode == 'omim':
-    time.sleep(2)
+
     print(gpn)
 
 if mode == 'list':
@@ -180,6 +185,8 @@ if mode == 'list':
 
 
     my_file.close()
+print()
+print('----------------------------------------------------------------------------')
 print()
 if mode == 'omim':
     print('Extracting Gene MIM IDs from input:')
@@ -274,7 +281,8 @@ for i in gene_MIM_list_unique:
 sys.stdout.write('\r ')
 time.sleep(0.2)
 sys.stdout.flush()
-sys.stdout.write('\r'+'Gene MIMs extracted     ✔       '+'\n')
+sys.stdout.write('\r'+'                                                  '+'\n')
+sys.stdout.write('\r'+'Gene MIMs extracted                           ✔   '+'\n')
 sys.stdout.flush()
 print()
 
@@ -305,9 +313,11 @@ while 'results' not in response2.json():
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 response2 = requests.get(f'https://rest.uniprot.org/idmapping/results/'+job_ID+'/?size=500')
 
-sys.stdout.write('\r'+'Conversion to UNIPROT complete  ✔                         '+'\n')
-time.sleep(2)
+sys.stdout.write('\r'+'                                                  '+'\n')
+sys.stdout.write('\r'+'Conversion to UNIPROT complete                ✔   '+'\n')
 sys.stdout.flush()
+time.sleep(2)
+
 
 
 
@@ -378,18 +388,21 @@ for j in range(len(response2.json()['results'])):
     if j > 0:
         if response2.json()['results'][j]['from'] == response2.json()['results'][j-1]['from']:
             i = i - 1
-
-    print(j+1, '| Approved Gene ID:', gene_ids_list_unique[i], '| Gene Product (UNIPROT ID):', response2.json()['results'][j]['to'], '| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    time.sleep(0.05)
+    sys.stdout.flush()
+    sys.stdout.write('\r')
+    print('   '+str(j+1), '| Approved Gene ID:', gene_ids_list_unique[i], '| Gene Product (UNIPROT ID):', response2.json()['results'][j]['to'], '| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+    print()
     sys.stdout.flush()
     i = i+1
 
 
-print()
-
+time.sleep(0.1)
 done = True
-
+time.sleep(0.2)
+sys.stdout.flush()
 time.sleep(2)
-
+print()
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
 
 sys.stdout.flush()

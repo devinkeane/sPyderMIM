@@ -520,8 +520,8 @@ print()
 graph_output_name = output+'.png'
 plt.savefig(graph_output_name)
 
-gexf_output_name = output+'.gexf'
-nx.write_gexf(G, gexf_output_name)
+graphml_output_name = output+'.gexf'
+nx.write_graphml(G, graphml_output_name)
 
 # ---------------------------------------------------------------------------
 # Print logo and output message |
@@ -588,7 +588,7 @@ print('     ...image saved as \"'+output+'.png\" with ', num_nodes,' total nodes
 print()
 print('     Summary file saved as \"'+output+'_NETWORK_SUMMARY.txt\"')
 print()
-print('     Graph exchange XML file saved as \"'+gexf_output_name+'  *:･ﾟ✧')
+print('     Graph exchange XML file saved as \"'+graphml_output_name+'  *:･ﾟ✧')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()

@@ -50,14 +50,14 @@ workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
      * OMIM gene network statistical analysis (.txt)
      * OMIM clinical features network statistical analysis (.txt)
      * Protein interactor network statistical analysis (.txt)
-     * OMIM gene network graph exchange file XML (.gexf)
-     * OMIM clinical features network graph exchange file XML (.gexf)
-     * Protein interactor network graph exchange file XML (.gexf)
+     * OMIM gene network GraphML file (.graphml)
+     * OMIM clinical features network GraphML file (.graphml)
+     * Protein interactor network GraphML file (.graphml)
      * Primary gene (OMIM genes) enrichment analysis (.csv)
      * Protein interactor (IntAct genes) enrichment analysis (.csv)
 
 
-<font color="lime"> Edge list and .gexf output can be used in other programs.  However, an ultimate goal of our
+<font color="lime"> Edge list and .graphml output can be used in other programs.  However, an ultimate goal of our
 software is to provide a purely command line based workflow that can allow for graph theory
 analysis to be upscaled and applied to larger data sets than could be handled in GUI-based
 programs. </font>
@@ -123,7 +123,7 @@ interactors.py uses EBI's [IntAct API](https://www.ebi.ac.uk/intact/documentatio
                                                 ʕっ•ᴥ•ʔっ
  <font size="3"><font color="aqua"><b>[ g r a p h . p y ]</b></span></font></font> is able to take in the .csv output from either table.py or interactors.py
  and generate a network graph of phenotypes or protein interactors, respectively.  The output is
- a high resolution .png visualization of your network, a .gexf export of your network, and a
+ a high resolution .png visualization of your network, a .graphml export of your network, and a
  summary .txt file featuring multiple calculations:
 
         1) top 20 nodes by connectivity degree
@@ -272,10 +272,10 @@ and the program will crash if these types of MIM numbers are used.</font>
    * project_name_genes_NETWORK_SUMMARY.txt  (OMIM genes network statistical analysis)
    * project_name_omim_genes_interactions_NETWORK_SUMMARY.txt  (OMIM gene interactions network statistical analysis)
    * project_name_interactors_NETWORK_SUMMARY.txt  (IntAct protein interactor network statistical analysis)
-   * project_name_clinical-features.gexf  (OMIM clinical features network graph exchange XML)
-   * project_name_genes.gexf  (OMIM disease gene overlap network graph exchange XML)
-   * project_name_omim_genes_interactions.gexf  (OMIM disease gene interactions network graph exchange XML)
-   * project_name_interactors.gexf  (Protein interactor network graph exchange XML)
+   * project_name_clinical-features.graphml  (OMIM clinical features network graph exchange XML)
+   * project_name_genes.graphml  (OMIM disease gene overlap network graph exchange XML)
+   * project_name_omim_genes_interactions.graphml  (OMIM disease gene interactions network graph exchange XML)
+   * project_name_interactors.graphml  (Protein interactor network graph exchange XML)
    * project_name_genes_enrichment.csv  (OMIM genes enrichment analysis)
    * project_name_interactors_enrichment.csv  (IntAct protein interactors enrichment analysis) </font>
 
@@ -333,10 +333,14 @@ and the program will crash if these types of MIM numbers are used.</font>
     
 <font size="3"><font color="lime">interactors.py requires one of two modes, specified using the "-m" option:
 
+⚠ WARNING:  due to recent changes in the repository (v7.0 - v7.1), LIST MODE is currently unusable. ⚠
+List mode will be repaired in the future or deprecated, depending on if there is a solution to its limitations.
+--DK 2022-09-10
+
 ### 1) "omim"
 * "omim" mode finds protein interactors for all of the genes found in the table that table.py produces for output.
 
-### 2) "list"
+### 2) "list"  
 * "list" mode takes in a .txt file that you have created.  The list can
     contain mixed types of IDs from most databases, because interactors.py
     will use convert_ids.py to detect your ID types and convert them to the
@@ -373,33 +377,33 @@ and the program will crash if these types of MIM numbers are used.</font>
                                        V
     ~$ python3 graph.py -i <input_file.csv> -m <mode> -l <labels_option> -o <output_file.png>
     
-    graph.py options:
-    
-      -h, --help            show this help message and exit
-    
-      -m MODE, --mode MODE  "list" (find protein interactors for a .txt file of most gene ID types)
-                                                                                                 A
-	    				                    or         (see README_conversion_IDs_list.txt)   ___|           
-    
-	    	                "omim" (find protein interactors for your table.py OMIM genes output edge list)
-    
-      -i INPUT, --input INPUT
+    usage: graph.py [-h] -m MODE -i INPUT [-g GENE_LIST] [-l LABELS] -o OUTPUT
+                                               A
+                                               |
+                                               +-----------   ⚠ only for "omim_genes_interactions" mode ⚠
 
-                        <INPUT_FILENAME.csv> (Input table)
+
+    ʕっ•ᴥ•ʔっ * Apply graph theory to your network table! *
     
+    optional arguments:
+      -h, --help            show this help message and exit
+      -m MODE, --mode MODE  "interactors" (find protein interactor overlap), "omim_genes" (find OMIM genes shared between OMIM diseases),
+                            "omim_genes_interactions" (find interactions between OMIM genes), or "omim_features" (find OMIM clinical feature overlap)
+      -i INPUT, --input INPUT
+                            <INPUT_FILENAME.csv> (Input table)
+      -g GENE_LIST, --gene_list GENE_LIST
+                            <GENES_LIST.csv> OMIM Genes List Output (only for 'omim_genes_interactions' mode)
       -l LABELS, --labels LABELS
-    
-                            arguments: arguments: "all" or "none"
-    
+                            Labels --> arguments: "all" or "none"
       -o OUTPUT, --output OUTPUT
-    
-                            <OUTPUT_FILENAME.png>
+                            <OUTPUT_NAME> (without file extension)
+
     
     
 <font size="3"><font color="lime">Output:
 * ./project_name_NETWORK_SUMMARY.txt
 * ./project_name.png
-* ./project_name.gexf </font></font>
+* ./project_name.graphml </font></font>
 
 <!-- end the list -->
 
