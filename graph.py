@@ -520,7 +520,7 @@ print()
 graph_output_name = output+'.png'
 plt.savefig(graph_output_name)
 
-graphml_output_name = output+'.gexf'
+graphml_output_name = output+'.graphml'
 nx.write_graphml(G, graphml_output_name)
 
 # ---------------------------------------------------------------------------
