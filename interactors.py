@@ -1,4 +1,4 @@
-# last rev 2022-09-07
+# last rev 2022-09-10
 
 import numpy as np
 import pandas as pd
@@ -71,7 +71,7 @@ print(logo)
 gpn = pd.DataFrame()
 
 
-# import genes, either from an OMIM table for from a simple .txt list
+# import genes, either from an OMIM table or from a simple .txt list
 
 if mode == 'omim':
     gpn = pd.read_csv(input)
@@ -161,6 +161,7 @@ if mode == 'omim':
 
     print(gpn)
 
+# FIXME! --> LIST MODE IS CURRENTLY UNUSABLE
 if mode == 'list':
     my_file = open(input, "r")
 
@@ -185,6 +186,7 @@ if mode == 'list':
 
 
     my_file.close()
+
 print()
 print('----------------------------------------------------------------------------')
 print()
@@ -193,7 +195,7 @@ if mode == 'omim':
 if mode == 'list':
     print('Converting input to ENSEMBL IDs:')
 print()
-
+# Create HGNC Gene IDs list for mapping with other lists
 gene_ids_list = []
 gene_ids_list_unique = []
 
@@ -206,7 +208,7 @@ for i in gene_ids_list:
     else:
         gene_ids_list_unique += [i]
 
-
+# Create ENSEMBL Gene IDs list for mapping with other lists
 ensembl_ids_list = []
 ensembl_ids_list_unique = []
 
@@ -220,7 +222,7 @@ for i in ensembl_ids_list:
         ensembl_ids_list_unique += [i]
 ensembl_ids_list_unique = list(filter(None, ensembl_ids_list_unique))
 
-
+# Create OMIM Gene MIM# list for mapping with other lists
 gene_MIM_list = []
 gene_MIM_list_unique = []
 
@@ -259,8 +261,12 @@ if mode == 'list':
     for i in MIM_conversion_df['converted']:
         gene_MIM_list_unique += [i]
 
+# Begin constructing a query string
+# ----------------------------------
+
 query_string = ''
 
+# Alter the speed displaying MIM numbers based on quantity of MIM number input
 sleep_float = 0.1
 if len(ensembl_ids_list_unique) < 1000:
     sleep_float = 0.0
@@ -273,11 +279,13 @@ if len(ensembl_ids_list_unique) < 20:
 if len(ensembl_ids_list_unique) < 10:
     sleep_float = 0.2
 
+# Zip through the MIM numbers to verify that they are being extracted from the input table
 for i in gene_MIM_list_unique:
     sys.stdout.write('\r'+str(i))
     time.sleep(sleep_float)
     sys.stdout.flush()
 
+# Done message
 sys.stdout.write('\r ')
 time.sleep(0.2)
 sys.stdout.flush()
@@ -286,6 +294,7 @@ sys.stdout.write('\r'+'Gene MIMs extracted                           ✔   '+'\n
 sys.stdout.flush()
 print()
 
+# Begin conversion of HGNC to UNIPROT ID by building a query for UNIPROT API from the unique gene MIM list.
 sys.stdout.write('Converting MIM HGNC Gene IDs to UNIPROT IDs       ')
 sys.stdout.flush()
 
@@ -313,6 +322,7 @@ while 'results' not in response2.json():
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 response2 = requests.get(f'https://rest.uniprot.org/idmapping/results/'+job_ID+'/?size=500')
 
+# When the API call and response is complete, display this to output
 sys.stdout.write('\r'+'                                                  '+'\n')
 sys.stdout.write('\r'+'Conversion to UNIPROT complete                ✔   '+'\n')
 sys.stdout.flush()
@@ -320,14 +330,15 @@ time.sleep(2)
 
 
 
-
+# Instantiate the necessary objects for the INTACT API query
 intact_url = ''
 dictionary = {}
 df2 = pd.DataFrame()
 tempdf = pd.DataFrame()
 
 
-# check for failed IDs and drop them from their respective mapped lists
+# But first... check for failed IDs from the UNIPROT conversion API call and drop
+# corresponding items from their respective mapped lists
 if 'failedIds' in response2.json():
     for i in range(len(response2.json()['failedIds'])):
         j = 0
@@ -358,6 +369,8 @@ print()
 # Begin waiting animation
 searching_wait_animation.start()
 
+# Query the Intact API using each of the UNIPROT gene products from the UNIPROT API call
+# that converted the gene MIMs to protein products (UNIPROT ID) (one to many relationship)
 i = 0
 for j in range(len(response2.json()['results'])):
 
@@ -405,6 +418,7 @@ time.sleep(2)
 print()
 #df = pd.concat([df, df2], axis=0, ignore_index=True)
 
+# Save to output files and print feedback to STDOUT
 sys.stdout.flush()
 print()
 print()
@@ -444,7 +458,7 @@ df2.to_csv(output)
 # - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . -
 #                                                                                              ;
 # Potentially useful code for the future is below, leftover from various phases of devolopment ;
-# This code will likely be in favor of the evolving Master's Thesis plan                       ;
+# This code will likely be disgarded in favor of the evolving Master's Thesis plan.            ;
 #           -DK  2022-09-10                                                                    ;
 #                                                                                              ;
 # - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . - , - . - . - . -
