@@ -295,6 +295,14 @@ elif mode == 'interactors':
     # and 'moleculeB' is the target node.
     G = nx.from_pandas_edgelist(protein_df, source='moleculeA', target='moleculeB',edge_attr='intactMiscore') #  ,create_using=nx.MultiGraph()
 
+    # The following code may be used in the future if a subplot is desired that would remove all
+    # nodes of degree n=1.
+    """
+    to_be_removed = [x for x in G.nodes() if G.degree(x) <= 1]
+
+    for x in to_be_removed:
+        G.remove_node(x)
+    """
 
     sys.stdout.write('\rDefining source and target nodes... ✔')
 
@@ -307,6 +315,29 @@ elif mode == 'interactors':
     sys.stdout.flush()
     sys.stdout.write('\rCreating layout... ✔')
     print()
+
+    if labels == 'all' or labels == 'protein_interactions':
+        sys.stdout.write('Creating labels...')
+        sys.stdout.flush()
+        sys.stdout.write('\rCreating labels... ✔')
+        sys.stdout.flush()
+        print()
+        sys.stdout.write('Constructing network visualization...')
+        nx.draw(G, font_color='red', node_color='lightblue',pos=pos, with_labels=True)
+        sys.stdout.flush()
+        sys.stdout.write('\rConstructing network visualization... ✔')
+        sys.stdout.flush()
+        print()
+
+    else:
+        sys.stdout.write('Creating network visualization...')
+        sys.stdout.flush()
+        nx.draw(G, font_color='red', node_color='lightblue', pos=pos, with_labels=False)
+        sys.stdout.flush()
+        sys.stdout.write('\rCreating network visualization... ✔')
+        sys.stdout.flush()
+        print()
+
 
 if mode == 'omim_genes_interactions':
     protein_df = pd.read_csv(input)
@@ -371,7 +402,6 @@ if mode == 'omim_genes_interactions':
         sys.stdout.write('\rConstructing network visualization... ✔')
         sys.stdout.flush()
         print()
-
 
     else:
         sys.stdout.write('Creating network visualization...')
