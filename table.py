@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 # coding: utf-8
 
@@ -6,10 +7,10 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                      (ツ)_/¯  - * Version 7.1 * -
+#                                      (ツ)_/¯  - * Version 7.2 * -
 #  [ O m i m   T a b l e   M a k e r ]
 #
-# Last rev: 2022-07-05
+# Last rev: 2022-09-14
 # ------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------
 # Import libraries
@@ -79,16 +80,14 @@ for line in range(len(mimdf)):
         url += ','
 
 # Append clinical synopsis API request, JSON format option onto URL
-url += '&include=clinicalSynopsis,geneMap&format=json&apiKey='
+url += '&include=clinicalSynopsis&format=json&apiKey='
 
 # Append API key from parsed command line arguments onto URL
 url += args.apikey
 
-"""
 # Create a second URL for the gene map API, simply by replacing 'clinicalSynopsis' with 'geneMap'
 # at the the '&include' statement in the API URL
 url_geneMap = url.replace('clinicalSynopsis','geneMap')
-"""
 
 # ------------------------------------------------------------------------------------------------------
 # Making the API requests and storing the data in a dataframe  |
@@ -102,20 +101,10 @@ df = pd.read_json(url)
 df2 = pd.json_normalize(df['omim'][0])
 # - - - - - - - - - -
 # load geneMap data using Python JSON module
-df_geneMap = df
+df_geneMap = pd.read_json(url_geneMap)
+
 # This dataframe may be renamed in the future.  It ends up being the final dataframe that
 # exported, but it is no longer transposed as a result of changes to the code over time.
-
-
-# drop molecular basis
-# (not so data friendly gene id column, we will use the nested geneMap list from the
-# API request instead)
-if 'entry.clinicalSynopsis.molecularBasis' in df2.columns:
-    df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
-df2 = df2.drop(columns='entry.phenotypeMapList')
-
-df2_transposed = pd.DataFrame.transpose(df2)
-
 df_geneMap2_transposed = pd.DataFrame()
 
 # flatten data
@@ -124,6 +113,15 @@ for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
     temp = pd.DataFrame.transpose(df_geneMap2)
     df_geneMap2_transposed = pd.concat([df_geneMap2_transposed, temp], axis=1,ignore_index=True)
 
+
+# drop molecular basis
+# (not so data friendly gene id column, we will use the nested geneMap list from the
+# API request instead)
+if 'entry.clinicalSynopsis.molecularBasis' in df2.columns:
+    df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
+
+# Transpose the clinical data --> now each column represents a disease (MIM#)
+df2_transposed = pd.DataFrame.transpose(df2)
 
 
 # The following section may be changed or removed.  It was put in place to keep
@@ -239,7 +237,6 @@ for i in range(len(gpn)):
             # otherwise just transfer the whole string
             else:
                 gpn['Node_name'][i] = gpn['Node_name_temp'][i]
-
     else:
         gpn['Node_name'][i] = gpn['Node_name_temp'][i]
 """
