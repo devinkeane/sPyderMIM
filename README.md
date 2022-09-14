@@ -162,7 +162,7 @@ convert_ids.py performs gene name conversions by using g:Profiler's [ g:Convert 
                                              ─=≡Σ((( つ◕ل͜◕)つ
 
 <font size="3"><font color="aqua"><b>[ G e n o P h e n o . s h ]</b></span></font></font>  will run the whole workflow automatically on a list of up to
- 5,000 MIMs.  Just provide the name of your .txt MIM list file, your OMIM API key, and your
+ 2,500 MIMs (daily limit).  Just provide the name of your .txt MIM list file, your OMIM API key, and your
  desired project name. </font>
 
 --------------------------------------------------------------------------------------------
@@ -244,7 +244,7 @@ and the program will crash if these types of MIM numbers are used.</font>
       20 MIM lists if you are using individual programs in the suite.  Read further for usage on
       all programs included in this repository.
 
-                                   +---------- list of OMIM MIM numbers, maximum of 5,000
+                                   +---------- list of OMIM MIM numbers, maximum of 2,500 / day
                                    |
                                    |
     Input:                         V
