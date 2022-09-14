@@ -79,14 +79,16 @@ for line in range(len(mimdf)):
         url += ','
 
 # Append clinical synopsis API request, JSON format option onto URL
-url += '&include=clinicalSynopsis&format=json&apiKey='
+url += '&include=clinicalSynopsis,geneMap&format=json&apiKey='
 
 # Append API key from parsed command line arguments onto URL
 url += args.apikey
 
+"""
 # Create a second URL for the gene map API, simply by replacing 'clinicalSynopsis' with 'geneMap'
 # at the the '&include' statement in the API URL
 url_geneMap = url.replace('clinicalSynopsis','geneMap')
+"""
 
 # ------------------------------------------------------------------------------------------------------
 # Making the API requests and storing the data in a dataframe  |
@@ -100,10 +102,20 @@ df = pd.read_json(url)
 df2 = pd.json_normalize(df['omim'][0])
 # - - - - - - - - - -
 # load geneMap data using Python JSON module
-df_geneMap = pd.read_json(url_geneMap)
-
+df_geneMap = df
 # This dataframe may be renamed in the future.  It ends up being the final dataframe that
 # exported, but it is no longer transposed as a result of changes to the code over time.
+
+
+# drop molecular basis
+# (not so data friendly gene id column, we will use the nested geneMap list from the
+# API request instead)
+if 'entry.clinicalSynopsis.molecularBasis' in df2.columns:
+    df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
+df2 = df2.drop(columns='entry.phenotypeMapList')
+
+df2_transposed = pd.DataFrame.transpose(df2)
+
 df_geneMap2_transposed = pd.DataFrame()
 
 # flatten data
@@ -112,15 +124,6 @@ for i in range(len(pd.json_normalize(df_geneMap['omim'][0]))):
     temp = pd.DataFrame.transpose(df_geneMap2)
     df_geneMap2_transposed = pd.concat([df_geneMap2_transposed, temp], axis=1,ignore_index=True)
 
-
-# drop molecular basis
-# (not so data friendly gene id column, we will use the nested geneMap list from the
-# API request instead)
-if 'entry.clinicalSynopsis.molecularBasis' in df2.columns:
-    df2.drop(columns='entry.clinicalSynopsis.molecularBasis',inplace=True)
-
-# Transpose the clinical data --> now each column represents a disease (MIM#)
-df2_transposed = pd.DataFrame.transpose(df2)
 
 
 # The following section may be changed or removed.  It was put in place to keep
