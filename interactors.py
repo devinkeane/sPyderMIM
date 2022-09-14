@@ -29,7 +29,34 @@ mode = args.mode
 
 # -------------------------------------------------------------------------------------------
 # Loading bar animation function
+
+def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
+    """
+    Call in a loop to create terminal progress bar
+    @params:
+        iteration   - Required  : current iteration (Int)
+        total       - Required  : total iterations (Int)
+        prefix      - Optional  : prefix string (Str)
+        suffix      - Optional  : suffix string (Str)
+        decimals    - Optional  : positive number of decimals in percent complete (Int)
+        length      - Optional  : character length of bar (Int)
+        fill        - Optional  : bar fill character (Str)
+        printEnd    - Optional  : end character (e.g. "\r", "\r\n") (Str)
+    """
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filledLength = int(length * iteration // total)
+    bar = fill * filledLength + '-' * (length - filledLength)
+    print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
+    # Print New Line on Complete
+    if iteration == total:
+        print('( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔')
+        print()
+
+
+
 done = False
+
+# Likely to be deprecated:
 def animate():
 
 
@@ -367,13 +394,14 @@ print('         +---------------------------------------------------------------
 print()
 
 # Begin waiting animation
-searching_wait_animation.start()
+#searching_wait_animation.start()
 
 # Query the Intact API using each of the UNIPROT gene products from the UNIPROT API call
 # that converted the gene MIMs to protein products (UNIPROT ID) (one to many relationship)
 i = 0
-for j in range(len(response2.json()['results'])):
 
+printProgressBar(0, len(response2.json()['results']), prefix = '(⌐ ͡■ ͜ʖ ͡■) Working on it...  ', suffix = 'complete', length = 50)
+for j in range(len(response2.json()['results'])):
     # ---------------------------------------------------------------------
     intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
     intact_url += response2.json()['results'][j]['to']
@@ -402,10 +430,9 @@ for j in range(len(response2.json()['results'])):
         if response2.json()['results'][j]['from'] == response2.json()['results'][j-1]['from']:
             i = i - 1
     time.sleep(0.05)
-    sys.stdout.flush()
-    sys.stdout.write('\r')
     print('   '+str(j+1), '| Approved Gene ID:', gene_ids_list_unique[i], '| Gene Product (UNIPROT ID):', response2.json()['results'][j]['to'], '| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
     print()
+    printProgressBar(j + 1, len(response2.json()['results']), prefix='(⌐ ͡■ ͜ʖ ͡■) Working on it...  ', suffix='complete', length=50)
     sys.stdout.flush()
     i = i+1
 
