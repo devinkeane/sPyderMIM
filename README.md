@@ -130,8 +130,8 @@ interactors.py uses EBI's [IntAct API](https://www.ebi.ac.uk/intact/documentatio
         2) top 20 nodes by betweenness centrality
         3) the top 10 nodes in each modularity class by Eigenvector centrality.
         4) network diameter of largest component
-        5) triadic closure
-        6) number of total nodes and edges        ,,,
+        5) transitivity
+        6) total number of nodes and edges        ,,,
                                                 \(ʘ‿ʘ)/
 
 ---
