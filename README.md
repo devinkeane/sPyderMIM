@@ -259,7 +259,7 @@ and the program will crash if these types of MIM numbers are used.</font>
 
 
 <font color="lime">Output:  (all results are moved to a new folder
-          named after the project name, followed the a date/timestamp)
+          named after the project name, followed by a date/timestamp)
 
    * project_name_genes.csv  (OMIM geno table)
    * project_name_clinical-features.csv  (OMIM clinical features table)
@@ -272,10 +272,10 @@ and the program will crash if these types of MIM numbers are used.</font>
    * project_name_genes_NETWORK_SUMMARY.txt  (OMIM genes network statistical analysis)
    * project_name_omim_genes_interactions_NETWORK_SUMMARY.txt  (OMIM gene interactions network statistical analysis)
    * project_name_interactors_NETWORK_SUMMARY.txt  (IntAct protein interactor network statistical analysis)
-   * project_name_clinical-features.graphml  (OMIM clinical features network graph exchange XML)
-   * project_name_genes.graphml  (OMIM disease gene overlap network graph exchange XML)
-   * project_name_omim_genes_interactions.graphml  (OMIM disease gene interactions network graph exchange XML)
-   * project_name_interactors.graphml  (Protein interactor network graph exchange XML)
+   * project_name_clinical-features.graphml  (OMIM clinical features network GraphML)
+   * project_name_genes.graphml  (OMIM disease gene overlap network GraphML)
+   * project_name_omim_genes_interactions.graphml  (OMIM disease gene interactions network graph GraphML)
+   * project_name_interactors.graphml  (Protein interactor network graph GraphML)
    * project_name_genes_enrichment.csv  (OMIM genes enrichment analysis)
    * project_name_interactors_enrichment.csv  (IntAct protein interactors enrichment analysis) </font>
 
