@@ -618,7 +618,7 @@ print('     ...image saved as \"'+output+'.png\" with ', num_nodes,' total nodes
 print()
 print('     Summary file saved as \"'+output+'_NETWORK_SUMMARY.txt\"')
 print()
-print('     Graph exchange XML file saved as \"'+graphml_output_name+'  *:･ﾟ✧')
+print('     GraphML file saved as \"'+graphml_output_name+'  *:･ﾟ✧')
 print()
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
