@@ -7,7 +7,7 @@
 #    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
 #   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
 #   ______________________________________________________________|
-#                                      (ツ)_/¯  - * Version 7.2 * -
+#                                      (ツ)_/¯  - * Version 7.3 * -
 #  [ O m i m   T a b l e   M a k e r ]
 #
 # Last rev: 2022-09-14
@@ -40,7 +40,7 @@ logo = """
     |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
    ______________________________________________________________|
-                                      (ツ)_/¯  - * Version 7.2 * -
+                                      (ツ)_/¯  - * Version 7.3 * -
   [ O M I M   T a b l e   M a k e r ]
 """
 print(logo)
@@ -290,9 +290,9 @@ for i in range(len(df_geneMap2_transposed.columns)):
         pass
     else:
         for j in range(len(df_geneMap2_transposed[i]['entry.phenotypeMapList'])):
-            if 'approvedGeneSymbols' in df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap'].keys():
+            if 'geneSymbols' in df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap'].keys():
 
-                gpn3['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['approvedGeneSymbols']
+                gpn3['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['geneSymbols'].split(',')[0]
                 gpn3['Node_type'][k] = 'phenotypeMap.approvedGeneSymbols'
                 gpn3['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
                 gpn3['Phenotype_MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']

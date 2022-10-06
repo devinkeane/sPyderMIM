@@ -89,7 +89,7 @@ logo = """
    / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
   /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
 
-                                                       [ G e n o P h e n o ]  v7.2                         
+                                                       [ G e n o P h e n o ]  v7.3                         
 """
 print(logo)
 # -------------------------------------------------------------------------------------------
@@ -235,6 +235,8 @@ for i in gene_ids_list:
     else:
         gene_ids_list_unique += [i]
 
+gene_ids_list_unique = list(filter(None, gene_ids_list_unique))
+
 # Create ENSEMBL Gene IDs list for mapping with other lists
 ensembl_ids_list = []
 ensembl_ids_list_unique = []
@@ -254,15 +256,16 @@ gene_MIM_list = []
 gene_MIM_list_unique = []
 
 if mode == 'omim':
-    for i in range(len(gpn)):
-        gene_MIM_list += [gpn['Gene_MIM_number'][i]]
+    mim_df = gpn[gpn['Node_type']=='phenotypeMap.approvedGeneSymbols'].reset_index()
+    for i in range(len(mim_df)):
+        gene_MIM_list += [mim_df['Gene_MIM_number'][i]]
 
     for i in gene_MIM_list:
         if i in gene_MIM_list_unique:
             pass
         else:
             gene_MIM_list_unique += [i]
-
+gene_MIM_list_unique = list(filter(None, gene_MIM_list_unique))
 
 query_string = ''
 
@@ -372,8 +375,10 @@ if 'failedIds' in response2.json():
         for x in gene_MIM_list_unique[:]:
             if str(x) == response2.json()['failedIds'][i]:
                 gene_MIM_list_unique.pop(j)
-                ensembl_ids_list_unique.pop(j)
                 gene_ids_list_unique.pop(j)
+                # (ENSEMBL IDs are currently being phased out of this program)
+                # This has been commented out to avoid further instances bugs:
+                #ensembl_ids_list_unique.pop(j)
                 j -= 1
             j += 1
         print()
