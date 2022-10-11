@@ -325,7 +325,7 @@ sys.stdout.flush()
 print()
 
 # Begin conversion of HGNC to UNIPROT ID by building a query for UNIPROT API from the unique gene MIM list.
-sys.stdout.write('Converting MIM HGNC Gene IDs to UNIPROT IDs       ')
+sys.stdout.write('Converting MIM Gene IDs to UNIPROT IDs            ')
 sys.stdout.flush()
 
 
@@ -344,12 +344,14 @@ params = {
 response = requests.Response()
 while response.status_code != 200:
     response = requests.post('https://rest.uniprot.org/idmapping/run', params=params)
+    time.sleep(5)
 job_ID = response.json()['jobId']
 
 
 response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
 while 'results' not in response2.json():
     response2 = requests.get('https://rest.uniprot.org/idmapping/status/'+job_ID)
+    time.sleep(5)
 response2 = requests.get(f'https://rest.uniprot.org/idmapping/results/'+job_ID+'/?size=500')
 
 # When the API call and response is complete, display this to output
@@ -410,17 +412,11 @@ for j in range(len(response2.json()['results'])):
     # ---------------------------------------------------------------------
     intact_url = 'https://www.ebi.ac.uk/intact/ws/interaction/list?draw=50&interactorSpeciesFilter=Homo%20sapiens&interactorTypesFilter=protein&intraSpeciesFilter=true&maxMIScore=1&minMIScore=0&negativeFilter=POSITIVE_ONLY&page=0&pageSize=10000&query='
     intact_url += response2.json()['results'][j]['to']
-    r = requests.post(intact_url)
-    while r.status_code == 500:
-        r = requests.post(intact_url)
-    response = r.json()
-    dictionary.update(response)
-    tempdf = pd.DataFrame.from_dict(dictionary['data'])
-
 
     r = requests.post(intact_url)
     while r.status_code == 500:
         r = requests.post(intact_url)
+        time.sleep(5)
     response = r.json()
     dictionary.update(response)
     tempdf = pd.DataFrame.from_dict(dictionary['data'])
@@ -441,10 +437,6 @@ for j in range(len(response2.json()['results'])):
     sys.stdout.flush()
     i = i+1
 
-
-time.sleep(0.1)
-done = True
-time.sleep(0.2)
 sys.stdout.flush()
 time.sleep(2)
 print()
