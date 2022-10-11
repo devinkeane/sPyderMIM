@@ -110,10 +110,20 @@ if mode == 'omim_genes':
         if count == 0:
             done = True
 
+
     nodeList = list(G.nodes)
     for node in nodeList:
         if G.degree(node) == 0:
             G.remove_node(node)
+
+    nodeList = list(G.nodes)
+    for node in nodeList:
+        try:
+            if G[node][node] != None:
+                if G.degree(node) <= 2:
+                    G.remove_node(node)
+        except Exception:
+            pass
 
     sys.stdout.flush()
 
@@ -239,7 +249,7 @@ if mode == 'omim_features':
         count = 0
         for node in nodeList:
             if G.degree(node) <= 1:
-                if node not in list(gpn['Superphenotype']):
+                if node not in gpn['Superphenotype']:
                     G.remove_node(node)
                     count += 1
                 count += 1
@@ -250,6 +260,15 @@ if mode == 'omim_features':
     for node in nodeList:
         if G.degree(node) == 0:
             G.remove_node(node)
+
+    nodeList = list(G.nodes)
+    for node in nodeList:
+        try:
+            if G[node][node] != None:
+                if G.degree(node) <= 2:
+                    G.remove_node(node)
+        except Exception:
+            pass
 
     sys.stdout.flush()
     sys.stdout.write('\rDefining source and target nodes... ✔')
