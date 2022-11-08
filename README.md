@@ -21,15 +21,15 @@
 <font color="lime">GenoPheno is an automated workflow for in silico hypothesis testing.  It also serves as a
 "Swiss army knife" of genomics analysis tools.  A user is free to utilize any of the programs
 in the repository, but they may also just use GenoPheno.sh to execute most of the suite altogether
-as one easily automated workflow and in silico hypothesis testing platform.  The user only needs to
-provide API key obtained from OMIM and a list of OMIM reference numbers in a text file ("phenotypic
+as one easily automated workflow and hypothesis testing platform.  The user only needs to
+provide an API key obtained from OMIM and a list of OMIM reference numbers in a text file ("phenotypic
 MIM numbers" beginning with "#" prefix).</font>
 
 <font color="lime">GenoPheno.sh, the full workflow execution program, is a genotype/phenotype network generator that uses
 the OMIM (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
 links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API, which
 allows the user to find the protein products for the genes associated with each MIM number and the
-proteins \known to interact with each of these.  Additionally, GenoPheno uses the ToppGene API in order
+proteins known to interact with each of these.  Additionally, GenoPheno uses the ToppGene API in order
 to perform enrichment analysis on all the genes that encode for these products.  By the end of the
 workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
 
