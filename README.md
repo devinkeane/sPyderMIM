@@ -1,7 +1,7 @@
      ___   ____   __    ___   _      ____                          __,,,,_
     | |_) | |_   / /\  | | \ | |\/| | |_               _ __..-;''`--/'/ /.',-`-.
     |_| \ |_|__ /_/--\ |_|_/ |_|  | |_|__           (`/' ` |  \ \ \\ / / / / .-'/`,_
-                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.3    /'`\ \   |  \ | \| // // / -.,/_,'-,
+                              𝕤ℙ𝕪𝕕𝕖𝕣𝕄𝕀𝕄 v7.3.1     /'`\ \   |  \ | \| // // / -.,/_,'-,
                                                   /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
               C l e m s o n                      /  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
                                                  `-`  f/ ;      / __/ \__ `/ |__/ |
@@ -18,27 +18,27 @@
 
 <span style="font-family:Courier">
 
-<font color="lime">GenoPheno is an automated workflow for in silico hypothesis testing.  It also serves as a
+<font color="lime">sPyderMIM is an automated workflow for in silico hypothesis testing.  It also serves as a
 "Swiss army knife" of genomics analysis tools.  A user is free to utilize any of the programs
-in the repository, but they may also just use GenoPheno.sh to execute most of the suite altogether
+in the repository, but they may also just use sPyderMIM.sh to execute most of the suite altogether
 as one easily automated workflow and hypothesis testing platform.  The user only needs to
 provide an API key obtained from OMIM and a list of OMIM reference numbers in a text file ("phenotypic
 MIM numbers" beginning with "#" prefix).</font>
 
-<font color="lime">GenoPheno.sh, the full workflow execution program, is a genotype/phenotype network generator that uses
+<font color="lime">sPyderMIM.sh, the full workflow execution program, is a genotype/phenotype network generator that uses
 the OMIM (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
 links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API, which
 allows the user to find the protein products for the genes associated with each MIM number and the
-proteins known to interact with each of these.  Additionally, GenoPheno uses the ToppGene API in order
+proteins known to interact with each of these.  Additionally, sPyderMIM uses the ToppGene API in order
 to perform enrichment analysis on all the genes that encode for these products.  By the end of the
-workflow, GenoPheno.sh automatically generates two enrichment analyses:</font>
+workflow, sPyderMIM.sh automatically generates two enrichment analyses:</font>
 
     1)  for the genes obtained from OMIM
 
     2)  for the clinical data obtained from OMIM
 
 
-<font size="4"><font color="aqua"> A single workflow run using GenoPheno.sh features the following output, saved to a date/time-stamped folder: </font></font>
+<font size="4"><font color="aqua"> A single workflow run using sPyderMIM.sh features the following output, saved to a date/time-stamped folder: </font></font>
 
      * OMIM gene edge list table (.csv)
      * OMIM clinical features edge list table (.csv)
@@ -64,7 +64,7 @@ programs. </font>
 
 ---
 
-<font size="5"><font color="aqua">The major planned objectives for future versions of GenoPheno include:</font></font>
+<font size="5"><font color="aqua">The major planned objectives for future versions of sPyderMIM include:</font></font>
 
     *   Adding gene regulatory network discovery capability using GTEX eQTLs
 
@@ -90,7 +90,7 @@ programs. </font>
 --- 
 <font size="3"><font color="aqua"><b>[ s p l i t _ l i s t . p y ]</b></span></font></font> <font color="lime">will split any MIM list that is greater than 20 into separate
  lists of 20 or less, which can then be used as input for table.py.  This is necessary because
- OMIM API calls are limited to 20 MIM numbers per request.  GenoPheno.sh will perform
+ OMIM API calls are limited to 20 MIM numbers per request.  sPyderMIM.sh will perform
  this step automatically.
 
 ---
@@ -102,7 +102,7 @@ programs. </font>
  OMIM database.  The only required input for this workflow is a .txt file that is a simple list
  of phenotype MIM numbers which the user has collected for diseases they wish to investigate
  each separated by a new line (maximum of 20 mims per file, due to API call limits for table.py
- and 5000 total mims when using GenoPheno.sh).
+ and 5000 total mims when using sPyderMIM.sh).
 
 table.py uses the [OMIM rest API](https://www.omim.org/help/api) to retreive genetic and clinical data.
 
@@ -158,10 +158,12 @@ virtually any database identifier type to virtually any other type.  See
 
 convert_ids.py performs gene name conversions by using g:Profiler's [ g:Convert API](https://biit.cs.ut.ee/gprofiler/page/apis).
 
+                                                   ||  ||  
+                                                   \\()// 
+                                                  //(__)\\
+                                                  ||    ||
 
-                                             ─=≡Σ((( つ◕ل͜◕)つ
-
-<font size="3"><font color="aqua"><b>[ G e n o P h e n o . s h ]</b></span></font></font>  will run the whole workflow automatically on a list of up to
+<font size="3"><font color="aqua"><b>[ s P y d e r M I M . s h ]</b></span></font></font>  will run the whole workflow automatically on a list of up to
  2,500 MIMs (daily limit).  Just provide the name of your .txt MIM list file, your OMIM API key, and your
  desired project name. </font>
 
@@ -171,17 +173,17 @@ convert_ids.py performs gene name conversions by using g:Profiler's [ g:Convert 
 
 <font size="4"><font color="aqua">** Read first to ensure functionality **</font></font>
 ___
-<font color="lime">* GenoPheno.sh is the main program that will execute the entire workflow automatically.
+<font color="lime">* sPyderMIM.sh is the main program that will execute the entire workflow automatically.
 Additionally, you can also use any of the programs in the suite individually or include
 them in your own workflow script!</font>
 
 
-       ~$ GenoPheno.sh <MIM_LIST.TXT> <YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>  (do not use file
+       ~$ sPyderMIM.sh <MIM_LIST.TXT> <YOUR_OMIM_API_KEY> <YOUR_PROJECT_NAME>  (do not use file
                                                                               extension for
                                                                               project name)
 
 
-<font color="lime">* GenoPheno is designed to take in lists of "Phenotype MIM numbers" as the starting input of the workflow.
+<font color="lime">* sPyderMIM is designed to take in lists of "Phenotype MIM numbers" as the starting input of the workflow.
 DO NOT use "Gene/Locus MIM numbers" as these will cause the program to crash.  This program does not process
 MIM numbers with the "+", "%", "*", or "^" prefixes as these are irrelevent to the objectives of this software
 and the program will crash if these types of MIM numbers are used.</font>
@@ -206,7 +208,7 @@ and the program will crash if these types of MIM numbers are used.</font>
 
 2) <font size="3"><font color="lime">Create a list of OMIM reference ids ("MIM" numbers)
 
-(20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using GenoPheno.sh): </font></font>
+(20 MAXIMUM if input is for table.py, 5000 MAXIMUM if using sPyderMIM.sh): </font></font>
 
 
 ~$  ` vim input_list.txt `
@@ -219,12 +221,12 @@ and the program will crash if these types of MIM numbers are used.</font>
     ------
 --------------------------------------------------------------------------------------------
 
-3) <font size="3"><font color="lime">Set up an Anaconda environment with the necessary dependencies (Anaconda required): </font></font>
+3) <font size="3"><font color="lime">In the repository working directory, set up an Anaconda environment using the provided "environment.yml" file (Anaconda required):</font></font>
 
 
-~$ ` conda create -n GenoPheno python=3.9 scipy=1.7 pandas matplotlib curl networkx requests`
+~$ ` conda env create -f environment.yml`
 
-~$ ` conda activate GenoPheno` 
+~$ ` conda activate sPyderMIM` 
 
 --------------------------------------------------------------------------------------------
 
@@ -234,8 +236,8 @@ and the program will crash if these types of MIM numbers are used.</font>
 
     
      --------------------------------------------------------------------------------------------
-     [ G e n o P h e n o . s h ]    |     You can run your entire workflow with one command
-     -------------------------------+     using GenoPheno.sh with a list of MIMs that is greater
+     [ s P y d e r M I M . s h ]    |     You can run your entire workflow with one command
+     -------------------------------+     using sPyderMIM.sh with a list of MIMs that is greater
      -. .-.   .-. .-.   .-. .-.   .       than 20.  Alternatively, you can use separate programs
      ||\|||\ /|||\|||\ /|||\|||\ /|       in the suite individually, but table.py will require
      |/ \|||\|||/ \|||\|||/ \|||\||       that your MIM list has 20 or less MIMS, due to the
@@ -249,7 +251,7 @@ and the program will crash if these types of MIM numbers are used.</font>
                                    |
     Input:                         V
 
-    ~$  ./GenoPheno.sh <large_input_mim_list.txt> <OMIM_API_key> <project_name>
+    ~$  ./sPyderMIM.sh <large_input_mim_list.txt> <OMIM_API_key> <project_name>
 
                                                        A                A
                                                        |                |
@@ -280,7 +282,7 @@ and the program will crash if these types of MIM numbers are used.</font>
    * project_name_interactors_enrichment.csv  (IntAct protein interactors enrichment analysis) </font>
 
     --------------------------------------------------------------------------------------------
-     [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, GenoPheno.sh uses
+     [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, sPyderMIM.sh uses
     --------------------------------+   split_list.py in order to divide your MIM input list
                                         into separate lists of 20 MIMs or less, which can then
                                         be used as input for table.py.  If you are using the
@@ -470,12 +472,12 @@ Output:
      [ c o n t r o l _ t r i a l s _ g e n e r a t o r . p y ]  |    * BETA *
     ------------------------------------------------------------+ 
                                          
-    The random controls trials generator was developed to test the ability of GenoPheno
+    The random controls trials generator was developed to test the ability of sPyderMIM
     to find overlap and clustering between genes and clinical data for diseases
     that are thought to be related.
     
     It allows a user working on a supercomputing cluster to specify a set of MIMs of
-    interest which they can run through GenoPheno against a specified number of MIMs
+    interest which they can run through sPyderMIM against a specified number of MIMs
     randomly selected from the OMIM database.
 
     For example, suppose a user runs an experiment with 3 MIMs corresponding to varieties
@@ -509,7 +511,7 @@ Output:
 
    ---------------------------------------------------------------------------------
 
-    In the given example above, 10 .pbs scripts will be generated, each running a GenoPheno
+    In the given example above, 10 .pbs scripts will be generated, each running a sPyderMIM
     experiment containing 3 specified MIMs (Hypophosphatasia) and 45 randomly selected MIMs.
     For now, computer cluster parameters cannot be specified.  By default, the .pbs
     scripts will request "fdr" interconnect, 100gb RAM, 20 CPUs, and 60 hours of walltime.

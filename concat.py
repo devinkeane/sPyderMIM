@@ -2,7 +2,7 @@
 #
 #           C o n c a t . p y |
 #           ------------------+
-#                 [ GenoPheno ]
+#                 [ sPyderMIM ]
 #                                      Last rev: 2022-03-07
 # ------------------------------------------------------------------------------------------------------
 # Import libraries
@@ -44,7 +44,7 @@ gpn.to_csv(output)
 print()
 print('           c o n c a t . p y |')
 print('           ------------------+')
-print('                 [ GenoPheno ]')
+print('                 [ sPyderMIM ]')
 print('--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+')
 print()
 print('                 ...Your combined table was saved as \"',output,'\"')

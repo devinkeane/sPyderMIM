@@ -52,12 +52,12 @@ python3 enrichment.py -i $3_genes_concatenated.csv -m omim -o $3_genes_enrichmen
 python3 enrichment.py -i $3_interactors.csv  -m interactors -o $3_interactors_enrichment.csv > >(tee -a EXECUTION_OUTPUT.txt) 2>&1
 
 NOW=$( date '+%F_%H%M%S' )
-mkdir $3_GENOPHENO_RESULTS_$NOW
+mkdir $3_SPYDERMIM_RESULTS_$NOW
 
 cat EXECUTION_OUTPUT.txt | sed -e 's/.*\r//' >>EXECUTION_OUTPUT_$NOW.txt
 rm EXECUTION_OUTPUT.txt
 
-mv $3_clinical-features_concatenated.csv $3_genes_enrichment.csv $3_genes_NETWORK_SUMMARY.txt $3_genes.graphml $3_genes.png $3_genes_concatenated.csv $3_interactors.csv $3_interactors.png $3_omim_genes_interactions.png $3_omim_genes_interactions_NETWORK_SUMMARY.txt $3_omim_genes_interactions.graphml $3_clinical-features.png $3_interactors_enrichment.csv $3_clinical-features_NETWORK_SUMMARY.txt $3_clinical-features.graphml $3_interactors_NETWORK_SUMMARY.txt $3_interactors.graphml EXECUTION_OUTPUT_$NOW.txt $3_GENOPHENO_RESULTS_$NOW
+mv $3_clinical-features_concatenated.csv $3_genes_enrichment.csv $3_genes_NETWORK_SUMMARY.txt $3_genes.graphml $3_genes.png $3_genes_concatenated.csv $3_interactors.csv $3_interactors.png $3_omim_genes_interactions.png $3_omim_genes_interactions_NETWORK_SUMMARY.txt $3_omim_genes_interactions.graphml $3_clinical-features.png $3_interactors_enrichment.csv $3_clinical-features_NETWORK_SUMMARY.txt $3_clinical-features.graphml $3_interactors_NETWORK_SUMMARY.txt $3_interactors.graphml EXECUTION_OUTPUT_$NOW.txt $3_SPYDERMIM_RESULTS_$NOW
 
 rm -R ./$3_MIM_directory/
 rm -R ./$3_separate_tables/

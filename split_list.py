@@ -24,7 +24,7 @@ opening_screen = """
   (_).  ,/'
    _  ::       ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  
   (_)'  `\.
-           `\.              [  G e n o P h e n o  ]
+           `\.             [  s P y d e r M I M  ]
                                         List Splitter
 """
 print()
