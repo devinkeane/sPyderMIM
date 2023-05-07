@@ -1,5 +1,23 @@
 #!/bin/bash
 
+#!/bin/bash
+
+#!/bin/bash
+
+cat << 'EOF'
+
+
+
+                           _      _ _ () _ _
+                         s||)yder//\/\[]//\/\
+                          ||
+
+
+
+EOF
+
+sleep 2
+
 python3 split_list.py -i $1 -o $3 > >(tee EXECUTION_OUTPUT.txt) 2>&1
 
 ls ./$3_MIM_directory > MIM_list.txt
