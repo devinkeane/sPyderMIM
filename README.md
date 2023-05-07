@@ -424,6 +424,10 @@ List mode will be repaired in the future or deprecated, depending on if there is
 
 ---
 
+⚠ WARNING ⚠
+
+convert_ids.py is currently unreliable and may be redesigned or deprecated.
+
     --------------------------------------------------------------------------------------------
      [ c o n v e r t _ i d s . p y ]  |      "convert_ids.py" will allow you to convert gene
     ----------------------------------+      IDs from virtually any type (e.g., ENSG, HGNC, PDB,
@@ -469,28 +473,23 @@ Output:
 ---
 
     --------------------------------------------------------------------------------------------
-     [ c o n t r o l _ t r i a l s _ g e n e r a t o r . p y ]  |    * BETA *
-    ------------------------------------------------------------+ 
-                                         
-    The random controls trials generator was developed to test the ability of sPyderMIM
-    to find overlap and clustering between genes and clinical data for diseases
-    that are thought to be related.
+     [ c o n t r o l _ t r i a l s _ g e n e r a t o r . p y ]  |
+    ------------------------------------------------------------+
     
-    It allows a user working on a supercomputing cluster to specify a set of MIMs of
-    interest which they can run through sPyderMIM against a specified number of MIMs
-    randomly selected from the OMIM database.
+    ⚠ currently unsuitable for public use ⚠
+               (as of 2023-05-06)
+    
+    At Clemson University, we developed a random MIM generator, control_trials_generator.py,
+    to help assess and validate the performance of our program. This script was used to generate
+    100 unique lists of random phenotype MIMs for each target disease (HPP, OI, and EDS), matching
+    the number of MIMs in their respective phenotypic series. These randomized MIM lists were then
+    utilized as input for GenoPheno.sh, allowing us to compare summary statistics between target
+    sets and random controls.
 
-    For example, suppose a user runs an experiment with 3 MIMs corresponding to varieties
-    of hypophosphatasia against 45 MIMs corresponding to Ehlers-Danlos Syndrome and
-    Osteogenesis Imperfectica.  Using the random controls trials generator, the user
-    is able to run dozens of experiments testing the three hypophosphatasia MIMs against
-    45 randomly selected MIMs.
-
-    Alternatively, the user could specify that they do not want to include any experimental
-    MIMs in each batch by pressing "RETURN" when prompted to enter experimental MIMs
-    (hypophosphatasia, in the above example).  In this case, the program will generate
-    experiments where each batch of MIMs simply contains 48 randomly selected MIMs, rather
-    containing set of specified experimental MIMs together with the 45 random MIMs.
+    The process provided useful insights into the program's performance
+    and can potentially be redesigned for cloud computing services like AWS in the future. The
+    script is versatile and can generate any specified number of lists with any specified number
+    of random MIMs.
 
     ---------------------------------------------------------------------------------
     (e.g.)
