@@ -500,19 +500,15 @@ Output:
                ( beta )                   \'__'\/
 
 
-     (✿◠‿◠)  Please enter a name for your experiment:  TEST_1
+     (✿◠‿◠)  Please enter a name for your experiment:  TEST
      (✿◠‿◠)  Please tell me how many MIM numbers would you like to generate per batch:  48
-     (✿◠‿◠)  Please tell me how many batches you would like to generate:  10 
-     (✿◠‿◠)  Please list the experimental MIMs to run against controls, separated by spaces
-     (or press RETURN for none):  146300 241510 241500
-     (✿◠‿◠)  Please enter your API key so I can run the experiment:
+     (✿◠‿◠)  Please tell me how many batches you would like to generate:  100
+     (✿◠‿◠)  Please enter your API key so I can run the experiment: <PASTE_API_KEY_HERE>
 
    ---------------------------------------------------------------------------------
 
-    In the given example above, 10 .pbs scripts will be generated, each running a sPyderMIM
-    experiment containing 3 specified MIMs (Hypophosphatasia) and 45 randomly selected MIMs.
-    For now, computer cluster parameters cannot be specified.  By default, the .pbs
-    scripts will request "fdr" interconnect, 100gb RAM, 20 CPUs, and 60 hours of walltime.
+    In the given example above, 100 .pbs scripts will be generated, each running a sPyderMIM
+    experiment using a list of 48 randomly selected MIMs as input.
 
 ---
 
