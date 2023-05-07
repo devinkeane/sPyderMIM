@@ -66,13 +66,12 @@ dependencies:
   - xz=5.2.5
   - zlib=1.2.11
   - zstd=1.4.9
-  - curl
-  - c-ares
-  - keyutils
-  - krb5
-  - libcurl
-  - libedit
-  - libev
-  - libnghttp2
-  - libssh2
+  - curl=7.80.0
+  - c-ares=1.19.0
+  - krb5=1.19.2
+  - libcurl=7.80.0
+  - libedit=3.1.20221030
+  - libev=4.33
+  - libnghttp2=1.46.0
+  - libssh2=1.9.0
 prefix: /opt/anaconda3/envs/sPyderMIM
