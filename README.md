@@ -480,16 +480,15 @@ Output:
                (as of 2023-05-06)
     
     At Clemson University, we developed a random MIM generator, control_trials_generator.py,
-    to help assess and validate the performance of our program. This script was used to generate
+    to help assess and validate the performance of our program.  This script was used to generate
     100 unique lists of random phenotype MIMs for each target disease (HPP, OI, and EDS), matching
-    the number of MIMs in their respective phenotypic series. These randomized MIM lists were then
+    the number of MIMs in their respective phenotypic series.  These randomized MIM lists were then
     utilized as input for GenoPheno.sh, allowing us to compare summary statistics between target
     sets and random controls.
 
-    The process provided useful insights into the program's performance
-    and can potentially be redesigned for cloud computing services like AWS in the future. The
-    script is versatile and can generate any specified number of lists with any specified number
-    of random MIMs.
+    The process provided useful insights into the program's performance and can potentially be
+    redesigned for cloud computing services like AWS in the future. The script is versatile and can
+    generate any specified number of lists with any specified number of random MIMs.
 
     ---------------------------------------------------------------------------------
     (e.g.)
