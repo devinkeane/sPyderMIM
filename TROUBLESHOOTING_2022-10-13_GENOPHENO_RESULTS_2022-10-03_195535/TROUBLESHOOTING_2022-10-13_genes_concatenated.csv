@@ -1,7 +1,0 @@
-,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
-0,BAIBA,AGXT2,phenotypeMap.approvedGeneSymbols,210100,612471,
-1,CILD22,ZMYND10,phenotypeMap.approvedGeneSymbols,615444,607070,
-2,SCAR8,SYNE1,phenotypeMap.approvedGeneSymbols,610743,608441,
-3,BAIBA,ENSG00000113492,phenotypeMap.ensemblIDs,210100,612471,
-4,CILD22,ENSG00000004838,phenotypeMap.ensemblIDs,615444,607070,
-5,SCAR8,ENSG00000131018,phenotypeMap.ensemblIDs,610743,608441,
