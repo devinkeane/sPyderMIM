@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d4" for="edge" attr.name="intactMiscore" attr.type="double" />
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="AGXT2">
+      <data key="d0">2</data>
+      <data key="d1">0.0006049606775559589</data>
+      <data key="d2">4.0988912771339216e-17</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="ALDOB">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">2.8983538174077843e-17</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="CYP2E1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">2.8983538174077843e-17</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="CDR1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="ZMYND10">
+      <data key="d0">19</data>
+      <data key="d1">0.10344827586206898</data>
+      <data key="d2">2.4370387880723826e-05</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="TSC22D4">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="386682">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="ccsb orf id: 55406">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="CYSRT1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="EIF3M">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="FAM22F">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="IFT43">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="MTUS2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="NUTM1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="RBM11">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="SNX11">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="TBX5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="TCF4">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="WBP1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="NDUFA3">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="NR0B2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="RNF181">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="SERINC1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">5.590949005738742e-06</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="EMD">
+      <data key="d0">3</data>
+      <data key="d1">0.04053236539624925</data>
+      <data key="d2">0.12374485087320439</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="BANF1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.019733108179127545</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="DISC1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="SYNE1">
+      <data key="d0">35</data>
+      <data key="d1">0.35813672111312767</data>
+      <data key="d2">0.7365285851376627</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="SUN2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="SYNE2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.019733108179127545</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="SUN1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="H1-5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="AXDND1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="DDX23">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="HMGN2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="LMNA">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="APC">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="BDKRB2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="CDC42">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="MYOM1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="CDC5L">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="CEP63">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EXOC1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="NDEL1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="SH3BP5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="TNIK">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="TRAF3IP1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="TP53RK">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="AGO1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="AGO2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="BMI1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="ESR1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="G3BP1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="IFT57">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="KSR1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="MYC">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="PPEF1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="RYBP">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EPHA1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="MST1R">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.11745132806465407</data>
+      <data key="d3">0</data>
+    </node>
+    <edge source="AGXT2" target="ALDOB">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="AGXT2" target="CYP2E1">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="CDR1" target="ZMYND10">
+      <data key="d4">0.72</data>
+    </edge>
+    <edge source="ZMYND10" target="TSC22D4">
+      <data key="d4">0.7</data>
+    </edge>
+    <edge source="ZMYND10" target="386682">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="ccsb orf id: 55406">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="CYSRT1">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="EIF3M">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="FAM22F">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="IFT43">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="MTUS2">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="NUTM1">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="RBM11">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="SNX11">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="TBX5">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="TCF4">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="WBP1">
+      <data key="d4">0.56</data>
+    </edge>
+    <edge source="ZMYND10" target="NDUFA3">
+      <data key="d4">0.53</data>
+    </edge>
+    <edge source="ZMYND10" target="NR0B2">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="ZMYND10" target="RNF181">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="ZMYND10" target="SERINC1">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="EMD" target="BANF1">
+      <data key="d4">0.94</data>
+    </edge>
+    <edge source="EMD" target="SYNE2">
+      <data key="d4">0.58</data>
+    </edge>
+    <edge source="EMD" target="SYNE1">
+      <data key="d4">0.52</data>
+    </edge>
+    <edge source="DISC1" target="SYNE1">
+      <data key="d4">0.63</data>
+    </edge>
+    <edge source="SYNE1" target="SUN2">
+      <data key="d4">0.52</data>
+    </edge>
+    <edge source="SYNE1" target="SUN1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="SYNE1">
+      <data key="d4">0.51</data>
+    </edge>
+    <edge source="SYNE1" target="H1-5">
+      <data key="d4">0.4</data>
+    </edge>
+    <edge source="SYNE1" target="AXDND1">
+      <data key="d4">0.4</data>
+    </edge>
+    <edge source="SYNE1" target="DDX23">
+      <data key="d4">0.4</data>
+    </edge>
+    <edge source="SYNE1" target="HMGN2">
+      <data key="d4">0.4</data>
+    </edge>
+    <edge source="SYNE1" target="LMNA">
+      <data key="d4">0.4</data>
+    </edge>
+    <edge source="SYNE1" target="APC">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="BDKRB2">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="CDC42">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="MYOM1">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="CDC5L">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="CEP63">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="EXOC1">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="NDEL1">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="SH3BP5">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="TNIK">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="TRAF3IP1">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="TP53RK">
+      <data key="d4">0.37</data>
+    </edge>
+    <edge source="SYNE1" target="AGO1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="AGO2">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="BMI1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="ESR1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="G3BP1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="IFT57">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="KSR1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="MYC">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="PPEF1">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="RYBP">
+      <data key="d4">0.35</data>
+    </edge>
+    <edge source="SYNE1" target="EPHA1">
+      <data key="d4">0.27</data>
+    </edge>
+    <edge source="SYNE1" target="MST1R">
+      <data key="d4">0.27</data>
+    </edge>
+  </graph>
+</graphml>

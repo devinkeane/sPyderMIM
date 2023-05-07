@@ -1,0 +1,104 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.0          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-03 16:54:10.426158
+
+Total Nodes:  16
+Total Edges:  21
+
+             Approximate node connectivity:   2.625E+00
+     Network diameter of largest component:   4
+                              Transitivity:   1.667E-01
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                            COL1A1            9
+                                              BMP1            6
+                                            COL3A1            4
+                                            COL1A2            3
+                                            COL5A1            3
+                                             CRTAP            2
+                                              PPIB            2
+                                          SERPINH1            2
+                                              P3H1            2
+                                             SPARC            2
+                                           CREB3L1            2
+                                              MESD            1
+                                             PLOD1            1
+                                            FKBP10            1
+                                               C1R            1
+                                               C1S            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                            COL1A1    6.190E-01
+                                            COL5A1    2.667E-01
+                                              BMP1    2.571E-01
+                                            COL1A2    1.238E-01
+                                             SPARC    7.619E-02
+                                            COL3A1    2.857E-02
+                                              MESD    0.000E+00
+                                             CRTAP    0.000E+00
+                                             PLOD1    0.000E+00
+                                            FKBP10    0.000E+00
+                                              PPIB    0.000E+00
+                                          SERPINH1    0.000E+00
+                                              P3H1    0.000E+00
+                                               C1R    0.000E+00
+                                               C1S    0.000E+00
+                                           CREB3L1    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                            COL1A1    5.994E-01
+                                             CRTAP    2.366E-01
+                                              PPIB    2.366E-01
+                                          SERPINH1    2.366E-01
+                                              P3H1    2.366E-01
+                                             PLOD1    1.696E-01
+                                            FKBP10    1.696E-01
+
+CLASS 1:
+-------
+                                            COL5A1    3.243E-01
+                                            COL1A2    2.842E-01
+                                              MESD    8.042E-02
+
+CLASS 2:
+-------
+                                              BMP1    2.624E-01
+                                               C1R    7.426E-02
+                                               C1S    7.426E-02
+
+CLASS 3:
+-------
+                                             SPARC    2.240E-01
+                                            COL3A1    1.920E-01
+
+CLASS 4:
+-------
+                                           CREB3L1    3.477E-16

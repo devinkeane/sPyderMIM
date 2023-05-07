@@ -1,0 +1,146 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-05 20:03:57.671395
+
+Total Nodes:  103
+Total Edges:  189
+
+             Approximate node connectivity:   3.670E+00
+     Network diameter of largest component:   7
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                             LIMA1           45
+                                              ADD1           25
+                                            PIK3CA           16
+                                              UBA1           16
+                                             AGTR1           12
+                                              NOS3           11
+                                            SLC1A1            9
+                                              SQOR            8
+                                            ATP1B1            8
+                                               AGT            6
+                                              LGR4            5
+                                             FLRT3            5
+                                               APP            5
+                                              ECE1            5
+                                            TMEM67            5
+                                              GRB2            4
+                                             STAG2            4
+                                              ESR1            4
+                                             EPS15            3
+                                              CD81            3
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                             LIMA1    5.035E-01
+                                              UBA1    1.919E-01
+                                            PIK3CA    1.615E-01
+                                              ADD1    1.251E-01
+                                             AGTR1    1.012E-01
+                                              NOS3    6.643E-02
+                                            ATP1B1    6.554E-02
+                                               APP    5.662E-02
+                                              GRB2    5.600E-02
+                                               AGT    4.682E-02
+                                            SLC1A1    4.416E-02
+                                              SQOR    3.774E-02
+                                              SUN2    3.586E-02
+                                             TMOD1    3.556E-02
+                                              ESR2    3.431E-02
+                                            TMEM67    3.240E-02
+                                              CANX    3.097E-02
+                                              ECE1    2.641E-02
+                                              EGFR    2.606E-02
+                                               HTT    2.264E-02
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                             LIMA1    5.832E-01
+                                              ADD1    3.483E-01
+                                            ZDHHC5    1.319E-01
+                                             TMOD1    1.291E-01
+                                             MYO1C    1.257E-01
+                                            SPTAN1    1.232E-01
+                                             DAPK1    1.186E-01
+                                            CAPZA2    1.186E-01
+                                             CDKL2    1.186E-01
+                                            HASPIN    1.186E-01
+
+CLASS 1:
+-------
+                                              ESR2    8.271E-02
+                                              CFTR    8.133E-02
+                                             TUBG1    8.133E-02
+                                              SQOR    5.563E-02
+                                            ATP1B1    3.150E-02
+                                              ESR1    2.181E-02
+                                               MYC    2.118E-02
+                                               APP    1.924E-02
+                                              PRNP    1.730E-02
+                                              CD81    1.188E-02
+
+CLASS 2:
+-------
+                                              UBA1    1.044E-01
+                                              GRB2    1.028E-01
+                                             YWHAZ    8.754E-02
+                                              BMI1    8.754E-02
+                                             DISC1    8.754E-02
+                                              CANX    8.159E-02
+                                               JUN    5.763E-02
+                                             LAMP1    4.687E-02
+                                               AGT    3.781E-02
+                                               NVL    2.319E-02
+
+CLASS 3:
+-------
+                                              SUN2    9.802E-02
+                                               FOS    8.473E-02
+                                            PIK3CA    8.237E-02
+                                               HTT    2.435E-02
+                                             PLCG1    2.047E-02
+                                              UMPS    2.039E-02
+                                             BIRC2    1.426E-02
+                                            HAVCR2    1.146E-02
+                                            MANSC1    1.146E-02
+                                            RNF19B    1.146E-02
+
+CLASS 4:
+-------
+                                             EPS15    1.247E-01
+                                             FGFR1    8.035E-02
+                                             NUMBL    8.035E-02
+                                            SLC1A1    4.788E-02
+                                          MAP1LC3B    4.528E-02
+                                              DLG1    1.658E-02
+                                          C6orf141    1.084E-02
+                                            SLC6A8    1.066E-02
+                                           TBC1D2B    7.348E-03
+                                              NRN1    6.768E-03

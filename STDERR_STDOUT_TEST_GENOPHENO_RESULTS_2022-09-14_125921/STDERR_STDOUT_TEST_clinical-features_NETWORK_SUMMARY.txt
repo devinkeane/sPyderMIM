@@ -1,0 +1,120 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-14 12:58:56.949447
+
+Total Nodes:  167
+Total Edges:  180
+
+             Approximate node connectivity:   2.156E+00
+     Network diameter of largest component:   4
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                             WDRTS           80
+                                              HGPS           64
+                                              NGPS           36
+                                     Short stature            3
+                                 Failure to thrive            3
+                                      Micrognathia            3
+                                   Sparse eyebrows            3
+                                  Sparse eyelashes            3
+                               Autosomal recessive            2
+                                   Dental crowding            2
+                                Joint contractures            2
+                                         Scoliosis            2
+                                        Hypodontia            2
+                             Prominent scalp veins            2
+                             Mandibular osteolysis            1
+                                Midface hypoplasia            1
+                                         Proptosis            1
+                                Convex nasal ridge            1
+                       Restricted opening of mouth            1
+                                 Sinus tachycardia            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                             WDRTS    6.778E-01
+                                              HGPS    5.674E-01
+                                              NGPS    3.095E-01
+                                     Short stature    8.298E-02
+                                 Failure to thrive    8.298E-02
+                                      Micrognathia    8.298E-02
+                                   Sparse eyebrows    8.298E-02
+                                  Sparse eyelashes    8.298E-02
+                                        Hypodontia    4.352E-02
+                             Prominent scalp veins    4.352E-02
+                                   Dental crowding    2.068E-02
+                               Autosomal recessive    1.878E-02
+                                Joint contractures    1.878E-02
+                                         Scoliosis    1.878E-02
+                             Mandibular osteolysis    0.000E+00
+                                Midface hypoplasia    0.000E+00
+                                         Proptosis    0.000E+00
+                                Convex nasal ridge    0.000E+00
+                       Restricted opening of mouth    0.000E+00
+                                 Sinus tachycardia    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                             WDRTS    6.431E-01
+                   Intrauterine growth retardation    6.994E-02
+                             Poor postnatal growth    6.994E-02
+                              Progeroid appearance    6.994E-02
+                                         Aged face    6.994E-02
+                                   Triangular face    6.994E-02
+                                   Frontal bossing    6.994E-02
+                                Prominent forehead    6.994E-02
+                                  Malar hypoplasia    6.994E-02
+                                      Pointed chin    6.994E-02
+
+CLASS 1:
+-------
+                                              HGPS    2.596E-01
+                                        Hypodontia    9.817E-02
+                             Prominent scalp veins    9.817E-02
+                                Autosomal dominant    2.823E-02
+                        Craniofacial disproportion    2.823E-02
+                                      Retrognathia    2.823E-02
+                                    Prominent eyes    2.823E-02
+                                    Farsightedness    2.823E-02
+                           Nocturnal lagophthalmos    2.823E-02
+                                   Corneal dryness    2.823E-02
+
+CLASS 2:
+-------
+                                              NGPS    1.381E-01
+                                     Short stature    1.132E-01
+                                 Failure to thrive    1.132E-01
+                                      Micrognathia    1.132E-01
+                                   Sparse eyebrows    1.132E-01
+                                  Sparse eyelashes    1.132E-01
+                               Autosomal recessive    8.496E-02
+                                Joint contractures    8.496E-02
+                                         Scoliosis    8.496E-02
+                                   Dental crowding    4.325E-02

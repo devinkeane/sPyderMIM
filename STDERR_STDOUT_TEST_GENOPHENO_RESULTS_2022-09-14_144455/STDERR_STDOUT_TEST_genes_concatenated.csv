@@ -1,0 +1,7 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,NGPS,BANF1,phenotypeMap.approvedGeneSymbols,614008,603811,
+1,HGPS,LMNA,phenotypeMap.approvedGeneSymbols,176670,150330,
+2,WDRTS,POLR3A,phenotypeMap.approvedGeneSymbols,264090,614258,
+3,NGPS,ENSG00000175334,phenotypeMap.ensemblIDs,614008,603811,
+4,HGPS,ENSG00000160789,phenotypeMap.ensemblIDs,176670,150330,
+5,WDRTS,ENSG00000148606,phenotypeMap.ensemblIDs,264090,614258,

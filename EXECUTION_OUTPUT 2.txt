@@ -1,0 +1,17 @@
+
+
+
+   _       ,/'
+  (_).  ,/'
+   _  ::       ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  
+  (_)'  `\.
+           `\.              [  G e n o P h e n o  ]
+                                        List Splitter
+
+
+Splitting list into separate OMIM API compatible lists of 20 maximum MIMs...
+
+Saving divided lists to directory:    ./STDERR_STDOUT_TEST_MIM_directory/
+
+STDERR_STDOUT_TEST_0.txt
+

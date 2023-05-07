@@ -1,0 +1,91 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-13 18:38:11.866344
+
+Total Nodes:  15
+Total Edges:  14
+
+             Approximate node connectivity:   1.867E+00
+     Network diameter of largest component:   4
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                             PARK4           11
+                 VENTRICULAR TACHYCARDIA, FAMILIAL            3
+                                Autosomal dominant            2
+Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality            1
+                             No metabolic disorder            1
+                                       Weight loss            1
+Hypotension, postural, due to autonomic dysfunction            1
+                                      Parkinsonism            1
+                                          Dementia            1
+                       Diffuse Lewy body pathology            1
+Alpha-synuclein immunoreactive neuronal and glial inclusions            1
+                             Autonomic dysfunction            1
+                                    Hallucinations            1
+                                          Paranoia            1
+Caused by triplication of the alpha-synuclein gene            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                             PARK4    9.341E-01
+                                Autosomal dominant    3.626E-01
+                 VENTRICULAR TACHYCARDIA, FAMILIAL    2.747E-01
+Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality    0.000E+00
+                             No metabolic disorder    0.000E+00
+                                       Weight loss    0.000E+00
+Hypotension, postural, due to autonomic dysfunction    0.000E+00
+                                      Parkinsonism    0.000E+00
+                                          Dementia    0.000E+00
+                       Diffuse Lewy body pathology    0.000E+00
+Alpha-synuclein immunoreactive neuronal and glial inclusions    0.000E+00
+                             Autonomic dysfunction    0.000E+00
+                                    Hallucinations    0.000E+00
+                                          Paranoia    0.000E+00
+Caused by triplication of the alpha-synuclein gene    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                             PARK4    7.018E-01
+                                       Weight loss    2.104E-01
+Hypotension, postural, due to autonomic dysfunction    2.104E-01
+                                      Parkinsonism    2.104E-01
+                                          Dementia    2.104E-01
+                       Diffuse Lewy body pathology    2.104E-01
+Alpha-synuclein immunoreactive neuronal and glial inclusions    2.104E-01
+                             Autonomic dysfunction    2.104E-01
+                                    Hallucinations    2.104E-01
+                                          Paranoia    2.104E-01
+
+CLASS 1:
+-------
+                                Autosomal dominant    2.363E-01
+                 VENTRICULAR TACHYCARDIA, FAMILIAL    8.640E-02
+Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality    2.591E-02
+                             No metabolic disorder    2.591E-02

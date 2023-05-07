@@ -1,0 +1,314 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-14 00:39:40.202171
+
+Total Nodes:  434
+Total Edges:  450
+
+             Approximate node connectivity:   2.074E+00
+     Network diameter of largest component:   8
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                               CSB           72
+                                             ISDNA           50
+                                           GIKANIS           33
+                                            HMSN2C           33
+                                             RHYNS           28
+                                               HRZ           21
+                                              MONA           20
+                                           MTDPS19           20
+                                             FCAS3           20
+                                             MRD34           18
+                                             IMD13           17
+                                              CIAT           15
+HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY           14
+                                              DBA8           14
+                                             DEE45           13
+                                             PARK2           13
+                                Autosomal dominant           10
+             HYPERTHYROIDISM, FAMILIAL GESTATIONAL           10
+                                               BOS            9
+                                              NYS6            9
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                               CSB    3.466E-01
+                                Autosomal dominant    2.880E-01
+                               Autosomal recessive    2.112E-01
+                                          Seizures    1.983E-01
+                                             ISDNA    1.956E-01
+                                             DEE45    1.757E-01
+                                            HMSN2C    1.463E-01
+                                             RHYNS    1.386E-01
+                                           GIKANIS    1.221E-01
+                                             MRD34    1.184E-01
+                                              CIAT    1.122E-01
+                                              MONA    9.035E-02
+                                            Ataxia    8.656E-02
+                                               HRZ    8.158E-02
+                                           MTDPS19    7.368E-02
+                                             IMD13    6.561E-02
+                                     Short stature    6.369E-02
+                                              DBA8    5.752E-02
+HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY    5.594E-02
+                                            Tremor    5.268E-02
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                               CSB    6.971E-01
+                                    Malformed ears    8.161E-02
+                        Sensorineural hearing loss    8.161E-02
+                            Pigmentary retinopathy    8.161E-02
+                                     Optic atrophy    8.161E-02
+                                        Strabismus    8.161E-02
+                                         Hyperopia    8.161E-02
+                                   Corneal opacity    8.161E-02
+                             Decreased lacrimation    8.161E-02
+                                         Nystagmus    8.161E-02
+
+CLASS 1:
+-------
+                                             ISDNA    7.591E-02
+                   Short stature, disproportionate    8.891E-03
+                        Premature craniosynostosis    8.891E-03
+                         Microcephaly, progressive    8.891E-03
+                             Platyspondyly, severe    8.891E-03
+                       Cervical spine malformation    8.891E-03
+                              Cervical instability    8.891E-03
+                          Hypoplastic odontoid peg    8.891E-03
+                       Kyphoscoliosis, progressive    8.891E-03
+                           Sloping acetabular roof    8.891E-03
+
+CLASS 2:
+-------
+                                           GIKANIS    4.285E-02
+                                     Hypertelorism    1.391E-02
+                                      Low-set ears    5.016E-03
+                          Posteriorly rotated ears    5.016E-03
+                                       Fleshy ears    5.016E-03
+                                Polycystic kidneys    5.016E-03
+                                Skeletal dysplasia    5.016E-03
+                                Joint contractures    5.016E-03
+                              Thick occipital bone    5.016E-03
+               Decreased ossification of the skull    5.016E-03
+
+CLASS 3:
+-------
+                                            HMSN2C    3.755E-03
+                       Hearing loss, sensorineural    4.396E-04
+                              Abducens nerve palsy    4.396E-04
+                            Oculomotor nerve palsy    4.396E-04
+                                         Scoliosis    4.396E-04
+         'Sloping' shoulders due to muscle atrophy    4.396E-04
+                    Shoulder girdle muscle atrophy    4.396E-04
+          Neurogenic atrophy seen on muscle biopsy    4.396E-04
+Distal limb muscle weakness due to peripheral neuropathy    4.396E-04
+Distal limb muscle atrophy due to peripheral neuropathy    4.396E-04
+
+CLASS 4:
+-------
+                                            Ataxia    8.785E-02
+                                  Cerebral atrophy    8.611E-02
+                                             DEE45    3.844E-02
+                                              CIAT    1.488E-02
+                                Autosomal dominant    9.776E-03
+                                         Hypotonia    6.444E-03
+                              Thin corpus callosum    4.703E-03
+                        Cortical visual impairment    4.500E-03
+                          Epileptic encephalopathy    4.500E-03
+                   Delayed psychomotor development    4.500E-03
+
+CLASS 5:
+-------
+                               Thickened calvarium    8.603E-02
+                                             RHYNS    3.778E-02
+                                     Brachydactyly    1.331E-02
+         Sensorineural deafness, unilateral severe    4.424E-03
+                                         Exotropia    4.424E-03
+                              Retinitis pigmentosa    4.424E-03
+Extinguished electroretinogram responses bilaterally    4.424E-03
+                        Renal failure, progressive    4.424E-03
+                                  Nephronophthisis    4.424E-03
+                                  Delayed bone age    4.424E-03
+
+CLASS 6:
+-------
+                               Autosomal recessive    1.100E-01
+                                          Seizures    1.020E-01
+                                      Microcephaly    9.152E-02
+HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY    4.184E-02
+                                              RP58    1.404E-02
+                               Developmental delay    4.899E-03
+                                Gait abnormalities    4.899E-03
+                                    Incoordination    4.899E-03
+                                      Paresthesias    4.899E-03
+                                            Stroke    4.899E-03
+
+CLASS 7:
+-------
+                                               HRZ    1.577E-03
+                                   Tapered fingers    1.846E-04
+         Abnormal or absent dermatoglyphic pattern    1.846E-04
+                         Palmoplantar hypohidrosis    1.846E-04
+                    Palmoplantar keratoderma, mild    1.846E-04
+                  Accentuated palmoplantar creases    1.846E-04
+        Congenital scleroatrophy of hands and feet    1.846E-04
+    Atrophic plaques on fingers and dorsa of hands    1.846E-04
+                               Hyperorthokeratosis    1.846E-04
+                              Acanthotic epidermis    1.846E-04
+
+CLASS 8:
+-------
+                                             FCAS3    5.050E-13
+                           Urticaria, cold-induced    1.129E-13
+                            Erythema, cold-induced    1.129E-13
+                            Pruritis, cold-induced    1.129E-13
+                              Increased mast cells    1.129E-13
+                           Mast cell degranulation    1.129E-13
+                          Granulomatous dermatitis    1.129E-13
+                                 Allergic rhinitis    1.129E-13
+                                            Asthma    1.129E-13
+                              Recurrent infections    1.129E-13
+
+CLASS 9:
+-------
+                                      Osteoporosis    8.517E-02
+                                              MONA    3.041E-02
+                                         Pes cavus    3.999E-03
+                               Flexion contracture    3.560E-03
+                              Flexion contractures    3.560E-03
+                          Fusiform finger swelling    3.560E-03
+                    Interphalangeal joint erosions    3.560E-03
+                               Finger contractures    3.560E-03
+                                 Carpal osteolysis    3.560E-03
+                          Widened metacarpal shaft    3.560E-03
+
+CLASS 10:
+-------
+             HYPERTHYROIDISM, FAMILIAL GESTATIONAL    1.967E-18
+                                             PARK4    1.223E-18
+                                       Weight loss    9.789E-19
+                                            Nausea    6.034E-19
+                                          Vomiting    6.034E-19
+                       Gestational hyperthyroidism    6.034E-19
+                                    Diffuse goiter    6.034E-19
+                            Hyperemesis gravidarum    6.034E-19
+                   Spontaneous abortion, recurrent    6.034E-19
+                                     Decreased TSH    6.034E-19
+
+CLASS 11:
+-------
+                                           MTDPS19    1.732E-03
+                           Increased serum lactate    2.028E-04
+                          Hearing loss, unilateral    2.028E-04
+                                 Poor eye tracking    2.028E-04
+                                       Hypospadias    2.028E-04
+                                         Hydrocele    2.028E-04
+          Decreased mtDNA content in muscle tissue    2.028E-04
+Mitochondrial complex I deficiency in muscle tissue    2.028E-04
+                     Lack of spontaneous movements    2.028E-04
+                             Seizures, early-onset    2.028E-04
+
+CLASS 12:
+-------
+                                             IMD13    1.466E-03
+                            Recurrent otitis media    1.716E-04
+                                Recurrent shingles    1.716E-04
+                                 Fungal dermatitis    1.716E-04
+Persistent severe fungal infections of fingernails and toenails    1.716E-04
+                             Partial loss of nails    1.716E-04
+                     Recurrent bacterial pneumonia    1.716E-04
+     Bronchiolitis obliterans organizing pneumonia    1.716E-04
+                                  Herpetic lesions    1.716E-04
+                               Recurrent sinusitis    1.716E-04
+
+CLASS 13:
+-------
+                                             MRD34    1.768E-02
+                                            Ptosis    6.494E-03
+                                Hearing impairment    2.070E-03
+                                        Epicanthus    2.070E-03
+                        Cortical vision impairment    2.070E-03
+                                         Synophrys    2.070E-03
+                                  Broad-based gait    2.070E-03
+                           Microcephaly, postnatal    2.070E-03
+                                   Smooth philtrum    2.070E-03
+                                  Anteverted nares    2.070E-03
+
+CLASS 14:
+-------
+                                            Tremor    8.297E-02
+                                             PARK2    1.162E-02
+                         Parkinsonism, early-onset    1.361E-03
+                                      Bradykinesia    1.361E-03
+                                          Rigidity    1.361E-03
+                              Postural instability    1.361E-03
+                                 Gait disturbances    1.361E-03
+                                          Dystonia    1.361E-03
+                           Hyperreflexia may occur    1.361E-03
+                  Diurnal fluctuations of symptoms    1.361E-03
+
+CLASS 15:
+-------
+                                     Short stature    5.108E-03
+                                              DBA8    2.086E-03
+                                Widely spaced eyes    2.442E-04
+                                Growth retardation    2.442E-04
+                                     Cathie facies    2.442E-04
+                                        Short nose    2.442E-04
+                                Broad nasal bridge    2.442E-04
+                       Hepatic iron overload, mild    2.442E-04
+                        Mild hepatic iron overload    2.442E-04
+       Elevated adenosine deaminase (ADA) activity    2.442E-04
+
+CLASS 16:
+-------
+                                         Amblyopia    1.769E-03
+                                              NYS6    2.326E-04
+                  Congenital nystagmus, horizontal    2.723E-05
+                      Mottled retinal pigmentation    2.723E-05
+                                 Foveal hypoplasia    2.723E-05
+                           Decreased visual acuity    2.723E-05
+                                            Myopia    2.723E-05
+                                       Astigmatism    2.723E-05
+                          Normal skin pigmentation    2.723E-05
+                          Normal hair pigmentation    2.723E-05
+
+CLASS 17:
+-------
+                                               BOS    1.285E-03
+Osteopoikilosis ('spotted bones') typically located in epiphyses and metaphyses of long bones, wrist, foot, ankle, pelvis, and scapula    1.505E-04
+                                      Stiff joints    1.505E-04
+                                    Osteosclerosis    1.505E-04
+        Melorheostosis, typically affect diaphyses    1.505E-04
+               Subcutaneous nontender firm nodules    1.505E-04
+               Subcutaneous connective tissue nevi    1.505E-04
+               Elastin-rich connective tissue nevi    1.505E-04
+              Collagen-rich connective tissue nevi    1.505E-04

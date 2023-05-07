@@ -1,0 +1,841 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="OI2">
+      <data key="d0">10</data>
+      <data key="d1">0.05616272853677137</data>
+      <data key="d2">0.09192047723042976</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Autosomal dominant">
+      <data key="d0">5</data>
+      <data key="d1">0.011985550576672815</data>
+      <data key="d2">0.06475871690120828</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Short limb dwarfism">
+      <data key="d0">2</data>
+      <data key="d1">0.0006741028504641058</data>
+      <data key="d2">0.020386241957793094</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Blue sclerae">
+      <data key="d0">8</data>
+      <data key="d1">0.04024843889066445</data>
+      <data key="d2">0.12345002177439227</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Beaded ribs">
+      <data key="d0">2</data>
+      <data key="d1">0.0013960675378373623</data>
+      <data key="d2">0.02547108719826177</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Numerous multiple fractures present at birth">
+      <data key="d0">2</data>
+      <data key="d1">0.0006741028504641058</data>
+      <data key="d2">0.020386241957793094</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Wormian bones">
+      <data key="d0">15</data>
+      <data key="d1">0.17241659517344426</data>
+      <data key="d2">0.27925748392341876</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Soft calvaria">
+      <data key="d0">2</data>
+      <data key="d1">0.001243103280665017</data>
+      <data key="d2">0.03087642102035757</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Platyspondyly">
+      <data key="d0">6</data>
+      <data key="d1">0.020102585654744504</data>
+      <data key="d2">0.12098765780447394</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Tibial bowing">
+      <data key="d0">4</data>
+      <data key="d1">0.007554750670860065</data>
+      <data key="d2">0.07180324860400546</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Thin skin">
+      <data key="d0">2</data>
+      <data key="d1">0.0009121791738389632</data>
+      <data key="d2">0.021154248426728302</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="OI13">
+      <data key="d0">15</data>
+      <data key="d1">0.08422534489322171</data>
+      <data key="d2">0.1733786615746725</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Autosomal recessive">
+      <data key="d0">15</data>
+      <data key="d1">0.12982703000691534</data>
+      <data key="d2">0.29043264114515643</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Short stature">
+      <data key="d0">9</data>
+      <data key="d1">0.05321607178703153</data>
+      <data key="d2">0.17922337283100154</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Low weight">
+      <data key="d0">2</data>
+      <data key="d1">0.0006412341220249942</data>
+      <data key="d2">0.04393237277598445</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Long eyelashes">
+      <data key="d0">2</data>
+      <data key="d1">0.000778803917276878</data>
+      <data key="d2">0.03684575844121433</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Pectus carinatum">
+      <data key="d0">3</data>
+      <data key="d1">0.0026112042946860453</data>
+      <data key="d2">0.04251625833173418</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Joint hypermobility">
+      <data key="d0">3</data>
+      <data key="d1">0.0030943060748708675</data>
+      <data key="d2">0.06395604314506957</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Vertebral fractures">
+      <data key="d0">3</data>
+      <data key="d1">0.0026876829766536063</data>
+      <data key="d2">0.06163450309915261</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Kyphoscoliosis">
+      <data key="d0">2</data>
+      <data key="d1">0.0018745724646745611</data>
+      <data key="d2">0.04802649231343461</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Triangular face">
+      <data key="d0">4</data>
+      <data key="d1">0.008412099150149609</data>
+      <data key="d2">0.08711279163681855</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Prominent ears">
+      <data key="d0">2</data>
+      <data key="d1">0.0015212001392144892</data>
+      <data key="d2">0.04076858181448285</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Long philtrum">
+      <data key="d0">2</data>
+      <data key="d1">0.0018106791022742947</data>
+      <data key="d2">0.048091101282078795</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="No dentinogenesis imperfecta">
+      <data key="d0">4</data>
+      <data key="d1">0.006780774513216291</data>
+      <data key="d2">0.08882029335460022</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Umbilical hernia">
+      <data key="d0">2</data>
+      <data key="d1">0.000778803917276878</data>
+      <data key="d2">0.03684575844121433</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="OI18">
+      <data key="d0">11</data>
+      <data key="d1">0.04976919251869606</data>
+      <data key="d2">0.13869703321994006</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Thin ribs">
+      <data key="d0">6</data>
+      <data key="d1">0.012695199655933374</data>
+      <data key="d2">0.12400276862259123</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Codfish vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.0011204508939785828</data>
+      <data key="d2">0.03316239846339418</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Bowing of long bones">
+      <data key="d0">3</data>
+      <data key="d1">0.0017568844139344208</data>
+      <data key="d2">0.06213703290625314</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Joint laxity">
+      <data key="d0">3</data>
+      <data key="d1">0.004541559213392872</data>
+      <data key="d2">0.07013274297011052</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Micrognathia">
+      <data key="d0">4</data>
+      <data key="d1">0.004843586284571056</data>
+      <data key="d2">0.06999000000950838</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Speech delay">
+      <data key="d0">3</data>
+      <data key="d1">0.0031027315757715807</data>
+      <data key="d2">0.04845434436337769</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="OI8">
+      <data key="d0">17</data>
+      <data key="d1">0.09706336185641375</data>
+      <data key="d2">0.22191684415193164</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Proptosis">
+      <data key="d0">2</data>
+      <data key="d1">0.0008325974109727109</data>
+      <data key="d2">0.053821846034923605</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Bone fragility">
+      <data key="d0">2</data>
+      <data key="d1">0.000396726848634605</data>
+      <data key="d2">0.04416360539316993</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Scoliosis">
+      <data key="d0">13</data>
+      <data key="d1">0.1052985790257146</data>
+      <data key="d2">0.2411346675045974</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Kyphosis">
+      <data key="d0">5</data>
+      <data key="d1">0.012328937446814407</data>
+      <data key="d2">0.08523299336081376</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Vertebral compression fractures">
+      <data key="d0">7</data>
+      <data key="d1">0.02794616755254069</data>
+      <data key="d2">0.15037466758133175</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Femoral bowing">
+      <data key="d0">2</data>
+      <data key="d1">0.000396726848634605</data>
+      <data key="d2">0.04416360539316993</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Bulbous metaphyses">
+      <data key="d0">2</data>
+      <data key="d1">0.001629430883554425</data>
+      <data key="d2">0.05375723706627943</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Externally rotated/abducted legs">
+      <data key="d0">2</data>
+      <data key="d1">0.0008325974109727109</data>
+      <data key="d2">0.053821846034923605</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Open sutures">
+      <data key="d0">2</data>
+      <data key="d1">0.0008325974109727109</data>
+      <data key="d2">0.053821846034923605</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Round face">
+      <data key="d0">2</data>
+      <data key="d1">0.0008325974109727109</data>
+      <data key="d2">0.053821846034923605</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI16">
+      <data key="d0">10</data>
+      <data key="d1">0.04201963880151544</data>
+      <data key="d2">0.12381418452735168</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Osteopenia">
+      <data key="d0">5</data>
+      <data key="d1">0.015072964779106638</data>
+      <data key="d2">0.10778170353976324</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Soft calvarial bones">
+      <data key="d0">2</data>
+      <data key="d1">0.0009685815598563774</data>
+      <data key="d2">0.03491666582408894</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Multiple fractures of extremities">
+      <data key="d0">2</data>
+      <data key="d1">0.000461142284396636</data>
+      <data key="d2">0.032320466870157494</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Bowing of upper extremities">
+      <data key="d0">3</data>
+      <data key="d1">0.00148543344368607</data>
+      <data key="d2">0.052344137239242625</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Bowing of lower extremities">
+      <data key="d0">3</data>
+      <data key="d1">0.00148543344368607</data>
+      <data key="d2">0.052344137239242625</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI4">
+      <data key="d0">9</data>
+      <data key="d1">0.04292671999650531</data>
+      <data key="d2">0.10746415411487314</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Varying degree of multiple fractures">
+      <data key="d0">3</data>
+      <data key="d1">0.002347016192436947</data>
+      <data key="d2">0.03711907369037275</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Biconcave flattened vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.00022085547081228027</data>
+      <data key="d2">0.022989439610872693</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hearing loss">
+      <data key="d0">2</data>
+      <data key="d1">0.0005557396294437212</data>
+      <data key="d2">0.029474834394979922</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Otosclerosis">
+      <data key="d0">2</data>
+      <data key="d1">0.00022085547081228027</data>
+      <data key="d2">0.022989439610872693</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Dentinogenesis imperfecta">
+      <data key="d0">7</data>
+      <data key="d1">0.02722388548774748</data>
+      <data key="d2">0.12722373302840925</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI12">
+      <data key="d0">8</data>
+      <data key="d1">0.025679010050242593</data>
+      <data key="d2">0.12305070305535694</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Midface hypoplasia">
+      <data key="d0">3</data>
+      <data key="d1">0.0019628217742141897</data>
+      <data key="d2">0.05712593082321381</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="High-arched palate">
+      <data key="d0">2</data>
+      <data key="d1">0.00048374745955813225</data>
+      <data key="d2">0.034826524059392974</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI10">
+      <data key="d0">13</data>
+      <data key="d1">0.05329425817175865</data>
+      <data key="d2">0.1888712067203505</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Blue sclera">
+      <data key="d0">2</data>
+      <data key="d1">0.0005997010067437761</data>
+      <data key="d2">0.040001537086989</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Narrow chest">
+      <data key="d0">2</data>
+      <data key="d1">0.0010985868672958522</data>
+      <data key="d2">0.04992025550851639</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="OI11">
+      <data key="d0">19</data>
+      <data key="d1">0.14185772551167472</data>
+      <data key="d2">0.2333954581928184</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Birth length normal">
+      <data key="d0">2</data>
+      <data key="d1">0.0004897982977256029</data>
+      <data key="d2">0.041685873855551434</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Birth weight normal">
+      <data key="d0">2</data>
+      <data key="d1">0.0004897982977256029</data>
+      <data key="d2">0.041685873855551434</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Moderate to severe bone fragility">
+      <data key="d0">2</data>
+      <data key="d1">0.0004897982977256029</data>
+      <data key="d2">0.041685873855551434</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Moderately deforming osteogenesis imperfecta">
+      <data key="d0">2</data>
+      <data key="d1">0.0004897982977256029</data>
+      <data key="d2">0.041685873855551434</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Wedge-shaped vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.0004897982977256029</data>
+      <data key="d2">0.041685873855551434</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Biconcave vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.0004897982977256029</data>
+      <data key="d2">0.041685873855551434</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Protrusio acetabuli">
+      <data key="d0">2</data>
+      <data key="d1">0.0014826599376627208</data>
+      <data key="d2">0.04434313233561447</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Brachycephaly">
+      <data key="d0">2</data>
+      <data key="d1">0.0021390249197558143</data>
+      <data key="d2">0.04785456905315099</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI17">
+      <data key="d0">7</data>
+      <data key="d1">0.022569547193406515</data>
+      <data key="d2">0.0997783935980809</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="Normal hearing">
+      <data key="d0">2</data>
+      <data key="d1">0.001051591370892414</data>
+      <data key="d2">0.03940135792714254</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="Normal teeth">
+      <data key="d0">3</data>
+      <data key="d1">0.003330319668566125</data>
+      <data key="d2">0.040044615060844724</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="Motor delay">
+      <data key="d0">2</data>
+      <data key="d1">0.0006588469720683871</data>
+      <data key="d2">0.0352426294210482</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="OI21">
+      <data key="d0">14</data>
+      <data key="d1">0.07166923455645073</data>
+      <data key="d2">0.19871914121323223</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Pectus excavatum">
+      <data key="d0">3</data>
+      <data key="d1">0.0036616354220774354</data>
+      <data key="d2">0.05860077999535435</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Coxa vara">
+      <data key="d0">2</data>
+      <data key="d1">0.0012264256394983008</data>
+      <data key="d2">0.051082968983296756</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="OI7">
+      <data key="d0">20</data>
+      <data key="d1">0.14344411580895705</data>
+      <data key="d2">0.23394268234750026</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Bluish sclerae">
+      <data key="d0">2</data>
+      <data key="d1">0.002727417682126189</data>
+      <data key="d2">0.04175048282419561</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Multiple rib fractures">
+      <data key="d0">2</data>
+      <data key="d1">0.0016634440353046457</data>
+      <data key="d2">0.04791917802179516</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Multiple fractures present at birth">
+      <data key="d0">2</data>
+      <data key="d1">0.002347004897050816</data>
+      <data key="d2">0.04440774130425864</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Rhizomelia">
+      <data key="d0">2</data>
+      <data key="d1">0.0016634440353046457</data>
+      <data key="d2">0.04791917802179516</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI14">
+      <data key="d0">10</data>
+      <data key="d1">0.04075435196104307</data>
+      <data key="d2">0.1521394494557474</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Multiple fractures">
+      <data key="d0">3</data>
+      <data key="d1">0.0026350893575811233</data>
+      <data key="d2">0.04577874839209907</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI9">
+      <data key="d0">6</data>
+      <data key="d1">0.027351235355267935</data>
+      <data key="d2">0.08074663269648776</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Bowing of limbs due to multiple fractures">
+      <data key="d0">2</data>
+      <data key="d1">0.000772655850610749</data>
+      <data key="d2">0.02632038386608375</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="OI6">
+      <data key="d0">13</data>
+      <data key="d1">0.07734474880290736</data>
+      <data key="d2">0.1695962061063181</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Flattened vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.0019365429948992167</data>
+      <data key="d2">0.03415330444858519</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Shortening of upper extremities">
+      <data key="d0">2</data>
+      <data key="d1">0.0004348843700863374</data>
+      <data key="d2">0.03772580069225329</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Shortening of lower extremities">
+      <data key="d0">2</data>
+      <data key="d1">0.0004348843700863374</data>
+      <data key="d2">0.03772580069225329</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI1">
+      <data key="d0">9</data>
+      <data key="d1">0.04233469597150258</data>
+      <data key="d2">0.08725148325157031</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI15">
+      <data key="d0">12</data>
+      <data key="d1">0.055451309588295854</data>
+      <data key="d2">0.149933258364618</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI20">
+      <data key="d0">15</data>
+      <data key="d1">0.09687226020750837</data>
+      <data key="d2">0.1719225083250699</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Generalized osteopenia">
+      <data key="d0">2</data>
+      <data key="d1">0.0007020714245356106</data>
+      <data key="d2">0.027816140289157194</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI5">
+      <data key="d0">13</data>
+      <data key="d1">0.06133600826309855</data>
+      <data key="d2">0.11967497912557683</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI3">
+      <data key="d0">13</data>
+      <data key="d1">0.06811202851309207</data>
+      <data key="d2">0.14218139021689244</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI19">
+      <data key="d0">6</data>
+      <data key="d1">0.015332658880266614</data>
+      <data key="d2">0.06367425164197577</data>
+      <data key="d3">3</data>
+    </node>
+    <edge source="OI2" target="Autosomal dominant" />
+    <edge source="OI2" target="Short limb dwarfism" />
+    <edge source="OI2" target="Blue sclerae" />
+    <edge source="OI2" target="Beaded ribs" />
+    <edge source="OI2" target="Numerous multiple fractures present at birth" />
+    <edge source="OI2" target="Wormian bones" />
+    <edge source="OI2" target="Soft calvaria" />
+    <edge source="OI2" target="Platyspondyly" />
+    <edge source="OI2" target="Tibial bowing" />
+    <edge source="OI2" target="Thin skin" />
+    <edge source="Autosomal dominant" target="OI4" />
+    <edge source="Autosomal dominant" target="OI1" />
+    <edge source="Autosomal dominant" target="OI5" />
+    <edge source="Autosomal dominant" target="OI3" />
+    <edge source="Short limb dwarfism" target="OI9" />
+    <edge source="Blue sclerae" target="OI18" />
+    <edge source="Blue sclerae" target="OI16" />
+    <edge source="Blue sclerae" target="OI21" />
+    <edge source="Blue sclerae" target="OI6" />
+    <edge source="Blue sclerae" target="OI1" />
+    <edge source="Blue sclerae" target="OI20" />
+    <edge source="Blue sclerae" target="OI19" />
+    <edge source="Beaded ribs" target="OI16" />
+    <edge source="Numerous multiple fractures present at birth" target="OI9" />
+    <edge source="Wormian bones" target="OI13" />
+    <edge source="Wormian bones" target="OI18" />
+    <edge source="Wormian bones" target="OI8" />
+    <edge source="Wormian bones" target="OI4" />
+    <edge source="Wormian bones" target="OI12" />
+    <edge source="Wormian bones" target="OI11" />
+    <edge source="Wormian bones" target="OI21" />
+    <edge source="Wormian bones" target="OI7" />
+    <edge source="Wormian bones" target="OI14" />
+    <edge source="Wormian bones" target="OI6" />
+    <edge source="Wormian bones" target="OI1" />
+    <edge source="Wormian bones" target="OI20" />
+    <edge source="Wormian bones" target="OI5" />
+    <edge source="Wormian bones" target="OI3" />
+    <edge source="Soft calvaria" target="OI6" />
+    <edge source="Platyspondyly" target="OI13" />
+    <edge source="Platyspondyly" target="OI8" />
+    <edge source="Platyspondyly" target="OI10" />
+    <edge source="Platyspondyly" target="OI21" />
+    <edge source="Platyspondyly" target="OI15" />
+    <edge source="Tibial bowing" target="OI8" />
+    <edge source="Tibial bowing" target="OI14" />
+    <edge source="Tibial bowing" target="OI3" />
+    <edge source="Thin skin" target="OI1" />
+    <edge source="OI13" target="Autosomal recessive" />
+    <edge source="OI13" target="Short stature" />
+    <edge source="OI13" target="Low weight" />
+    <edge source="OI13" target="Long eyelashes" />
+    <edge source="OI13" target="Pectus carinatum" />
+    <edge source="OI13" target="Joint hypermobility" />
+    <edge source="OI13" target="Vertebral fractures" />
+    <edge source="OI13" target="Kyphoscoliosis" />
+    <edge source="OI13" target="Triangular face" />
+    <edge source="OI13" target="Prominent ears" />
+    <edge source="OI13" target="Long philtrum" />
+    <edge source="OI13" target="No dentinogenesis imperfecta" />
+    <edge source="OI13" target="Umbilical hernia" />
+    <edge source="Autosomal recessive" target="OI18" />
+    <edge source="Autosomal recessive" target="OI8" />
+    <edge source="Autosomal recessive" target="OI16" />
+    <edge source="Autosomal recessive" target="OI12" />
+    <edge source="Autosomal recessive" target="OI10" />
+    <edge source="Autosomal recessive" target="OI11" />
+    <edge source="Autosomal recessive" target="OI17" />
+    <edge source="Autosomal recessive" target="OI21" />
+    <edge source="Autosomal recessive" target="OI7" />
+    <edge source="Autosomal recessive" target="OI14" />
+    <edge source="Autosomal recessive" target="OI9" />
+    <edge source="Autosomal recessive" target="OI6" />
+    <edge source="Autosomal recessive" target="OI15" />
+    <edge source="Autosomal recessive" target="OI20" />
+    <edge source="Short stature" target="OI16" />
+    <edge source="Short stature" target="OI12" />
+    <edge source="Short stature" target="OI10" />
+    <edge source="Short stature" target="OI11" />
+    <edge source="Short stature" target="OI7" />
+    <edge source="Short stature" target="OI15" />
+    <edge source="Short stature" target="OI20" />
+    <edge source="Short stature" target="OI5" />
+    <edge source="Low weight" target="OI21" />
+    <edge source="Long eyelashes" target="OI18" />
+    <edge source="Pectus carinatum" target="OI12" />
+    <edge source="Pectus carinatum" target="OI19" />
+    <edge source="Joint hypermobility" target="OI21" />
+    <edge source="Joint hypermobility" target="OI6" />
+    <edge source="Vertebral fractures" target="OI21" />
+    <edge source="Vertebral fractures" target="OI15" />
+    <edge source="Kyphoscoliosis" target="OI11" />
+    <edge source="Triangular face" target="OI10" />
+    <edge source="Triangular face" target="OI11" />
+    <edge source="Triangular face" target="OI3" />
+    <edge source="Prominent ears" target="OI20" />
+    <edge source="Long philtrum" target="OI7" />
+    <edge source="No dentinogenesis imperfecta" target="OI8" />
+    <edge source="No dentinogenesis imperfecta" target="OI12" />
+    <edge source="No dentinogenesis imperfecta" target="OI7" />
+    <edge source="Umbilical hernia" target="OI18" />
+    <edge source="OI18" target="Thin ribs" />
+    <edge source="OI18" target="Codfish vertebrae" />
+    <edge source="OI18" target="Bowing of long bones" />
+    <edge source="OI18" target="Joint laxity" />
+    <edge source="OI18" target="Micrognathia" />
+    <edge source="OI18" target="Speech delay" />
+    <edge source="Thin ribs" target="OI8" />
+    <edge source="Thin ribs" target="OI10" />
+    <edge source="Thin ribs" target="OI21" />
+    <edge source="Thin ribs" target="OI14" />
+    <edge source="Thin ribs" target="OI15" />
+    <edge source="Codfish vertebrae" target="OI3" />
+    <edge source="Bowing of long bones" target="OI10" />
+    <edge source="Bowing of long bones" target="OI21" />
+    <edge source="Joint laxity" target="OI8" />
+    <edge source="Joint laxity" target="OI11" />
+    <edge source="Micrognathia" target="OI12" />
+    <edge source="Micrognathia" target="OI10" />
+    <edge source="Micrognathia" target="OI3" />
+    <edge source="Speech delay" target="OI17" />
+    <edge source="Speech delay" target="OI20" />
+    <edge source="OI8" target="Proptosis" />
+    <edge source="OI8" target="Bone fragility" />
+    <edge source="OI8" target="Scoliosis" />
+    <edge source="OI8" target="Kyphosis" />
+    <edge source="OI8" target="Vertebral compression fractures" />
+    <edge source="OI8" target="Femoral bowing" />
+    <edge source="OI8" target="Bulbous metaphyses" />
+    <edge source="OI8" target="Externally rotated/abducted legs" />
+    <edge source="OI8" target="Open sutures" />
+    <edge source="OI8" target="Round face" />
+    <edge source="Proptosis" target="OI7" />
+    <edge source="Bone fragility" target="OI14" />
+    <edge source="Scoliosis" target="OI4" />
+    <edge source="Scoliosis" target="OI10" />
+    <edge source="Scoliosis" target="OI11" />
+    <edge source="Scoliosis" target="OI17" />
+    <edge source="Scoliosis" target="OI21" />
+    <edge source="Scoliosis" target="OI7" />
+    <edge source="Scoliosis" target="OI14" />
+    <edge source="Scoliosis" target="OI9" />
+    <edge source="Scoliosis" target="OI6" />
+    <edge source="Scoliosis" target="OI15" />
+    <edge source="Scoliosis" target="OI3" />
+    <edge source="Scoliosis" target="OI19" />
+    <edge source="Kyphosis" target="OI4" />
+    <edge source="Kyphosis" target="OI9" />
+    <edge source="Kyphosis" target="OI6" />
+    <edge source="Kyphosis" target="OI3" />
+    <edge source="Vertebral compression fractures" target="OI16" />
+    <edge source="Vertebral compression fractures" target="OI10" />
+    <edge source="Vertebral compression fractures" target="OI11" />
+    <edge source="Vertebral compression fractures" target="OI17" />
+    <edge source="Vertebral compression fractures" target="OI7" />
+    <edge source="Vertebral compression fractures" target="OI20" />
+    <edge source="Femoral bowing" target="OI14" />
+    <edge source="Bulbous metaphyses" target="OI11" />
+    <edge source="Externally rotated/abducted legs" target="OI7" />
+    <edge source="Open sutures" target="OI7" />
+    <edge source="Round face" target="OI7" />
+    <edge source="OI16" target="Osteopenia" />
+    <edge source="OI16" target="Soft calvarial bones" />
+    <edge source="OI16" target="Multiple fractures of extremities" />
+    <edge source="OI16" target="Bowing of upper extremities" />
+    <edge source="OI16" target="Bowing of lower extremities" />
+    <edge source="Osteopenia" target="OI11" />
+    <edge source="Osteopenia" target="OI7" />
+    <edge source="Osteopenia" target="OI14" />
+    <edge source="Osteopenia" target="OI6" />
+    <edge source="Soft calvarial bones" target="OI20" />
+    <edge source="Multiple fractures of extremities" target="OI15" />
+    <edge source="Bowing of upper extremities" target="OI6" />
+    <edge source="Bowing of upper extremities" target="OI15" />
+    <edge source="Bowing of lower extremities" target="OI6" />
+    <edge source="Bowing of lower extremities" target="OI15" />
+    <edge source="OI4" target="Varying degree of multiple fractures" />
+    <edge source="OI4" target="Biconcave flattened vertebrae" />
+    <edge source="OI4" target="Hearing loss" />
+    <edge source="OI4" target="Otosclerosis" />
+    <edge source="OI4" target="Dentinogenesis imperfecta" />
+    <edge source="Varying degree of multiple fractures" target="OI1" />
+    <edge source="Varying degree of multiple fractures" target="OI5" />
+    <edge source="Biconcave flattened vertebrae" target="OI1" />
+    <edge source="Hearing loss" target="OI3" />
+    <edge source="Otosclerosis" target="OI1" />
+    <edge source="Dentinogenesis imperfecta" target="OI10" />
+    <edge source="Dentinogenesis imperfecta" target="OI11" />
+    <edge source="Dentinogenesis imperfecta" target="OI21" />
+    <edge source="Dentinogenesis imperfecta" target="OI1" />
+    <edge source="Dentinogenesis imperfecta" target="OI5" />
+    <edge source="Dentinogenesis imperfecta" target="OI3" />
+    <edge source="OI12" target="Midface hypoplasia" />
+    <edge source="OI12" target="High-arched palate" />
+    <edge source="Midface hypoplasia" target="OI10" />
+    <edge source="Midface hypoplasia" target="OI20" />
+    <edge source="High-arched palate" target="OI20" />
+    <edge source="OI10" target="Blue sclera" />
+    <edge source="OI10" target="Narrow chest" />
+    <edge source="Blue sclera" target="OI15" />
+    <edge source="Narrow chest" target="OI7" />
+    <edge source="OI11" target="Birth length normal" />
+    <edge source="OI11" target="Birth weight normal" />
+    <edge source="OI11" target="Moderate to severe bone fragility" />
+    <edge source="OI11" target="Moderately deforming osteogenesis imperfecta" />
+    <edge source="OI11" target="Wedge-shaped vertebrae" />
+    <edge source="OI11" target="Biconcave vertebrae" />
+    <edge source="OI11" target="Protrusio acetabuli" />
+    <edge source="OI11" target="Brachycephaly" />
+    <edge source="Birth length normal" target="OI5" />
+    <edge source="Birth weight normal" target="OI5" />
+    <edge source="Moderate to severe bone fragility" target="OI5" />
+    <edge source="Moderately deforming osteogenesis imperfecta" target="OI5" />
+    <edge source="Wedge-shaped vertebrae" target="OI5" />
+    <edge source="Biconcave vertebrae" target="OI5" />
+    <edge source="Protrusio acetabuli" target="OI3" />
+    <edge source="Brachycephaly" target="OI20" />
+    <edge source="OI17" target="Normal hearing" />
+    <edge source="OI17" target="Normal teeth" />
+    <edge source="OI17" target="Motor delay" />
+    <edge source="Normal hearing" target="OI7" />
+    <edge source="Normal teeth" target="OI14" />
+    <edge source="Normal teeth" target="OI1" />
+    <edge source="Motor delay" target="OI21" />
+    <edge source="OI21" target="Pectus excavatum" />
+    <edge source="OI21" target="Coxa vara" />
+    <edge source="Pectus excavatum" target="OI7" />
+    <edge source="Pectus excavatum" target="OI19" />
+    <edge source="Coxa vara" target="OI7" />
+    <edge source="OI7" target="Bluish sclerae" />
+    <edge source="OI7" target="Multiple rib fractures" />
+    <edge source="OI7" target="Multiple fractures present at birth" />
+    <edge source="OI7" target="Rhizomelia" />
+    <edge source="Bluish sclerae" target="OI5" />
+    <edge source="Multiple rib fractures" target="OI20" />
+    <edge source="Multiple fractures present at birth" target="OI3" />
+    <edge source="Rhizomelia" target="OI20" />
+    <edge source="OI14" target="Multiple fractures" />
+    <edge source="Multiple fractures" target="OI20" />
+    <edge source="Multiple fractures" target="OI19" />
+    <edge source="OI9" target="Bowing of limbs due to multiple fractures" />
+    <edge source="Bowing of limbs due to multiple fractures" target="OI3" />
+    <edge source="OI6" target="Flattened vertebrae" />
+    <edge source="OI6" target="Shortening of upper extremities" />
+    <edge source="OI6" target="Shortening of lower extremities" />
+    <edge source="Flattened vertebrae" target="OI5" />
+    <edge source="Shortening of upper extremities" target="OI15" />
+    <edge source="Shortening of lower extremities" target="OI15" />
+    <edge source="OI20" target="Generalized osteopenia" />
+    <edge source="Generalized osteopenia" target="OI19" />
+  </graph>
+</graphml>

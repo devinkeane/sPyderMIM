@@ -1,0 +1,13 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,"HYPERTHYROIDISM, FAMILIAL GESTATIONAL",TSHR,phenotypeMap.approvedGeneSymbols,603373,603372,
+1,MTDPS19,SLC25A10,phenotypeMap.approvedGeneSymbols,618972,606794,
+2,NYS6,GPR143,phenotypeMap.approvedGeneSymbols,300814,300808,
+3,FCAS3,PLCG2,phenotypeMap.approvedGeneSymbols,614468,600220,
+4,PARK2,PRKN,phenotypeMap.approvedGeneSymbols,600116,602544,
+5,PARK4,SNCA,phenotypeMap.approvedGeneSymbols,605543,163890,
+6,"HYPERTHYROIDISM, FAMILIAL GESTATIONAL",ENSG00000165409,phenotypeMap.ensemblIDs,603373,603372,
+7,MTDPS19,ENSG00000183048,phenotypeMap.ensemblIDs,618972,606794,
+8,NYS6,ENSG00000101850,phenotypeMap.ensemblIDs,300814,300808,
+9,FCAS3,ENSG00000197943,phenotypeMap.ensemblIDs,614468,600220,
+10,PARK2,ENSG00000185345,phenotypeMap.ensemblIDs,600116,602544,
+11,PARK4,ENSG00000145335,phenotypeMap.ensemblIDs,605543,163890,

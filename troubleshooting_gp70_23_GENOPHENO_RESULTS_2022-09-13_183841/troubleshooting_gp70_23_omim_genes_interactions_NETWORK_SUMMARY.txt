@@ -1,0 +1,47 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-13 18:37:56.120634
+
+Total Nodes:  1
+Total Edges:  1
+
+             Approximate node connectivity:   2.000E+00
+     Network diameter of largest component:   0
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                              SNCA            2
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                              SNCA    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                              SNCA    1.000E+00

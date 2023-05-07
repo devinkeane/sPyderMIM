@@ -1,0 +1,120 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-14 15:32:55.225178
+
+Total Nodes:  435
+Total Edges:  446
+
+             Approximate node connectivity:   2.051E+00
+     Network diameter of largest component:   5
+                              Transitivity:   3.381E-04
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                              LMNA          348
+                                             BANF1           56
+                                            POLR3A           45
+                                               EMD            2
+                                              TMPO            2
+                                              BMI1            2
+                                           METTL14            2
+                                            RALBP1            2
+                                              SDHA            2
+                                              SOD1            2
+                                              RYBP            2
+                                               MYC            2
+                                             IRAK1            2
+                                             LRRK2            2
+                                             BANF2            1
+                                            ANKLE1            1
+                                             HLA-B            1
+                                          CDK5RAP3            1
+                                             DDHD1            1
+                                            PWWP2A            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                              LMNA    9.739E-01
+                                             BANF1    2.011E-01
+                                            POLR3A    1.802E-01
+                                              RYBP    4.347E-02
+                                               MYC    4.347E-02
+                                             IRAK1    4.347E-02
+                                             LRRK2    4.347E-02
+                                               EMD    0.000E+00
+                                             BANF2    0.000E+00
+                                            ANKLE1    0.000E+00
+                                             HLA-B    0.000E+00
+                                          CDK5RAP3    0.000E+00
+                                             DDHD1    0.000E+00
+                                            PWWP2A    0.000E+00
+                                              TMPO    0.000E+00
+                                              AIM2    0.000E+00
+                                           ATP6V1A    0.000E+00
+                                              BET1    0.000E+00
+                                              BMI1    0.000E+00
+                                              CD81    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                              LMNA    7.153E-01
+                                             LMNB1    3.737E-02
+                                            DUSP13    3.737E-02
+                                             LMNB2    3.737E-02
+                                            NUP155    3.737E-02
+                                              SNW1    3.737E-02
+                                              CFTR    3.737E-02
+                                              SUN2    3.737E-02
+                                            SREBF1    3.737E-02
+                                              USP7    3.737E-02
+
+CLASS 1:
+-------
+                                             BANF1    6.353E-02
+                                               EMD    4.068E-02
+                                              TMPO    4.068E-02
+                                              BMI1    4.068E-02
+                                           METTL14    4.068E-02
+                                            RALBP1    4.068E-02
+                                              SDHA    4.068E-02
+                                              SOD1    4.068E-02
+                                             BANF2    3.319E-03
+                                            ANKLE1    3.319E-03
+
+CLASS 2:
+-------
+                                              RYBP    3.783E-02
+                                               MYC    3.783E-02
+                                             IRAK1    3.783E-02
+                                             LRRK2    3.783E-02
+                                            POLR3A    8.900E-03
+                                            POLR2E    4.649E-04
+                                            PPP1CA    4.649E-04
+                                              KSR2    4.649E-04
+                                               CHM    4.649E-04
+                                            NUDCD3    4.649E-04

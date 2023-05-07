@@ -1,0 +1,9 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,EDSPD1,C1R,phenotypeMap.approvedGeneSymbols,130080,613785,
+1,BCS1,ZNF469,phenotypeMap.approvedGeneSymbols,229200,612078,
+2,EDSMC1,CHST14,phenotypeMap.approvedGeneSymbols,601776,608429,
+3,EDSPD2,C1S,phenotypeMap.approvedGeneSymbols,617174,120580,
+4,EDSPD1,ENSG00000159403,phenotypeMap.ensemblIDs,130080,613785,
+5,BCS1,ENSG00000225614,phenotypeMap.ensemblIDs,229200,612078,
+6,EDSMC1,ENSG00000169105,phenotypeMap.ensemblIDs,601776,608429,
+7,EDSPD2,ENSG00000182326,phenotypeMap.ensemblIDs,617174,120580,

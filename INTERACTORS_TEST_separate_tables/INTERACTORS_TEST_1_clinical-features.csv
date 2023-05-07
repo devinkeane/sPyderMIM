@@ -1,0 +1,167 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,EDSPD1,Autosomal dominant,entry.clinicalSynopsis.inheritance,130080,,
+1,EDSPD1,Tall stature,entry.clinicalSynopsis.growthHeight,130080,,(in some patients)
+2,EDSPD1,Arm span wider than height,entry.clinicalSynopsis.growthHeight,130080,,(in some patients)
+3,EDSPD1,Acrogeric facial appearance,entry.clinicalSynopsis.headAndNeckFace,130080,,(rare)
+4,EDSPD1,Early-onset periodontitis,entry.clinicalSynopsis.headAndNeckMouth,130080,,
+5,EDSPD1,Gingival recession,entry.clinicalSynopsis.headAndNeckMouth,130080,,
+6,EDSPD1,Minimally attached or unattached gingivae,entry.clinicalSynopsis.headAndNeckMouth,130080,,
+7,EDSPD1,Gingival fragility,entry.clinicalSynopsis.headAndNeckMouth,130080,,
+8,EDSPD1,Gingival thinning,entry.clinicalSynopsis.headAndNeckMouth,130080,,
+9,EDSPD1,Gingival bleeding,entry.clinicalSynopsis.headAndNeckMouth,130080,,
+10,EDSPD1,Keratinized gingivae,entry.clinicalSynopsis.headAndNeckMouth,130080,,(in some patients)
+11,EDSPD1,Alveolar bone loss around teeth,entry.clinicalSynopsis.headAndNeckTeeth,130080,,
+12,EDSPD1,Premature and progressive loss of teeth,entry.clinicalSynopsis.headAndNeckTeeth,130080,,
+13,EDSPD1,Propensity for calculus formation,entry.clinicalSynopsis.headAndNeckTeeth,130080,,(in some patients)
+14,EDSPD1,Periodontal disease,entry.clinicalSynopsis.headAndNeckTeeth,130080,,
+15,EDSPD1,Cerebral artery aneurysm/rupture,entry.clinicalSynopsis.cardiovascularVascular,130080,,(in some patients)
+16,EDSPD1,Aortic aneurysm/dissection,entry.clinicalSynopsis.cardiovascularVascular,130080,,(rare)
+17,EDSPD1,Prominent subcutaneous vasculature,entry.clinicalSynopsis.cardiovascularVascular,130080,,(rare)
+18,EDSPD1,Intestinal perforation,entry.clinicalSynopsis.abdomenGastrointestinal,130080,,(in 1 patient)
+19,EDSPD1,Inguinal hernia,entry.clinicalSynopsis.abdomenGastrointestinal,130080,,(in 1 patient)
+20,EDSPD1,Scoliosis,entry.clinicalSynopsis.skeletalSpine,130080,,(in some patients)
+21,EDSPD1,"Generalized joint laxity, mild",entry.clinicalSynopsis.skeletalLimbs,130080,,(in some patients)
+22,EDSPD1,"Hypermobility of elbow joints, mild",entry.clinicalSynopsis.skeletalLimbs,130080,,
+23,EDSPD1,"Hypermobility of wrists, mild",entry.clinicalSynopsis.skeletalLimbs,130080,,(in some patients)
+24,EDSPD1,Arm span wider than height,entry.clinicalSynopsis.skeletalLimbs,130080,,(in some patients)
+25,EDSPD1,"Hypermobility of finger joints, mild",entry.clinicalSynopsis.skeletalHands,130080,,
+26,EDSPD1,Arachnodactyly,entry.clinicalSynopsis.skeletalHands,130080,,(in some patients)
+27,EDSPD1,Easy bruising,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+28,EDSPD1,Soft skin,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+29,EDSPD1,Thin atrophic skin,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+30,EDSPD1,Prominent subcutaneous vasculature,entry.clinicalSynopsis.skinNailsHairSkin,130080,,(rare)
+31,EDSPD1,Increased skin fragility,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+32,EDSPD1,Mild hyperelasticity of skin,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+33,EDSPD1,Pretibial hyperpigmentation,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+34,EDSPD1,"Pretibial plaques, hypertrophic or atrophic",entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+35,EDSPD1,Atrophic scars,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+36,EDSPD1,Thickened scars,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+37,EDSPD1,Poor wound healing,entry.clinicalSynopsis.skinNailsHairSkin,130080,,
+38,EDSPD1,Increased numbers of fibroblasts,entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,130080,,
+39,EDSPD1,Decreased collagen content,entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,130080,,
+40,EDSPD1,Abnormal variation in collagen fibril diameter,entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,130080,,
+41,EDSPD1,Abnormally shaped collagen fibrils,entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,130080,,
+42,EDSPD1,Abnormally enlarged endoplasmic reticulum cisterns,entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,130080,,
+43,EDSPD1,Hoarse voice,entry.clinicalSynopsis.voice,130080,,
+44,EDSPD1,Recurrent infections,entry.clinicalSynopsis.immunology,130080,,(in some patients)
+45,EDSPD1,Autoimmune disorders,entry.clinicalSynopsis.immunology,130080,,(in 1 family)
+46,BCS1,Autosomal recessive,entry.clinicalSynopsis.inheritance,229200,,
+47,BCS1,Dentinogenesis imperfecta,entry.clinicalSynopsis.headAndNeckTeeth,229200,,
+48,BCS1,Scoliosis,entry.clinicalSynopsis.skeletalSpine,229200,,
+49,BCS1,Spondylolisthesis,entry.clinicalSynopsis.skeletalSpine,229200,,
+50,BCS1,Scarring,entry.clinicalSynopsis.skinNailsHairSkin,229200,,
+51,BCS1,Molluscoid pseudotumor,entry.clinicalSynopsis.skinNailsHairSkin,229200,,
+52,BCS1,Excessive wrinkled skin,entry.clinicalSynopsis.skinNailsHairSkin,229200,,(palms and soles)
+53,BCS1,Marfanoid habitus,entry.clinicalSynopsis.growthOther,229200,,
+54,BCS1,Macrocephaly,entry.clinicalSynopsis.headAndNeckHead,229200,,
+55,BCS1,Hearing loss,entry.clinicalSynopsis.headAndNeckEars,229200,,
+56,BCS1,Epicanthal folds,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+57,BCS1,Blue sclerae,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+58,BCS1,Vision loss,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+59,BCS1,Myopia,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+60,BCS1,Brittle cornea,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+61,BCS1,Keratoconus,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+62,BCS1,Keratoglobus,entry.clinicalSynopsis.headAndNeckEyes,229200,,
+63,BCS1,Mitral valve prolapse,entry.clinicalSynopsis.cardiovascularHeart,229200,,
+64,BCS1,Joint laxity,entry.clinicalSynopsis.skeletal,229200,,
+65,BCS1,Congenital hip dislocation,entry.clinicalSynopsis.skeletalPelvis,229200,,
+66,BCS1,Red hair,entry.clinicalSynopsis.skinNailsHairHair,229200,,
+67,BCS1,Normal lysl hydroxylase activity,entry.clinicalSynopsis.laboratoryAbnormalities,229200,,
+68,BCS1,Normal dermal hydroxylysine content,entry.clinicalSynopsis.laboratoryAbnormalities,229200,,
+69,EDSMC1,Autosomal recessive,entry.clinicalSynopsis.inheritance,601776,,
+70,EDSMC1,"Broad, flat forehead",entry.clinicalSynopsis.headAndNeckFace,601776,,
+71,EDSMC1,Microretrognathia in infancy,entry.clinicalSynopsis.headAndNeckFace,601776,,
+72,EDSMC1,Protruding jaw from adolescence,entry.clinicalSynopsis.headAndNeckFace,601776,,
+73,EDSMC1,Facial asymmetry from adolescence,entry.clinicalSynopsis.headAndNeckFace,601776,,
+74,EDSMC1,Thin upper lip,entry.clinicalSynopsis.headAndNeckMouth,601776,,
+75,EDSMC1,Small mouth in infancy,entry.clinicalSynopsis.headAndNeckMouth,601776,,
+76,EDSMC1,High-arched palate,entry.clinicalSynopsis.headAndNeckMouth,601776,,
+77,EDSMC1,Cleft palate,entry.clinicalSynopsis.headAndNeckMouth,601776,,
+78,EDSMC1,"Hematomas, recurrent large subcutaneous",entry.clinicalSynopsis.cardiovascularVascular,601776,,
+79,EDSMC1,Constipation,entry.clinicalSynopsis.abdomenGastrointestinal,601776,,
+80,EDSMC1,Diverticular perforation,entry.clinicalSynopsis.abdomenGastrointestinal,601776,,(rare)
+81,EDSMC1,Duodenal obstruction due to malrotation,entry.clinicalSynopsis.abdomenGastrointestinal,601776,,
+82,EDSMC1,Scoliosis,entry.clinicalSynopsis.skeletalSpine,601776,,
+83,EDSMC1,Hypermobility of shoulders,entry.clinicalSynopsis.skeletalLimbs,601776,,
+84,EDSMC1,"Adducted thumbs, bilateral, in infancy",entry.clinicalSynopsis.skeletalHands,601776,,
+85,EDSMC1,Arachnodactyly,entry.clinicalSynopsis.skeletalHands,601776,,
+86,EDSMC1,Slender and/or cylindrical fingers,entry.clinicalSynopsis.skeletalHands,601776,,
+87,EDSMC1,"Arthrogryposis, distal",entry.clinicalSynopsis.skeletalHands,601776,,
+88,EDSMC1,Hypermobility of small joints,entry.clinicalSynopsis.skeletalHands,601776,,
+89,EDSMC1,Hyperextensible skin,entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+90,EDSMC1,Ecchymoses,entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+91,EDSMC1,Fragile skin with atrophic scarring,entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+92,EDSMC1,Delayed wound healing,entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+93,EDSMC1,Hyperalgesia to pressure,entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+94,EDSMC1,"Palmar creases, fine to acrogeria-like",entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+95,EDSMC1,"Subcutaneous infections, recurrent, with fistula formation",entry.clinicalSynopsis.skinNailsHairSkin,601776,,
+96,EDSMC1,Collagen fibrils dispersed in reticular dermis,entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,601776,,
+97,EDSMC1,"Smooth, round collagen fibrils",entry.clinicalSynopsis.skinNailsHairSkinElectronMicroscopy,601776,,
+98,EDSMC1,Brachycephaly,entry.clinicalSynopsis.headAndNeckHead,601776,,
+99,EDSMC1,Large fontanel with delayed closure,entry.clinicalSynopsis.headAndNeckHead,601776,,
+100,EDSMC1,Low-set and rotated ears,entry.clinicalSynopsis.headAndNeckEars,601776,,
+101,EDSMC1,Prominent ears,entry.clinicalSynopsis.headAndNeckEars,601776,,
+102,EDSMC1,Hearing impairment,entry.clinicalSynopsis.headAndNeckEars,601776,,
+103,EDSMC1,"Eye anomalies, variable",entry.clinicalSynopsis.headAndNeckEyes,601776,,
+104,EDSMC1,Blue sclerae,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+105,EDSMC1,Hypertelorism,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+106,EDSMC1,Downslanting palpebral fissures,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+107,EDSMC1,Strabismus,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+108,EDSMC1,Myopia,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+109,EDSMC1,Glaucoma,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+110,EDSMC1,Microcornea,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+111,EDSMC1,Retinal detachment,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+112,EDSMC1,Anterior chamber abnormality,entry.clinicalSynopsis.headAndNeckEyes,601776,,
+113,EDSMC1,Valve anomalies,entry.clinicalSynopsis.cardiovascularHeart,601776,,
+114,EDSMC1,Atrial septal defect,entry.clinicalSynopsis.cardiovascularHeart,601776,,
+115,EDSMC1,Mild osteopenia in childhood,entry.clinicalSynopsis.skeletal,601776,,(in some patients)
+116,EDSMC1,"Congenital contractures, multiple",entry.clinicalSynopsis.skeletal,601776,,
+117,EDSMC1,"Joint laxity, generalized",entry.clinicalSynopsis.skeletal,601776,,
+118,EDSMC1,"Joint dislocations, recurrent",entry.clinicalSynopsis.skeletal,601776,,
+119,EDSMC1,Tendon abnormalities,entry.clinicalSynopsis.skeletal,601776,,
+120,EDSMC1,Severely wasted build,entry.clinicalSynopsis.growthWeight,601776,,
+121,EDSMC1,Short with hypoplastic columella,entry.clinicalSynopsis.headAndNeckNose,601776,,
+122,EDSMC1,Long philtrum,entry.clinicalSynopsis.headAndNeckNose,601776,,
+123,EDSMC1,Hemopneumothorax,entry.clinicalSynopsis.respiratoryLung,601776,,
+124,EDSMC1,Pectus excavatum,entry.clinicalSynopsis.chestRibsSternumClaviclesAndScapulae,601776,,
+125,EDSMC1,"Flat, thin pectus",entry.clinicalSynopsis.chestRibsSternumClaviclesAndScapulae,601776,,
+126,EDSMC1,Hiatal hernia,entry.clinicalSynopsis.chestDiaphragm,601776,,
+127,EDSMC1,Umbilical hernia,entry.clinicalSynopsis.abdomenExternalFeatures,601776,,
+128,EDSMC1,Diastasis recti,entry.clinicalSynopsis.abdomenExternalFeatures,601776,,
+129,EDSMC1,Cryptorchidism,entry.clinicalSynopsis.genitourinaryInternalGenitaliaMale,601776,,(in most patients)
+130,EDSMC1,"Hydronephrosis, bilateral",entry.clinicalSynopsis.genitourinaryKidneys,601776,,
+131,EDSMC1,"Cystitis, recurrent",entry.clinicalSynopsis.genitourinaryBladder,601776,,(in some patients)
+132,EDSMC1,Enlarged bladder,entry.clinicalSynopsis.genitourinaryBladder,601776,,(in some patients)
+133,EDSMC1,Talipes equinovarus in infancy,entry.clinicalSynopsis.skeletalFeet,601776,,
+134,EDSMC1,"Talipes valgus and planus, progressive",entry.clinicalSynopsis.skeletalFeet,601776,,
+135,EDSMC1,Hypermobility of small joints,entry.clinicalSynopsis.skeletalFeet,601776,,
+136,EDSMC1,Fine collagen fibers predominant in reticular to papillary dermis,entry.clinicalSynopsis.skinNailsHairSkinHistology,601776,,
+137,EDSMC1,Thin collagen bundles,entry.clinicalSynopsis.skinNailsHairSkinHistology,601776,,
+138,EDSMC1,"Hematomas, recurrent large subcutaneous",entry.clinicalSynopsis.muscleSoftTissue,601776,,
+139,EDSMC1,Low muscle mass,entry.clinicalSynopsis.muscleSoftTissue,601776,,
+140,EDSMC1,Hypotonia,entry.clinicalSynopsis.muscleSoftTissue,601776,,
+141,EDSMC1,Gross motor developmental delay,entry.clinicalSynopsis.neurologicCentralNervousSystem,601776,,
+142,EDSMC1,Mental retardation,entry.clinicalSynopsis.neurologicCentralNervousSystem,601776,,(in some patients)
+143,EDSMC1,Mildly enlarged ventricles,entry.clinicalSynopsis.neurologicCentralNervousSystem,601776,,
+144,EDSPD2,Autosomal dominant,entry.clinicalSynopsis.inheritance,617174,,
+145,EDSPD2,Aggressive periodontitis,entry.clinicalSynopsis.headAndNeckMouth,617174,,
+146,EDSPD2,Gingival recessions,entry.clinicalSynopsis.headAndNeckMouth,617174,,
+147,EDSPD2,Gum fragility,entry.clinicalSynopsis.headAndNeckMouth,617174,,
+148,EDSPD2,Bleeding gums,entry.clinicalSynopsis.headAndNeckMouth,617174,,(in some patients)
+149,EDSPD2,"Tooth loss, progressive, beginning in second and third decades of life",entry.clinicalSynopsis.headAndNeckTeeth,617174,,
+150,EDSPD2,Prominent subcutaneous vasculature,entry.clinicalSynopsis.cardiovascularVascular,617174,,(in some patients)
+151,EDSPD2,Irritable bowel symptoms,entry.clinicalSynopsis.abdomenGastrointestinal,617174,,(in some patients)
+152,EDSPD2,Scoliosis,entry.clinicalSynopsis.skeletalSpine,617174,,(in some patients)
+153,EDSPD2,Spinal osteoarthritis,entry.clinicalSynopsis.skeletalSpine,617174,,(in some patients)
+154,EDSPD2,Joint hypermobility,entry.clinicalSynopsis.skeletalLimbs,617174,,"(elbows, knees, in some patients)"
+155,EDSPD2,Joint pain,entry.clinicalSynopsis.skeletalLimbs,617174,,(in some patients)
+156,EDSPD2,Joint hypermobility,entry.clinicalSynopsis.skeletalHands,617174,,(in some patients)
+157,EDSPD2,Easy bruising,entry.clinicalSynopsis.skinNailsHairSkin,617174,,
+158,EDSPD2,Skin fragility,entry.clinicalSynopsis.skinNailsHairSkin,617174,,
+159,EDSPD2,Pretibial hyperpigmentation,entry.clinicalSynopsis.skinNailsHairSkin,617174,,
+160,EDSPD2,Elastic skin,entry.clinicalSynopsis.skinNailsHairSkin,617174,,(in some patients)
+161,EDSPD2,Abnormal scarring,entry.clinicalSynopsis.skinNailsHairSkin,617174,,(in some patients)
+162,EDSPD2,Prominent subcutaneous vasculature,entry.clinicalSynopsis.skinNailsHairSkin,617174,,(in some patients)
+163,EDSPD2,Umbilical hernia,entry.clinicalSynopsis.abdomenExternalFeatures,617174,,(in 1 patient)
+164,EDSPD2,Inguinal hernia,entry.clinicalSynopsis.abdomenExternalFeatures,617174,,(in 1 patient)
+165,EDSPD2,Cancer,entry.clinicalSynopsis.neoplasia,617174,,"(e.g., lung, breast, genitourinary, colon, etc. in some patients)"

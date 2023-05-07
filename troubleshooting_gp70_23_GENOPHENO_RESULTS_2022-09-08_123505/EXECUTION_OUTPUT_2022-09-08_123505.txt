@@ -1,0 +1,659 @@
+
+
+
+   _	   ,/'
+  (_).	,/'
+   _  ::       ---  ---  ---  ---  ---	---  ---  ---  ---  ---  ---  ---
+  (_)'	`\.
+	   `\.		    [  G e n o P h e n o  ]
+					List Splitter
+
+
+Splitting list into separate OMIM API compatible lists of 20 maximum MIMs...
+
+Saving divided lists to directory:    ./troubleshooting_gp70_23_MIM_directory/
+
+troubleshooting_gp70_23_0.txt
+troubleshooting_gp70_23_1.txt
+
+
+     ___|			_ \   |
+    |	    _ \  __ \	 _ \   |   |  __ \    _ \  __ \    _ \	 |
+    |	|   __/  |   |	(   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/	 |
+   ______________________________________________________________|
+				      (ツ)_/¯  - * Version 7.1 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./troubleshooting_gp70_23_separate_tables/troubleshooting_gp70_23_0_genes.csv "
+  with	42  total rows
+
+  Your clinical data table was saved as " ./troubleshooting_gp70_23_separate_tables/troubleshooting_gp70_23_0_clinical-features.csv "
+  with	375  total rows
+
+
+   20  of  20  MIMs contained phenotypic data.
+
+   20  of  20  MIMs contained ENSEMBL/Gene IDs.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+     ___|			_ \   |
+    |	    _ \  __ \	 _ \   |   |  __ \    _ \  __ \    _ \	 |
+    |	|   __/  |   |	(   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/	 |
+   ______________________________________________________________|
+				      (ツ)_/¯  - * Version 7.1 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./troubleshooting_gp70_23_separate_tables/troubleshooting_gp70_23_1_genes.csv "
+  with	8  total rows
+
+  Your clinical data table was saved as " ./troubleshooting_gp70_23_separate_tables/troubleshooting_gp70_23_1_clinical-features.csv "
+  with	59  total rows
+
+
+   4  of  4  MIMs contained phenotypic data.
+
+   4  of  4  MIMs contained ENSEMBL/Gene IDs.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+	   c o n c a t . p y |
+	   ------------------+
+		 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+		 ...Your combined table was saved as " troubleshooting_gp70_23_clinical-features_concatenated.csv "
+		 with  434  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+	   c o n c a t . p y |
+	   ------------------+
+		 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+		 ...Your combined table was saved as " troubleshooting_gp70_23_genes_concatenated.csv "
+		 with  50  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+      _______		__   ____      __			__
+     / ____(_)___  ____/ /  /  _/___  / /____  _________ ______/ /_____  __________
+    / /_  / / __ \/ __	/   / // __ \/ __/ _ \/ ___/ __ `/ ___/ __/ __ \/ ___/ ___/
+   / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  )
+  /_/	/_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/
+
+						       [ G e n o P h e n o ]  v7.1
+
+
+--------------------------------------------------------------------
+
+	ʕっ••ʔっ	Your input:
+
+
+				       Superphenotype  ... Parenthetical
+0					      CTRCT34  ...	     NaN
+1	  ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2  ...	     NaN
+2						RHYNS  ...	     NaN
+3						  HRZ  ...	     NaN
+4						  CSB  ...	     NaN
+5						DEE45  ...	     NaN
+6						 CIAT  ...	     NaN
+7						PITA5  ...	     NaN
+8					      GIKANIS  ...	     NaN
+9						  BOS  ...	     NaN
+10						  BOS  ...	     NaN
+11						 MONA  ...	     NaN
+12						MRD34  ...	     NaN
+13						IMD13  ...	     NaN
+14						 RP58  ...	     NaN
+15						ISDNA  ...	     NaN
+16  HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-ME...  ...	     NaN
+17						 DBA8  ...	     NaN
+18					       HMSN2C  ...	     NaN
+19						 STL4  ...	     NaN
+20		    VENTRICULAR TACHYCARDIA, FAMILIAL  ...	     NaN
+21					      CTRCT34  ...	     NaN
+22	  ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2  ...	     NaN
+23						RHYNS  ...	     NaN
+24						  HRZ  ...	     NaN
+25						  CSB  ...	     NaN
+26						DEE45  ...	     NaN
+27						 CIAT  ...	     NaN
+28						PITA5  ...	     NaN
+29					      GIKANIS  ...	     NaN
+30						  BOS  ...	     NaN
+31						  BOS  ...	     NaN
+32						 MONA  ...	     NaN
+33						MRD34  ...	     NaN
+34						IMD13  ...	     NaN
+35						 RP58  ...	     NaN
+36						ISDNA  ...	     NaN
+37  HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-ME...  ...	     NaN
+38						 DBA8  ...	     NaN
+39					       HMSN2C  ...	     NaN
+40						 STL4  ...	     NaN
+41		    VENTRICULAR TACHYCARDIA, FAMILIAL  ...	     NaN
+42		HYPERTHYROIDISM, FAMILIAL GESTATIONAL  ...	     NaN
+43					      MTDPS19  ...	     NaN
+44						 NYS6  ...	     NaN
+45						FCAS3  ...	     NaN
+46		HYPERTHYROIDISM, FAMILIAL GESTATIONAL  ...	     NaN
+47					      MTDPS19  ...	     NaN
+48						 NYS6  ...	     NaN
+49						FCAS3  ...	     NaN
+
+[50 rows x 6 columns]
+
+Extracting ENSEMBL IDs from input:
+
+ENSEMBL IDs extracted	  ✔
+
+Searching for protein interactors for each ENSEMBL gene product:
+
+⚠  Failed■toWconvertoGene.MIM|600220' to UNIPROT ID
+
+len(response2['results']:   25
+len(ensembl_ids_list_unique):	   24
+len(gene_ids_list_unique):	 24
+len(gene_ids_list):	  25
+len(ensembl_ids_list):	     25
+len(gene_MIM_list_unique):	 24
+len(gene_MIM_list):	  50
+[601094, 608595, 609884, 612761, 609413, 137190, 600702, 605516, 606941, 607844, 120360, 604677, 604011, 613598, 605744, 607093, 603658, 605427, 120210, 139360, 603372, 606794, 300808, 600220]
+{"results":[{"from":"601094","to":"Q13461"},{"from":"608595","to":"Q6W5P4"},{"from":"609884","to":"Q5HYA8"},{"from":"612761","to":"Q9H4L7"},{"from":"609413","to":"P0DP91"},{"from":"609413","to":"Q03468"},{"from":"609413","to":"Q8N328"},{"from":"137190","to":"P18505"},{"from":"600702","to":"Q9UQD0"},{"from":"605516","to":"Q9H251"},{"from":"606941","to":"Q9H6U8"},{"from":"607844","to":"Q9Y2U8"},{"from":"120360","to":"P08253"},{"from":"604677","to":"Q9Y5P4"},{"from":"604011","to":"Q13432"},{"from":"613598","to":"Q8N8E2"},{"from":"605744","to":"O43909"},{"from":"607093","to":"P42898"},{"from":"603658","to":"P62081"},{"from":"605427","to":"Q9HBA0"},{"from":"120210","to":"P20849"},{"from":"139360","to":"P04899"},{"from":"603372","to":"P16473"},{"from":"606794","to":"Q9UBX3"},{"from":"300808","to":"P51810"}],"failedIds":["600220'"]}
+1 | ENSEMBL ID: ENSG00000186790 | Approved Gene ID: FOXE3 | Interactions: 0 | Total Interactions: 0
+2 | ENSEMBL ID: ENSG00000187258 | Approved Gene ID: NPSR1 | Interactions: 16 | Total Interactions: 16
+3 | ENSEMBL ID: ENSG00000164953 | Approved Gene ID: TMEM67 | Interactions: 93 | Total Interactions: 109
+4 | ENSEMBL ID: ENSG00000163104 | Approved Gene ID: SMARCAD1 | Interactions: 24 | Total Interactions: 133
+5 | ENSEMBL ID: ENSG00000225830 | Approved Gene ID: ERCC6 | Interactions: 3 | Total Interactions: 136
+6 | ENSEMBL ID: ENSG00000225830 | Approved Gene ID: ERCC6 | Interactions: 33 | Total Interactions: 169
+7 | ENSEMBL ID: ENSG00000225830 | Approved Gene ID: ERCC6 | Interactions: 1 | Total Interactions: 170
+8 | ENSEMBL ID: ENSG00000163288 | Approved Gene ID: GABRB1 | Interactions: 5 | Total Interactions: 175
+9 | ENSEMBL ID: ENSG00000196876 | Approved Gene ID: SCN8A | Interactions: 6 | Total Interactions: 181
+10 | ENSEMBLrID:gENSG00000107736 | Approved Gene ID: CDH23 | Interactions: 18 | Total Interactions: 199
+11 | ENSEMBLrID:gENSG00000086848 | Approved Gene ID: ALG9 | Interactions: 35 | Total Interactions: 234
+12 | ENSEMBLrID:gENSG00000174106 | Approved Gene ID: LEMD3 | Interactions: 84 | Total Interactions: 318
+13 | ENSEMBLrID:gENSG00000087245 | Approved Gene ID: MMP2 | Interactions: 83 | Total Interactions: 401
+14 | ENSEMBLrID:gENSG00000113163 | Approved Gene ID: CERT1 | Interactions: 92 | Total Interactions: 493
+15 | ENSEMBLrID:gENSG00000109103 | Approved Gene ID: UNC119 | Interactions: 191 | Total Interactions: 684
+16 | ENSEMBLrID:gENSG00000163795 | Approved Gene ID: ZNF513 | Interactions: 16 | Total Interactions: 700
+17 | ENSEMBLrID:gENSG00000012232 | Approved Gene ID: EXTL3 | Interactions: 26 | Total Interactions: 726
+18 | ENSEMBLrID:gENSG00000177000 | Approved Gene ID: MTHFR | Interactions: 24 | Total Interactions: 750
+19 | ENSEMBLrID:gENSG00000171863 | Approved Gene ID: RPS7 | Interactions: 107 | Total Interactions: 857
+20 | ENSEMBLrID:gENSG00000111199 | Approved Gene ID: TRPV4 | Interactions: 14 | Total Interactions: 871
+21 | ENSEMBLrID:gENSG00000112280 | Approved Gene ID: COL9A1 | Interactions: 15 | Total Interactions: 886
+22 | ENSEMBLrID:gENSG00000114353 | Approved Gene ID: GNAI2 | Interactions: 122 | Total Interactions: 1008
+23 | ENSEMBLrID:gENSG00000165409 | Approved Gene ID: TSHR | Interactions: 29 | Total Interactions: 1037
+24 | ENSEMBLrID:gENSG00000183048 | Approved Gene ID: SLC25A10 | Interactions: 96 | Total Interactions: 1133
+25 | ENSEMBLrID:gENSG00000101850 | Approved Gene ID: GPR143 | Interactions: 11 | Total Interactions: 1144
+
+( ° ʖ °)ﾉ⌐■-■  We did it! ✔
+
+Saving output table:
+
+		ac  ...  searchChildInteractors
+0     EBI-20810732  ... 		   None
+1     EBI-20810894  ... 		   None
+2     EBI-20810742  ... 		   None
+3     EBI-20810752  ... 		   None
+4     EBI-20810762  ... 		   None
+...	       ...  ... 		    ...
+1139  EBI-15934312  ... 		   None
+1140  EBI-34578129  ... 		   None
+1141  EBI-34576187  ... 		   None
+1142  EBI-34576269  ... 		   None
+1143  EBI-34576210  ... 		   None
+
+[1144 rows x 99 columns]
+
+
+Process complete.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Your interactors list was saved as "troubleshooting_gp70_23_interactors.csv" with  99  columns and  1144  rows.
+
+							⊂(◉‿◉)つ  ♡
+
+
+
+O---o	 ___|			    _ \   |
+O---o	|	_ \  __ \    _ \   |   |  __ \	  _ \  __ \    _ \   |
+ O-o	|   |	__/  |	 |  (	|  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|	_| \___/  _|	 _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O	High Performance Computing Genomic Network Analysis    |  Version 7.1  |    ✧ - ･ﾟ*
+O---o				    +------------------------------------------+
+ O-o			 (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane	       |
+  O				    |  Feltus Lab			       |◉‿◉)つ
+ o-O				    |  Department of Genetics and Biochemistry |
+o---O				    |  Clemson University		       |
+O---o			    .'✧     |					       |
+				    |  Last rev: 2022-09-01		       |
+				    +------------------------------------------+
+			 , ⌒ *: ﾟ･✧* ･ﾟ✧ - *			  ─=≡Σ((( つ◕ل◕)つ
+    ╰( ° ʖ ° )つ──☆*:・^'
+
+Processing your input table:
+
+		ac  ...  searchChildInteractors
+0     EBI-20810732  ... 		    NaN
+1     EBI-20810894  ... 		    NaN
+2     EBI-20810742  ... 		    NaN
+3     EBI-20810752  ... 		    NaN
+4     EBI-20810762  ... 		    NaN
+...	       ...  ... 		    ...
+1139  EBI-15934312  ... 		    NaN
+1140  EBI-34578129  ... 		    NaN
+1141  EBI-34576187  ... 		    NaN
+1142  EBI-34576269  ... 		    NaN
+1143  EBI-34576210  ... 		    NaN
+
+[1144 rows x 99 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+								 \   ,'|`-.   /
+								  \,' _|_  ','
+								  /'.' | `,' \
+							      -._/_/_'.|,'_\__\_,-
+								 | | ,-*." |  |
+							      ___|,+' /|\`.|  |
+			[  I n t e r a c t o r s  ]		 \  \/ | \/`. |___
+								  \ /`.|,'\  /
+								   Y.  |   \/
+								   | `.|_,'
+								   |
+								   |
+		  Network spun. 				__ |
+								__\|,-
+								,-`=--.
+								 /=8\
+
+
+
+     ...image saved as "troubleshooting_gp70_23_interactors.png" with  684  total nodes.
+
+     Summary file saved as "troubleshooting_gp70_23_interactors_NETWORK_SUMMARY.txt"
+
+     Graph exchange XML file saved as "troubleshooting_gp70_23_interactors.gexf  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o	 ___|			    _ \   |
+O---o	|	_ \  __ \    _ \   |   |  __ \	  _ \  __ \    _ \   |
+ O-o	|   |	__/  |	 |  (	|  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|	_| \___/  _|	 _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O	High Performance Computing Genomic Network Analysis    |  Version 7.1  |    ✧ - ･ﾟ*
+O---o				    +------------------------------------------+
+ O-o			 (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane	       |
+  O				    |  Feltus Lab			       |◉‿◉)つ
+ o-O				    |  Department of Genetics and Biochemistry |
+o---O				    |  Clemson University		       |
+O---o			    .'✧     |					       |
+				    |  Last rev: 2022-09-01		       |
+				    +------------------------------------------+
+			 , ⌒ *: ﾟ･✧* ･ﾟ✧ - *			  ─=≡Σ((( つ◕ل◕)つ
+    ╰( ° ʖ ° )つ──☆*:・^'
+
+Processing your input table:
+
+		ac  ...  searchChildInteractors
+0     EBI-20810732  ... 		    NaN
+1     EBI-20810894  ... 		    NaN
+2     EBI-20810742  ... 		    NaN
+3     EBI-20810752  ... 		    NaN
+4     EBI-20810762  ... 		    NaN
+...	       ...  ... 		    ...
+1139  EBI-15934312  ... 		    NaN
+1140  EBI-34578129  ... 		    NaN
+1141  EBI-34576187  ... 		    NaN
+1142  EBI-34576269  ... 		    NaN
+1143  EBI-34576210  ... 		    NaN
+
+[1144 rows x 99 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Creating labels... ✔
+Constructing network visualization... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+
+     ...image saved as "troubleshooting_gp70_23_omim_genes_interactions.png" with  3  total nodes.
+
+     Summary file saved as "troubleshooting_gp70_23_omim_genes_interactions_NETWORK_SUMMARY.txt"
+
+     Graph exchange XML file saved as "troubleshooting_gp70_23_omim_genes_interactions.gexf  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o	 ___|			    _ \   |
+O---o	|	_ \  __ \    _ \   |   |  __ \	  _ \  __ \    _ \   |
+ O-o	|   |	__/  |	 |  (	|  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|	_| \___/  _|	 _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O	High Performance Computing Genomic Network Analysis    |  Version 7.1  |    ✧ - ･ﾟ*
+O---o				    +------------------------------------------+
+ O-o			 (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane	       |
+  O				    |  Feltus Lab			       |◉‿◉)つ
+ o-O				    |  Department of Genetics and Biochemistry |
+o---O				    |  Clemson University		       |
+O---o			    .'✧     |					       |
+				    |  Last rev: 2022-09-01		       |
+				    +------------------------------------------+
+			 , ⌒ *: ﾟ･✧* ･ﾟ✧ - *			  ─=≡Σ((( つ◕ل◕)つ
+    ╰( ° ʖ ° )つ──☆*:・^'
+
+Processing your input table:
+
+				       Superphenotype  ... Parenthetical
+0					      CTRCT34  ...	     NaN
+1	  ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2  ...	     NaN
+2						RHYNS  ...	     NaN
+3						  HRZ  ...	     NaN
+4						  CSB  ...	     NaN
+5						DEE45  ...	     NaN
+6						 CIAT  ...	     NaN
+7						PITA5  ...	     NaN
+8					      GIKANIS  ...	     NaN
+9						  BOS  ...	     NaN
+10						  BOS  ...	     NaN
+11						 MONA  ...	     NaN
+12						MRD34  ...	     NaN
+13						IMD13  ...	     NaN
+14						 RP58  ...	     NaN
+15						ISDNA  ...	     NaN
+16  HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-ME...  ...	     NaN
+17						 DBA8  ...	     NaN
+18					       HMSN2C  ...	     NaN
+19						 STL4  ...	     NaN
+20		    VENTRICULAR TACHYCARDIA, FAMILIAL  ...	     NaN
+21					      CTRCT34  ...	     NaN
+22	  ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2  ...	     NaN
+23						RHYNS  ...	     NaN
+24						  HRZ  ...	     NaN
+25						  CSB  ...	     NaN
+26						DEE45  ...	     NaN
+27						 CIAT  ...	     NaN
+28						PITA5  ...	     NaN
+29					      GIKANIS  ...	     NaN
+30						  BOS  ...	     NaN
+31						  BOS  ...	     NaN
+32						 MONA  ...	     NaN
+33						MRD34  ...	     NaN
+34						IMD13  ...	     NaN
+35						 RP58  ...	     NaN
+36						ISDNA  ...	     NaN
+37  HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-ME...  ...	     NaN
+38						 DBA8  ...	     NaN
+39					       HMSN2C  ...	     NaN
+40						 STL4  ...	     NaN
+41		    VENTRICULAR TACHYCARDIA, FAMILIAL  ...	     NaN
+42		HYPERTHYROIDISM, FAMILIAL GESTATIONAL  ...	     NaN
+43					      MTDPS19  ...	     NaN
+44						 NYS6  ...	     NaN
+45						FCAS3  ...	     NaN
+46		HYPERTHYROIDISM, FAMILIAL GESTATIONAL  ...	     NaN
+47					      MTDPS19  ...	     NaN
+48						 NYS6  ...	     NaN
+49						FCAS3  ...	     NaN
+
+[50 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+								 \   ,'|`-.   /
+								  \,' _|_  ','
+								  /'.' | `,' \
+							      -._/_/_'.|,'_\__\_,-
+								 | | ,-*." |  |
+							      ___|,+' /|\`.|  |
+	     [	O M I M  ]					 \  \/ | \/`. |___
+								  \ /`.|,'\  /
+								   Y.  |   \/
+								   | `.|_,'
+								   |
+								   |
+		  Network spun. 				__ |
+								__\|,-
+								,-`=--.
+								 /=8\
+
+
+
+     ...image saved as "troubleshooting_gp70_23_genes.png" with  48  total nodes.
+
+     Summary file saved as "troubleshooting_gp70_23_genes_NETWORK_SUMMARY.txt"
+
+     Graph exchange XML file saved as "troubleshooting_gp70_23_genes.gexf  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o	 ___|			    _ \   |
+O---o	|	_ \  __ \    _ \   |   |  __ \	  _ \  __ \    _ \   |
+ O-o	|   |	__/  |	 |  (	|  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|	_| \___/  _|	 _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O	High Performance Computing Genomic Network Analysis    |  Version 7.1  |    ✧ - ･ﾟ*
+O---o				    +------------------------------------------+
+ O-o			 (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane	       |
+  O				    |  Feltus Lab			       |◉‿◉)つ
+ o-O				    |  Department of Genetics and Biochemistry |
+o---O				    |  Clemson University		       |
+O---o			    .'✧     |					       |
+				    |  Last rev: 2022-09-01		       |
+				    +------------------------------------------+
+			 , ⌒ *: ﾟ･✧* ･ﾟ✧ - *			  ─=≡Σ((( つ◕ل◕)つ
+    ╰( ° ʖ ° )つ──☆*:・^'
+
+Processing your input table:
+
+    Superphenotype  ...       Parenthetical
+0	     RHYNS  ... 		NaN
+1	     RHYNS  ... 		NaN
+2	     RHYNS  ... 		NaN
+3	     RHYNS  ... 		NaN
+4	     RHYNS  ... 		NaN
+..	       ...  ... 		...
+429	     FCAS3  ...  (in some patients)
+430	     FCAS3  ... 		NaN
+431	     FCAS3  ... 		NaN
+432	     FCAS3  ... 		NaN
+433	     FCAS3  ...  (in some patients)
+
+[434 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+								 \   ,'|`-.   /
+								  \,' _|_  ','
+								  /'.' | `,' \
+							      -._/_/_'.|,'_\__\_,-
+								 | | ,-*." |  |
+							      ___|,+' /|\`.|  |
+	     [	O M I M  ]					 \  \/ | \/`. |___
+								  \ /`.|,'\  /
+								   Y.  |   \/
+								   | `.|_,'
+								   |
+								   |
+		  Network spun. 				__ |
+								__\|,-
+								,-`=--.
+								 /=8\
+
+
+
+     ...image saved as "troubleshooting_gp70_23_clinical-features.png" with  412  total nodes.
+
+     Summary file saved as "troubleshooting_gp70_23_clinical-features_NETWORK_SUMMARY.txt"
+
+     Graph exchange XML file saved as "troubleshooting_gp70_23_clinical-features.gexf  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+			      d8,	 d8b
+			     `8P	 ?88					    d8P
+					  88b					 d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P	  |
+  88b	  d88	88P d88      d88 88b	 d88   88P d88	d88  88P88b	d88   88P  88b	  |
+  `?888P'd88'	88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+											  |
+  ----------------------------------------------------------------------------------------+
+							Ɇ₦Ø₱Ɇ₦Ø  v7.1
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed	 Time	 Time	  Time	Current
+				 Dload	Upload	 Total	 Spent	  Left	Speed
+100  1716  100	1503  100   213   2303	  326 --:--:-- --:--:-- --:--:--  2635
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed	 Time	 Time	  Time	Current
+				 Dload	Upload	 Total	 Spent	  Left	Speed
+100 6233k    0 6233k  100   142  5181k	  110 -0:00:01 -0:00:01 --:--:-- 6181k
+-------------------------------------------------------------------------------------
+
+	  Sorry, your enrichment analysis did not produce results meeting the
+		     minimum threshold for statistical significance.
+
+-------------------------------------------------------------------------------------
+
+			      d8,	 d8b
+			     `8P	 ?88					    d8P
+					  88b					 d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P	  |
+  88b	  d88	88P d88      d88 88b	 d88   88P d88	d88  88P88b	d88   88P  88b	  |
+  `?888P'd88'	88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+											  |
+  ----------------------------------------------------------------------------------------+
+							Ɇ₦Ø₱Ɇ₦Ø  v7.1
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed	 Time	 Time	  Time	Current
+				 Dload	Upload	 Total	 Spent	  Left	Speed
+100 47790    0 42108  100  5682  55705	 7516 --:--:-- --:--:-- --:--:-- 63214
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed	 Time	 Time	  Time	Current
+				 Dload	Upload	 Total	 Spent	  Left	Speed
+100 2492k    0 2489k  100  3757   280k	 1422 -0:00:08 -0:00:08 --:--:--  597k
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Your output table:
+			  Category  ... 					     Genes
+0		       Interaction  ...  [{'Entrez': 1026, 'Symbol': 'CDKN1A'}, {'Entre...
+1		       Interaction  ...  [{'Entrez': 91147, 'Symbol': 'TMEM67'}, {'Entr...
+2			    Pubmed  ...  [{'Entrez': 55299, 'Symbol': 'BRIX1'}, {'Entre...
+3			    Pubmed  ...  [{'Entrez': 6166, 'Symbol': 'RPL36AL'}, {'Entr...
+4		       Interaction  ...  [{'Entrez': 7205, 'Symbol': 'TRIP6'}, {'Entrez...
+..			       ...  ... 					       ...
+773  GeneOntologyBiologicalProcess  ...  [{'Entrez': 1026, 'Symbol': 'CDKN1A'}, {'Entre...
+774			   Disease  ...  [{'Entrez': 2064, 'Symbol': 'ERBB2'}, {'Entrez...
+775			      Drug  ...  [{'Entrez': 1026, 'Symbol': 'CDKN1A'}, {'Entre...
+776  GeneOntologyCellularComponent  ...  [{'Entrez': 6184, 'Symbol': 'RPN1'}, {'Entrez'...
+777  GeneOntologyCellularComponent  ...  [{'Entrez': 6184, 'Symbol': 'RPN1'}, {'Entrez'...
+
+[778 rows x 14 columns]
+
+     * Your enrichment analysis was saved as "troubleshooting_gp70_23_interactors_enrichment.csv"
+     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6
+
+-------------------------------------------------------------------------------------
+
+			Thank you for using Ɇ₦Ø₱Ɇ₦Ø    ❤
+
+-------------------------------------------------------------------------------------
+

@@ -1,0 +1,341 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-03 20:09:32.335924
+
+Total Nodes:  947
+Total Edges:  1359
+
+             Approximate node connectivity:   2.870E+00
+     Network diameter of largest component:   6
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                            EDSMC1           73
+                                           EDSCLL2           56
+                                              OI20           49
+                                          EDSKSCL2           47
+                                              HPPI           47
+                                           EDSSPD1           46
+                                              OI13           45
+                                            EDSPD1           44
+                                            EDSMC2           42
+                                          EDSKSCL1           42
+                                           EDSSPD3           42
+                                          EDSDERMS           40
+                                               OI7           36
+                                               OI8           34
+                                           EDSSPD2           34
+                                          EDSARTH2           34
+                                              OI10           33
+                                           EDSVASC           33
+                                            EDSCL1           32
+                               Autosomal recessive           31
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                               Autosomal recessive    2.910E-01
+                                            EDSMC1    1.171E-01
+                                         Scoliosis    9.237E-02
+                                           EDSCLL2    9.190E-02
+                                      Blue sclerae    7.844E-02
+                                          EDSKSCL2    7.840E-02
+                                              HPPI    7.620E-02
+                                              OI20    7.354E-02
+                                            EDSPD1    7.253E-02
+                                              OI13    6.735E-02
+                                           EDSSPD1    6.383E-02
+                                           EDSSPD3    6.369E-02
+                                          EDSDERMS    6.113E-02
+                                            EDSMC2    5.861E-02
+                                          EDSKSCL1    5.652E-02
+                                     Short stature    5.612E-02
+                                           EDSVASC    4.963E-02
+                                Autosomal dominant    4.739E-02
+                                               OI7    4.738E-02
+                                           EDSSPD2    4.669E-02
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                               Autosomal recessive    2.952E-01
+                                         Scoliosis    1.759E-01
+                                     Wormian bones    1.349E-01
+                                              OI21    1.280E-01
+                                               OI8    1.209E-01
+                                     Platyspondyly    8.495E-02
+                                              OI14    7.616E-02
+                                Autosomal dominant    7.578E-02
+                                               OI3    7.151E-02
+                                          Kyphosis    6.812E-02
+
+CLASS 1:
+-------
+                                            EDSCL1    1.093E-01
+                             Mitral valve prolapse    6.620E-02
+                                           EDSVASC    6.180E-02
+                                            EDSCLL    6.106E-02
+                               Joint hypermobility    5.521E-02
+                           Molluscoid pseudotumors    2.870E-02
+                             Cigarette-paper scars    2.610E-02
+                                Poor wound healing    2.244E-02
+                                    Osteoarthritis    2.079E-02
+                                         Thin lips    1.807E-02
+
+CLASS 2:
+-------
+                                              OI20    1.514E-01
+                                              OI12    8.488E-02
+                                Midface hypoplasia    6.648E-02
+                                High-arched palate    6.604E-02
+                                              OI19    4.853E-02
+                      No dentinogenesis imperfecta    4.193E-02
+                                  Pectus carinatum    4.036E-02
+                                Multiple fractures    2.384E-02
+                            Depressed nasal bridge    2.126E-02
+                              Soft calvarial bones    2.034E-02
+
+CLASS 3:
+-------
+                                           EDSSPD1    1.865E-01
+                                           EDSSPD3    1.311E-01
+                             Delayed wound healing    8.098E-02
+                                        Pes planus    7.857E-02
+                              Broad, flat forehead    3.807E-02
+                                 Failure to thrive    3.417E-02
+                               Talipes equinovarus    3.003E-02
+                                      Low-set ears    2.917E-02
+                                       Bifid uvula    2.743E-02
+                                        Coxa valga    2.716E-02
+
+CLASS 4:
+-------
+                                          EDSKSCL2    9.844E-02
+                                            BTHLM2    4.108E-02
+                                   Hip dislocation    3.299E-02
+                     Hypermobility of small joints    3.047E-02
+                         Delayed motor development    2.598E-02
+                       Kyphoscoliosis, progressive    2.157E-02
+                                 Atrophic scarring    1.586E-02
+                             Hypertrophic scarring    1.205E-02
+                         Bluish sclerae in infancy    8.500E-03
+                  Insufficiency of tricuspid valve    8.500E-03
+
+CLASS 5:
+-------
+                                      Blue sclerae    1.842E-01
+                                          EDSKSCL1    1.613E-01
+                                              BCS1    1.056E-01
+                                      Joint laxity    9.118E-02
+                                            Myopia    8.013E-02
+                                              BCS2    6.027E-02
+                                  Epicanthal folds    4.445E-02
+                                       Keratoconus    3.359E-02
+                                      Macrocephaly    2.522E-02
+                           Excessive wrinkled skin    2.305E-02
+
+CLASS 6:
+-------
+                                            EDSMC1    2.545E-01
+                                       Microcornea    3.590E-02
+                                Retinal detachment    3.590E-02
+                                          Glaucoma    3.590E-02
+                      Microretrognathia in infancy    2.197E-02
+                   Protruding jaw from adolescence    2.197E-02
+                 Facial asymmetry from adolescence    2.197E-02
+                          Low-set and rotated ears    2.197E-02
+                                Hearing impairment    2.197E-02
+                           Eye anomalies, variable    2.197E-02
+
+CLASS 7:
+-------
+                                     Short stature    1.324E-01
+                                               OI6    1.088E-01
+                                        Osteopenia    9.196E-02
+                                              OI15    8.887E-02
+                                              OI16    8.423E-02
+                       Bowing of upper extremities    2.434E-02
+                       Bowing of lower extremities    2.434E-02
+                   Shortening of upper extremities    1.707E-02
+                   Shortening of lower extremities    1.707E-02
+                 Multiple fractures of extremities    1.495E-02
+
+CLASS 8:
+-------
+                                              HPPI    8.117E-02
+                                              HPPC    5.132E-02
+                                      Constipation    2.898E-02
+                                     Dental caries    1.548E-02
+                                   Rachitic rosary    1.144E-02
+     Skin dimple over apex of long bone angulation    1.144E-02
+                                          Seizures    1.144E-02
+                            Phosphoethanolaminuria    1.144E-02
+ Elevated plasma and urine inorganic pyrophosphate    1.144E-02
+                                        Short ribs    7.009E-03
+
+CLASS 9:
+-------
+                                         Hypotonia    1.006E-01
+                                          EDSARTH2    9.994E-02
+                                             EDSCV    9.171E-02
+                                 Easy bruisability    8.923E-02
+                                          EDSARTH1    8.377E-02
+                              Hyperextensible skin    6.922E-02
+                                    Atrophic scars    4.091E-02
+                   Delayed gross motor development    4.090E-02
+                                         Fractures    4.077E-02
+                                         Soft skin    3.649E-02
+
+CLASS 10:
+-------
+                                   Inguinal hernia    9.113E-02
+                                            EDSPD1    6.680E-02
+                                            EDSPD2    5.329E-02
+                                     Easy bruising    3.023E-02
+                                        Joint pain    1.691E-02
+                Prominent subcutaneous vasculature    1.037E-02
+                       Pretibial hyperpigmentation    1.037E-02
+                                      Tall stature    5.768E-03
+                        Arm span wider than height    5.768E-03
+                       Acrogeric facial appearance    5.768E-03
+
+CLASS 11:
+-------
+                                           EDSCLL2    1.315E-01
+                                    Cryptorchidism    4.640E-02
+                                 Severe osteopenia    2.179E-02
+                                     Thin eyebrows    1.136E-02
+                                  Bilateral ptosis    1.136E-02
+                              Klippel-Feil anomaly    1.136E-02
+                                Thoracic scoliosis    1.136E-02
+                     Loss of normal lordotic curve    1.136E-02
+                                   Facet arthrosis    1.136E-02
+                              Degenerative changes    1.136E-02
+
+CLASS 12:
+-------
+                                               OI7    1.323E-01
+                   Vertebral compression fractures    6.896E-02
+                                  Pectus excavatum    6.602E-02
+                                              OI17    6.567E-02
+                                     Long philtrum    5.844E-02
+                                      Osteoporosis    3.096E-02
+                            Multiple rib fractures    2.450E-02
+                                        Rhizomelia    2.450E-02
+                                         Coxa vara    2.248E-02
+                  Externally rotated/abducted legs    2.186E-02
+
+CLASS 13:
+-------
+                                              OI10    1.208E-01
+                                              OI18    9.439E-02
+                                  Umbilical hernia    8.872E-02
+                                      Micrognathia    5.541E-02
+                              Bowing of long bones    4.574E-02
+                                   Triangular face    3.999E-02
+                                      Narrow chest    3.796E-02
+                         Joint laxity, generalized    3.512E-02
+                                      Speech delay    2.689E-02
+                                       Blue sclera    2.511E-02
+
+CLASS 14:
+-------
+                                              OI11    1.234E-01
+                                               OI5    5.205E-02
+                                Bulbous metaphyses    2.109E-02
+                               Protrusio acetabuli    1.683E-02
+                               Birth length normal    1.515E-02
+                               Birth weight normal    1.515E-02
+                 Moderate to severe bone fragility    1.515E-02
+      Moderately deforming osteogenesis imperfecta    1.515E-02
+                            Wedge-shaped vertebrae    1.515E-02
+                               Biconcave vertebrae    1.515E-02
+
+CLASS 15:
+-------
+                                              OI13    1.475E-01
+                                    Prominent ears    6.008E-02
+                               Vertebral fractures    3.146E-02
+                           Wide palpebral fissures    1.273E-02
+                                 Faint blue sclera    1.273E-02
+                                Deformed clavicles    1.273E-02
+                            Increased bone density    1.273E-02
+                            Decreased bone density    1.273E-02
+                          Osteoporosis, borderline    1.273E-02
+                                Prenatal fractures    1.273E-02
+
+CLASS 16:
+-------
+                                          EDSDERMS    1.386E-01
+                   Downslanting palpebral fissures    5.758E-02
+                    Premature rupture of membranes    2.590E-02
+                                        Hypodontia    2.330E-02
+                                 Gingival bleeding    1.774E-02
+                                    Skin fragility    1.657E-02
+                                  Blepharochalasis    1.197E-02
+                                     Puffy eyelids    1.197E-02
+                             Neonatal pneumothorax    1.197E-02
+                              Joint laxity, marked    1.197E-02
+
+CLASS 17:
+-------
+                                            EDSMC2    1.426E-01
+                                    Arachnodactyly    6.671E-02
+                                     Brachycephaly    5.801E-02
+                                     Hypertelorism    5.038E-02
+                                       Small mouth    2.841E-02
+                                   Adducted thumbs    2.538E-02
+                                   Frontal bossing    2.291E-02
+                                       Telecanthus    1.231E-02
+                                        Short nose    1.231E-02
+                              Patent foramen ovale    1.231E-02
+
+CLASS 18:
+-------
+                                           EDSSPD2    1.096E-01
+                                      Cleft palate    4.754E-02
+                                    Prominent eyes    3.864E-02
+                                         Proptosis    3.576E-02
+                                        Low weight    3.325E-02
+                                    Kyphoscoliosis    3.285E-02
+                                       Sparse hair    2.253E-02
+                                          Clubfeet    1.809E-02
+                               Developmental delay    1.714E-02
+                                Large joint laxity    9.463E-03
+
+CLASS 19:
+-------
+                                              HPPA    3.606E-02
+                               Recurrent fractures    3.114E-03
+                              Pathologic fractures    3.114E-03
+                                      Osteomalacia    3.114E-03
+                                           Rickets    3.114E-03
+                         Long bone pseudofractures    3.114E-03
+                 Calcium pyrophosphate arthropathy    3.114E-03
+                                 Chondrocalcinosis    3.114E-03
+                   Premature loss of primary teeth    3.114E-03
+                 Premature loss of secondary teeth    3.114E-03

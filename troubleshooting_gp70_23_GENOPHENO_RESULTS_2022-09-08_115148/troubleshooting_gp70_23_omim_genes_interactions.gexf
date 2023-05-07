@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-09-08">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="degree" type="long" />
+      <attribute id="1" title="betweenness" type="double" />
+      <attribute id="2" title="eigenvector" type="double" />
+      <attribute id="3" title="modularity" type="long" />
+    </attributes>
+    <nodes>
+      <node id="CERT1" label="CERT1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.5773502691896257" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="ZNF513" label="ZNF513">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.5773502691896257" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="TRPV4" label="TRPV4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.5773502691896257" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="CERT1" target="CERT1" id="0" />
+      <edge source="ZNF513" target="ZNF513" id="1" />
+      <edge source="TRPV4" target="TRPV4" id="2" />
+    </edges>
+  </graph>
+</gexf>

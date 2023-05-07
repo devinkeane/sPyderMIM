@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-09-03">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="degree" type="long" />
+      <attribute id="1" title="betweenness" type="double" />
+      <attribute id="2" title="eigenvector" type="double" />
+      <attribute id="3" title="modularity" type="long" />
+    </attributes>
+    <nodes>
+      <node id="COL1A1" label="COL1A1">
+        <attvalues>
+          <attvalue for="0" value="9" />
+          <attvalue for="1" value="0.6190476190476191" />
+          <attvalue for="2" value="0.5993992198985411" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="COL1A2" label="COL1A2">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.12380952380952381" />
+          <attvalue for="2" value="0.284168125123691" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="MESD" label="MESD">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08041949361550281" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="COL5A1" label="COL5A1">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.2666666666666667" />
+          <attvalue for="2" value="0.324309690721794" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="CRTAP" label="CRTAP">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.23658198212243445" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="PLOD1" label="PLOD1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.16962955009527453" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="FKBP10" label="FKBP10">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.16962955009527453" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="PPIB" label="PPIB">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.23658198212243445" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="SERPINH1" label="SERPINH1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.23658198212243445" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="P3H1" label="P3H1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.23658198212243445" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="SPARC" label="SPARC">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0761904761904762" />
+          <attvalue for="2" value="0.22395750116051638" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="BMP1" label="BMP1">
+        <attvalues>
+          <attvalue for="0" value="6" />
+          <attvalue for="1" value="0.2571428571428572" />
+          <attvalue for="2" value="0.2624009154655479" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="COL3A1" label="COL3A1">
+        <attvalues>
+          <attvalue for="0" value="4" />
+          <attvalue for="1" value="0.028571428571428574" />
+          <attvalue for="2" value="0.19196871009643032" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="C1R" label="C1R">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.07426064701101669" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="C1S" label="C1S">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.07426064701101669" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="CREB3L1" label="CREB3L1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.476980015230071e-16" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="COL1A1" target="COL1A2" id="0" />
+      <edge source="COL1A1" target="CRTAP" id="1" />
+      <edge source="COL1A1" target="PLOD1" id="2" />
+      <edge source="COL1A1" target="FKBP10" id="3" />
+      <edge source="COL1A1" target="PPIB" id="4" />
+      <edge source="COL1A1" target="SERPINH1" id="5" />
+      <edge source="COL1A1" target="COL5A1" id="6" />
+      <edge source="COL1A1" target="P3H1" id="7" />
+      <edge source="COL1A1" target="SPARC" id="8" />
+      <edge source="COL1A2" target="MESD" id="9" />
+      <edge source="COL1A2" target="COL5A1" id="10" />
+      <edge source="COL5A1" target="BMP1" id="11" />
+      <edge source="CRTAP" target="P3H1" id="12" />
+      <edge source="PPIB" target="SERPINH1" id="13" />
+      <edge source="SPARC" target="COL3A1" id="14" />
+      <edge source="BMP1" target="BMP1" id="15" />
+      <edge source="BMP1" target="COL3A1" id="16" />
+      <edge source="BMP1" target="C1R" id="17" />
+      <edge source="BMP1" target="C1S" id="18" />
+      <edge source="COL3A1" target="COL3A1" id="19" />
+      <edge source="CREB3L1" target="CREB3L1" id="20" />
+    </edges>
+  </graph>
+</gexf>

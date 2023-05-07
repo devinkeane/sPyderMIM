@@ -1,0 +1,1905 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="OI2">
+      <data key="d0">10</data>
+      <data key="d1">0.019964096727680705</data>
+      <data key="d2">0.0635435849935605</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Autosomal dominant">
+      <data key="d0">14</data>
+      <data key="d1">0.034880741055378306</data>
+      <data key="d2">0.09128822600434992</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Short limb dwarfism">
+      <data key="d0">3</data>
+      <data key="d1">0.0011927637207811757</data>
+      <data key="d2">0.018468601182435682</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Blue sclerae">
+      <data key="d0">18</data>
+      <data key="d1">0.07000644351734538</data>
+      <data key="d2">0.19955703782232376</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Beaded ribs">
+      <data key="d0">2</data>
+      <data key="d1">0.0003101172144191858</data>
+      <data key="d2">0.014781818192904339</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Numerous multiple fractures present at birth">
+      <data key="d0">2</data>
+      <data key="d1">0.00011588637547876456</data>
+      <data key="d2">0.011681863743829053</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Wormian bones">
+      <data key="d0">16</data>
+      <data key="d1">0.049315422405551534</data>
+      <data key="d2">0.1601390621011877</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Soft calvaria">
+      <data key="d0">2</data>
+      <data key="d1">0.00021203621165611042</data>
+      <data key="d2">0.017553466112408465</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Platyspondyly">
+      <data key="d0">9</data>
+      <data key="d1">0.015072946225151533</data>
+      <data key="d2">0.09499677065551394</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Tibial bowing">
+      <data key="d0">4</data>
+      <data key="d1">0.0015987591095667872</data>
+      <data key="d2">0.034919345293285046</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Thin skin">
+      <data key="d0">4</data>
+      <data key="d1">0.0018450256759104703</data>
+      <data key="d2">0.03432279832112399</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI13">
+      <data key="d0">19</data>
+      <data key="d1">0.04326988949462817</data>
+      <data key="d2">0.13975677598777825</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Autosomal recessive">
+      <data key="d0">31</data>
+      <data key="d1">0.21851760849463092</data>
+      <data key="d2">0.32315326346961193</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Short stature">
+      <data key="d0">14</data>
+      <data key="d1">0.05527243405840584</data>
+      <data key="d2">0.1495281029053149</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Low weight">
+      <data key="d0">3</data>
+      <data key="d1">0.0007316382318291008</data>
+      <data key="d2">0.03679941070900005</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Long eyelashes">
+      <data key="d0">2</data>
+      <data key="d1">0.0001764165587989845</data>
+      <data key="d2">0.022981098891604417</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Pectus carinatum">
+      <data key="d0">4</data>
+      <data key="d1">0.0016248148305353</data>
+      <data key="d2">0.043838747782990566</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Joint hypermobility">
+      <data key="d0">7</data>
+      <data key="d1">0.008235135425369187</data>
+      <data key="d2">0.06376343967302575</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Vertebral fractures">
+      <data key="d0">3</data>
+      <data key="d1">0.0007453145523977516</data>
+      <data key="d2">0.03551416592264762</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Kyphoscoliosis">
+      <data key="d0">3</data>
+      <data key="d1">0.0013758245754702035</data>
+      <data key="d2">0.036703062142983</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Triangular face">
+      <data key="d0">4</data>
+      <data key="d1">0.001975862388688034</data>
+      <data key="d2">0.04610807682378693</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Prominent ears">
+      <data key="d0">4</data>
+      <data key="d1">0.0023832015672482837</data>
+      <data key="d2">0.05554420455500321</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Long philtrum">
+      <data key="d0">4</data>
+      <data key="d1">0.0033066663129531315</data>
+      <data key="d2">0.056117697267794385</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Thin lips">
+      <data key="d0">2</data>
+      <data key="d1">0.0005201797365493525</data>
+      <data key="d2">0.019069422926665622</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="No dentinogenesis imperfecta">
+      <data key="d0">4</data>
+      <data key="d1">0.0019062813698635039</data>
+      <data key="d2">0.0478262195884032</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Umbilical hernia">
+      <data key="d0">8</data>
+      <data key="d1">0.010161225188821708</data>
+      <data key="d2">0.08619977991781581</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Arachnodactyly">
+      <data key="d0">5</data>
+      <data key="d1">0.005593171216718637</data>
+      <data key="d2">0.06350671414654159</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Hypotonia">
+      <data key="d0">9</data>
+      <data key="d1">0.019523140468630983</data>
+      <data key="d2">0.10343322047928365</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Delayed gross motor development">
+      <data key="d0">4</data>
+      <data key="d1">0.0026207486658134473</data>
+      <data key="d2">0.045320187739548476</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI18">
+      <data key="d0">11</data>
+      <data key="d1">0.01824578602117554</data>
+      <data key="d2">0.10533535876174396</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Thin ribs">
+      <data key="d0">6</data>
+      <data key="d1">0.003317653319153618</data>
+      <data key="d2">0.06561396425321915</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Codfish vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.0001964211326367778</data>
+      <data key="d2">0.017594078813985597</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Bowing of long bones">
+      <data key="d0">4</data>
+      <data key="d1">0.0013846317685926592</data>
+      <data key="d2">0.052615383396324475</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Joint laxity">
+      <data key="d0">9</data>
+      <data key="d1">0.017114161984868922</data>
+      <data key="d2">0.10518739969030086</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Micrognathia">
+      <data key="d0">6</data>
+      <data key="d1">0.004766780520243809</data>
+      <data key="d2">0.06047668930486178</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Speech delay">
+      <data key="d0">3</data>
+      <data key="d1">0.0009046950116658582</data>
+      <data key="d2">0.029911453089288106</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="OI8">
+      <data key="d0">19</data>
+      <data key="d1">0.05092853442216265</data>
+      <data key="d2">0.1342870798127084</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Proptosis">
+      <data key="d0">4</data>
+      <data key="d1">0.0031567973820371548</data>
+      <data key="d2">0.04210229751895775</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Bone fragility">
+      <data key="d0">2</data>
+      <data key="d1">9.858287611902244e-05</data>
+      <data key="d2">0.021243878093681536</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Severe osteopenia">
+      <data key="d0">2</data>
+      <data key="d1">0.0006675304429614933</data>
+      <data key="d2">0.02228763868844595</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Scoliosis">
+      <data key="d0">20</data>
+      <data key="d1">0.09177909876458076</data>
+      <data key="d2">0.20156905413486237</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Kyphosis">
+      <data key="d0">9</data>
+      <data key="d1">0.0149084724167179</data>
+      <data key="d2">0.08272410755055336</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Vertebral compression fractures">
+      <data key="d0">7</data>
+      <data key="d1">0.008996499537189992</data>
+      <data key="d2">0.08039534708888368</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Femoral bowing">
+      <data key="d0">2</data>
+      <data key="d1">9.858287611902244e-05</data>
+      <data key="d2">0.021243878093681536</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Bulbous metaphyses">
+      <data key="d0">2</data>
+      <data key="d1">0.0004037366016318551</data>
+      <data key="d2">0.02579446675187832</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Externally rotated/abducted legs">
+      <data key="d0">2</data>
+      <data key="d1">0.00024824363502471287</data>
+      <data key="d2">0.026250565074112248</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Open sutures">
+      <data key="d0">2</data>
+      <data key="d1">0.00024824363502471287</data>
+      <data key="d2">0.026250565074112248</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Round face">
+      <data key="d0">2</data>
+      <data key="d1">0.00024824363502471287</data>
+      <data key="d2">0.026250565074112248</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Short metacarpals">
+      <data key="d0">2</data>
+      <data key="d1">0.0004886146341789738</data>
+      <data key="d2">0.024258516132897506</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI16">
+      <data key="d0">12</data>
+      <data key="d1">0.030984265492510488</data>
+      <data key="d2">0.09410367954626413</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Rib fractures">
+      <data key="d0">2</data>
+      <data key="d1">0.0005265754852484426</data>
+      <data key="d2">0.015610382342286499</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Osteopenia">
+      <data key="d0">9</data>
+      <data key="d1">0.017556240405933496</data>
+      <data key="d2">0.10696338125509551</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Soft calvarial bones">
+      <data key="d0">2</data>
+      <data key="d1">0.00040451378418204136</data>
+      <data key="d2">0.021909270117251346</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Multiple fractures of extremities">
+      <data key="d0">2</data>
+      <data key="d1">0.0001579846200028824</data>
+      <data key="d2">0.01793412866818386</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Bowing of upper extremities">
+      <data key="d0">3</data>
+      <data key="d1">0.00046859893416491115</data>
+      <data key="d2">0.029529421491367856</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Bowing of lower extremities">
+      <data key="d0">3</data>
+      <data key="d1">0.00046859893416491115</data>
+      <data key="d2">0.029529421491367856</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Small joint hypermobility">
+      <data key="d0">2</data>
+      <data key="d1">0.00016488805980428479</data>
+      <data key="d2">0.014748833126823386</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI4">
+      <data key="d0">9</data>
+      <data key="d1">0.014240808658355997</data>
+      <data key="d2">0.0639470977531016</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Varying degree of multiple fractures">
+      <data key="d0">3</data>
+      <data key="d1">0.0005113853017510363</data>
+      <data key="d2">0.01874835621083177</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Biconcave flattened vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">5.1988071706533605e-05</data>
+      <data key="d2">0.013069114635813691</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Hearing loss">
+      <data key="d0">3</data>
+      <data key="d1">0.0008493416661289348</data>
+      <data key="d2">0.025033669458259633</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Otosclerosis">
+      <data key="d0">2</data>
+      <data key="d1">5.1988071706533605e-05</data>
+      <data key="d2">0.013069114635813691</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Dentinogenesis imperfecta">
+      <data key="d0">8</data>
+      <data key="d1">0.009934042748646574</data>
+      <data key="d2">0.07637185404411474</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI12">
+      <data key="d0">10</data>
+      <data key="d1">0.014148086441569407</data>
+      <data key="d2">0.0903463730596396</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Depressed nasal bridge">
+      <data key="d0">2</data>
+      <data key="d1">0.0003775485207916635</data>
+      <data key="d2">0.023859699672763843</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Midface hypoplasia">
+      <data key="d0">6</data>
+      <data key="d1">0.0058995694936615035</data>
+      <data key="d2">0.07303557237220654</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="High-arched palate">
+      <data key="d0">5</data>
+      <data key="d1">0.0035681714727010256</data>
+      <data key="d2">0.06060742263399479</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Delayed motor milestones">
+      <data key="d0">2</data>
+      <data key="d1">0.00018145977142481904</data>
+      <data key="d2">0.02110296962889853</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI10">
+      <data key="d0">16</data>
+      <data key="d1">0.031717523453322606</data>
+      <data key="d2">0.12886931139666155</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Blue sclera">
+      <data key="d0">3</data>
+      <data key="d1">0.0011626827882426272</data>
+      <data key="d2">0.027980670524391918</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Joint laxity, generalized">
+      <data key="d0">3</data>
+      <data key="d1">0.0016215670175729546</data>
+      <data key="d2">0.032255279350266744</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Open anterior fontanel">
+      <data key="d0">2</data>
+      <data key="d1">0.00038392460715286044</data>
+      <data key="d2">0.024747429668286976</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Prominent forehead">
+      <data key="d0">2</data>
+      <data key="d1">0.0002613092359455923</data>
+      <data key="d2">0.02247917787213772</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Narrow chest">
+      <data key="d0">3</data>
+      <data key="d1">0.00134861192261392</data>
+      <data key="d2">0.0430983482489348</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="OI11">
+      <data key="d0">19</data>
+      <data key="d1">0.06296978056016682</data>
+      <data key="d2">0.1408094658654154</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Birth length normal">
+      <data key="d0">2</data>
+      <data key="d1">0.00010418337162086989</data>
+      <data key="d2">0.0188822611791468</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Birth weight normal">
+      <data key="d0">2</data>
+      <data key="d1">0.00010418337162086989</data>
+      <data key="d2">0.0188822611791468</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Moderate to severe bone fragility">
+      <data key="d0">2</data>
+      <data key="d1">0.00010418337162086989</data>
+      <data key="d2">0.0188822611791468</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Moderately deforming osteogenesis imperfecta">
+      <data key="d0">2</data>
+      <data key="d1">0.00010418337162086989</data>
+      <data key="d2">0.0188822611791468</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Wedge-shaped vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.00010418337162086989</data>
+      <data key="d2">0.0188822611791468</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Biconcave vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.00010418337162086989</data>
+      <data key="d2">0.0188822611791468</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Protrusio acetabuli">
+      <data key="d0">2</data>
+      <data key="d1">0.0002972206278749274</data>
+      <data key="d2">0.020920313514507766</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Brachycephaly">
+      <data key="d0">4</data>
+      <data key="d1">0.003912971427038321</data>
+      <data key="d2">0.05564291017113406</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI17">
+      <data key="d0">10</data>
+      <data key="d1">0.01988449291258264</data>
+      <data key="d2">0.0741111547596458</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Osteoporosis">
+      <data key="d0">3</data>
+      <data key="d1">0.0014254117398783915</data>
+      <data key="d2">0.03203359365927719</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Joint hyperlaxity">
+      <data key="d0">2</data>
+      <data key="d1">0.00045615268073717294</data>
+      <data key="d2">0.019613023319115755</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Soft skin">
+      <data key="d0">5</data>
+      <data key="d1">0.0036178629788392426</data>
+      <data key="d2">0.040208004226268836</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Normal hearing">
+      <data key="d0">2</data>
+      <data key="d1">0.00038395513385574095</data>
+      <data key="d2">0.02060816089847273</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Normal teeth">
+      <data key="d0">3</data>
+      <data key="d1">0.0008369678919244949</data>
+      <data key="d2">0.022674579833323258</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Motor delay">
+      <data key="d0">2</data>
+      <data key="d1">0.0002748393268952004</data>
+      <data key="d2">0.02024841114225585</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="OI21">
+      <data key="d0">17</data>
+      <data key="d1">0.04076730718873034</data>
+      <data key="d2">0.1418370179347057</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Pectus excavatum">
+      <data key="d0">6</data>
+      <data key="d1">0.005943827179184828</data>
+      <data key="d2">0.06857626205267218</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Coxa vara">
+      <data key="d0">2</data>
+      <data key="d1">0.00035854386319031487</data>
+      <data key="d2">0.026958486096508423</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Coxa valga">
+      <data key="d0">2</data>
+      <data key="d1">0.0003211207548560168</data>
+      <data key="d2">0.03065514917143661</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Dental caries">
+      <data key="d0">2</data>
+      <data key="d1">0.00043821628660240696</data>
+      <data key="d2">0.018755372064134856</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Failure to thrive">
+      <data key="d0">3</data>
+      <data key="d1">0.0017475112838616718</data>
+      <data key="d2">0.03744188661004324</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="OI7">
+      <data key="d0">22</data>
+      <data key="d1">0.06912765335268974</data>
+      <data key="d2">0.14567372897058833</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Bluish sclerae">
+      <data key="d0">2</data>
+      <data key="d1">0.0006183516258454828</data>
+      <data key="d2">0.019338359501380728</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Multiple rib fractures">
+      <data key="d0">2</data>
+      <data key="d1">0.0005387665110379911</data>
+      <data key="d2">0.02674474313993412</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Multiple fractures present at birth">
+      <data key="d0">2</data>
+      <data key="d1">0.0005210074194673821</data>
+      <data key="d2">0.021376411836741695</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Rhizomelia">
+      <data key="d0">2</data>
+      <data key="d1">0.0005387665110379911</data>
+      <data key="d2">0.02674474313993412</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Micromelia">
+      <data key="d0">2</data>
+      <data key="d1">0.0009487222554367952</data>
+      <data key="d2">0.02044585536496928</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="Breech presentation">
+      <data key="d0">3</data>
+      <data key="d1">0.0013830825433554896</data>
+      <data key="d2">0.033211011330907585</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI14">
+      <data key="d0">10</data>
+      <data key="d1">0.017723643461135606</data>
+      <data key="d2">0.0922776922601113</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Multiple fractures">
+      <data key="d0">3</data>
+      <data key="d1">0.0006938349738420014</data>
+      <data key="d2">0.02664536842691218</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI9">
+      <data key="d0">6</data>
+      <data key="d1">0.012558530642926214</data>
+      <data key="d2">0.06104283867287387</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Bowing of limbs due to multiple fractures">
+      <data key="d0">2</data>
+      <data key="d1">0.00016391051325087468</data>
+      <data key="d2">0.013440984364983633</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI6">
+      <data key="d0">14</data>
+      <data key="d1">0.03746608722128315</data>
+      <data key="d2">0.12366314963816553</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Fractures">
+      <data key="d0">5</data>
+      <data key="d1">0.00566533653155153</data>
+      <data key="d2">0.04573216168860405</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Flattened vertebrae">
+      <data key="d0">2</data>
+      <data key="d1">0.0004203734600074105</data>
+      <data key="d2">0.017274534398202077</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Shortening of upper extremities">
+      <data key="d0">2</data>
+      <data key="d1">0.00010890094366435772</data>
+      <data key="d2">0.020705776587687987</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Shortening of lower extremities">
+      <data key="d0">2</data>
+      <data key="d1">0.00010890094366435772</data>
+      <data key="d2">0.020705776587687987</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI1">
+      <data key="d0">11</data>
+      <data key="d1">0.022311703126941078</data>
+      <data key="d2">0.07543427911156678</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Mitral valve prolapse">
+      <data key="d0">8</data>
+      <data key="d1">0.009172040585650739</data>
+      <data key="d2">0.0731231291613222</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Easy bruisability">
+      <data key="d0">11</data>
+      <data key="d1">0.01715757710616089</data>
+      <data key="d2">0.10216308610759832</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI15">
+      <data key="d0">13</data>
+      <data key="d1">0.02884313436579754</data>
+      <data key="d2">0.09716279995931329</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Developmental delay">
+      <data key="d0">2</data>
+      <data key="d1">0.0003326780657642633</data>
+      <data key="d2">0.019506212315360406</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI20">
+      <data key="d0">21</data>
+      <data key="d1">0.06126063076499323</data>
+      <data key="d2">0.139557461253543</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Prominent eyes">
+      <data key="d0">3</data>
+      <data key="d1">0.0013001826450657734</data>
+      <data key="d2">0.04083713476571873</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Generalized osteopenia">
+      <data key="d0">2</data>
+      <data key="d1">0.00018316521978271882</data>
+      <data key="d2">0.017992937480980242</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Kyphoscoliosis, progressive">
+      <data key="d0">2</data>
+      <data key="d1">0.0007597798173066867</data>
+      <data key="d2">0.02088386323583996</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Sparse hair">
+      <data key="d0">2</data>
+      <data key="d1">0.00043847230484607007</data>
+      <data key="d2">0.023481353764427886</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Low-set ears">
+      <data key="d0">2</data>
+      <data key="d1">0.00047590675272289287</data>
+      <data key="d2">0.030441406214862313</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Adducted thumbs">
+      <data key="d0">2</data>
+      <data key="d1">0.00042695235830630604</data>
+      <data key="d2">0.025749605560577146</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Cryptorchidism">
+      <data key="d0">3</data>
+      <data key="d1">0.0014261420738715998</data>
+      <data key="d2">0.03947210176069602</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="OI5">
+      <data key="d0">13</data>
+      <data key="d1">0.023904228008984448</data>
+      <data key="d2">0.060568793857565466</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="OI3">
+      <data key="d0">14</data>
+      <data key="d1">0.027482277971331414</data>
+      <data key="d2">0.08230450806167737</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Frontal bossing">
+      <data key="d0">3</data>
+      <data key="d1">0.002668303195696665</data>
+      <data key="d2">0.025837278151373804</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="EDSDERMS">
+      <data key="d0">17</data>
+      <data key="d1">0.04468531332286186</data>
+      <data key="d2">0.13471561811320204</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Epicanthal folds">
+      <data key="d0">4</data>
+      <data key="d1">0.001745170987367421</data>
+      <data key="d2">0.050239698222349034</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Downslanting palpebral fissures">
+      <data key="d0">4</data>
+      <data key="d1">0.0022541571719109587</data>
+      <data key="d2">0.053652963441187224</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Myopia">
+      <data key="d0">7</data>
+      <data key="d1">0.006803421826921611</data>
+      <data key="d2">0.08065340947418924</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Skin fragility">
+      <data key="d0">2</data>
+      <data key="d1">0.00033292530890876584</data>
+      <data key="d2">0.018134623310893654</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Normal wound healing">
+      <data key="d0">2</data>
+      <data key="d1">0.00014889846906616046</data>
+      <data key="d2">0.018512211417533387</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Premature rupture of membranes">
+      <data key="d0">2</data>
+      <data key="d1">0.0003360906440926306</data>
+      <data key="d2">0.02801998824907619</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Gingival bleeding">
+      <data key="d0">2</data>
+      <data key="d1">0.000451131956623685</data>
+      <data key="d2">0.018291404761244547</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hypodontia">
+      <data key="d0">2</data>
+      <data key="d1">0.00022730459937210284</data>
+      <data key="d2">0.024298698087753347</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Inguinal hernia">
+      <data key="d0">10</data>
+      <data key="d1">0.016092576400076417</data>
+      <data key="d2">0.09583007024203687</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSCLL">
+      <data key="d0">7</data>
+      <data key="d1">0.008930919801940109</data>
+      <data key="d2">0.06271608159056134</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hyperextensible skin">
+      <data key="d0">7</data>
+      <data key="d1">0.00790889481624335</data>
+      <data key="d2">0.07138839344578549</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Velvety skin">
+      <data key="d0">2</data>
+      <data key="d1">0.00010464443771769886</data>
+      <data key="d2">0.01677992546085267</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSVASC">
+      <data key="d0">12</data>
+      <data key="d1">0.020461724431975945</data>
+      <data key="d2">0.06361755330637314</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Keratoconus">
+      <data key="d0">4</data>
+      <data key="d1">0.0018250805179549179</data>
+      <data key="d2">0.038599023135630156</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Fragile skin">
+      <data key="d0">3</data>
+      <data key="d1">0.00047919179602721237</data>
+      <data key="d2">0.020345997107149717</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Cigarette-paper scars">
+      <data key="d0">3</data>
+      <data key="d1">0.0008637465518068237</data>
+      <data key="d2">0.028531521069740388</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Molluscoid pseudotumors">
+      <data key="d0">3</data>
+      <data key="d1">0.0008588496833846387</data>
+      <data key="d2">0.03225281123106323</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Acrogeria">
+      <data key="d0">2</data>
+      <data key="d1">0.00034009881939868177</data>
+      <data key="d2">0.01614160638044854</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Periodontal disease">
+      <data key="d0">2</data>
+      <data key="d1">0.00024991097230503396</data>
+      <data key="d2">0.011624884597306867</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="HPPC">
+      <data key="d0">10</data>
+      <data key="d1">0.027488106691678657</data>
+      <data key="d2">0.05818797647096297</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Rachitic rosary">
+      <data key="d0">2</data>
+      <data key="d1">0.0001248613206414024</data>
+      <data key="d2">0.012242741332595713</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Skin dimple over apex of long bone angulation">
+      <data key="d0">2</data>
+      <data key="d1">0.0001248613206414024</data>
+      <data key="d2">0.012242741332595713</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Seizures">
+      <data key="d0">2</data>
+      <data key="d1">0.0001248613206414024</data>
+      <data key="d2">0.012242741332595713</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Phosphoethanolaminuria">
+      <data key="d0">2</data>
+      <data key="d1">0.0001248613206414024</data>
+      <data key="d2">0.012242741332595713</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Elevated plasma and urine inorganic pyrophosphate">
+      <data key="d0">2</data>
+      <data key="d1">0.0001248613206414024</data>
+      <data key="d2">0.012242741332595713</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="EDSCV">
+      <data key="d0">13</data>
+      <data key="d1">0.019879042610675097</data>
+      <data key="d2">0.10264422252478958</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Genu recurvatum">
+      <data key="d0">2</data>
+      <data key="d1">0.0002663079711856619</data>
+      <data key="d2">0.02698023113276122</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Skin hyperextensibility">
+      <data key="d0">2</data>
+      <data key="d1">0.00014758041312040114</data>
+      <data key="d2">0.0205237932773951</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Atrophic scars">
+      <data key="d0">5</data>
+      <data key="d1">0.0027237570133138685</data>
+      <data key="d2">0.04453231073535078</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Delayed wound healing">
+      <data key="d0">6</data>
+      <data key="d1">0.00483580048749585</data>
+      <data key="d2">0.07769775701203936</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Pes planus">
+      <data key="d0">7</data>
+      <data key="d1">0.006872553141869465</data>
+      <data key="d2">0.08242943197326945</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI19">
+      <data key="d0">6</data>
+      <data key="d1">0.005849965143054801</data>
+      <data key="d2">0.0523362109520815</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="BCS2">
+      <data key="d0">6</data>
+      <data key="d1">0.008613705095595382</data>
+      <data key="d2">0.06319180110778305</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Keratoglobus">
+      <data key="d0">2</data>
+      <data key="d1">0.00010953834980593382</data>
+      <data key="d2">0.01724555505049165</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="EDSKSCL2">
+      <data key="d0">13</data>
+      <data key="d1">0.026335420629529115</data>
+      <data key="d2">0.08316777248824353</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hyperelastic skin">
+      <data key="d0">2</data>
+      <data key="d1">0.0002962537700419786</data>
+      <data key="d2">0.0194653070074164</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Easy bruising">
+      <data key="d0">4</data>
+      <data key="d1">0.0016035589779236274</data>
+      <data key="d2">0.028657199429892168</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hypertrophic scarring">
+      <data key="d0">2</data>
+      <data key="d1">0.00021262164776970053</data>
+      <data key="d2">0.01195835996535649</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Hypermobility of small joints">
+      <data key="d0">2</data>
+      <data key="d1">0.0003654466835110859</data>
+      <data key="d2">0.024488523028696692</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Delayed motor development">
+      <data key="d0">3</data>
+      <data key="d1">0.0008814500663487651</data>
+      <data key="d2">0.027346719111827237</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSSPD1">
+      <data key="d0">25</data>
+      <data key="d1">0.07375671388195928</data>
+      <data key="d2">0.18509843397425962</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Hypertelorism">
+      <data key="d0">3</data>
+      <data key="d1">0.0010432083465592439</data>
+      <data key="d2">0.04671004635472472</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Macrocephaly">
+      <data key="d0">2</data>
+      <data key="d1">0.000434247823672993</data>
+      <data key="d2">0.028676147828638976</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Broad, flat forehead">
+      <data key="d0">2</data>
+      <data key="d1">0.0003419168557170216</data>
+      <data key="d2">0.03404606600771904</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Small mouth">
+      <data key="d0">2</data>
+      <data key="d1">0.0004276816461692589</data>
+      <data key="d2">0.030019761348296516</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Bifid uvula">
+      <data key="d0">2</data>
+      <data key="d1">0.00032903113529924785</data>
+      <data key="d2">0.02902284998643875</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Cleft palate">
+      <data key="d0">3</data>
+      <data key="d1">0.0010909264949528822</data>
+      <data key="d2">0.04444179455857546</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Talipes equinovarus">
+      <data key="d0">2</data>
+      <data key="d1">0.0005698011796260869</data>
+      <data key="d2">0.03274414014776159</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSCLL2">
+      <data key="d0">16</data>
+      <data key="d1">0.030604334824187663</data>
+      <data key="d2">0.1034093406429317</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Osteoarthritis">
+      <data key="d0">2</data>
+      <data key="d1">0.00024736976664322215</data>
+      <data key="d2">0.020595534686621075</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hip dislocation">
+      <data key="d0">4</data>
+      <data key="d1">0.002358176172631093</data>
+      <data key="d2">0.034428539476421556</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Finger contractures">
+      <data key="d0">2</data>
+      <data key="d1">0.00024163870348078504</data>
+      <data key="d2">0.021363260525844266</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSMC2">
+      <data key="d0">21</data>
+      <data key="d1">0.053169383849619826</data>
+      <data key="d2">0.13506064232599393</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Joint pain">
+      <data key="d0">2</data>
+      <data key="d1">0.0005392697270510882</data>
+      <data key="d2">0.018166974555293886</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Atrophic scarring">
+      <data key="d0">2</data>
+      <data key="d1">0.0006103019860474606</data>
+      <data key="d2">0.016824102290093672</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSKSCL1">
+      <data key="d0">25</data>
+      <data key="d1">0.07112177734448315</data>
+      <data key="d2">0.1641159898948626</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Microcornea">
+      <data key="d0">2</data>
+      <data key="d1">0.00033628711928054334</data>
+      <data key="d2">0.032078644152898954</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Retinal detachment">
+      <data key="d0">2</data>
+      <data key="d1">0.00033628711928054334</data>
+      <data key="d2">0.032078644152898954</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Glaucoma">
+      <data key="d0">2</data>
+      <data key="d1">0.00033628711928054334</data>
+      <data key="d2">0.032078644152898954</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Excessive wrinkled skin">
+      <data key="d0">2</data>
+      <data key="d1">0.00023170779598451598</data>
+      <data key="d2">0.026708725973818886</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Bladder diverticula">
+      <data key="d0">2</data>
+      <data key="d1">0.00047670887476370413</data>
+      <data key="d2">0.02556485658825153</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Marfanoid habitus">
+      <data key="d0">2</data>
+      <data key="d1">0.00023170779598451598</data>
+      <data key="d2">0.026708725973818886</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSCL2">
+      <data key="d0">7</data>
+      <data key="d1">0.005663069164060779</data>
+      <data key="d2">0.0371304830035048</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Congenital hip dislocation">
+      <data key="d0">2</data>
+      <data key="d1">0.00037257802359181316</data>
+      <data key="d2">0.014801911849905371</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSSPD2">
+      <data key="d0">16</data>
+      <data key="d1">0.03472924254120542</data>
+      <data key="d2">0.1108698637441262</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Clubfeet">
+      <data key="d0">2</data>
+      <data key="d1">0.0003972387292760196</data>
+      <data key="d2">0.020572225992637198</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="HPPA">
+      <data key="d0">2</data>
+      <data key="d1">0.0005466595292854855</data>
+      <data key="d2">0.038859006479259536</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="BTHLM2">
+      <data key="d0">8</data>
+      <data key="d1">0.009836565353248571</data>
+      <data key="d2">0.04436746792015937</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="HPPI">
+      <data key="d0">15</data>
+      <data key="d1">0.04201856999929638</data>
+      <data key="d2">0.07238017531968802</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Constipation">
+      <data key="d0">2</data>
+      <data key="d1">0.0009349067525486279</data>
+      <data key="d2">0.023477022445034836</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSCL1">
+      <data key="d0">18</data>
+      <data key="d1">0.039134445615780396</data>
+      <data key="d2">0.11624088524114046</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Poor wound healing">
+      <data key="d0">3</data>
+      <data key="d1">0.0008478006889191955</data>
+      <data key="d2">0.025934514767327988</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSPD1">
+      <data key="d0">12</data>
+      <data key="d1">0.023904529657563244</data>
+      <data key="d2">0.06036119094700947</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Prominent subcutaneous vasculature">
+      <data key="d0">2</data>
+      <data key="d1">7.8404359261561e-05</data>
+      <data key="d2">0.011162769866927323</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Pretibial hyperpigmentation">
+      <data key="d0">2</data>
+      <data key="d1">7.8404359261561e-05</data>
+      <data key="d2">0.011162769866927323</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="BCS1">
+      <data key="d0">15</data>
+      <data key="d1">0.03953458321092864</data>
+      <data key="d2">0.1207310792637981</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSARTH2">
+      <data key="d0">18</data>
+      <data key="d1">0.04154912205290362</data>
+      <data key="d2">0.10853177622328011</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Recurrent joint subluxation">
+      <data key="d0">2</data>
+      <data key="d1">4.288888079836959e-05</data>
+      <data key="d2">0.019551893404544936</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Thin, velvety skin">
+      <data key="d0">2</data>
+      <data key="d1">4.288888079836959e-05</data>
+      <data key="d2">0.019551893404544936</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="EDSSPD3">
+      <data key="d0">16</data>
+      <data key="d1">0.03687503952763286</data>
+      <data key="d2">0.12442863839164117</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSMC1">
+      <data key="d0">25</data>
+      <data key="d1">0.06728457653611794</data>
+      <data key="d2">0.17800095639803853</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="EDSARTH1">
+      <data key="d0">15</data>
+      <data key="d1">0.02588903721120695</data>
+      <data key="d2">0.09998807374112227</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="EDSPD2">
+      <data key="d0">10</data>
+      <data key="d1">0.019119651061356678</data>
+      <data key="d2">0.058689125545144466</data>
+      <data key="d3">0</data>
+    </node>
+    <edge source="OI2" target="Autosomal dominant" />
+    <edge source="OI2" target="Short limb dwarfism" />
+    <edge source="OI2" target="Blue sclerae" />
+    <edge source="OI2" target="Beaded ribs" />
+    <edge source="OI2" target="Numerous multiple fractures present at birth" />
+    <edge source="OI2" target="Wormian bones" />
+    <edge source="OI2" target="Soft calvaria" />
+    <edge source="OI2" target="Platyspondyly" />
+    <edge source="OI2" target="Tibial bowing" />
+    <edge source="OI2" target="Thin skin" />
+    <edge source="Autosomal dominant" target="OI4" />
+    <edge source="Autosomal dominant" target="OI1" />
+    <edge source="Autosomal dominant" target="OI5" />
+    <edge source="Autosomal dominant" target="OI3" />
+    <edge source="Autosomal dominant" target="EDSVASC" />
+    <edge source="Autosomal dominant" target="EDSCL2" />
+    <edge source="Autosomal dominant" target="HPPA" />
+    <edge source="Autosomal dominant" target="BTHLM2" />
+    <edge source="Autosomal dominant" target="EDSCL1" />
+    <edge source="Autosomal dominant" target="EDSPD1" />
+    <edge source="Autosomal dominant" target="EDSARTH2" />
+    <edge source="Autosomal dominant" target="EDSARTH1" />
+    <edge source="Autosomal dominant" target="EDSPD2" />
+    <edge source="Short limb dwarfism" target="OI9" />
+    <edge source="Short limb dwarfism" target="HPPI" />
+    <edge source="Blue sclerae" target="OI18" />
+    <edge source="Blue sclerae" target="OI16" />
+    <edge source="Blue sclerae" target="OI21" />
+    <edge source="Blue sclerae" target="OI6" />
+    <edge source="Blue sclerae" target="OI1" />
+    <edge source="Blue sclerae" target="OI20" />
+    <edge source="Blue sclerae" target="EDSDERMS" />
+    <edge source="Blue sclerae" target="OI19" />
+    <edge source="Blue sclerae" target="BCS2" />
+    <edge source="Blue sclerae" target="EDSSPD1" />
+    <edge source="Blue sclerae" target="EDSMC2" />
+    <edge source="Blue sclerae" target="EDSKSCL1" />
+    <edge source="Blue sclerae" target="EDSSPD2" />
+    <edge source="Blue sclerae" target="EDSCL1" />
+    <edge source="Blue sclerae" target="BCS1" />
+    <edge source="Blue sclerae" target="EDSSPD3" />
+    <edge source="Blue sclerae" target="EDSMC1" />
+    <edge source="Beaded ribs" target="OI16" />
+    <edge source="Numerous multiple fractures present at birth" target="OI9" />
+    <edge source="Wormian bones" target="OI13" />
+    <edge source="Wormian bones" target="OI18" />
+    <edge source="Wormian bones" target="OI8" />
+    <edge source="Wormian bones" target="OI4" />
+    <edge source="Wormian bones" target="OI12" />
+    <edge source="Wormian bones" target="OI11" />
+    <edge source="Wormian bones" target="OI21" />
+    <edge source="Wormian bones" target="OI7" />
+    <edge source="Wormian bones" target="OI14" />
+    <edge source="Wormian bones" target="OI6" />
+    <edge source="Wormian bones" target="OI1" />
+    <edge source="Wormian bones" target="OI20" />
+    <edge source="Wormian bones" target="OI5" />
+    <edge source="Wormian bones" target="OI3" />
+    <edge source="Wormian bones" target="EDSARTH2" />
+    <edge source="Soft calvaria" target="OI6" />
+    <edge source="Platyspondyly" target="OI13" />
+    <edge source="Platyspondyly" target="OI8" />
+    <edge source="Platyspondyly" target="OI10" />
+    <edge source="Platyspondyly" target="OI21" />
+    <edge source="Platyspondyly" target="OI15" />
+    <edge source="Platyspondyly" target="EDSSPD2" />
+    <edge source="Platyspondyly" target="HPPI" />
+    <edge source="Platyspondyly" target="EDSSPD3" />
+    <edge source="Tibial bowing" target="OI8" />
+    <edge source="Tibial bowing" target="OI14" />
+    <edge source="Tibial bowing" target="OI3" />
+    <edge source="Thin skin" target="OI1" />
+    <edge source="Thin skin" target="EDSCV" />
+    <edge source="Thin skin" target="EDSSPD3" />
+    <edge source="OI13" target="Autosomal recessive" />
+    <edge source="OI13" target="Short stature" />
+    <edge source="OI13" target="Low weight" />
+    <edge source="OI13" target="Long eyelashes" />
+    <edge source="OI13" target="Pectus carinatum" />
+    <edge source="OI13" target="Joint hypermobility" />
+    <edge source="OI13" target="Vertebral fractures" />
+    <edge source="OI13" target="Kyphoscoliosis" />
+    <edge source="OI13" target="Triangular face" />
+    <edge source="OI13" target="Prominent ears" />
+    <edge source="OI13" target="Long philtrum" />
+    <edge source="OI13" target="Thin lips" />
+    <edge source="OI13" target="No dentinogenesis imperfecta" />
+    <edge source="OI13" target="Umbilical hernia" />
+    <edge source="OI13" target="Arachnodactyly" />
+    <edge source="OI13" target="Hypotonia" />
+    <edge source="OI13" target="Delayed gross motor development" />
+    <edge source="Autosomal recessive" target="OI18" />
+    <edge source="Autosomal recessive" target="OI8" />
+    <edge source="Autosomal recessive" target="OI16" />
+    <edge source="Autosomal recessive" target="OI12" />
+    <edge source="Autosomal recessive" target="OI10" />
+    <edge source="Autosomal recessive" target="OI11" />
+    <edge source="Autosomal recessive" target="OI17" />
+    <edge source="Autosomal recessive" target="OI21" />
+    <edge source="Autosomal recessive" target="OI7" />
+    <edge source="Autosomal recessive" target="OI14" />
+    <edge source="Autosomal recessive" target="OI9" />
+    <edge source="Autosomal recessive" target="OI6" />
+    <edge source="Autosomal recessive" target="OI15" />
+    <edge source="Autosomal recessive" target="OI20" />
+    <edge source="Autosomal recessive" target="EDSDERMS" />
+    <edge source="Autosomal recessive" target="EDSCLL" />
+    <edge source="Autosomal recessive" target="HPPC" />
+    <edge source="Autosomal recessive" target="EDSCV" />
+    <edge source="Autosomal recessive" target="BCS2" />
+    <edge source="Autosomal recessive" target="EDSKSCL2" />
+    <edge source="Autosomal recessive" target="EDSSPD1" />
+    <edge source="Autosomal recessive" target="EDSCLL2" />
+    <edge source="Autosomal recessive" target="EDSMC2" />
+    <edge source="Autosomal recessive" target="EDSKSCL1" />
+    <edge source="Autosomal recessive" target="EDSSPD2" />
+    <edge source="Autosomal recessive" target="HPPA" />
+    <edge source="Autosomal recessive" target="HPPI" />
+    <edge source="Autosomal recessive" target="BCS1" />
+    <edge source="Autosomal recessive" target="EDSSPD3" />
+    <edge source="Autosomal recessive" target="EDSMC1" />
+    <edge source="Short stature" target="OI16" />
+    <edge source="Short stature" target="OI12" />
+    <edge source="Short stature" target="OI10" />
+    <edge source="Short stature" target="OI11" />
+    <edge source="Short stature" target="OI7" />
+    <edge source="Short stature" target="OI15" />
+    <edge source="Short stature" target="OI20" />
+    <edge source="Short stature" target="OI5" />
+    <edge source="Short stature" target="EDSDERMS" />
+    <edge source="Short stature" target="EDSVASC" />
+    <edge source="Short stature" target="HPPC" />
+    <edge source="Short stature" target="EDSSPD1" />
+    <edge source="Short stature" target="EDSCL1" />
+    <edge source="Low weight" target="OI21" />
+    <edge source="Low weight" target="EDSSPD2" />
+    <edge source="Long eyelashes" target="OI18" />
+    <edge source="Pectus carinatum" target="OI12" />
+    <edge source="Pectus carinatum" target="OI19" />
+    <edge source="Pectus carinatum" target="EDSSPD1" />
+    <edge source="Joint hypermobility" target="OI21" />
+    <edge source="Joint hypermobility" target="OI6" />
+    <edge source="Joint hypermobility" target="EDSCLL" />
+    <edge source="Joint hypermobility" target="EDSCL2" />
+    <edge source="Joint hypermobility" target="EDSCL1" />
+    <edge source="Joint hypermobility" target="EDSPD2" />
+    <edge source="Vertebral fractures" target="OI21" />
+    <edge source="Vertebral fractures" target="OI15" />
+    <edge source="Kyphoscoliosis" target="OI11" />
+    <edge source="Kyphoscoliosis" target="EDSSPD2" />
+    <edge source="Triangular face" target="OI10" />
+    <edge source="Triangular face" target="OI11" />
+    <edge source="Triangular face" target="OI3" />
+    <edge source="Prominent ears" target="OI20" />
+    <edge source="Prominent ears" target="EDSMC2" />
+    <edge source="Prominent ears" target="EDSMC1" />
+    <edge source="Long philtrum" target="OI7" />
+    <edge source="Long philtrum" target="EDSMC2" />
+    <edge source="Long philtrum" target="EDSMC1" />
+    <edge source="Thin lips" target="EDSVASC" />
+    <edge source="No dentinogenesis imperfecta" target="OI8" />
+    <edge source="No dentinogenesis imperfecta" target="OI12" />
+    <edge source="No dentinogenesis imperfecta" target="OI7" />
+    <edge source="Umbilical hernia" target="OI18" />
+    <edge source="Umbilical hernia" target="EDSDERMS" />
+    <edge source="Umbilical hernia" target="EDSKSCL2" />
+    <edge source="Umbilical hernia" target="EDSCLL2" />
+    <edge source="Umbilical hernia" target="EDSCL1" />
+    <edge source="Umbilical hernia" target="EDSMC1" />
+    <edge source="Umbilical hernia" target="EDSPD2" />
+    <edge source="Arachnodactyly" target="EDSMC2" />
+    <edge source="Arachnodactyly" target="EDSKSCL1" />
+    <edge source="Arachnodactyly" target="EDSPD1" />
+    <edge source="Arachnodactyly" target="EDSMC1" />
+    <edge source="Hypotonia" target="EDSSPD1" />
+    <edge source="Hypotonia" target="EDSKSCL1" />
+    <edge source="Hypotonia" target="EDSSPD2" />
+    <edge source="Hypotonia" target="BTHLM2" />
+    <edge source="Hypotonia" target="HPPI" />
+    <edge source="Hypotonia" target="EDSARTH2" />
+    <edge source="Hypotonia" target="EDSMC1" />
+    <edge source="Hypotonia" target="EDSARTH1" />
+    <edge source="Delayed gross motor development" target="EDSMC2" />
+    <edge source="Delayed gross motor development" target="EDSARTH2" />
+    <edge source="Delayed gross motor development" target="EDSARTH1" />
+    <edge source="OI18" target="Thin ribs" />
+    <edge source="OI18" target="Codfish vertebrae" />
+    <edge source="OI18" target="Bowing of long bones" />
+    <edge source="OI18" target="Joint laxity" />
+    <edge source="OI18" target="Micrognathia" />
+    <edge source="OI18" target="Speech delay" />
+    <edge source="Thin ribs" target="OI8" />
+    <edge source="Thin ribs" target="OI10" />
+    <edge source="Thin ribs" target="OI21" />
+    <edge source="Thin ribs" target="OI14" />
+    <edge source="Thin ribs" target="OI15" />
+    <edge source="Codfish vertebrae" target="OI3" />
+    <edge source="Bowing of long bones" target="OI10" />
+    <edge source="Bowing of long bones" target="OI21" />
+    <edge source="Bowing of long bones" target="EDSSPD1" />
+    <edge source="Joint laxity" target="OI8" />
+    <edge source="Joint laxity" target="OI11" />
+    <edge source="Joint laxity" target="EDSCV" />
+    <edge source="Joint laxity" target="EDSSPD1" />
+    <edge source="Joint laxity" target="EDSKSCL1" />
+    <edge source="Joint laxity" target="BTHLM2" />
+    <edge source="Joint laxity" target="BCS1" />
+    <edge source="Joint laxity" target="EDSSPD3" />
+    <edge source="Micrognathia" target="OI12" />
+    <edge source="Micrognathia" target="OI10" />
+    <edge source="Micrognathia" target="OI3" />
+    <edge source="Micrognathia" target="EDSDERMS" />
+    <edge source="Micrognathia" target="EDSCLL2" />
+    <edge source="Speech delay" target="OI17" />
+    <edge source="Speech delay" target="OI20" />
+    <edge source="OI8" target="Proptosis" />
+    <edge source="OI8" target="Bone fragility" />
+    <edge source="OI8" target="Severe osteopenia" />
+    <edge source="OI8" target="Scoliosis" />
+    <edge source="OI8" target="Kyphosis" />
+    <edge source="OI8" target="Vertebral compression fractures" />
+    <edge source="OI8" target="Femoral bowing" />
+    <edge source="OI8" target="Bulbous metaphyses" />
+    <edge source="OI8" target="Externally rotated/abducted legs" />
+    <edge source="OI8" target="Open sutures" />
+    <edge source="OI8" target="Round face" />
+    <edge source="OI8" target="Short metacarpals" />
+    <edge source="Proptosis" target="OI7" />
+    <edge source="Proptosis" target="HPPC" />
+    <edge source="Proptosis" target="EDSSPD2" />
+    <edge source="Bone fragility" target="OI14" />
+    <edge source="Severe osteopenia" target="EDSCLL2" />
+    <edge source="Scoliosis" target="OI4" />
+    <edge source="Scoliosis" target="OI10" />
+    <edge source="Scoliosis" target="OI11" />
+    <edge source="Scoliosis" target="OI17" />
+    <edge source="Scoliosis" target="OI21" />
+    <edge source="Scoliosis" target="OI7" />
+    <edge source="Scoliosis" target="OI14" />
+    <edge source="Scoliosis" target="OI9" />
+    <edge source="Scoliosis" target="OI6" />
+    <edge source="Scoliosis" target="OI15" />
+    <edge source="Scoliosis" target="OI3" />
+    <edge source="Scoliosis" target="OI19" />
+    <edge source="Scoliosis" target="EDSSPD1" />
+    <edge source="Scoliosis" target="EDSPD1" />
+    <edge source="Scoliosis" target="BCS1" />
+    <edge source="Scoliosis" target="EDSARTH2" />
+    <edge source="Scoliosis" target="EDSMC1" />
+    <edge source="Scoliosis" target="EDSARTH1" />
+    <edge source="Scoliosis" target="EDSPD2" />
+    <edge source="Kyphosis" target="OI4" />
+    <edge source="Kyphosis" target="OI9" />
+    <edge source="Kyphosis" target="OI6" />
+    <edge source="Kyphosis" target="OI3" />
+    <edge source="Kyphosis" target="EDSKSCL1" />
+    <edge source="Kyphosis" target="BTHLM2" />
+    <edge source="Kyphosis" target="EDSARTH2" />
+    <edge source="Kyphosis" target="EDSARTH1" />
+    <edge source="Vertebral compression fractures" target="OI16" />
+    <edge source="Vertebral compression fractures" target="OI10" />
+    <edge source="Vertebral compression fractures" target="OI11" />
+    <edge source="Vertebral compression fractures" target="OI17" />
+    <edge source="Vertebral compression fractures" target="OI7" />
+    <edge source="Vertebral compression fractures" target="OI20" />
+    <edge source="Femoral bowing" target="OI14" />
+    <edge source="Bulbous metaphyses" target="OI11" />
+    <edge source="Externally rotated/abducted legs" target="OI7" />
+    <edge source="Open sutures" target="OI7" />
+    <edge source="Round face" target="OI7" />
+    <edge source="Short metacarpals" target="EDSSPD3" />
+    <edge source="OI16" target="Rib fractures" />
+    <edge source="OI16" target="Osteopenia" />
+    <edge source="OI16" target="Soft calvarial bones" />
+    <edge source="OI16" target="Multiple fractures of extremities" />
+    <edge source="OI16" target="Bowing of upper extremities" />
+    <edge source="OI16" target="Bowing of lower extremities" />
+    <edge source="OI16" target="Small joint hypermobility" />
+    <edge source="Rib fractures" target="HPPI" />
+    <edge source="Osteopenia" target="OI11" />
+    <edge source="Osteopenia" target="OI7" />
+    <edge source="Osteopenia" target="OI14" />
+    <edge source="Osteopenia" target="OI6" />
+    <edge source="Osteopenia" target="EDSDERMS" />
+    <edge source="Osteopenia" target="EDSSPD1" />
+    <edge source="Osteopenia" target="EDSSPD3" />
+    <edge source="Osteopenia" target="EDSARTH1" />
+    <edge source="Soft calvarial bones" target="OI20" />
+    <edge source="Multiple fractures of extremities" target="OI15" />
+    <edge source="Bowing of upper extremities" target="OI6" />
+    <edge source="Bowing of upper extremities" target="OI15" />
+    <edge source="Bowing of lower extremities" target="OI6" />
+    <edge source="Bowing of lower extremities" target="OI15" />
+    <edge source="Small joint hypermobility" target="BCS2" />
+    <edge source="OI4" target="Varying degree of multiple fractures" />
+    <edge source="OI4" target="Biconcave flattened vertebrae" />
+    <edge source="OI4" target="Hearing loss" />
+    <edge source="OI4" target="Otosclerosis" />
+    <edge source="OI4" target="Dentinogenesis imperfecta" />
+    <edge source="Varying degree of multiple fractures" target="OI1" />
+    <edge source="Varying degree of multiple fractures" target="OI5" />
+    <edge source="Biconcave flattened vertebrae" target="OI1" />
+    <edge source="Hearing loss" target="OI3" />
+    <edge source="Hearing loss" target="BCS1" />
+    <edge source="Otosclerosis" target="OI1" />
+    <edge source="Dentinogenesis imperfecta" target="OI10" />
+    <edge source="Dentinogenesis imperfecta" target="OI11" />
+    <edge source="Dentinogenesis imperfecta" target="OI21" />
+    <edge source="Dentinogenesis imperfecta" target="OI1" />
+    <edge source="Dentinogenesis imperfecta" target="OI5" />
+    <edge source="Dentinogenesis imperfecta" target="OI3" />
+    <edge source="Dentinogenesis imperfecta" target="BCS1" />
+    <edge source="OI12" target="Depressed nasal bridge" />
+    <edge source="OI12" target="Midface hypoplasia" />
+    <edge source="OI12" target="High-arched palate" />
+    <edge source="OI12" target="Delayed motor milestones" />
+    <edge source="Depressed nasal bridge" target="EDSKSCL1" />
+    <edge source="Midface hypoplasia" target="OI10" />
+    <edge source="Midface hypoplasia" target="OI20" />
+    <edge source="Midface hypoplasia" target="EDSSPD1" />
+    <edge source="Midface hypoplasia" target="EDSMC2" />
+    <edge source="Midface hypoplasia" target="EDSARTH1" />
+    <edge source="High-arched palate" target="OI20" />
+    <edge source="High-arched palate" target="EDSCLL2" />
+    <edge source="High-arched palate" target="EDSMC2" />
+    <edge source="High-arched palate" target="EDSMC1" />
+    <edge source="Delayed motor milestones" target="EDSDERMS" />
+    <edge source="OI10" target="Blue sclera" />
+    <edge source="OI10" target="Joint laxity, generalized" />
+    <edge source="OI10" target="Open anterior fontanel" />
+    <edge source="OI10" target="Prominent forehead" />
+    <edge source="OI10" target="Narrow chest" />
+    <edge source="Blue sclera" target="OI15" />
+    <edge source="Blue sclera" target="HPPI" />
+    <edge source="Joint laxity, generalized" target="EDSCL2" />
+    <edge source="Joint laxity, generalized" target="EDSMC1" />
+    <edge source="Open anterior fontanel" target="EDSMC2" />
+    <edge source="Prominent forehead" target="EDSSPD2" />
+    <edge source="Narrow chest" target="OI7" />
+    <edge source="Narrow chest" target="EDSSPD1" />
+    <edge source="OI11" target="Birth length normal" />
+    <edge source="OI11" target="Birth weight normal" />
+    <edge source="OI11" target="Moderate to severe bone fragility" />
+    <edge source="OI11" target="Moderately deforming osteogenesis imperfecta" />
+    <edge source="OI11" target="Wedge-shaped vertebrae" />
+    <edge source="OI11" target="Biconcave vertebrae" />
+    <edge source="OI11" target="Protrusio acetabuli" />
+    <edge source="OI11" target="Brachycephaly" />
+    <edge source="Birth length normal" target="OI5" />
+    <edge source="Birth weight normal" target="OI5" />
+    <edge source="Moderate to severe bone fragility" target="OI5" />
+    <edge source="Moderately deforming osteogenesis imperfecta" target="OI5" />
+    <edge source="Wedge-shaped vertebrae" target="OI5" />
+    <edge source="Biconcave vertebrae" target="OI5" />
+    <edge source="Protrusio acetabuli" target="OI3" />
+    <edge source="Brachycephaly" target="OI20" />
+    <edge source="Brachycephaly" target="EDSMC2" />
+    <edge source="Brachycephaly" target="EDSMC1" />
+    <edge source="OI17" target="Osteoporosis" />
+    <edge source="OI17" target="Joint hyperlaxity" />
+    <edge source="OI17" target="Soft skin" />
+    <edge source="OI17" target="Normal hearing" />
+    <edge source="OI17" target="Normal teeth" />
+    <edge source="OI17" target="Motor delay" />
+    <edge source="Osteoporosis" target="EDSCLL2" />
+    <edge source="Osteoporosis" target="EDSKSCL1" />
+    <edge source="Joint hyperlaxity" target="EDSMC2" />
+    <edge source="Soft skin" target="EDSCV" />
+    <edge source="Soft skin" target="EDSKSCL2" />
+    <edge source="Soft skin" target="EDSPD1" />
+    <edge source="Soft skin" target="EDSARTH2" />
+    <edge source="Normal hearing" target="OI7" />
+    <edge source="Normal teeth" target="OI14" />
+    <edge source="Normal teeth" target="OI1" />
+    <edge source="Motor delay" target="OI21" />
+    <edge source="OI21" target="Pectus excavatum" />
+    <edge source="OI21" target="Coxa vara" />
+    <edge source="OI21" target="Coxa valga" />
+    <edge source="OI21" target="Dental caries" />
+    <edge source="OI21" target="Failure to thrive" />
+    <edge source="Pectus excavatum" target="OI7" />
+    <edge source="Pectus excavatum" target="EDSCV" />
+    <edge source="Pectus excavatum" target="OI19" />
+    <edge source="Pectus excavatum" target="EDSSPD2" />
+    <edge source="Pectus excavatum" target="EDSMC1" />
+    <edge source="Coxa vara" target="OI7" />
+    <edge source="Coxa valga" target="EDSSPD1" />
+    <edge source="Dental caries" target="HPPC" />
+    <edge source="Failure to thrive" target="EDSSPD1" />
+    <edge source="Failure to thrive" target="HPPI" />
+    <edge source="OI7" target="Bluish sclerae" />
+    <edge source="OI7" target="Multiple rib fractures" />
+    <edge source="OI7" target="Multiple fractures present at birth" />
+    <edge source="OI7" target="Rhizomelia" />
+    <edge source="OI7" target="Micromelia" />
+    <edge source="OI7" target="Breech presentation" />
+    <edge source="Bluish sclerae" target="OI5" />
+    <edge source="Multiple rib fractures" target="OI20" />
+    <edge source="Multiple fractures present at birth" target="OI3" />
+    <edge source="Rhizomelia" target="OI20" />
+    <edge source="Micromelia" target="HPPI" />
+    <edge source="Breech presentation" target="EDSARTH2" />
+    <edge source="Breech presentation" target="EDSARTH1" />
+    <edge source="OI14" target="Multiple fractures" />
+    <edge source="Multiple fractures" target="OI20" />
+    <edge source="Multiple fractures" target="OI19" />
+    <edge source="OI9" target="Bowing of limbs due to multiple fractures" />
+    <edge source="Bowing of limbs due to multiple fractures" target="OI3" />
+    <edge source="OI6" target="Fractures" />
+    <edge source="OI6" target="Flattened vertebrae" />
+    <edge source="OI6" target="Shortening of upper extremities" />
+    <edge source="OI6" target="Shortening of lower extremities" />
+    <edge source="Fractures" target="EDSKSCL2" />
+    <edge source="Fractures" target="HPPI" />
+    <edge source="Fractures" target="EDSARTH2" />
+    <edge source="Fractures" target="EDSARTH1" />
+    <edge source="Flattened vertebrae" target="OI5" />
+    <edge source="Shortening of upper extremities" target="OI15" />
+    <edge source="Shortening of lower extremities" target="OI15" />
+    <edge source="OI1" target="Mitral valve prolapse" />
+    <edge source="OI1" target="Easy bruisability" />
+    <edge source="Mitral valve prolapse" target="EDSCLL" />
+    <edge source="Mitral valve prolapse" target="EDSVASC" />
+    <edge source="Mitral valve prolapse" target="EDSCV" />
+    <edge source="Mitral valve prolapse" target="EDSCLL2" />
+    <edge source="Mitral valve prolapse" target="EDSMC2" />
+    <edge source="Mitral valve prolapse" target="EDSCL1" />
+    <edge source="Mitral valve prolapse" target="BCS1" />
+    <edge source="Easy bruisability" target="EDSDERMS" />
+    <edge source="Easy bruisability" target="EDSCLL" />
+    <edge source="Easy bruisability" target="EDSVASC" />
+    <edge source="Easy bruisability" target="EDSCV" />
+    <edge source="Easy bruisability" target="EDSKSCL1" />
+    <edge source="Easy bruisability" target="EDSCL2" />
+    <edge source="Easy bruisability" target="EDSCL1" />
+    <edge source="Easy bruisability" target="EDSARTH2" />
+    <edge source="Easy bruisability" target="EDSSPD3" />
+    <edge source="Easy bruisability" target="EDSARTH1" />
+    <edge source="OI15" target="Developmental delay" />
+    <edge source="Developmental delay" target="EDSSPD2" />
+    <edge source="OI20" target="Prominent eyes" />
+    <edge source="OI20" target="Generalized osteopenia" />
+    <edge source="OI20" target="Kyphoscoliosis, progressive" />
+    <edge source="OI20" target="Sparse hair" />
+    <edge source="OI20" target="Low-set ears" />
+    <edge source="OI20" target="Adducted thumbs" />
+    <edge source="OI20" target="Cryptorchidism" />
+    <edge source="Prominent eyes" target="EDSSPD1" />
+    <edge source="Prominent eyes" target="EDSSPD2" />
+    <edge source="Generalized osteopenia" target="OI19" />
+    <edge source="Kyphoscoliosis, progressive" target="EDSKSCL2" />
+    <edge source="Sparse hair" target="EDSSPD2" />
+    <edge source="Low-set ears" target="EDSSPD1" />
+    <edge source="Adducted thumbs" target="EDSMC2" />
+    <edge source="Cryptorchidism" target="EDSCLL2" />
+    <edge source="Cryptorchidism" target="EDSMC1" />
+    <edge source="OI3" target="Frontal bossing" />
+    <edge source="Frontal bossing" target="HPPC" />
+    <edge source="Frontal bossing" target="EDSMC2" />
+    <edge source="EDSDERMS" target="Epicanthal folds" />
+    <edge source="EDSDERMS" target="Downslanting palpebral fissures" />
+    <edge source="EDSDERMS" target="Myopia" />
+    <edge source="EDSDERMS" target="Skin fragility" />
+    <edge source="EDSDERMS" target="Normal wound healing" />
+    <edge source="EDSDERMS" target="Premature rupture of membranes" />
+    <edge source="EDSDERMS" target="Gingival bleeding" />
+    <edge source="EDSDERMS" target="Hypodontia" />
+    <edge source="EDSDERMS" target="Inguinal hernia" />
+    <edge source="Epicanthal folds" target="EDSKSCL1" />
+    <edge source="Epicanthal folds" target="EDSCL1" />
+    <edge source="Epicanthal folds" target="BCS1" />
+    <edge source="Downslanting palpebral fissures" target="EDSMC2" />
+    <edge source="Downslanting palpebral fissures" target="EDSSPD3" />
+    <edge source="Downslanting palpebral fissures" target="EDSMC1" />
+    <edge source="Myopia" target="BCS2" />
+    <edge source="Myopia" target="EDSKSCL2" />
+    <edge source="Myopia" target="EDSKSCL1" />
+    <edge source="Myopia" target="EDSCL1" />
+    <edge source="Myopia" target="BCS1" />
+    <edge source="Myopia" target="EDSMC1" />
+    <edge source="Skin fragility" target="EDSPD2" />
+    <edge source="Normal wound healing" target="EDSCLL" />
+    <edge source="Premature rupture of membranes" target="EDSKSCL1" />
+    <edge source="Gingival bleeding" target="EDSPD1" />
+    <edge source="Hypodontia" target="EDSSPD3" />
+    <edge source="Inguinal hernia" target="EDSVASC" />
+    <edge source="Inguinal hernia" target="EDSCV" />
+    <edge source="Inguinal hernia" target="EDSKSCL2" />
+    <edge source="Inguinal hernia" target="EDSCLL2" />
+    <edge source="Inguinal hernia" target="EDSMC2" />
+    <edge source="Inguinal hernia" target="EDSKSCL1" />
+    <edge source="Inguinal hernia" target="EDSCL1" />
+    <edge source="Inguinal hernia" target="EDSPD1" />
+    <edge source="Inguinal hernia" target="EDSPD2" />
+    <edge source="EDSCLL" target="Hyperextensible skin" />
+    <edge source="EDSCLL" target="Velvety skin" />
+    <edge source="Hyperextensible skin" target="EDSKSCL1" />
+    <edge source="Hyperextensible skin" target="EDSCL2" />
+    <edge source="Hyperextensible skin" target="EDSSPD2" />
+    <edge source="Hyperextensible skin" target="EDSARTH2" />
+    <edge source="Hyperextensible skin" target="EDSMC1" />
+    <edge source="Hyperextensible skin" target="EDSARTH1" />
+    <edge source="Velvety skin" target="EDSCL1" />
+    <edge source="EDSVASC" target="Keratoconus" />
+    <edge source="EDSVASC" target="Fragile skin" />
+    <edge source="EDSVASC" target="Cigarette-paper scars" />
+    <edge source="EDSVASC" target="Molluscoid pseudotumors" />
+    <edge source="EDSVASC" target="Acrogeria" />
+    <edge source="EDSVASC" target="Periodontal disease" />
+    <edge source="Keratoconus" target="BCS2" />
+    <edge source="Keratoconus" target="EDSKSCL1" />
+    <edge source="Keratoconus" target="BCS1" />
+    <edge source="Fragile skin" target="EDSCL2" />
+    <edge source="Fragile skin" target="EDSCL1" />
+    <edge source="Cigarette-paper scars" target="EDSCL1" />
+    <edge source="Cigarette-paper scars" target="EDSSPD3" />
+    <edge source="Molluscoid pseudotumors" target="EDSKSCL1" />
+    <edge source="Molluscoid pseudotumors" target="EDSCL1" />
+    <edge source="Acrogeria" target="EDSARTH2" />
+    <edge source="Periodontal disease" target="EDSPD1" />
+    <edge source="HPPC" target="Rachitic rosary" />
+    <edge source="HPPC" target="Skin dimple over apex of long bone angulation" />
+    <edge source="HPPC" target="Seizures" />
+    <edge source="HPPC" target="Phosphoethanolaminuria" />
+    <edge source="HPPC" target="Elevated plasma and urine inorganic pyrophosphate" />
+    <edge source="Rachitic rosary" target="HPPI" />
+    <edge source="Skin dimple over apex of long bone angulation" target="HPPI" />
+    <edge source="Seizures" target="HPPI" />
+    <edge source="Phosphoethanolaminuria" target="HPPI" />
+    <edge source="Elevated plasma and urine inorganic pyrophosphate" target="HPPI" />
+    <edge source="EDSCV" target="Genu recurvatum" />
+    <edge source="EDSCV" target="Skin hyperextensibility" />
+    <edge source="EDSCV" target="Atrophic scars" />
+    <edge source="EDSCV" target="Delayed wound healing" />
+    <edge source="EDSCV" target="Pes planus" />
+    <edge source="Genu recurvatum" target="EDSSPD1" />
+    <edge source="Skin hyperextensibility" target="EDSCL1" />
+    <edge source="Atrophic scars" target="EDSCLL2" />
+    <edge source="Atrophic scars" target="EDSPD1" />
+    <edge source="Atrophic scars" target="EDSARTH2" />
+    <edge source="Atrophic scars" target="EDSARTH1" />
+    <edge source="Delayed wound healing" target="EDSSPD1" />
+    <edge source="Delayed wound healing" target="EDSCLL2" />
+    <edge source="Delayed wound healing" target="EDSMC2" />
+    <edge source="Delayed wound healing" target="EDSSPD3" />
+    <edge source="Delayed wound healing" target="EDSMC1" />
+    <edge source="Pes planus" target="EDSKSCL2" />
+    <edge source="Pes planus" target="EDSSPD1" />
+    <edge source="Pes planus" target="EDSCLL2" />
+    <edge source="Pes planus" target="EDSKSCL1" />
+    <edge source="Pes planus" target="EDSCL1" />
+    <edge source="Pes planus" target="EDSSPD3" />
+    <edge source="BCS2" target="Keratoglobus" />
+    <edge source="Keratoglobus" target="BCS1" />
+    <edge source="EDSKSCL2" target="Hyperelastic skin" />
+    <edge source="EDSKSCL2" target="Easy bruising" />
+    <edge source="EDSKSCL2" target="Hypertrophic scarring" />
+    <edge source="EDSKSCL2" target="Hypermobility of small joints" />
+    <edge source="EDSKSCL2" target="Delayed motor development" />
+    <edge source="Hyperelastic skin" target="EDSSPD3" />
+    <edge source="Easy bruising" target="EDSCLL2" />
+    <edge source="Easy bruising" target="EDSPD1" />
+    <edge source="Easy bruising" target="EDSPD2" />
+    <edge source="Hypertrophic scarring" target="BTHLM2" />
+    <edge source="Hypermobility of small joints" target="EDSMC1" />
+    <edge source="Delayed motor development" target="EDSKSCL1" />
+    <edge source="Delayed motor development" target="BTHLM2" />
+    <edge source="EDSSPD1" target="Hypertelorism" />
+    <edge source="EDSSPD1" target="Macrocephaly" />
+    <edge source="EDSSPD1" target="Broad, flat forehead" />
+    <edge source="EDSSPD1" target="Small mouth" />
+    <edge source="EDSSPD1" target="Bifid uvula" />
+    <edge source="EDSSPD1" target="Cleft palate" />
+    <edge source="EDSSPD1" target="Talipes equinovarus" />
+    <edge source="Hypertelorism" target="EDSMC2" />
+    <edge source="Hypertelorism" target="EDSMC1" />
+    <edge source="Macrocephaly" target="BCS1" />
+    <edge source="Broad, flat forehead" target="EDSMC1" />
+    <edge source="Small mouth" target="EDSMC2" />
+    <edge source="Bifid uvula" target="EDSSPD3" />
+    <edge source="Cleft palate" target="EDSSPD2" />
+    <edge source="Cleft palate" target="EDSMC1" />
+    <edge source="Talipes equinovarus" target="EDSKSCL1" />
+    <edge source="EDSCLL2" target="Osteoarthritis" />
+    <edge source="EDSCLL2" target="Hip dislocation" />
+    <edge source="EDSCLL2" target="Finger contractures" />
+    <edge source="Osteoarthritis" target="EDSCL1" />
+    <edge source="Hip dislocation" target="EDSSPD2" />
+    <edge source="Hip dislocation" target="BTHLM2" />
+    <edge source="Hip dislocation" target="EDSARTH2" />
+    <edge source="Finger contractures" target="EDSSPD3" />
+    <edge source="EDSMC2" target="Joint pain" />
+    <edge source="EDSMC2" target="Atrophic scarring" />
+    <edge source="Joint pain" target="EDSPD2" />
+    <edge source="Atrophic scarring" target="BTHLM2" />
+    <edge source="EDSKSCL1" target="Microcornea" />
+    <edge source="EDSKSCL1" target="Retinal detachment" />
+    <edge source="EDSKSCL1" target="Glaucoma" />
+    <edge source="EDSKSCL1" target="Excessive wrinkled skin" />
+    <edge source="EDSKSCL1" target="Bladder diverticula" />
+    <edge source="EDSKSCL1" target="Marfanoid habitus" />
+    <edge source="Microcornea" target="EDSMC1" />
+    <edge source="Retinal detachment" target="EDSMC1" />
+    <edge source="Glaucoma" target="EDSMC1" />
+    <edge source="Excessive wrinkled skin" target="BCS1" />
+    <edge source="Bladder diverticula" target="EDSARTH2" />
+    <edge source="Marfanoid habitus" target="BCS1" />
+    <edge source="EDSCL2" target="Congenital hip dislocation" />
+    <edge source="Congenital hip dislocation" target="BCS1" />
+    <edge source="EDSSPD2" target="Clubfeet" />
+    <edge source="Clubfeet" target="EDSARTH2" />
+    <edge source="HPPI" target="Constipation" />
+    <edge source="Constipation" target="EDSMC1" />
+    <edge source="EDSCL1" target="Poor wound healing" />
+    <edge source="Poor wound healing" target="EDSPD1" />
+    <edge source="Poor wound healing" target="EDSARTH1" />
+    <edge source="EDSPD1" target="Prominent subcutaneous vasculature" />
+    <edge source="EDSPD1" target="Pretibial hyperpigmentation" />
+    <edge source="Prominent subcutaneous vasculature" target="EDSPD2" />
+    <edge source="Pretibial hyperpigmentation" target="EDSPD2" />
+    <edge source="EDSARTH2" target="Recurrent joint subluxation" />
+    <edge source="EDSARTH2" target="Thin, velvety skin" />
+    <edge source="Recurrent joint subluxation" target="EDSARTH1" />
+    <edge source="Thin, velvety skin" target="EDSARTH1" />
+  </graph>
+</graphml>

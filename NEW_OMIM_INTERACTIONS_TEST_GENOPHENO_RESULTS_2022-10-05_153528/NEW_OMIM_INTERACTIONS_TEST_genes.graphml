@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="OI2">
+      <data key="d0">2</data>
+      <data key="d1">0.03333333333333333</data>
+      <data key="d2">0.4082485111514332</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="COL1A2">
+      <data key="d0">3</data>
+      <data key="d1">0.15000000000000002</data>
+      <data key="d2">0.49999972971388407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="COL1A1">
+      <data key="d0">3</data>
+      <data key="d1">0.15000000000000002</data>
+      <data key="d2">0.49999972971388407</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI4">
+      <data key="d0">2</data>
+      <data key="d1">0.03333333333333333</data>
+      <data key="d2">0.4082485111514332</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI3">
+      <data key="d0">2</data>
+      <data key="d1">0.03333333333333333</data>
+      <data key="d2">0.4082485111514332</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="ALPL">
+      <data key="d0">0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">1.330919460387155e-08</data>
+      <data key="d3">1</data>
+    </node>
+    <edge source="OI2" target="COL1A2" />
+    <edge source="OI2" target="COL1A1" />
+    <edge source="COL1A2" target="OI4" />
+    <edge source="COL1A2" target="OI3" />
+    <edge source="COL1A1" target="OI4" />
+    <edge source="COL1A1" target="OI3" />
+  </graph>
+</graphml>

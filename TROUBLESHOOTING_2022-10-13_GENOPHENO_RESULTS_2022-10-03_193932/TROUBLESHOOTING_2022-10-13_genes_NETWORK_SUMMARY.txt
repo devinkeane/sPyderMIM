@@ -1,0 +1,68 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-03 19:38:59.490615
+
+Total Nodes:  6
+Total Edges:  3
+
+             Approximate node connectivity:   1.000E+00
+     Network diameter of largest component:   1
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                             BAIBA            1
+                                             AGXT2            1
+                                            CILD22            1
+                                           ZMYND10            1
+                                             SCAR8            1
+                                             SYNE1            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                             BAIBA    0.000E+00
+                                             AGXT2    0.000E+00
+                                            CILD22    0.000E+00
+                                           ZMYND10    0.000E+00
+                                             SCAR8    0.000E+00
+                                             SYNE1    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                             BAIBA    4.082E-01
+                                             AGXT2    4.082E-01
+
+CLASS 1:
+-------
+                                            CILD22    4.082E-01
+                                           ZMYND10    4.082E-01
+
+CLASS 2:
+-------
+                                             SCAR8    4.082E-01
+                                             SYNE1    4.082E-01

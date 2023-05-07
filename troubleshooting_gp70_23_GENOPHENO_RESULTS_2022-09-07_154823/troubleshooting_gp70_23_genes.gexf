@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-09-07">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="degree" type="long" />
+      <attribute id="1" title="betweenness" type="double" />
+      <attribute id="2" title="eigenvector" type="double" />
+      <attribute id="3" title="modularity" type="long" />
+    </attributes>
+    <nodes>
+      <node id="CTRCT34" label="CTRCT34">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="FOXE3" label="FOXE3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2" label="ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="NPSR1" label="NPSR1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="RHYNS" label="RHYNS">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="TMEM67" label="TMEM67">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="HRZ" label="HRZ">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="SMARCAD1" label="SMARCAD1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="CSB" label="CSB">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="ERCC6" label="ERCC6">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="DEE45" label="DEE45">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="GABRB1" label="GABRB1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="CIAT" label="CIAT">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="SCN8A" label="SCN8A">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="PITA5" label="PITA5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="CDH23" label="CDH23">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="GIKANIS" label="GIKANIS">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="ALG9" label="ALG9">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="BOS" label="BOS">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="LEMD3" label="LEMD3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="MONA" label="MONA">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="MMP2" label="MMP2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="MRD34" label="MRD34">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="CERT1" label="CERT1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="IMD13" label="IMD13">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="UNC119" label="UNC119">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="RP58" label="RP58">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="ZNF513" label="ZNF513">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="ISDNA" label="ISDNA">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="EXTL3" label="EXTL3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" label="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="MTHFR" label="MTHFR">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="DBA8" label="DBA8">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="RPS7" label="RPS7">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="HMSN2C" label="HMSN2C">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="TRPV4" label="TRPV4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="STL4" label="STL4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="18" />
+        </attvalues>
+      </node>
+      <node id="COL9A1" label="COL9A1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="18" />
+        </attvalues>
+      </node>
+      <node id="VENTRICULAR TACHYCARDIA, FAMILIAL" label="VENTRICULAR TACHYCARDIA, FAMILIAL">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="19" />
+        </attvalues>
+      </node>
+      <node id="GNAI2" label="GNAI2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="19" />
+        </attvalues>
+      </node>
+      <node id="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" label="HYPERTHYROIDISM, FAMILIAL GESTATIONAL">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="20" />
+        </attvalues>
+      </node>
+      <node id="TSHR" label="TSHR">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="20" />
+        </attvalues>
+      </node>
+      <node id="MTDPS19" label="MTDPS19">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="21" />
+        </attvalues>
+      </node>
+      <node id="SLC25A10" label="SLC25A10">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="21" />
+        </attvalues>
+      </node>
+      <node id="NYS6" label="NYS6">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="22" />
+        </attvalues>
+      </node>
+      <node id="GPR143" label="GPR143">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="22" />
+        </attvalues>
+      </node>
+      <node id="FCAS3" label="FCAS3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="23" />
+        </attvalues>
+      </node>
+      <node id="PLCG2" label="PLCG2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.1443375672974064" />
+          <attvalue for="3" value="23" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="CTRCT34" target="FOXE3" id="0" />
+      <edge source="ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2" target="NPSR1" id="1" />
+      <edge source="RHYNS" target="TMEM67" id="2" />
+      <edge source="HRZ" target="SMARCAD1" id="3" />
+      <edge source="CSB" target="ERCC6" id="4" />
+      <edge source="DEE45" target="GABRB1" id="5" />
+      <edge source="CIAT" target="SCN8A" id="6" />
+      <edge source="PITA5" target="CDH23" id="7" />
+      <edge source="GIKANIS" target="ALG9" id="8" />
+      <edge source="BOS" target="LEMD3" id="9" />
+      <edge source="MONA" target="MMP2" id="10" />
+      <edge source="MRD34" target="CERT1" id="11" />
+      <edge source="IMD13" target="UNC119" id="12" />
+      <edge source="RP58" target="ZNF513" id="13" />
+      <edge source="ISDNA" target="EXTL3" id="14" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="MTHFR" id="15" />
+      <edge source="DBA8" target="RPS7" id="16" />
+      <edge source="HMSN2C" target="TRPV4" id="17" />
+      <edge source="STL4" target="COL9A1" id="18" />
+      <edge source="VENTRICULAR TACHYCARDIA, FAMILIAL" target="GNAI2" id="19" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="TSHR" id="20" />
+      <edge source="MTDPS19" target="SLC25A10" id="21" />
+      <edge source="NYS6" target="GPR143" id="22" />
+      <edge source="FCAS3" target="PLCG2" id="23" />
+    </edges>
+  </graph>
+</gexf>

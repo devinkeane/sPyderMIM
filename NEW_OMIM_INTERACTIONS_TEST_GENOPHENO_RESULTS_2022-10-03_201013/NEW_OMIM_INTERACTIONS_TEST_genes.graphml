@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="OI2">
+      <data key="d0">2</data>
+      <data key="d1">0.000903342366757001</data>
+      <data key="d2">0.35355338932844</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="COL1A2">
+      <data key="d0">5</data>
+      <data key="d1">0.004366154772658838</data>
+      <data key="d2">0.49999999881055757</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="COL1A1">
+      <data key="d0">5</data>
+      <data key="d1">0.004366154772658838</data>
+      <data key="d2">0.4999999988105577</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI13">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="BMP1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="OI18">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="TENT5A">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="OI8">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="P3H1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="OI16">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="CREB3L1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="OI4">
+      <data key="d0">2</data>
+      <data key="d1">0.000903342366757001</data>
+      <data key="d2">0.35355338932844</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI12">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="SP7">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="OI10">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">7</data>
+    </node>
+    <node id="SERPINH1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">7</data>
+    </node>
+    <node id="OI11">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">8</data>
+    </node>
+    <node id="FKBP10">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">8</data>
+    </node>
+    <node id="OI17">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">9</data>
+    </node>
+    <node id="SPARC">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">9</data>
+    </node>
+    <node id="OI21">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">10</data>
+    </node>
+    <node id="KDELR2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">10</data>
+    </node>
+    <node id="OI7">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">11</data>
+    </node>
+    <node id="CRTAP">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">11</data>
+    </node>
+    <node id="OI14">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">12</data>
+    </node>
+    <node id="TMEM38B">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">12</data>
+    </node>
+    <node id="OI9">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">13</data>
+    </node>
+    <node id="PPIB">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">13</data>
+    </node>
+    <node id="OI6">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">14</data>
+    </node>
+    <node id="SERPINF1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">14</data>
+    </node>
+    <node id="OI1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.17677669466422005</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI15">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">15</data>
+    </node>
+    <node id="WNT1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">15</data>
+    </node>
+    <node id="OI20">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">16</data>
+    </node>
+    <node id="MESD">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">16</data>
+    </node>
+    <node id="OI5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">17</data>
+    </node>
+    <node id="IFITM5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">17</data>
+    </node>
+    <node id="OI3">
+      <data key="d0">2</data>
+      <data key="d1">0.000903342366757001</data>
+      <data key="d2">0.35355338932844</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSDERMS">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">18</data>
+    </node>
+    <node id="ADAMTS2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">18</data>
+    </node>
+    <node id="EDSCLL">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">19</data>
+    </node>
+    <node id="TNXB">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">19</data>
+    </node>
+    <node id="EDSVASC">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">20</data>
+    </node>
+    <node id="COL3A1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">20</data>
+    </node>
+    <node id="HPPC">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">3.1507582139704946e-05</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="ALPL">
+      <data key="d0">3</data>
+      <data key="d1">0.000903342366757001</data>
+      <data key="d2">5.4572733089618685e-05</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="EDSCV">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.17677669466422002</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="OI19">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">21</data>
+    </node>
+    <node id="MBTPS2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">21</data>
+    </node>
+    <node id="BCS2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">22</data>
+    </node>
+    <node id="PRDM5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">22</data>
+    </node>
+    <node id="EDSKSCL2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">23</data>
+    </node>
+    <node id="FKBP14">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">23</data>
+    </node>
+    <node id="EDSSPD1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">24</data>
+    </node>
+    <node id="B4GALT7">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">24</data>
+    </node>
+    <node id="EDSCLL2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">25</data>
+    </node>
+    <node id="AEBP1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">25</data>
+    </node>
+    <node id="EDSMC2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">26</data>
+    </node>
+    <node id="DSE">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">26</data>
+    </node>
+    <node id="EDSKSCL1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">27</data>
+    </node>
+    <node id="PLOD1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">27</data>
+    </node>
+    <node id="EDSCL2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">28</data>
+    </node>
+    <node id="COL5A2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">28</data>
+    </node>
+    <node id="EDSSPD2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">29</data>
+    </node>
+    <node id="B3GALT6">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">29</data>
+    </node>
+    <node id="HPPA">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">3.1507582139704946e-05</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="BTHLM2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">30</data>
+    </node>
+    <node id="COL12A1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">30</data>
+    </node>
+    <node id="HPPI">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">3.1507582139704946e-05</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="EDSCL1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">31</data>
+    </node>
+    <node id="COL5A1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">31</data>
+    </node>
+    <node id="EDSPD1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">32</data>
+    </node>
+    <node id="C1R">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">32</data>
+    </node>
+    <node id="BCS1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">33</data>
+    </node>
+    <node id="ZNF469">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">33</data>
+    </node>
+    <node id="EDSARTH2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.17677669466422002</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSSPD3">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">34</data>
+    </node>
+    <node id="SLC39A13">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">34</data>
+    </node>
+    <node id="EDSMC1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">35</data>
+    </node>
+    <node id="CHST14">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">35</data>
+    </node>
+    <node id="EDSARTH1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.17677669466422005</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="EDSPD2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">36</data>
+    </node>
+    <node id="C1S">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">8.792856354559287e-09</data>
+      <data key="d3">36</data>
+    </node>
+    <edge source="OI2" target="COL1A2" />
+    <edge source="OI2" target="COL1A1" />
+    <edge source="COL1A2" target="OI4" />
+    <edge source="COL1A2" target="OI3" />
+    <edge source="COL1A2" target="EDSCV" />
+    <edge source="COL1A2" target="EDSARTH2" />
+    <edge source="COL1A1" target="OI4" />
+    <edge source="COL1A1" target="OI1" />
+    <edge source="COL1A1" target="OI3" />
+    <edge source="COL1A1" target="EDSARTH1" />
+    <edge source="OI13" target="BMP1" />
+    <edge source="OI18" target="TENT5A" />
+    <edge source="OI8" target="P3H1" />
+    <edge source="OI16" target="CREB3L1" />
+    <edge source="OI12" target="SP7" />
+    <edge source="OI10" target="SERPINH1" />
+    <edge source="OI11" target="FKBP10" />
+    <edge source="OI17" target="SPARC" />
+    <edge source="OI21" target="KDELR2" />
+    <edge source="OI7" target="CRTAP" />
+    <edge source="OI14" target="TMEM38B" />
+    <edge source="OI9" target="PPIB" />
+    <edge source="OI6" target="SERPINF1" />
+    <edge source="OI15" target="WNT1" />
+    <edge source="OI20" target="MESD" />
+    <edge source="OI5" target="IFITM5" />
+    <edge source="EDSDERMS" target="ADAMTS2" />
+    <edge source="EDSCLL" target="TNXB" />
+    <edge source="EDSVASC" target="COL3A1" />
+    <edge source="HPPC" target="ALPL" />
+    <edge source="ALPL" target="HPPA" />
+    <edge source="ALPL" target="HPPI" />
+    <edge source="OI19" target="MBTPS2" />
+    <edge source="BCS2" target="PRDM5" />
+    <edge source="EDSKSCL2" target="FKBP14" />
+    <edge source="EDSSPD1" target="B4GALT7" />
+    <edge source="EDSCLL2" target="AEBP1" />
+    <edge source="EDSMC2" target="DSE" />
+    <edge source="EDSKSCL1" target="PLOD1" />
+    <edge source="EDSCL2" target="COL5A2" />
+    <edge source="EDSSPD2" target="B3GALT6" />
+    <edge source="BTHLM2" target="COL12A1" />
+    <edge source="EDSCL1" target="COL5A1" />
+    <edge source="EDSPD1" target="C1R" />
+    <edge source="BCS1" target="ZNF469" />
+    <edge source="EDSSPD3" target="SLC39A13" />
+    <edge source="EDSMC1" target="CHST14" />
+    <edge source="EDSPD2" target="C1S" />
+  </graph>
+</graphml>

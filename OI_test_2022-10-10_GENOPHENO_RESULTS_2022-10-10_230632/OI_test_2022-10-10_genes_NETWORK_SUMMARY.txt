@@ -1,0 +1,65 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.3          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-10 23:06:02.049646
+
+Total Nodes:  6
+Total Edges:  7
+
+             Approximate node connectivity:   2.333E+00
+     Network diameter of largest component:   3
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                            COL1A1            4
+                                            COL1A2            3
+                                               OI2            2
+                                               OI4            2
+                                               OI3            2
+                                               OI1            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                            COL1A1    5.500E-01
+                                            COL1A2    1.500E-01
+                                               OI2    6.667E-02
+                                               OI4    6.667E-02
+                                               OI3    6.667E-02
+                                               OI1    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                            COL1A1    5.395E-01
+                                               OI4    3.897E-01
+                                               OI1    2.110E-01
+
+CLASS 1:
+-------
+                                            COL1A2    4.571E-01
+                                               OI2    3.897E-01
+                                               OI3    3.897E-01

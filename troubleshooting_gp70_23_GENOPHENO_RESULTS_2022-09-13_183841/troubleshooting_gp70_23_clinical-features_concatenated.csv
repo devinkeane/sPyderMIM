@@ -1,0 +1,15 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,"VENTRICULAR TACHYCARDIA, FAMILIAL","Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality",entry.clinicalSynopsis.oldFormat.Cardiac,192605,,
+1,"VENTRICULAR TACHYCARDIA, FAMILIAL",No metabolic disorder,entry.clinicalSynopsis.oldFormat.Metabolic,192605,,
+2,"VENTRICULAR TACHYCARDIA, FAMILIAL",Autosomal dominant,entry.clinicalSynopsis.oldFormat.Inheritance,192605,,
+3,PARK4,Autosomal dominant,entry.clinicalSynopsis.inheritance,605543,,
+4,PARK4,Weight loss,entry.clinicalSynopsis.growthWeight,605543,,
+5,PARK4,"Hypotension, postural, due to autonomic dysfunction",entry.clinicalSynopsis.cardiovascularVascular,605543,,
+6,PARK4,Parkinsonism,entry.clinicalSynopsis.neurologicCentralNervousSystem,605543,,
+7,PARK4,Dementia,entry.clinicalSynopsis.neurologicCentralNervousSystem,605543,,
+8,PARK4,Diffuse Lewy body pathology,entry.clinicalSynopsis.neurologicCentralNervousSystem,605543,,
+9,PARK4,Alpha-synuclein immunoreactive neuronal and glial inclusions,entry.clinicalSynopsis.neurologicCentralNervousSystem,605543,,
+10,PARK4,Autonomic dysfunction,entry.clinicalSynopsis.neurologicCentralNervousSystem,605543,,
+11,PARK4,Hallucinations,entry.clinicalSynopsis.neurologicBehavioralPsychiatricManifestations,605543,,
+12,PARK4,Paranoia,entry.clinicalSynopsis.neurologicBehavioralPsychiatricManifestations,605543,,
+13,PARK4,Caused by triplication of the alpha-synuclein gene,entry.clinicalSynopsis.molecularBasis,605543,,"(SNCA, {163890.0003})"

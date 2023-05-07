@@ -1,0 +1,211 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.1          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-08 12:46:32.502200
+
+Total Nodes:  52
+Total Edges:  26
+
+             Approximate node connectivity:   1.000E+00
+     Network diameter of largest component:   1
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                           CTRCT34            1
+                                             FOXE3            1
+       ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2            1
+                                             NPSR1            1
+                                             RHYNS            1
+                                            TMEM67            1
+                                               HRZ            1
+                                          SMARCAD1            1
+                                               CSB            1
+                                             ERCC6            1
+                                             DEE45            1
+                                            GABRB1            1
+                                              CIAT            1
+                                             SCN8A            1
+                                             PITA5            1
+                                             CDH23            1
+                                           GIKANIS            1
+                                              ALG9            1
+                                               BOS            1
+                                             LEMD3            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                           CTRCT34    0.000E+00
+                                             FOXE3    0.000E+00
+       ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2    0.000E+00
+                                             NPSR1    0.000E+00
+                                             RHYNS    0.000E+00
+                                            TMEM67    0.000E+00
+                                               HRZ    0.000E+00
+                                          SMARCAD1    0.000E+00
+                                               CSB    0.000E+00
+                                             ERCC6    0.000E+00
+                                             DEE45    0.000E+00
+                                            GABRB1    0.000E+00
+                                              CIAT    0.000E+00
+                                             SCN8A    0.000E+00
+                                             PITA5    0.000E+00
+                                             CDH23    0.000E+00
+                                           GIKANIS    0.000E+00
+                                              ALG9    0.000E+00
+                                               BOS    0.000E+00
+                                             LEMD3    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                           CTRCT34    1.387E-01
+                                             FOXE3    1.387E-01
+
+CLASS 1:
+-------
+       ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2    1.387E-01
+                                             NPSR1    1.387E-01
+
+CLASS 2:
+-------
+                                             RHYNS    1.387E-01
+                                            TMEM67    1.387E-01
+
+CLASS 3:
+-------
+                                               HRZ    1.387E-01
+                                          SMARCAD1    1.387E-01
+
+CLASS 4:
+-------
+                                               CSB    1.387E-01
+                                             ERCC6    1.387E-01
+
+CLASS 5:
+-------
+                                             DEE45    1.387E-01
+                                            GABRB1    1.387E-01
+
+CLASS 6:
+-------
+                                              CIAT    1.387E-01
+                                             SCN8A    1.387E-01
+
+CLASS 7:
+-------
+                                             PITA5    1.387E-01
+                                             CDH23    1.387E-01
+
+CLASS 8:
+-------
+                                           GIKANIS    1.387E-01
+                                              ALG9    1.387E-01
+
+CLASS 9:
+-------
+                                               BOS    1.387E-01
+                                             LEMD3    1.387E-01
+
+CLASS 10:
+-------
+                                              MONA    1.387E-01
+                                              MMP2    1.387E-01
+
+CLASS 11:
+-------
+                                             MRD34    1.387E-01
+                                             CERT1    1.387E-01
+
+CLASS 12:
+-------
+                                             IMD13    1.387E-01
+                                            UNC119    1.387E-01
+
+CLASS 13:
+-------
+                                              RP58    1.387E-01
+                                            ZNF513    1.387E-01
+
+CLASS 14:
+-------
+                                             ISDNA    1.387E-01
+                                             EXTL3    1.387E-01
+
+CLASS 15:
+-------
+HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY    1.387E-01
+                                             MTHFR    1.387E-01
+
+CLASS 16:
+-------
+                                              DBA8    1.387E-01
+                                              RPS7    1.387E-01
+
+CLASS 17:
+-------
+                                            HMSN2C    1.387E-01
+                                             TRPV4    1.387E-01
+
+CLASS 18:
+-------
+                                              STL4    1.387E-01
+                                            COL9A1    1.387E-01
+
+CLASS 19:
+-------
+                 VENTRICULAR TACHYCARDIA, FAMILIAL    1.387E-01
+                                             GNAI2    1.387E-01
+
+CLASS 20:
+-------
+             HYPERTHYROIDISM, FAMILIAL GESTATIONAL    1.387E-01
+                                              TSHR    1.387E-01
+
+CLASS 21:
+-------
+                                           MTDPS19    1.387E-01
+                                          SLC25A10    1.387E-01
+
+CLASS 22:
+-------
+                                              NYS6    1.387E-01
+                                            GPR143    1.387E-01
+
+CLASS 23:
+-------
+                                             FCAS3    1.387E-01
+                                             PLCG2    1.387E-01
+
+CLASS 24:
+-------
+                                             PARK2    1.387E-01
+                                              PRKN    1.387E-01
+
+CLASS 25:
+-------
+                                             PARK4    1.387E-01
+                                              SNCA    1.387E-01

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="COL1A1">
+      <data key="d0">7</data>
+      <data key="d1">0.8928571428571428</data>
+      <data key="d2">0.6514870879137599</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="COL1A2">
+      <data key="d0">2</data>
+      <data key="d1">0.25</data>
+      <data key="d2">0.24253235416028662</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="MESD">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.08037411814456856</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="CRTAP">
+      <data key="d0">2</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.3229011999756129</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="FKBP10">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.21589568408937465</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="PPIB">
+      <data key="d0">2</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.3229011999756129</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="SERPINH1">
+      <data key="d0">2</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.3229011999756129</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="P3H1">
+      <data key="d0">2</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.3229011999756129</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="SPARC">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.21589568408937465</data>
+      <data key="d3">0</data>
+    </node>
+    <edge source="COL1A1" target="COL1A2" />
+    <edge source="COL1A1" target="CRTAP" />
+    <edge source="COL1A1" target="FKBP10" />
+    <edge source="COL1A1" target="PPIB" />
+    <edge source="COL1A1" target="SERPINH1" />
+    <edge source="COL1A1" target="P3H1" />
+    <edge source="COL1A1" target="SPARC" />
+    <edge source="COL1A2" target="MESD" />
+    <edge source="CRTAP" target="P3H1" />
+    <edge source="PPIB" target="SERPINH1" />
+  </graph>
+</graphml>

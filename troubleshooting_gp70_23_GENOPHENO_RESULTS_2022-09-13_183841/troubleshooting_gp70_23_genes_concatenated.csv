@@ -1,0 +1,5 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,"VENTRICULAR TACHYCARDIA, FAMILIAL",GNAI2,phenotypeMap.approvedGeneSymbols,192605,139360,
+1,"VENTRICULAR TACHYCARDIA, FAMILIAL",ENSG00000114353,phenotypeMap.ensemblIDs,192605,139360,
+2,PARK4,SNCA,phenotypeMap.approvedGeneSymbols,605543,163890,
+3,PARK4,ENSG00000145335,phenotypeMap.ensemblIDs,605543,163890,

@@ -1,0 +1,555 @@
+
+
+
+   _       ,/'
+  (_).  ,/'
+   _  ::       ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  
+  (_)'  `\.
+           `\.              [  G e n o P h e n o  ]
+                                        List Splitter
+
+
+Splitting list into separate OMIM API compatible lists of 20 maximum MIMs...
+
+Saving divided lists to directory:    ./TROUBLESHOOTING_2022-10-13_MIM_directory/
+
+TROUBLESHOOTING_2022-10-13_0.txt
+
+
+     ___|                       _ \   |
+    |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+   ______________________________________________________________|
+                                      (ツ)_/¯  - * Version 7.2 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./TROUBLESHOOTING_2022-10-13_separate_tables/TROUBLESHOOTING_2022-10-13_0_genes.csv "
+  with  6  total rows 
+
+  Your clinical data table was saved as " ./TROUBLESHOOTING_2022-10-13_separate_tables/TROUBLESHOOTING_2022-10-13_0_clinical-features.csv "
+  with  41  total rows 
+
+
+   3  of  3  MIMs contained phenotypic data.
+
+   3  of  3  MIMs contained ENSEMBL/Gene IDs.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+           c o n c a t . p y |
+           ------------------+
+                 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+                 ...Your combined table was saved as " TROUBLESHOOTING_2022-10-13_clinical-features_concatenated.csv "
+                 with  41  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+           c o n c a t . p y |
+           ------------------+
+                 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+                 ...Your combined table was saved as " TROUBLESHOOTING_2022-10-13_genes_concatenated.csv "
+                 with  6  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+      _______           __   ____      __                       __                 
+     / ____(_)___  ____/ /  /  _/___  / /____  _________ ______/ /_____  __________
+    / /_  / / __ \/ __  /   / // __ \/ __/ _ \/ ___/ __ `/ ___/ __/ __ \/ ___/ ___/
+   / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
+  /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
+
+                                                       [ G e n o P h e n o ]  v7.2                         
+
+
+--------------------------------------------------------------------
+
+	ʕっ•ᴥ•ʔっ        Your input:   
+
+
+  Superphenotype        Node_name  ... Gene_MIM_number  Parenthetical
+0          BAIBA            AGXT2  ...          612471            NaN
+1         CILD22          ZMYND10  ...          607070            NaN
+2          SCAR8            SYNE1  ...          608441            NaN
+3          BAIBA  ENSG00000113492  ...          612471            NaN
+4         CILD22  ENSG00000004838  ...          607070            NaN
+5          SCAR8  ENSG00000131018  ...          608441            NaN
+
+[6 rows x 6 columns]
+
+----------------------------------------------------------------------------
+
+Extracting Gene MIM IDs from input:
+
+                                                  
+Gene MIMs extracted                           ✔   
+
+                                                  
+Conversion to UNIPROT complete                ✔   
+
+                                         ┌(◉ ͜ʖ◉)つ
+         +-----------------------------------------------------------------------+
+         |   Searching for proteins that interact with each OMIM gene product:   |
+         +-----------------------------------------------------------------------+
+
+   1 | Approved Gene ID: AGXT2 | Gene Product (UNIPROT ID): Q9BYV1 | Interactions: 2 | Total Interactions: 2
+
+   2 | Approved Gene ID: ZMYND10 | Gene Product (UNIPROT ID): O75800 | Interactions: 58 | Total Interactions: 60
+
+   3 | Approved Gene ID: SYNE1 | Gene Product (UNIPROT ID): Q8NF91 | Interactions: 67 | Total Interactions: 127
+
+( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔
+
+
+
+
+Saving output table:
+
+               ac  ...  searchChildInteractors
+0     EBI-3929602  ...                    None
+1     EBI-3937299  ...                    None
+2    EBI-22337809  ...                    None
+3    EBI-22796059  ...                    None
+4    EBI-24289894  ...                    None
+..            ...  ...                     ...
+122  EBI-14023711  ...                    None
+123  EBI-27111302  ...                    None
+124   EBI-6163101  ...                    None
+125  EBI-32720516  ...                    None
+126  EBI-32725158  ...                    None
+
+[127 rows x 99 columns]
+
+
+Process complete.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Your interactors list was saved as "TROUBLESHOOTING_2022-10-13_interactors.csv" with  99  columns and  127  rows.
+
+                                                    	⊂(◉‿◉)つ  ♡  
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.2  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-09-01                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+               ac  ...  searchChildInteractors
+0     EBI-3929602  ...                     NaN
+1     EBI-3937299  ...                     NaN
+2    EBI-22337809  ...                     NaN
+3    EBI-22796059  ...                     NaN
+4    EBI-24289894  ...                     NaN
+..            ...  ...                     ...
+122  EBI-14023711  ...                     NaN
+123  EBI-27111302  ...                     NaN
+124   EBI-6163101  ...                     NaN
+125  EBI-32720516  ...                     NaN
+126  EBI-32725158  ...                     NaN
+
+[127 rows x 99 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Creating labels... ✔
+Constructing network visualization... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+                        [  I n t e r a c t o r s  ]              \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.2  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-09-01                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+               ac  ...  searchChildInteractors
+0     EBI-3929602  ...                     NaN
+1     EBI-3937299  ...                     NaN
+2    EBI-22337809  ...                     NaN
+3    EBI-22796059  ...                     NaN
+4    EBI-24289894  ...                     NaN
+..            ...  ...                     ...
+122  EBI-14023711  ...                     NaN
+123  EBI-27111302  ...                     NaN
+124   EBI-6163101  ...                     NaN
+125  EBI-32720516  ...                     NaN
+126  EBI-32725158  ...                     NaN
+
+[127 rows x 99 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Creating labels... ✔
+Constructing network visualization... ✔
+
+
+
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.2  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-09-01                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+  Superphenotype        Node_name  ... Gene_MIM_number  Parenthetical
+0          BAIBA            AGXT2  ...          612471            NaN
+1         CILD22          ZMYND10  ...          607070            NaN
+2          SCAR8            SYNE1  ...          608441            NaN
+3          BAIBA  ENSG00000113492  ...          612471            NaN
+4         CILD22  ENSG00000004838  ...          607070            NaN
+5          SCAR8  ENSG00000131018  ...          608441            NaN
+
+[6 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  O M I M  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+
+
+     ...image saved as "TROUBLESHOOTING_2022-10-13_genes.png" with  6  total nodes.
+
+     Summary file saved as "TROUBLESHOOTING_2022-10-13_genes_NETWORK_SUMMARY.txt"
+
+     GraphML file saved as "TROUBLESHOOTING_2022-10-13_genes.graphml  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.2  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-09-01                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+   Superphenotype  ...               Parenthetical
+0           BAIBA  ...                         NaN
+1           BAIBA  ...                         NaN
+2          CILD22  ...                         NaN
+3          CILD22  ...                         NaN
+4          CILD22  ...                         NaN
+5          CILD22  ...                         NaN
+6          CILD22  ...                         NaN
+7          CILD22  ...                         NaN
+8          CILD22  ...                         NaN
+9          CILD22  ...                         NaN
+10         CILD22  ...                         NaN
+11         CILD22  ...  (in about 50% of patients)
+12         CILD22  ...                         NaN
+13         CILD22  ...                         NaN
+14         CILD22  ...                         NaN
+15         CILD22  ...                         NaN
+16         CILD22  ...                         NaN
+17          SCAR8  ...                         NaN
+18          SCAR8  ...          (in some patients)
+19          SCAR8  ...                         NaN
+20          SCAR8  ...                         NaN
+21          SCAR8  ...                         NaN
+22          SCAR8  ...                         NaN
+23          SCAR8  ...                         NaN
+24          SCAR8  ...          (in some patients)
+25          SCAR8  ...                         NaN
+26          SCAR8  ...                         NaN
+27          SCAR8  ...                         NaN
+28          SCAR8  ...                         NaN
+29          SCAR8  ...                         NaN
+30          SCAR8  ...                         NaN
+31          SCAR8  ...                         NaN
+32          SCAR8  ...                         NaN
+33          SCAR8  ...                         NaN
+34          SCAR8  ...          (in some patients)
+35          SCAR8  ...          (in some patients)
+36          SCAR8  ...          (in some patients)
+37          SCAR8  ...                         NaN
+38          SCAR8  ...          (in some patients)
+39          SCAR8  ...          (in some patients)
+40          SCAR8  ...          (in some patients)
+
+[41 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  O M I M  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+
+
+     ...image saved as "TROUBLESHOOTING_2022-10-13_clinical-features.png" with  42  total nodes.
+
+     Summary file saved as "TROUBLESHOOTING_2022-10-13_clinical-features_NETWORK_SUMMARY.txt"
+
+     GraphML file saved as "TROUBLESHOOTING_2022-10-13_clinical-features.graphml  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+                              d8,        d8b
+                             `8P         ?88                                        d8P
+                                          88b                                    d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P    |
+  88b     d88   88P d88      d88 88b     d88   88P d88  d88  88P88b     d88   88P  88b    |
+  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+                                                                                          |
+  ----------------------------------------------------------------------------------------+
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v7.2
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   241  100   202  100    39    592    114 --:--:-- --:--:-- --:--:--   708
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  338k    0  338k  100    29   305k     26  0:00:01  0:00:01 --:--:--  305k
+-------------------------------------------------------------------------------------
+
+          Sorry, your enrichment analysis did not produce results meeting the
+                     minimum threshold for statistical significance.
+
+-------------------------------------------------------------------------------------
+
+                              d8,        d8b
+                             `8P         ?88                                        d8P
+                                          88b                                    d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P    |
+  88b     d88   88P d88      d88 88b     d88   88P d88  d88  88P88b     d88   88P  88b    |
+  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+                                                                                          |
+  ----------------------------------------------------------------------------------------+
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v7.2
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  4009    0  3513  100   496   8971   1266 --:--:-- --:--:-- --:--:-- 10227
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  530k    0  530k  100   326   450k    276  0:00:01  0:00:01 --:--:--  451k
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Your output table:
+                         Category  ...                                              Genes
+0                     Interaction  ...  [{'Entrez': 256646, 'Symbol': 'NUTM1'}, {'Entr...
+1                     Interaction  ...  [{'Entrez': 23043, 'Symbol': 'TNIK'}, {'Entrez...
+2                          Pubmed  ...  [{'Entrez': 23043, 'Symbol': 'TNIK'}, {'Entrez...
+3                          Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+4                          Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+5                     Interaction  ...  [{'Entrez': 4609, 'Symbol': 'MYC'}, {'Entrez':...
+6                          Pubmed  ...  [{'Entrez': 23043, 'Symbol': 'TNIK'}, {'Entrez...
+7                          Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+8                          Pubmed  ...  [{'Entrez': 23345, 'Symbol': 'SYNE1'}, {'Entre...
+9                          Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+10                         Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+11                         Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+12                    Interaction  ...  [{'Entrez': 4609, 'Symbol': 'MYC'}, {'Entrez':...
+13                           Drug  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+14                         Pubmed  ...  [{'Entrez': 23345, 'Symbol': 'SYNE1'}, {'Entre...
+15                         Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+16                         Pubmed  ...  [{'Entrez': 23345, 'Symbol': 'SYNE1'}, {'Entre...
+17                         Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+18  GeneOntologyMolecularFunction  ...  [{'Entrez': 23345, 'Symbol': 'SYNE1'}, {'Entre...
+19                         Pubmed  ...  [{'Entrez': 81565, 'Symbol': 'NDEL1'}, {'Entre...
+20                         Pubmed  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+21                       MicroRNA  ...  [{'Entrez': 23043, 'Symbol': 'TNIK'}, {'Entrez...
+22                        Disease  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+23                        Disease  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+24                         Pubmed  ...  [{'Entrez': 23345, 'Symbol': 'SYNE1'}, {'Entre...
+25                        Disease  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+26                        Disease  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+27                        Disease  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+28                        Disease  ...  [{'Entrez': 4000, 'Symbol': 'LMNA'}, {'Entrez'...
+
+[29 rows x 14 columns]
+
+     * Your enrichment analysis was saved as "TROUBLESHOOTING_2022-10-13_interactors_enrichment.csv"
+     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6
+
+-------------------------------------------------------------------------------------
+
+                        Thank you for using ₲Ɇ₦Ø₱ⱧɆ₦Ø    ❤
+
+-------------------------------------------------------------------------------------
+

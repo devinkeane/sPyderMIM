@@ -1,0 +1,624 @@
+
+
+
+   _       ,/'
+  (_).  ,/'
+   _  ::       ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  
+  (_)'  `\.
+           `\.              [  G e n o P h e n o  ]
+                                        List Splitter
+
+
+Splitting list into separate OMIM API compatible lists of 20 maximum MIMs...
+
+Saving divided lists to directory:    ./TROUBLESHOOT_MIMBATCH88_MIM_directory/
+
+TROUBLESHOOT_MIMBATCH88_0.txt
+TROUBLESHOOT_MIMBATCH88_1.txt
+
+
+     ___|                       _ \   |
+    |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+   ______________________________________________________________|
+                                      (ツ)_/¯  - * Version 7.2 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+No ENSEMBL or Gene ID found...      MIM # :     300194
+No ENSEMBL or Gene ID found...      MIM # :     300337
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_0_genes.csv "
+  with  38  total rows 
+
+  Your clinical data table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_0_clinical-features.csv "
+  with  276  total rows 
+
+
+   20  of  20  MIMs contained phenotypic data.
+
+   18  of  20  MIMs contained ENSEMBL/Gene IDs.
+
+   No corresponding ENSEMBL IDs found for MIM#:
+
+     * 300194
+     * 300337
+
+   These gene IDs have been omitted from the output table.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+     ___|                       _ \   |
+    |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+   ______________________________________________________________|
+                                      (ツ)_/¯  - * Version 7.2 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_1_genes.csv "
+  with  20  total rows 
+
+  Your clinical data table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_1_clinical-features.csv "
+  with  72  total rows 
+
+
+   4  of  4  MIMs contained phenotypic data.
+
+   4  of  4  MIMs contained ENSEMBL/Gene IDs.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+           c o n c a t . p y |
+           ------------------+
+                 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+                 ...Your combined table was saved as " TROUBLESHOOT_MIMBATCH88_clinical-features_concatenated.csv "
+                 with  348  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+           c o n c a t . p y |
+           ------------------+
+                 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+                 ...Your combined table was saved as " TROUBLESHOOT_MIMBATCH88_genes_concatenated.csv "
+                 with  58  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+      _______           __   ____      __                       __                 
+     / ____(_)___  ____/ /  /  _/___  / /____  _________ ______/ /_____  __________
+    / /_  / / __ \/ __  /   / // __ \/ __/ _ \/ ___/ __ `/ ___/ __/ __ \/ ___/ ___/
+   / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
+  /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
+
+                                                       [ G e n o P h e n o ]  v7.2                         
+
+
+--------------------------------------------------------------------
+
+	ʕっ•ᴥ•ʔっ        Your input:   
+
+
+         Superphenotype        Node_name  ... Gene_MIM_number  Parenthetical
+0                 GACI2            ABCC6  ...          603234            NaN
+1                  SSS4             GNB2  ...          139390            NaN
+2                BMIQ12            PCSK1  ...          162150            NaN
+3                  C4AD              C4A  ...          120810            NaN
+4                   LWD             SHOX  ...          312865            NaN
+5                   LWD             SHOX  ...          400020            NaN
+6                   CTX          CYP27A1  ...          606530            NaN
+7                 ANXD3            NEPRO  ...          617089            NaN
+8                 SEMDX              BGN  ...          301870            NaN
+9                 SMMCI              SHH  ...          600725            NaN
+10               MYOCL1             NOL3  ...          605235            NaN
+11                CPPB1           KISS1R  ...          604161            NaN
+12  FACTOR X DEFICIENCY              F10  ...          613872            NaN
+13                HLASA            LARS2  ...          604544            NaN
+14               SRTD17          DYNLT2B  ...          617353            NaN
+15                 ODG6           NUP107  ...          607617            NaN
+16               MCPH13            CENPE  ...          117143            NaN
+17                HPE14            PLCH1  ...          612835            NaN
+18                BBS13             MKS1  ...          609883            NaN
+19                GACI2  ENSG00000091262  ...          603234            NaN
+20                 SSS4  ENSG00000172354  ...          139390            NaN
+21               BMIQ12  ENSG00000175426  ...          162150            NaN
+22                 C4AD  ENSG00000244731  ...          120810            NaN
+23                  LWD  ENSG00000185960  ...          312865            NaN
+24                  LWD  ENSG00000185960  ...          400020            NaN
+25                  CTX  ENSG00000135929  ...          606530            NaN
+26                ANXD3  ENSG00000163608  ...          617089            NaN
+27                SEMDX  ENSG00000182492  ...          301870            NaN
+28                SMMCI  ENSG00000164690  ...          600725            NaN
+29               MYOCL1  ENSG00000140939  ...          605235            NaN
+30                CPPB1  ENSG00000116014  ...          604161            NaN
+31  FACTOR X DEFICIENCY  ENSG00000126218  ...          613872            NaN
+32                HLASA  ENSG00000011376  ...          604544            NaN
+33               SRTD17  ENSG00000213123  ...          617353            NaN
+34                 ODG6  ENSG00000111581  ...          607617            NaN
+35               MCPH13  ENSG00000138778  ...          117143            NaN
+36                HPE14  ENSG00000114805  ...          612835            NaN
+37                BBS13  ENSG00000011143  ...          609883            NaN
+38               ARVD11             DSC2  ...          125645            NaN
+39               ARVD11             DSC2  ...          125645            NaN
+40              CTRCT11            PITX3  ...          602669            NaN
+41              CTRCT11            PITX3  ...          602669            NaN
+42                UCMD1           COL6A3  ...          120250            NaN
+43                UCMD1           COL6A1  ...          120220            NaN
+44                UCMD1           COL6A2  ...          120240            NaN
+45                 GLM1             IDH1  ...          147700            NaN
+46                 GLM1             TP53  ...          191170            NaN
+47                 GLM1            ERBB2  ...          164870            NaN
+48               ARVD11  ENSG00000134755  ...          125645            NaN
+49               ARVD11  ENSG00000134755  ...          125645            NaN
+50              CTRCT11  ENSG00000107859  ...          602669            NaN
+51              CTRCT11  ENSG00000107859  ...          602669            NaN
+52                UCMD1  ENSG00000163359  ...          120250            NaN
+53                UCMD1  ENSG00000142156  ...          120220            NaN
+54                UCMD1  ENSG00000142173  ...          120240            NaN
+55                 GLM1  ENSG00000138413  ...          147700            NaN
+56                 GLM1  ENSG00000141510  ...          191170            NaN
+57                 GLM1  ENSG00000141736  ...          164870            NaN
+
+[58 rows x 6 columns]
+
+----------------------------------------------------------------------------
+
+Extracting Gene MIM IDs from input:
+
+                                                  
+Gene MIMs extracted                           ✔   
+
+                                                  
+Conversion to UNIPROT complete                ✔   
+
+                                         ┌(◉ ͜ʖ◉)つ
+         +-----------------------------------------------------------------------+
+         |   Searching for proteins that interact with each OMIM gene product:   |
+         +-----------------------------------------------------------------------+
+
+   1 | Approved Gene ID: ABCC6 | Gene Product (UNIPROT ID): O95255 | Interactions: 9 | Total Interactions: 9
+
+   2 | Approved Gene ID: GNB2 | Gene Product (UNIPROT ID): P62879 | Interactions: 245 | Total Interactions: 254
+
+   3 | Approved Gene ID: PCSK1 | Gene Product (UNIPROT ID): P29120 | Interactions: 3 | Total Interactions: 257
+
+   4 | Approved Gene ID: C4A | Gene Product (UNIPROT ID): P0C0L4 | Interactions: 57 | Total Interactions: 314
+
+   5 | Approved Gene ID: SHOX | Gene Product (UNIPROT ID): O15266 | Interactions: 18 | Total Interactions: 332
+
+   6 | Approved Gene ID: CYP27A1 | Gene Product (UNIPROT ID): O15266 | Interactions: 18 | Total Interactions: 350
+
+   7 | Approved Gene ID: NEPRO | Gene Product (UNIPROT ID): Q02318 | Interactions: 8 | Total Interactions: 358
+
+   8 | Approved Gene ID: BGN | Gene Product (UNIPROT ID): Q6NW34 | Interactions: 26 | Total Interactions: 384
+
+   9 | Approved Gene ID: SHH | Gene Product (UNIPROT ID): P21810 | Interactions: 24 | Total Interactions: 408
+
+   10 | Approved Gene ID: NOL3 | Gene Product (UNIPROT ID): Q15465 | Interactions: 25 | Total Interactions: 433
+
+   11 | Approved Gene ID: KISS1R | Gene Product (UNIPROT ID): O60936 | Interactions: 29 | Total Interactions: 462
+
+   12 | Approved Gene ID: F10 | Gene Product (UNIPROT ID): Q969F8 | Interactions: 23 | Total Interactions: 485
+
+   13 | Approved Gene ID: LARS2 | Gene Product (UNIPROT ID): P00742 | Interactions: 15 | Total Interactions: 500
+
+   14 | Approved Gene ID: DYNLT2B | Gene Product (UNIPROT ID): Q15031 | Interactions: 25 | Total Interactions: 525
+
+   15 | Approved Gene ID: NUP107 | Gene Product (UNIPROT ID): Q8WW35 | Interactions: 50 | Total Interactions: 575
+
+   16 | Approved Gene ID: CENPE | Gene Product (UNIPROT ID): P57740 | Interactions: 116 | Total Interactions: 691
+
+   17 | Approved Gene ID: PLCH1 | Gene Product (UNIPROT ID): Q02224 | Interactions: 46 | Total Interactions: 737
+
+   18 | Approved Gene ID: MKS1 | Gene Product (UNIPROT ID): Q4KWH8 | Interactions: 17 | Total Interactions: 754
+
+   19 | Approved Gene ID: DSC2 | Gene Product (UNIPROT ID): Q9NXB0 | Interactions: 109 | Total Interactions: 863
+
+   20 | Approved Gene ID: PITX3 | Gene Product (UNIPROT ID): Q02487 | Interactions: 31 | Total Interactions: 894
+
+   21 | Approved Gene ID: COL6A3 | Gene Product (UNIPROT ID): O75364 | Interactions: 1 | Total Interactions: 895
+
+   22 | Approved Gene ID: COL6A1 | Gene Product (UNIPROT ID): P12111 | Interactions: 7 | Total Interactions: 902
+
+   23 | Approved Gene ID: COL6A2 | Gene Product (UNIPROT ID): P12109 | Interactions: 24 | Total Interactions: 926
+
+   24 | Approved Gene ID: IDH1 | Gene Product (UNIPROT ID): P12110 | Interactions: 31 | Total Interactions: 957
+
+   25 | Approved Gene ID: TP53 | Gene Product (UNIPROT ID): O75874 | Interactions: 60 | Total Interactions: 1017
+
+   26 | Approved Gene ID: ERBB2 | Gene Product (UNIPROT ID): P04637 | Interactions: 1670 | Total Interactions: 2687
+
+Traceback (most recent call last):
+  File "/Users/devinkeane/Documents/GitHub/GenoPheno/interactors.py", line 433, in <module>
+    print('   '+str(j+1), '| Approved Gene ID:', gene_ids_list_unique[i], '| Gene Product (UNIPROT ID):', response2.json()['results'][j]['to'], '| Interactions:', len(tempdf), '| Total Interactions:', len(df2))
+IndexError: list index out of range
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Traceback (most recent call last):
+  File "/Users/devinkeane/Documents/GitHub/GenoPheno/graph.py", line 295, in <module>
+    protein_df = pd.read_csv(input)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 933, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1217, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/common.py", line 789, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'TROUBLESHOOT_MIMBATCH88_interactors.csv'
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Traceback (most recent call last):
+  File "/Users/devinkeane/Documents/GitHub/GenoPheno/graph.py", line 372, in <module>
+    protein_df = pd.read_csv(input)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 933, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1217, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/common.py", line 789, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'TROUBLESHOOT_MIMBATCH88_interactors.csv'
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+         Superphenotype        Node_name  ... Gene_MIM_number  Parenthetical
+0                 GACI2            ABCC6  ...          603234            NaN
+1                  SSS4             GNB2  ...          139390            NaN
+2                BMIQ12            PCSK1  ...          162150            NaN
+3                  C4AD              C4A  ...          120810            NaN
+4                   LWD             SHOX  ...          312865            NaN
+5                   LWD             SHOX  ...          400020            NaN
+6                   CTX          CYP27A1  ...          606530            NaN
+7                 ANXD3            NEPRO  ...          617089            NaN
+8                 SEMDX              BGN  ...          301870            NaN
+9                 SMMCI              SHH  ...          600725            NaN
+10               MYOCL1             NOL3  ...          605235            NaN
+11                CPPB1           KISS1R  ...          604161            NaN
+12  FACTOR X DEFICIENCY              F10  ...          613872            NaN
+13                HLASA            LARS2  ...          604544            NaN
+14               SRTD17          DYNLT2B  ...          617353            NaN
+15                 ODG6           NUP107  ...          607617            NaN
+16               MCPH13            CENPE  ...          117143            NaN
+17                HPE14            PLCH1  ...          612835            NaN
+18                BBS13             MKS1  ...          609883            NaN
+19                GACI2  ENSG00000091262  ...          603234            NaN
+20                 SSS4  ENSG00000172354  ...          139390            NaN
+21               BMIQ12  ENSG00000175426  ...          162150            NaN
+22                 C4AD  ENSG00000244731  ...          120810            NaN
+23                  LWD  ENSG00000185960  ...          312865            NaN
+24                  LWD  ENSG00000185960  ...          400020            NaN
+25                  CTX  ENSG00000135929  ...          606530            NaN
+26                ANXD3  ENSG00000163608  ...          617089            NaN
+27                SEMDX  ENSG00000182492  ...          301870            NaN
+28                SMMCI  ENSG00000164690  ...          600725            NaN
+29               MYOCL1  ENSG00000140939  ...          605235            NaN
+30                CPPB1  ENSG00000116014  ...          604161            NaN
+31  FACTOR X DEFICIENCY  ENSG00000126218  ...          613872            NaN
+32                HLASA  ENSG00000011376  ...          604544            NaN
+33               SRTD17  ENSG00000213123  ...          617353            NaN
+34                 ODG6  ENSG00000111581  ...          607617            NaN
+35               MCPH13  ENSG00000138778  ...          117143            NaN
+36                HPE14  ENSG00000114805  ...          612835            NaN
+37                BBS13  ENSG00000011143  ...          609883            NaN
+38               ARVD11             DSC2  ...          125645            NaN
+39               ARVD11             DSC2  ...          125645            NaN
+40              CTRCT11            PITX3  ...          602669            NaN
+41              CTRCT11            PITX3  ...          602669            NaN
+42                UCMD1           COL6A3  ...          120250            NaN
+43                UCMD1           COL6A1  ...          120220            NaN
+44                UCMD1           COL6A2  ...          120240            NaN
+45                 GLM1             IDH1  ...          147700            NaN
+46                 GLM1             TP53  ...          191170            NaN
+47                 GLM1            ERBB2  ...          164870            NaN
+48               ARVD11  ENSG00000134755  ...          125645            NaN
+49               ARVD11  ENSG00000134755  ...          125645            NaN
+50              CTRCT11  ENSG00000107859  ...          602669            NaN
+51              CTRCT11  ENSG00000107859  ...          602669            NaN
+52                UCMD1  ENSG00000163359  ...          120250            NaN
+53                UCMD1  ENSG00000142156  ...          120220            NaN
+54                UCMD1  ENSG00000142173  ...          120240            NaN
+55                 GLM1  ENSG00000138413  ...          147700            NaN
+56                 GLM1  ENSG00000141510  ...          191170            NaN
+57                 GLM1  ENSG00000141736  ...          164870            NaN
+
+[58 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  O M I M  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+      ⚠ NO GRAPH WAS PRODUCED FOR THIS INPUT! ⚠
+
+      No connected nodes were found.
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+    Superphenotype  ...       Parenthetical
+0            GACI2  ...                 NaN
+1            GACI2  ...                 NaN
+2            GACI2  ...  (in some patients)
+3            GACI2  ...                 NaN
+4            GACI2  ...                 NaN
+..             ...  ...                 ...
+343           GLM1  ...                 NaN
+344           GLM1  ...                 NaN
+345           GLM1  ...                 NaN
+346           GLM1  ...                 NaN
+347           GLM1  ...                 NaN
+
+[348 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  O M I M  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+
+
+     ...image saved as "TROUBLESHOOT_MIMBATCH88_clinical-features.png" with  37  total nodes.
+
+     Summary file saved as "TROUBLESHOOT_MIMBATCH88_clinical-features_NETWORK_SUMMARY.txt"
+
+     GraphML file saved as "TROUBLESHOOT_MIMBATCH88_clinical-features.graphml  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+                              d8,        d8b
+                             `8P         ?88                                        d8P
+                                          88b                                    d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P    |
+  88b     d88   88P d88      d88 88b     d88   88P d88  d88  88P88b     d88   88P  88b    |
+  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+                                                                                          |
+  ----------------------------------------------------------------------------------------+
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v7.2
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1806  100  1591  100   215   3568    482 --:--:-- --:--:-- --:--:--  4058
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  445k    0  445k  100   146   371k    121  0:00:01  0:00:01 --:--:--  371k
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Your output table:
+   Category  ...                                              Genes
+0    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+1    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+2    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+3    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+4    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+5    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+6    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+7    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+8    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+9    Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+10   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+11   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+12   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+13   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+14   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+15   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+16   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+17   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+18   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+19   Pubmed  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+20  Disease  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+21  Disease  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+22  Disease  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+23  Disease  ...  [{'Entrez': 2064, 'Symbol': 'ERBB2'}, {'Entrez...
+24  Disease  ...  [{'Entrez': 2064, 'Symbol': 'ERBB2'}, {'Entrez...
+25  Disease  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+26  Disease  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+27  Disease  ...  [{'Entrez': 1291, 'Symbol': 'COL6A1'}, {'Entre...
+
+[28 rows x 14 columns]
+
+     * Your enrichment analysis was saved as "TROUBLESHOOT_MIMBATCH88_genes_enrichment.csv"
+     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6
+
+-------------------------------------------------------------------------------------
+
+                        Thank you for using ₲Ɇ₦Ø₱ⱧɆ₦Ø    ❤
+
+-------------------------------------------------------------------------------------
+
+
+                              d8,        d8b
+                             `8P         ?88                                        d8P
+                                          88b                                    d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P    |
+  88b     d88   88P d88      d88 88b     d88   88P d88  d88  88P88b     d88   88P  88b    |
+  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+                                                                                          |
+  ----------------------------------------------------------------------------------------+
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v7.2
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+Traceback (most recent call last):
+  File "/Users/devinkeane/Documents/GitHub/GenoPheno/enrichment.py", line 98, in <module>
+    interactors_df = pd.read_csv(input)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 933, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1217, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/Users/devinkeane/PycharmProjects/GenoPheno/venv/lib/python3.9/site-packages/pandas/io/common.py", line 789, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'TROUBLESHOOT_MIMBATCH88_interactors.csv'

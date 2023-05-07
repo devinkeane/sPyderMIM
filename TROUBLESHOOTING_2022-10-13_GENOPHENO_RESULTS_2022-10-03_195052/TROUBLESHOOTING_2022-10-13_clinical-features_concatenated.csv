@@ -1,0 +1,42 @@
+,Superphenotype,Node_name,Node_type,Phenotype_MIM_number,Gene_MIM_number,Parenthetical
+0,BAIBA,Urinary excretion of beta-aminoisobutyric acid; D-beta-aminoisobutyrate:pyruvate aminotransferase deficiency,entry.clinicalSynopsis.oldFormat.Lab,210100,,
+1,BAIBA,Autosomal recessive,entry.clinicalSynopsis.oldFormat.Inheritance,210100,,
+2,CILD22,Autosomal recessive,entry.clinicalSynopsis.inheritance,615444,,
+3,CILD22,"Otitis media, recurrent",entry.clinicalSynopsis.headAndNeckEars,615444,,
+4,CILD22,Rhinitis,entry.clinicalSynopsis.headAndNeckNose,615444,,
+5,CILD22,Respiratory insufficiency due to defective ciliary clearance,entry.clinicalSynopsis.respiratory,615444,,
+6,CILD22,"Respiratory infections, recurrent",entry.clinicalSynopsis.respiratory,615444,,
+7,CILD22,"Sinusitis, recurrent",entry.clinicalSynopsis.respiratoryNasopharynx,615444,,
+8,CILD22,Nasal polyps,entry.clinicalSynopsis.respiratoryNasopharynx,615444,,
+9,CILD22,Chronic bronchitis,entry.clinicalSynopsis.respiratoryAirways,615444,,
+10,CILD22,Bronchiectasis,entry.clinicalSynopsis.respiratoryLung,615444,,
+11,CILD22,Situs inversus,entry.clinicalSynopsis.abdomen,615444,,(in about 50% of patients)
+12,CILD22,Infertility,entry.clinicalSynopsis.genitourinaryInternalGenitaliaMale,615444,,
+13,CILD22,Immotile sperm,entry.clinicalSynopsis.genitourinaryInternalGenitaliaMale,615444,,
+14,CILD22,Electron microscopy of patient respiratory cells shows absent inner and outer dynein arms,entry.clinicalSynopsis.laboratoryAbnormalities,615444,,
+15,CILD22,Lack of ciliary motility,entry.clinicalSynopsis.laboratoryAbnormalities,615444,,
+16,CILD22,Decreased nasal nitric oxide,entry.clinicalSynopsis.laboratoryAbnormalities,615444,,
+17,SCAR8,Autosomal recessive,entry.clinicalSynopsis.inheritance,610743,,
+18,SCAR8,Restrictive respiratory insufficiency,entry.clinicalSynopsis.respiratory,610743,,(in some patients)
+19,SCAR8,Abnormal saccades,entry.clinicalSynopsis.headAndNeckEyes,610743,,
+20,SCAR8,Abnormal smooth pursuit,entry.clinicalSynopsis.headAndNeckEyes,610743,,
+21,SCAR8,Nystagmus,entry.clinicalSynopsis.headAndNeckEyes,610743,,
+22,SCAR8,Strabismus,entry.clinicalSynopsis.headAndNeckEyes,610743,,
+23,SCAR8,Ptosis,entry.clinicalSynopsis.headAndNeckEyes,610743,,
+24,SCAR8,Urinary urgency,entry.clinicalSynopsis.genitourinaryBladder,610743,,(in some patients)
+25,SCAR8,Kyphosis,entry.clinicalSynopsis.skeletalSpine,610743,,
+26,SCAR8,Scoliosis,entry.clinicalSynopsis.skeletalSpine,610743,,
+27,SCAR8,Pes cavus,entry.clinicalSynopsis.skeletalFeet,610743,,
+28,SCAR8,Neurogenic changes seen on EMG,entry.clinicalSynopsis.muscleSoftTissue,610743,,
+29,SCAR8,Cerebellar ataxia,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,
+30,SCAR8,Gait ataxia,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,
+31,SCAR8,Limb ataxia,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,
+32,SCAR8,Dysarthria,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,
+33,SCAR8,Dysmetria,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,
+34,SCAR8,Brisk lower limb reflexes,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,(in some patients)
+35,SCAR8,Spasticity,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,(in some patients)
+36,SCAR8,Impaired cognition,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,(in some patients)
+37,SCAR8,Cerebellar atrophy,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,
+38,SCAR8,Pontine atrophy,entry.clinicalSynopsis.neurologicCentralNervousSystem,610743,,(in some patients)
+39,SCAR8,"Axonal peripheral neuropathy, mild",entry.clinicalSynopsis.neurologicPeripheralNervousSystem,610743,,(in some patients)
+40,SCAR8,Impaired vibration sense,entry.clinicalSynopsis.neurologicPeripheralNervousSystem,610743,,(in some patients)

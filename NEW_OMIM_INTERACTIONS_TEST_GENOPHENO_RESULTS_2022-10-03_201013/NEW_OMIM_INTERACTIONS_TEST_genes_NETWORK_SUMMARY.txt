@@ -1,0 +1,275 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-03 20:08:41.048685
+
+Total Nodes:  83
+Total Edges:  48
+
+             Approximate node connectivity:   1.157E+00
+     Network diameter of largest component:   4
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                            COL1A2            5
+                                            COL1A1            5
+                                              ALPL            3
+                                               OI2            2
+                                               OI4            2
+                                               OI3            2
+                                              OI13            1
+                                              BMP1            1
+                                              OI18            1
+                                            TENT5A            1
+                                               OI8            1
+                                              P3H1            1
+                                              OI16            1
+                                           CREB3L1            1
+                                              OI12            1
+                                               SP7            1
+                                              OI10            1
+                                          SERPINH1            1
+                                              OI11            1
+                                            FKBP10            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                            COL1A2    4.366E-03
+                                            COL1A1    4.366E-03
+                                               OI2    9.033E-04
+                                               OI4    9.033E-04
+                                               OI3    9.033E-04
+                                              ALPL    9.033E-04
+                                              OI13    0.000E+00
+                                              BMP1    0.000E+00
+                                              OI18    0.000E+00
+                                            TENT5A    0.000E+00
+                                               OI8    0.000E+00
+                                              P3H1    0.000E+00
+                                              OI16    0.000E+00
+                                           CREB3L1    0.000E+00
+                                              OI12    0.000E+00
+                                               SP7    0.000E+00
+                                              OI10    0.000E+00
+                                          SERPINH1    0.000E+00
+                                              OI11    0.000E+00
+                                            FKBP10    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                            COL1A1    5.000E-01
+                                            COL1A2    5.000E-01
+                                               OI2    3.536E-01
+                                               OI4    3.536E-01
+                                               OI3    3.536E-01
+                                               OI1    1.768E-01
+                                          EDSARTH1    1.768E-01
+                                             EDSCV    1.768E-01
+                                          EDSARTH2    1.768E-01
+
+CLASS 1:
+-------
+                                              ALPL    5.457E-05
+                                              HPPC    3.151E-05
+                                              HPPA    3.151E-05
+                                              HPPI    3.151E-05
+
+CLASS 2:
+-------
+                                              OI13    8.793E-09
+                                              BMP1    8.793E-09
+
+CLASS 3:
+-------
+                                              OI18    8.793E-09
+                                            TENT5A    8.793E-09
+
+CLASS 4:
+-------
+                                               OI8    8.793E-09
+                                              P3H1    8.793E-09
+
+CLASS 5:
+-------
+                                              OI16    8.793E-09
+                                           CREB3L1    8.793E-09
+
+CLASS 6:
+-------
+                                              OI12    8.793E-09
+                                               SP7    8.793E-09
+
+CLASS 7:
+-------
+                                              OI10    8.793E-09
+                                          SERPINH1    8.793E-09
+
+CLASS 8:
+-------
+                                              OI11    8.793E-09
+                                            FKBP10    8.793E-09
+
+CLASS 9:
+-------
+                                              OI17    8.793E-09
+                                             SPARC    8.793E-09
+
+CLASS 10:
+-------
+                                              OI21    8.793E-09
+                                            KDELR2    8.793E-09
+
+CLASS 11:
+-------
+                                               OI7    8.793E-09
+                                             CRTAP    8.793E-09
+
+CLASS 12:
+-------
+                                              OI14    8.793E-09
+                                           TMEM38B    8.793E-09
+
+CLASS 13:
+-------
+                                               OI9    8.793E-09
+                                              PPIB    8.793E-09
+
+CLASS 14:
+-------
+                                               OI6    8.793E-09
+                                          SERPINF1    8.793E-09
+
+CLASS 15:
+-------
+                                              OI15    8.793E-09
+                                              WNT1    8.793E-09
+
+CLASS 16:
+-------
+                                              OI20    8.793E-09
+                                              MESD    8.793E-09
+
+CLASS 17:
+-------
+                                               OI5    8.793E-09
+                                            IFITM5    8.793E-09
+
+CLASS 18:
+-------
+                                          EDSDERMS    8.793E-09
+                                           ADAMTS2    8.793E-09
+
+CLASS 19:
+-------
+                                            EDSCLL    8.793E-09
+                                              TNXB    8.793E-09
+
+CLASS 20:
+-------
+                                           EDSVASC    8.793E-09
+                                            COL3A1    8.793E-09
+
+CLASS 21:
+-------
+                                              OI19    8.793E-09
+                                            MBTPS2    8.793E-09
+
+CLASS 22:
+-------
+                                              BCS2    8.793E-09
+                                             PRDM5    8.793E-09
+
+CLASS 23:
+-------
+                                          EDSKSCL2    8.793E-09
+                                            FKBP14    8.793E-09
+
+CLASS 24:
+-------
+                                           EDSSPD1    8.793E-09
+                                           B4GALT7    8.793E-09
+
+CLASS 25:
+-------
+                                           EDSCLL2    8.793E-09
+                                             AEBP1    8.793E-09
+
+CLASS 26:
+-------
+                                            EDSMC2    8.793E-09
+                                               DSE    8.793E-09
+
+CLASS 27:
+-------
+                                          EDSKSCL1    8.793E-09
+                                             PLOD1    8.793E-09
+
+CLASS 28:
+-------
+                                            EDSCL2    8.793E-09
+                                            COL5A2    8.793E-09
+
+CLASS 29:
+-------
+                                           EDSSPD2    8.793E-09
+                                           B3GALT6    8.793E-09
+
+CLASS 30:
+-------
+                                            BTHLM2    8.793E-09
+                                           COL12A1    8.793E-09
+
+CLASS 31:
+-------
+                                            EDSCL1    8.793E-09
+                                            COL5A1    8.793E-09
+
+CLASS 32:
+-------
+                                            EDSPD1    8.793E-09
+                                               C1R    8.793E-09
+
+CLASS 33:
+-------
+                                              BCS1    8.793E-09
+                                            ZNF469    8.793E-09
+
+CLASS 34:
+-------
+                                           EDSSPD3    8.793E-09
+                                          SLC39A13    8.793E-09
+
+CLASS 35:
+-------
+                                            EDSMC1    8.793E-09
+                                            CHST14    8.793E-09
+
+CLASS 36:
+-------
+                                            EDSPD2    8.793E-09
+                                               C1S    8.793E-09

@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="CTRCT34">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="FOXE3">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="NPSR1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="RHYNS">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="TMEM67">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="HRZ">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="SMARCAD1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="CSB">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="ERCC6">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="DEE45">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="GABRB1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">5</data>
+    </node>
+    <node id="CIAT">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="SCN8A">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">6</data>
+    </node>
+    <node id="PITA5">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">7</data>
+    </node>
+    <node id="CDH23">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">7</data>
+    </node>
+    <node id="GIKANIS">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">8</data>
+    </node>
+    <node id="ALG9">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">8</data>
+    </node>
+    <node id="BOS">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">9</data>
+    </node>
+    <node id="LEMD3">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">9</data>
+    </node>
+    <node id="MONA">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">10</data>
+    </node>
+    <node id="MMP2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">10</data>
+    </node>
+    <node id="MRD34">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">11</data>
+    </node>
+    <node id="CERT1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">11</data>
+    </node>
+    <node id="IMD13">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">12</data>
+    </node>
+    <node id="UNC119">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">12</data>
+    </node>
+    <node id="RP58">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">13</data>
+    </node>
+    <node id="ZNF513">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">13</data>
+    </node>
+    <node id="ISDNA">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">14</data>
+    </node>
+    <node id="EXTL3">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">14</data>
+    </node>
+    <node id="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">15</data>
+    </node>
+    <node id="MTHFR">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">15</data>
+    </node>
+    <node id="DBA8">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">16</data>
+    </node>
+    <node id="RPS7">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">16</data>
+    </node>
+    <node id="HMSN2C">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">17</data>
+    </node>
+    <node id="TRPV4">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">17</data>
+    </node>
+    <node id="STL4">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">18</data>
+    </node>
+    <node id="COL9A1">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">18</data>
+    </node>
+    <node id="VENTRICULAR TACHYCARDIA, FAMILIAL">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">19</data>
+    </node>
+    <node id="GNAI2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">19</data>
+    </node>
+    <node id="HYPERTHYROIDISM, FAMILIAL GESTATIONAL">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">20</data>
+    </node>
+    <node id="TSHR">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">20</data>
+    </node>
+    <node id="MTDPS19">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">21</data>
+    </node>
+    <node id="SLC25A10">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">21</data>
+    </node>
+    <node id="NYS6">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">22</data>
+    </node>
+    <node id="GPR143">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">22</data>
+    </node>
+    <node id="FCAS3">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">23</data>
+    </node>
+    <node id="PLCG2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">23</data>
+    </node>
+    <node id="PARK2">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">24</data>
+    </node>
+    <node id="PRKN">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">24</data>
+    </node>
+    <node id="PARK4">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">25</data>
+    </node>
+    <node id="SNCA">
+      <data key="d0">1</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.13867504905630726</data>
+      <data key="d3">25</data>
+    </node>
+    <edge source="CTRCT34" target="FOXE3" />
+    <edge source="ASTHMA-RELATED TRAITS, SUSCEPTIBILITY TO, 2" target="NPSR1" />
+    <edge source="RHYNS" target="TMEM67" />
+    <edge source="HRZ" target="SMARCAD1" />
+    <edge source="CSB" target="ERCC6" />
+    <edge source="DEE45" target="GABRB1" />
+    <edge source="CIAT" target="SCN8A" />
+    <edge source="PITA5" target="CDH23" />
+    <edge source="GIKANIS" target="ALG9" />
+    <edge source="BOS" target="LEMD3" />
+    <edge source="MONA" target="MMP2" />
+    <edge source="MRD34" target="CERT1" />
+    <edge source="IMD13" target="UNC119" />
+    <edge source="RP58" target="ZNF513" />
+    <edge source="ISDNA" target="EXTL3" />
+    <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="MTHFR" />
+    <edge source="DBA8" target="RPS7" />
+    <edge source="HMSN2C" target="TRPV4" />
+    <edge source="STL4" target="COL9A1" />
+    <edge source="VENTRICULAR TACHYCARDIA, FAMILIAL" target="GNAI2" />
+    <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="TSHR" />
+    <edge source="MTDPS19" target="SLC25A10" />
+    <edge source="NYS6" target="GPR143" />
+    <edge source="FCAS3" target="PLCG2" />
+    <edge source="PARK2" target="PRKN" />
+    <edge source="PARK4" target="SNCA" />
+  </graph>
+</graphml>

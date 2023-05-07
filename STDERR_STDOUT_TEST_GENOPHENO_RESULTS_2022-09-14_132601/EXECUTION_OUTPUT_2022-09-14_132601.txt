@@ -1,0 +1,11 @@
+./GenoPheno.sh: line 3: stdbuf: command not found
+./GenoPheno.sh: line 18: stdbuf: command not found
+./GenoPheno.sh: line 31: stdbuf: command not found
+./GenoPheno.sh: line 41: stdbuf: command not found
+./GenoPheno.sh: line 43: stdbuf: command not found
+./GenoPheno.sh: line 45: stdbuf: command not found
+./GenoPheno.sh: line 46: stdbuf: command not found
+./GenoPheno.sh: line 47: stdbuf: command not found
+./GenoPheno.sh: line 48: stdbuf: command not found
+./GenoPheno.sh: line 51: stdbuf: command not found
+./GenoPheno.sh: line 52: stdbuf: command not found

@@ -1,0 +1,3940 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-09-08">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="degree" type="long" />
+      <attribute id="1" title="betweenness" type="double" />
+      <attribute id="2" title="eigenvector" type="double" />
+      <attribute id="3" title="modularity" type="long" />
+    </attributes>
+    <nodes>
+      <node id="RHYNS" label="RHYNS">
+        <attvalues>
+          <attvalue for="0" value="28" />
+          <attvalue for="1" value="0.13862009236095046" />
+          <attvalue for="2" value="0.037784995972302116" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Autosomal recessive" label="Autosomal recessive">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="0.2111963637452208" />
+          <attvalue for="2" value="0.11003908510251181" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Short stature" label="Short stature">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.063689009597468" />
+          <attvalue for="2" value="0.00510757298145708" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Sensorineural deafness, unilateral severe" label="Sensorineural deafness, unilateral severe">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Ptosis" label="Ptosis">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.014980997370242478" />
+          <attvalue for="2" value="0.006493884695748595" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Exotropia" label="Exotropia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Retinitis pigmentosa" label="Retinitis pigmentosa">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Extinguished electroretinogram responses bilaterally" label="Extinguished electroretinogram responses bilaterally">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Renal failure, progressive" label="Renal failure, progressive">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Nephronophthisis" label="Nephronophthisis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Delayed bone age" label="Delayed bone age">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Generalized osteopenia" label="Generalized osteopenia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Thickened calvarium" label="Thickened calvarium">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.018621848453837943" />
+          <attvalue for="2" value="0.0860297005140369" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Rotoscoliosis" label="Rotoscoliosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Hypoplastic iliac bones" label="Hypoplastic iliac bones">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Irregular acetabular margins" label="Irregular acetabular margins">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Thin tubular bones" label="Thin tubular bones">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Shortened long bones" label="Shortened long bones">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Bowed radii" label="Bowed radii">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Short femoral neck" label="Short femoral neck">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Epiphyseal hypoplasia" label="Epiphyseal hypoplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Thinning of diaphyseal cortex" label="Thinning of diaphyseal cortex">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Brachydactyly" label="Brachydactyly">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.012031690735197461" />
+          <attvalue for="2" value="0.013314700797542866" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Congenital palsy of right cranial nerve III" label="Congenital palsy of right cranial nerve III">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Congenital palsy of right cranial nerve IV" label="Congenital palsy of right cranial nerve IV">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Congenital palsy of left cranial nerve VI" label="Congenital palsy of left cranial nerve VI">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Hypopituitarism" label="Hypopituitarism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Growth hormone deficiency" label="Growth hormone deficiency">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="Thyroid stimulating hormone deficiency" label="Thyroid stimulating hormone deficiency">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0044237528625228765" />
+          <attvalue for="3" value="5" />
+        </attvalues>
+      </node>
+      <node id="HRZ" label="HRZ">
+        <attvalues>
+          <attvalue for="0" value="21" />
+          <attvalue for="1" value="0.0815798477461295" />
+          <attvalue for="2" value="0.0015767849667575275" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Autosomal dominant" label="Autosomal dominant">
+        <attvalues>
+          <attvalue for="0" value="10" />
+          <attvalue for="1" value="0.28804177126967623" />
+          <attvalue for="2" value="0.009775928804150591" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Tapered fingers" label="Tapered fingers">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Abnormal or absent dermatoglyphic pattern" label="Abnormal or absent dermatoglyphic pattern">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Palmoplantar hypohidrosis" label="Palmoplantar hypohidrosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Palmoplantar keratoderma, mild" label="Palmoplantar keratoderma, mild">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Accentuated palmoplantar creases" label="Accentuated palmoplantar creases">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Congenital scleroatrophy of hands and feet" label="Congenital scleroatrophy of hands and feet">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Atrophic plaques on fingers and dorsa of hands" label="Atrophic plaques on fingers and dorsa of hands">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Hyperorthokeratosis" label="Hyperorthokeratosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Acanthotic epidermis" label="Acanthotic epidermis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Prominent granular cell layer" label="Prominent granular cell layer">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Fibrosis in upper and mid-dermis, mild" label="Fibrosis in upper and mid-dermis, mild">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Increased number of blood vessels" label="Increased number of blood vessels">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Absence of Langerhans cells in affected skin" label="Absence of Langerhans cells in affected skin">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Nail hypoplasia" label="Nail hypoplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Thin nail plates" label="Thin nail plates">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Longitudinal ridges" label="Longitudinal ridges">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Angle formation" label="Angle formation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Fissures" label="Fissures">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="V-shaped notches" label="V-shaped notches">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="Squamous cell carcinoma (in areas of scleroatrophic skin) &lt;G,H" label="Squamous cell carcinoma (in areas of scleroatrophic skin) &lt;G,H">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00018460139075550193" />
+          <attvalue for="3" value="7" />
+        </attvalues>
+      </node>
+      <node id="CSB" label="CSB">
+        <attvalues>
+          <attvalue for="0" value="72" />
+          <attvalue for="1" value="0.34663169979308134" />
+          <attvalue for="2" value="0.6970875248897902" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Malformed ears" label="Malformed ears">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Sensorineural hearing loss" label="Sensorineural hearing loss">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Pigmentary retinopathy" label="Pigmentary retinopathy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Optic atrophy" label="Optic atrophy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Strabismus" label="Strabismus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Hyperopia" label="Hyperopia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Corneal opacity" label="Corneal opacity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Decreased lacrimation" label="Decreased lacrimation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Nystagmus" label="Nystagmus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Cataracts" label="Cataracts">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Microphthalmos" label="Microphthalmos">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Iris hypoplasia" label="Iris hypoplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Microcornea" label="Microcornea">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Proteinuria" label="Proteinuria">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Renal failure" label="Renal failure">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Osteoporosis" label="Osteoporosis">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.015053543086324703" />
+          <attvalue for="2" value="0.0851657241922725" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Kyphosis" label="Kyphosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Vertebral body abnormalities" label="Vertebral body abnormalities">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Intervertebral calcifications" label="Intervertebral calcifications">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Small, squared off pelvis" label="Small, squared off pelvis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Hypoplastic iliac wings" label="Hypoplastic iliac wings">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Mild to moderate joint limitation" label="Mild to moderate joint limitation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Sclerotic ivory phalangeal epiphyses" label="Sclerotic ivory phalangeal epiphyses">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Mental retardation" label="Mental retardation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Normal pressure hydrocephalus" label="Normal pressure hydrocephalus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Poor-absent neurologic development" label="Poor-absent neurologic development">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Basal ganglia calcifications" label="Basal ganglia calcifications">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Subcortical white matter calcifications" label="Subcortical white matter calcifications">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Cerebellar calcifications" label="Cerebellar calcifications">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Patchy demyelination of subcortical white matter" label="Patchy demyelination of subcortical white matter">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Cerebral atrophy" label="Cerebral atrophy">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.02762537836139491" />
+          <attvalue for="2" value="0.08610613659606507" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Seizures" label="Seizures">
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="0.19828273090119233" />
+          <attvalue for="2" value="0.10196605668433432" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Photosensitivity" label="Photosensitivity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Scarring" label="Scarring">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Pigmentation" label="Pigmentation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Atrophy" label="Atrophy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Anhidrosis" label="Anhidrosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Dry skin" label="Dry skin">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Decreased subcutaneous adipose tissue" label="Decreased subcutaneous adipose tissue">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Intrauterine growth retardation" label="Intrauterine growth retardation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Low birth weight" label="Low birth weight">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Marked failure to thrive" label="Marked failure to thrive">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Postnatal growth retardation" label="Postnatal growth retardation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Cachectic dwarfism" label="Cachectic dwarfism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Microcephaly" label="Microcephaly">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.034371816704380186" />
+          <attvalue for="2" value="0.09152116132240931" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Mandible prognathism" label="Mandible prognathism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Loss of facial adipose tissue" label="Loss of facial adipose tissue">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Wizened face" label="Wizened face">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Slender nose" label="Slender nose">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Dental caries" label="Dental caries">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Delayed eruption of deciduous teeth" label="Delayed eruption of deciduous teeth">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Malocclusion" label="Malocclusion">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Absent/hypoplastic teeth" label="Absent/hypoplastic teeth">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Cardiac arrhythmias" label="Cardiac arrhythmias">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Hypertension" label="Hypertension">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Hepatomegaly" label="Hepatomegaly">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Splenomegaly" label="Splenomegaly">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Micropenis" label="Micropenis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Cryptorchidism" label="Cryptorchidism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Precociously senile appearance" label="Precociously senile appearance">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Thin, dry hair" label="Thin, dry hair">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Dysmyelination" label="Dysmyelination">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Ataxia" label="Ataxia">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.0865634912848188" />
+          <attvalue for="2" value="0.08784756539913373" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Tremor" label="Tremor">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.052679411513129756" />
+          <attvalue for="2" value="0.08296681704424123" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Weakness" label="Weakness">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Peripheral neuropathy" label="Peripheral neuropathy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Slowed nerve conduction velocities" label="Slowed nerve conduction velocities">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Abnormal myelination in sural nerve biopsies" label="Abnormal myelination in sural nerve biopsies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Disturbed visual and brainstem auditory evoked responses indicative of CNS demyelination" label="Disturbed visual and brainstem auditory evoked responses indicative of CNS demyelination">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="Increased cellular sensitivity to UV light" label="Increased cellular sensitivity to UV light">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.08160594765151402" />
+          <attvalue for="3" value="0" />
+        </attvalues>
+      </node>
+      <node id="DEE45" label="DEE45">
+        <attvalues>
+          <attvalue for="0" value="13" />
+          <attvalue for="1" value="0.1757443335375665" />
+          <attvalue for="2" value="0.038440224448122985" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Cortical visual impairment" label="Cortical visual impairment">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Epileptic encephalopathy" label="Epileptic encephalopathy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Delayed psychomotor development" label="Delayed psychomotor development">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Psychomotor regression" label="Psychomotor regression">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Hypotonia" label="Hypotonia">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.048926019570104805" />
+          <attvalue for="2" value="0.00644444187577414" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Hypsarrhythmia" label="Hypsarrhythmia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Epilepsy of infancy with migrating focal seizures" label="Epilepsy of infancy with migrating focal seizures">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Thin corpus callosum" label="Thin corpus callosum">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.02935829003156435" />
+          <attvalue for="2" value="0.0047030130727054795" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="White matter atrophy" label="White matter atrophy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0045001889445510455" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="CIAT" label="CIAT">
+        <attvalues>
+          <attvalue for="0" value="15" />
+          <attvalue for="1" value="0.11219239169226794" />
+          <attvalue for="2" value="0.014875368019262302" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Optic nerve hypoplasia" label="Optic nerve hypoplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Gaze-evoked nystagmus" label="Gaze-evoked nystagmus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Esophoria" label="Esophoria">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Amblyopia" label="Amblyopia">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.036855273287143955" />
+          <attvalue for="2" value="0.0017686538113727839" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Global developmental delay" label="Global developmental delay">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.005419626039991907" />
+          <attvalue for="2" value="0.00381156063629438" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Impaired intellectual development" label="Impaired intellectual development">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Language delay" label="Language delay">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Dysmetria" label="Dysmetria">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Dysarthria" label="Dysarthria">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Cerebellar atrophy seen on MRI" label="Cerebellar atrophy seen on MRI">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Attention deficit-hyperactivity disorder" label="Attention deficit-hyperactivity disorder">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Emotional lability" label="Emotional lability">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0017414288030686608" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="PITA5" label="PITA5">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.004180566247540843" />
+          <attvalue for="2" value="0.0011604301607339254" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Pituitary adenoma" label="Pituitary adenoma">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00013585546470055502" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="GIKANIS" label="GIKANIS">
+        <attvalues>
+          <attvalue for="0" value="33" />
+          <attvalue for="1" value="0.12206559389488553" />
+          <attvalue for="2" value="0.042846374076159835" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Low-set ears" label="Low-set ears">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Posteriorly rotated ears" label="Posteriorly rotated ears">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Fleshy ears" label="Fleshy ears">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Hypertelorism" label="Hypertelorism">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.011282169761448718" />
+          <attvalue for="2" value="0.013907321285891738" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Polycystic kidneys" label="Polycystic kidneys">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Skeletal dysplasia" label="Skeletal dysplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Joint contractures" label="Joint contractures">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Thick occipital bone" label="Thick occipital bone">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Decreased ossification of the skull" label="Decreased ossification of the skull">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Absent or decreased ossification of the vertebral bodies" label="Absent or decreased ossification of the vertebral bodies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Absent ossification of the pubic rami" label="Absent ossification of the pubic rami">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Round pelvis" label="Round pelvis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Ovoid ischia" label="Ovoid ischia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Brachymelia" label="Brachymelia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Short tubular bones" label="Short tubular bones">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Metaphyseal broadening" label="Metaphyseal broadening">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Ulnar deviation of the hands" label="Ulnar deviation of the hands">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Brachycephaly" label="Brachycephaly">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Micrognathia" label="Micrognathia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Retrognathia" label="Retrognathia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Flat philtrum" label="Flat philtrum">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Beaked nose" label="Beaked nose">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Hypoplastic alae nasi" label="Hypoplastic alae nasi">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Congenital heart defects" label="Congenital heart defects">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Periportal fibrosis" label="Periportal fibrosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Short neck" label="Short neck">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Lung hypoplasia" label="Lung hypoplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Abnormal lung lobation" label="Abnormal lung lobation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Diaphragmatic hernia" label="Diaphragmatic hernia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Dilated pancreatic ducts" label="Dilated pancreatic ducts">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="Abnormal feet position" label="Abnormal feet position">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.005016373350871748" />
+          <attvalue for="3" value="2" />
+        </attvalues>
+      </node>
+      <node id="BOS" label="BOS">
+        <attvalues>
+          <attvalue for="0" value="9" />
+          <attvalue for="1" value="0.033145154392267555" />
+          <attvalue for="2" value="0.0012854832938542682" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Osteopoikilosis ('spotted bones') typically located in epiphyses and metaphyses of long bones, wrist, foot, ankle, pelvis, and scapula" label="Osteopoikilosis ('spotted bones') typically located in epiphyses and metaphyses of long bones, wrist, foot, ankle, pelvis, and scapula">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Stiff joints" label="Stiff joints">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Osteosclerosis" label="Osteosclerosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Melorheostosis, typically affect diaphyses" label="Melorheostosis, typically affect diaphyses">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Subcutaneous nontender firm nodules" label="Subcutaneous nontender firm nodules">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Subcutaneous connective tissue nevi" label="Subcutaneous connective tissue nevi">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Elastin-rich connective tissue nevi" label="Elastin-rich connective tissue nevi">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="Collagen-rich connective tissue nevi" label="Collagen-rich connective tissue nevi">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00015049624949462547" />
+          <attvalue for="3" value="17" />
+        </attvalues>
+      </node>
+      <node id="MONA" label="MONA">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="0.09035023274181593" />
+          <attvalue for="2" value="0.030406707556403696" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Flexion contracture" label="Flexion contracture">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Flexion contractures" label="Flexion contractures">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Fusiform finger swelling" label="Fusiform finger swelling">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Interphalangeal joint erosions" label="Interphalangeal joint erosions">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Finger contractures" label="Finger contractures">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Carpal osteolysis" label="Carpal osteolysis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Widened metacarpal shaft" label="Widened metacarpal shaft">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Thin metacarpal cortices" label="Thin metacarpal cortices">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Subcutaneous nodules" label="Subcutaneous nodules">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Hyperpigmented erythematous lesions" label="Hyperpigmented erythematous lesions">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Elevated antinuclear antibody (ANA)" label="Elevated antinuclear antibody (ANA)">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Elevated IL1-beta" label="Elevated IL1-beta">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Elevated IL6" label="Elevated IL6">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Pes planus" label="Pes planus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Pes cavus" label="Pes cavus">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.03872726574644709" />
+          <attvalue for="2" value="0.00399942126671783" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Tarsal osteolysis" label="Tarsal osteolysis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Widened metatarsal shaft" label="Widened metatarsal shaft">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="Thin metatarsal cortices" label="Thin metatarsal cortices">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0035597765407585015" />
+          <attvalue for="3" value="9" />
+        </attvalues>
+      </node>
+      <node id="MRD34" label="MRD34">
+        <attvalues>
+          <attvalue for="0" value="18" />
+          <attvalue for="1" value="0.11844182456968268" />
+          <attvalue for="2" value="0.017682090361599435" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Hearing impairment" label="Hearing impairment">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Epicanthus" label="Epicanthus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Cortical vision impairment" label="Cortical vision impairment">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Synophrys" label="Synophrys">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Broad-based gait" label="Broad-based gait">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Microcephaly, postnatal" label="Microcephaly, postnatal">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Smooth philtrum" label="Smooth philtrum">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Anteverted nares" label="Anteverted nares">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Bruxism" label="Bruxism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Widely-spaced teeth" label="Widely-spaced teeth">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Stereotypic behaviors" label="Stereotypic behaviors">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Small feet" label="Small feet">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="2-3 toe syndactyly" label="2-3 toe syndactyly">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="Drooling" label="Drooling">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.002070131833225719" />
+          <attvalue for="3" value="13" />
+        </attvalues>
+      </node>
+      <node id="IMD13" label="IMD13">
+        <attvalues>
+          <attvalue for="0" value="17" />
+          <attvalue for="1" value="0.0656060217261141" />
+          <attvalue for="2" value="0.0014660436970632858" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Recurrent otitis media" label="Recurrent otitis media">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Recurrent shingles" label="Recurrent shingles">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Fungal dermatitis" label="Fungal dermatitis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Persistent severe fungal infections of fingernails and toenails" label="Persistent severe fungal infections of fingernails and toenails">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Partial loss of nails" label="Partial loss of nails">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Recurrent bacterial pneumonia" label="Recurrent bacterial pneumonia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Bronchiolitis obliterans organizing pneumonia" label="Bronchiolitis obliterans organizing pneumonia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Herpetic lesions" label="Herpetic lesions">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Recurrent sinusitis" label="Recurrent sinusitis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Reduced CD4 T-lymphocyte counts" label="Reduced CD4 T-lymphocyte counts">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Reduced CD3 T-lymphocyte counts" label="Reduced CD3 T-lymphocyte counts">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Lymphopenia" label="Lymphopenia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Severely reduced response to mitogens" label="Severely reduced response to mitogens">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Severely reduced response to Candida and tetanus toxoid antigens" label="Severely reduced response to Candida and tetanus toxoid antigens">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Normal levels of IgM, IgA, and IgG" label="Normal levels of IgM, IgA, and IgG">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="Normal response to bacterial antigens" label="Normal response to bacterial antigens">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00017163586903966695" />
+          <attvalue for="3" value="12" />
+        </attvalues>
+      </node>
+      <node id="RP58" label="RP58">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="0.024923017705927638" />
+          <attvalue for="2" value="0.01403753856389885" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Night blindness, progressive" label="Night blindness, progressive">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0016434464418011699" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Loss of peripheral vision" label="Loss of peripheral vision">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0016434464418011699" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Waxy pale optic disc" label="Waxy pale optic disc">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0016434464418011699" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Attenuation of retinal arteries" label="Attenuation of retinal arteries">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0016434464418011699" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Bone spicule pigment deposits in midperiphery of retina" label="Bone spicule pigment deposits in midperiphery of retina">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0016434464418011699" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Loss of rod and cone responses seen on ERG" label="Loss of rod and cone responses seen on ERG">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0016434464418011699" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="ISDNA" label="ISDNA">
+        <attvalues>
+          <attvalue for="0" value="50" />
+          <attvalue for="1" value="0.1956344464193784" />
+          <attvalue for="2" value="0.07591412721720758" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Short stature, disproportionate" label="Short stature, disproportionate">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Premature craniosynostosis" label="Premature craniosynostosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Microcephaly, progressive" label="Microcephaly, progressive">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Platyspondyly, severe" label="Platyspondyly, severe">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Cervical spine malformation" label="Cervical spine malformation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Cervical instability" label="Cervical instability">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Hypoplastic odontoid peg" label="Hypoplastic odontoid peg">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Kyphoscoliosis, progressive" label="Kyphoscoliosis, progressive">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Sloping acetabular roof" label="Sloping acetabular roof">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Trident-shaped acetabula" label="Trident-shaped acetabula">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Shallow lateral notches" label="Shallow lateral notches">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Narrow sciatic notches" label="Narrow sciatic notches">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Coxa valga" label="Coxa valga">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Radial head dislocation" label="Radial head dislocation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Small capital femoral epiphyses" label="Small capital femoral epiphyses">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Epiphyseal dysplasia" label="Epiphyseal dysplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Metaphyseal dysplasia" label="Metaphyseal dysplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Delayed carpal ossification" label="Delayed carpal ossification">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Lack of ossification of fifth-finger middle phalanx" label="Lack of ossification of fifth-finger middle phalanx">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Intellectual disability, mild to severe" label="Intellectual disability, mild to severe">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Motor delay" label="Motor delay">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Truncal muscular hypotonia" label="Truncal muscular hypotonia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Hypertonia of limbs" label="Hypertonia of limbs">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Single palmar crease" label="Single palmar crease">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Abnormal palmar crease" label="Abnormal palmar crease">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Erythroderma" label="Erythroderma">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Coarse facies" label="Coarse facies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Full cheeks" label="Full cheeks">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Prominent nose" label="Prominent nose">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Depressed nasal bridge" label="Depressed nasal bridge">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Broad nasal tip" label="Broad nasal tip">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Liver cysts" label="Liver cysts">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Truncal hypotonia" label="Truncal hypotonia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Hypertonia in limbs" label="Hypertonia in limbs">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Frequent infections" label="Frequent infections">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Extremely low or absent T cells" label="Extremely low or absent T cells">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Normal B cell levels" label="Normal B cell levels">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Oligoclonal T-cell expansions" label="Oligoclonal T-cell expansions">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="CD4+ lymphopenia" label="CD4+ lymphopenia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Eosinophilia" label="Eosinophilia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Increased serum IgE levels" label="Increased serum IgE levels">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Hypogammaglobulinemia" label="Hypogammaglobulinemia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Severe narrowing of laryngotracheal tract" label="Severe narrowing of laryngotracheal tract">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Pectus excavatum" label="Pectus excavatum">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Rib deformity" label="Rib deformity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="Anal atresia" label="Anal atresia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00889094793501999" />
+          <attvalue for="3" value="1" />
+        </attvalues>
+      </node>
+      <node id="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" label="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY">
+        <attvalues>
+          <attvalue for="0" value="14" />
+          <attvalue for="1" value="0.055939132503172895" />
+          <attvalue for="2" value="0.04184435308595916" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Developmental delay" label="Developmental delay">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Gait abnormalities" label="Gait abnormalities">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Incoordination" label="Incoordination">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Paresthesias" label="Paresthesias">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Stroke" label="Stroke">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Psychiatric disturbances" label="Psychiatric disturbances">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Muscle weakness" label="Muscle weakness">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Methylenetetrahydrofolate reductase deficiency" label="Methylenetetrahydrofolate reductase deficiency">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Low to normal plasma methionine" label="Low to normal plasma methionine">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Homocysteinemia" label="Homocysteinemia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="Homocystinuria" label="Homocystinuria">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.004898840320023542" />
+          <attvalue for="3" value="6" />
+        </attvalues>
+      </node>
+      <node id="DBA8" label="DBA8">
+        <attvalues>
+          <attvalue for="0" value="14" />
+          <attvalue for="1" value="0.05751980819808809" />
+          <attvalue for="2" value="0.0020855962821416454" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Widely spaced eyes" label="Widely spaced eyes">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Growth retardation" label="Growth retardation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Cathie facies" label="Cathie facies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Short nose" label="Short nose">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Broad nasal bridge" label="Broad nasal bridge">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Hepatic iron overload, mild" label="Hepatic iron overload, mild">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Mild hepatic iron overload" label="Mild hepatic iron overload">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Elevated adenosine deaminase (ADA) activity" label="Elevated adenosine deaminase (ADA) activity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Elevated levels of reduced glutathione" label="Elevated levels of reduced glutathione">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Thick upper lip" label="Thick upper lip">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Congenital anemia" label="Congenital anemia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="Neutropenia" label="Neutropenia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0002441753929748751" />
+          <attvalue for="3" value="15" />
+        </attvalues>
+      </node>
+      <node id="HMSN2C" label="HMSN2C">
+        <attvalues>
+          <attvalue for="0" value="33" />
+          <attvalue for="1" value="0.1462553135617689" />
+          <attvalue for="2" value="0.0037550690027293686" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Hearing loss, sensorineural" label="Hearing loss, sensorineural">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Abducens nerve palsy" label="Abducens nerve palsy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Oculomotor nerve palsy" label="Oculomotor nerve palsy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Scoliosis" label="Scoliosis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="'Sloping' shoulders due to muscle atrophy" label="'Sloping' shoulders due to muscle atrophy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Shoulder girdle muscle atrophy" label="Shoulder girdle muscle atrophy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Neurogenic atrophy seen on muscle biopsy" label="Neurogenic atrophy seen on muscle biopsy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Distal limb muscle weakness due to peripheral neuropathy" label="Distal limb muscle weakness due to peripheral neuropathy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Distal limb muscle atrophy due to peripheral neuropathy" label="Distal limb muscle atrophy due to peripheral neuropathy">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Both upper and lower limb involvement" label="Both upper and lower limb involvement">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Wasting of hand muscles often occurs early" label="Wasting of hand muscles often occurs early">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Impaired manual dexterity" label="Impaired manual dexterity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Proximal limb muscles may be involved in severe cases" label="Proximal limb muscles may be involved in severe cases">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Foot drop" label="Foot drop">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Intercostal muscle involvement" label="Intercostal muscle involvement">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Diaphragm involvement" label="Diaphragm involvement">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Vocal cord paresis" label="Vocal cord paresis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Areflexia" label="Areflexia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Hyporeflexia" label="Hyporeflexia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Distal sensory impairment" label="Distal sensory impairment">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Decreased or absent distal sensory nerve action potential" label="Decreased or absent distal sensory nerve action potential">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Normal motor nerve conduction velocity (NCV)" label="Normal motor nerve conduction velocity (NCV)">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Decreased compound muscle action potentials" label="Decreased compound muscle action potentials">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Hammertoes" label="Hammertoes">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Respiratory failure due to intercostal muscle and diaphragm involvement" label="Respiratory failure due to intercostal muscle and diaphragm involvement">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Obstructive sleep apnea" label="Obstructive sleep apnea">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Stridor" label="Stridor">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Urinary urgency" label="Urinary urgency">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Urinary incontinence" label="Urinary incontinence">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="Hoarse voice due to vocal cord paresis" label="Hoarse voice due to vocal cord paresis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00043964472595932796" />
+          <attvalue for="3" value="3" />
+        </attvalues>
+      </node>
+      <node id="VENTRICULAR TACHYCARDIA, FAMILIAL" label="VENTRICULAR TACHYCARDIA, FAMILIAL">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="0.008350440509793859" />
+          <attvalue for="2" value="0.0011767841861922044" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality" label="Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0001377701303806107" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="No metabolic disorder" label="No metabolic disorder">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0001377701303806107" />
+          <attvalue for="3" value="4" />
+        </attvalues>
+      </node>
+      <node id="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" label="HYPERTHYROIDISM, FAMILIAL GESTATIONAL">
+        <attvalues>
+          <attvalue for="0" value="10" />
+          <attvalue for="1" value="0.0013471901462663587" />
+          <attvalue for="2" value="1.9667632424637144e-18" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Weight loss" label="Weight loss">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="0.000962278675904542" />
+          <attvalue for="2" value="9.789207601494046e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Nausea" label="Nausea">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Vomiting" label="Vomiting">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Gestational hyperthyroidism" label="Gestational hyperthyroidism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Diffuse goiter" label="Diffuse goiter">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Hyperemesis gravidarum" label="Hyperemesis gravidarum">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Spontaneous abortion, recurrent" label="Spontaneous abortion, recurrent">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Decreased TSH" label="Decreased TSH">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Increased serum free thyroxine" label="Increased serum free thyroxine">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Increased serum triiodothyronine" label="Increased serum triiodothyronine">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.034475303650367e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="MTDPS19" label="MTDPS19">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="0.07367757961965044" />
+          <attvalue for="2" value="0.0017324907377126158" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Increased serum lactate" label="Increased serum lactate">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Hearing loss, unilateral" label="Hearing loss, unilateral">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Poor eye tracking" label="Poor eye tracking">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Hypospadias" label="Hypospadias">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Hydrocele" label="Hydrocele">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Decreased mtDNA content in muscle tissue" label="Decreased mtDNA content in muscle tissue">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Mitochondrial complex I deficiency in muscle tissue" label="Mitochondrial complex I deficiency in muscle tissue">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Lack of spontaneous movements" label="Lack of spontaneous movements">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Seizures, early-onset" label="Seizures, early-onset">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Seizures are refractory" label="Seizures are refractory">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Multifocal epileptiform activity seen on EEG" label="Multifocal epileptiform activity seen on EEG">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Suppression-burst pattern" label="Suppression-burst pattern">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Spasticity" label="Spasticity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Quadriparesis" label="Quadriparesis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Dyskinesias" label="Dyskinesias">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Normal intellectual development" label="Normal intellectual development">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="White matter abnormalities seen on brain imaging" label="White matter abnormalities seen on brain imaging">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="Anemia, iron-deficient" label="Anemia, iron-deficient">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.00020282412815443405" />
+          <attvalue for="3" value="11" />
+        </attvalues>
+      </node>
+      <node id="NYS6" label="NYS6">
+        <attvalues>
+          <attvalue for="0" value="9" />
+          <attvalue for="1" value="0.033145154392267555" />
+          <attvalue for="2" value="0.00023255702445966288" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Congenital nystagmus, horizontal" label="Congenital nystagmus, horizontal">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Mottled retinal pigmentation" label="Mottled retinal pigmentation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Foveal hypoplasia" label="Foveal hypoplasia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Decreased visual acuity" label="Decreased visual acuity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Myopia" label="Myopia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Astigmatism" label="Astigmatism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Normal skin pigmentation" label="Normal skin pigmentation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="Normal hair pigmentation" label="Normal hair pigmentation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.722500830412302e-05" />
+          <attvalue for="3" value="16" />
+        </attvalues>
+      </node>
+      <node id="FCAS3" label="FCAS3">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="0.0020314772046873663" />
+          <attvalue for="2" value="5.050215821295301e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Urticaria, cold-induced" label="Urticaria, cold-induced">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Erythema, cold-induced" label="Erythema, cold-induced">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Pruritis, cold-induced" label="Pruritis, cold-induced">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Increased mast cells" label="Increased mast cells">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Mast cell degranulation" label="Mast cell degranulation">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Granulomatous dermatitis" label="Granulomatous dermatitis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Allergic rhinitis" label="Allergic rhinitis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Asthma" label="Asthma">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Recurrent infections" label="Recurrent infections">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Decreased serum IgA" label="Decreased serum IgA">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Decreased serum IgM" label="Decreased serum IgM">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Increased serum IgE" label="Increased serum IgE">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Decreased circulating B cells" label="Decreased circulating B cells">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Defective B cell class-switching" label="Defective B cell class-switching">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Decreased circulating NK cells" label="Decreased circulating NK cells">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Autoimmune disease" label="Autoimmune disease">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Positive antinuclear autoantibodies" label="Positive antinuclear autoantibodies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Vitiligo" label="Vitiligo">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Hashimoto's thyroiditis" label="Hashimoto's thyroiditis">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="Food allergies" label="Food allergies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.1292625874470215e-13" />
+          <attvalue for="3" value="8" />
+        </attvalues>
+      </node>
+      <node id="PARK2" label="PARK2">
+        <attvalues>
+          <attvalue for="0" value="13" />
+          <attvalue for="1" value="0.049461123941493455" />
+          <attvalue for="2" value="0.011624747656082245" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Parkinsonism, early-onset" label="Parkinsonism, early-onset">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Bradykinesia" label="Bradykinesia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Rigidity" label="Rigidity">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Postural instability" label="Postural instability">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Gait disturbances" label="Gait disturbances">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Dystonia" label="Dystonia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Hyperreflexia may occur" label="Hyperreflexia may occur">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Diurnal fluctuations of symptoms" label="Diurnal fluctuations of symptoms">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="No dementia" label="No dementia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Neuronal loss and gliosis in the substantia nigra pars compacta" label="Neuronal loss and gliosis in the substantia nigra pars compacta">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="Neuronal loss in the locus ceruleus" label="Neuronal loss in the locus ceruleus">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="No Lewy bodies" label="No Lewy bodies">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0013608693927272216" />
+          <attvalue for="3" value="14" />
+        </attvalues>
+      </node>
+      <node id="PARK4" label="PARK4">
+        <attvalues>
+          <attvalue for="0" value="9" />
+          <attvalue for="1" value="0.0012402702933880763" />
+          <attvalue for="2" value="1.2228285530506868e-18" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Parkinsonism" label="Parkinsonism">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Dementia" label="Dementia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Diffuse Lewy body pathology" label="Diffuse Lewy body pathology">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Alpha-synuclein immunoreactive neuronal and glial inclusions" label="Alpha-synuclein immunoreactive neuronal and glial inclusions">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Autonomic dysfunction" label="Autonomic dysfunction">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Hypotension, postural, due to autonomic dysfunction" label="Hypotension, postural, due to autonomic dysfunction">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Hallucinations" label="Hallucinations">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+      <node id="Paranoia" label="Paranoia">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.7547322978436806e-19" />
+          <attvalue for="3" value="10" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="RHYNS" target="Autosomal recessive" id="0" />
+      <edge source="RHYNS" target="Short stature" id="1" />
+      <edge source="RHYNS" target="Sensorineural deafness, unilateral severe" id="2" />
+      <edge source="RHYNS" target="Ptosis" id="3" />
+      <edge source="RHYNS" target="Exotropia" id="4" />
+      <edge source="RHYNS" target="Retinitis pigmentosa" id="5" />
+      <edge source="RHYNS" target="Extinguished electroretinogram responses bilaterally" id="6" />
+      <edge source="RHYNS" target="Renal failure, progressive" id="7" />
+      <edge source="RHYNS" target="Nephronophthisis" id="8" />
+      <edge source="RHYNS" target="Delayed bone age" id="9" />
+      <edge source="RHYNS" target="Generalized osteopenia" id="10" />
+      <edge source="RHYNS" target="Thickened calvarium" id="11" />
+      <edge source="RHYNS" target="Rotoscoliosis" id="12" />
+      <edge source="RHYNS" target="Hypoplastic iliac bones" id="13" />
+      <edge source="RHYNS" target="Irregular acetabular margins" id="14" />
+      <edge source="RHYNS" target="Thin tubular bones" id="15" />
+      <edge source="RHYNS" target="Shortened long bones" id="16" />
+      <edge source="RHYNS" target="Bowed radii" id="17" />
+      <edge source="RHYNS" target="Short femoral neck" id="18" />
+      <edge source="RHYNS" target="Epiphyseal hypoplasia" id="19" />
+      <edge source="RHYNS" target="Thinning of diaphyseal cortex" id="20" />
+      <edge source="RHYNS" target="Brachydactyly" id="21" />
+      <edge source="RHYNS" target="Congenital palsy of right cranial nerve III" id="22" />
+      <edge source="RHYNS" target="Congenital palsy of right cranial nerve IV" id="23" />
+      <edge source="RHYNS" target="Congenital palsy of left cranial nerve VI" id="24" />
+      <edge source="RHYNS" target="Hypopituitarism" id="25" />
+      <edge source="RHYNS" target="Growth hormone deficiency" id="26" />
+      <edge source="RHYNS" target="Thyroid stimulating hormone deficiency" id="27" />
+      <edge source="Autosomal recessive" target="CSB" id="28" />
+      <edge source="Autosomal recessive" target="GIKANIS" id="29" />
+      <edge source="Autosomal recessive" target="MONA" id="30" />
+      <edge source="Autosomal recessive" target="RP58" id="31" />
+      <edge source="Autosomal recessive" target="ISDNA" id="32" />
+      <edge source="Autosomal recessive" target="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" id="33" />
+      <edge source="Short stature" target="DBA8" id="34" />
+      <edge source="Short stature" target="HMSN2C" id="35" />
+      <edge source="Ptosis" target="MRD34" id="36" />
+      <edge source="Thickened calvarium" target="CSB" id="37" />
+      <edge source="Brachydactyly" target="ISDNA" id="38" />
+      <edge source="HRZ" target="Autosomal dominant" id="39" />
+      <edge source="HRZ" target="Tapered fingers" id="40" />
+      <edge source="HRZ" target="Abnormal or absent dermatoglyphic pattern" id="41" />
+      <edge source="HRZ" target="Palmoplantar hypohidrosis" id="42" />
+      <edge source="HRZ" target="Palmoplantar keratoderma, mild" id="43" />
+      <edge source="HRZ" target="Accentuated palmoplantar creases" id="44" />
+      <edge source="HRZ" target="Congenital scleroatrophy of hands and feet" id="45" />
+      <edge source="HRZ" target="Atrophic plaques on fingers and dorsa of hands" id="46" />
+      <edge source="HRZ" target="Hyperorthokeratosis" id="47" />
+      <edge source="HRZ" target="Acanthotic epidermis" id="48" />
+      <edge source="HRZ" target="Prominent granular cell layer" id="49" />
+      <edge source="HRZ" target="Fibrosis in upper and mid-dermis, mild" id="50" />
+      <edge source="HRZ" target="Increased number of blood vessels" id="51" />
+      <edge source="HRZ" target="Absence of Langerhans cells in affected skin" id="52" />
+      <edge source="HRZ" target="Nail hypoplasia" id="53" />
+      <edge source="HRZ" target="Thin nail plates" id="54" />
+      <edge source="HRZ" target="Longitudinal ridges" id="55" />
+      <edge source="HRZ" target="Angle formation" id="56" />
+      <edge source="HRZ" target="Fissures" id="57" />
+      <edge source="HRZ" target="V-shaped notches" id="58" />
+      <edge source="HRZ" target="Squamous cell carcinoma (in areas of scleroatrophic skin) &lt;G,H" id="59" />
+      <edge source="Autosomal dominant" target="DEE45" id="60" />
+      <edge source="Autosomal dominant" target="CIAT" id="61" />
+      <edge source="Autosomal dominant" target="PITA5" id="62" />
+      <edge source="Autosomal dominant" target="BOS" id="63" />
+      <edge source="Autosomal dominant" target="MRD34" id="64" />
+      <edge source="Autosomal dominant" target="IMD13" id="65" />
+      <edge source="Autosomal dominant" target="DBA8" id="66" />
+      <edge source="Autosomal dominant" target="HMSN2C" id="67" />
+      <edge source="Autosomal dominant" target="VENTRICULAR TACHYCARDIA, FAMILIAL" id="68" />
+      <edge source="CSB" target="Malformed ears" id="69" />
+      <edge source="CSB" target="Sensorineural hearing loss" id="70" />
+      <edge source="CSB" target="Pigmentary retinopathy" id="71" />
+      <edge source="CSB" target="Optic atrophy" id="72" />
+      <edge source="CSB" target="Strabismus" id="73" />
+      <edge source="CSB" target="Hyperopia" id="74" />
+      <edge source="CSB" target="Corneal opacity" id="75" />
+      <edge source="CSB" target="Decreased lacrimation" id="76" />
+      <edge source="CSB" target="Nystagmus" id="77" />
+      <edge source="CSB" target="Cataracts" id="78" />
+      <edge source="CSB" target="Microphthalmos" id="79" />
+      <edge source="CSB" target="Iris hypoplasia" id="80" />
+      <edge source="CSB" target="Microcornea" id="81" />
+      <edge source="CSB" target="Proteinuria" id="82" />
+      <edge source="CSB" target="Renal failure" id="83" />
+      <edge source="CSB" target="Osteoporosis" id="84" />
+      <edge source="CSB" target="Kyphosis" id="85" />
+      <edge source="CSB" target="Vertebral body abnormalities" id="86" />
+      <edge source="CSB" target="Intervertebral calcifications" id="87" />
+      <edge source="CSB" target="Small, squared off pelvis" id="88" />
+      <edge source="CSB" target="Hypoplastic iliac wings" id="89" />
+      <edge source="CSB" target="Mild to moderate joint limitation" id="90" />
+      <edge source="CSB" target="Sclerotic ivory phalangeal epiphyses" id="91" />
+      <edge source="CSB" target="Mental retardation" id="92" />
+      <edge source="CSB" target="Normal pressure hydrocephalus" id="93" />
+      <edge source="CSB" target="Poor-absent neurologic development" id="94" />
+      <edge source="CSB" target="Basal ganglia calcifications" id="95" />
+      <edge source="CSB" target="Subcortical white matter calcifications" id="96" />
+      <edge source="CSB" target="Cerebellar calcifications" id="97" />
+      <edge source="CSB" target="Patchy demyelination of subcortical white matter" id="98" />
+      <edge source="CSB" target="Cerebral atrophy" id="99" />
+      <edge source="CSB" target="Seizures" id="100" />
+      <edge source="CSB" target="Photosensitivity" id="101" />
+      <edge source="CSB" target="Scarring" id="102" />
+      <edge source="CSB" target="Pigmentation" id="103" />
+      <edge source="CSB" target="Atrophy" id="104" />
+      <edge source="CSB" target="Anhidrosis" id="105" />
+      <edge source="CSB" target="Dry skin" id="106" />
+      <edge source="CSB" target="Decreased subcutaneous adipose tissue" id="107" />
+      <edge source="CSB" target="Intrauterine growth retardation" id="108" />
+      <edge source="CSB" target="Low birth weight" id="109" />
+      <edge source="CSB" target="Marked failure to thrive" id="110" />
+      <edge source="CSB" target="Postnatal growth retardation" id="111" />
+      <edge source="CSB" target="Cachectic dwarfism" id="112" />
+      <edge source="CSB" target="Microcephaly" id="113" />
+      <edge source="CSB" target="Mandible prognathism" id="114" />
+      <edge source="CSB" target="Loss of facial adipose tissue" id="115" />
+      <edge source="CSB" target="Wizened face" id="116" />
+      <edge source="CSB" target="Slender nose" id="117" />
+      <edge source="CSB" target="Dental caries" id="118" />
+      <edge source="CSB" target="Delayed eruption of deciduous teeth" id="119" />
+      <edge source="CSB" target="Malocclusion" id="120" />
+      <edge source="CSB" target="Absent/hypoplastic teeth" id="121" />
+      <edge source="CSB" target="Cardiac arrhythmias" id="122" />
+      <edge source="CSB" target="Hypertension" id="123" />
+      <edge source="CSB" target="Hepatomegaly" id="124" />
+      <edge source="CSB" target="Splenomegaly" id="125" />
+      <edge source="CSB" target="Micropenis" id="126" />
+      <edge source="CSB" target="Cryptorchidism" id="127" />
+      <edge source="CSB" target="Precociously senile appearance" id="128" />
+      <edge source="CSB" target="Thin, dry hair" id="129" />
+      <edge source="CSB" target="Dysmyelination" id="130" />
+      <edge source="CSB" target="Ataxia" id="131" />
+      <edge source="CSB" target="Tremor" id="132" />
+      <edge source="CSB" target="Weakness" id="133" />
+      <edge source="CSB" target="Peripheral neuropathy" id="134" />
+      <edge source="CSB" target="Slowed nerve conduction velocities" id="135" />
+      <edge source="CSB" target="Abnormal myelination in sural nerve biopsies" id="136" />
+      <edge source="CSB" target="Disturbed visual and brainstem auditory evoked responses indicative of CNS demyelination" id="137" />
+      <edge source="CSB" target="Increased cellular sensitivity to UV light" id="138" />
+      <edge source="Osteoporosis" target="MONA" id="139" />
+      <edge source="Cerebral atrophy" target="DEE45" id="140" />
+      <edge source="Seizures" target="DEE45" id="141" />
+      <edge source="Seizures" target="MRD34" id="142" />
+      <edge source="Seizures" target="ISDNA" id="143" />
+      <edge source="Seizures" target="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" id="144" />
+      <edge source="Microcephaly" target="GIKANIS" id="145" />
+      <edge source="Microcephaly" target="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" id="146" />
+      <edge source="Ataxia" target="DEE45" id="147" />
+      <edge source="Ataxia" target="CIAT" id="148" />
+      <edge source="Tremor" target="PARK2" id="149" />
+      <edge source="DEE45" target="Cortical visual impairment" id="150" />
+      <edge source="DEE45" target="Epileptic encephalopathy" id="151" />
+      <edge source="DEE45" target="Delayed psychomotor development" id="152" />
+      <edge source="DEE45" target="Psychomotor regression" id="153" />
+      <edge source="DEE45" target="Hypotonia" id="154" />
+      <edge source="DEE45" target="Hypsarrhythmia" id="155" />
+      <edge source="DEE45" target="Epilepsy of infancy with migrating focal seizures" id="156" />
+      <edge source="DEE45" target="Thin corpus callosum" id="157" />
+      <edge source="DEE45" target="White matter atrophy" id="158" />
+      <edge source="Hypotonia" target="CIAT" id="159" />
+      <edge source="Hypotonia" target="MTDPS19" id="160" />
+      <edge source="Thin corpus callosum" target="MTDPS19" id="161" />
+      <edge source="CIAT" target="Optic nerve hypoplasia" id="162" />
+      <edge source="CIAT" target="Gaze-evoked nystagmus" id="163" />
+      <edge source="CIAT" target="Esophoria" id="164" />
+      <edge source="CIAT" target="Amblyopia" id="165" />
+      <edge source="CIAT" target="Global developmental delay" id="166" />
+      <edge source="CIAT" target="Impaired intellectual development" id="167" />
+      <edge source="CIAT" target="Language delay" id="168" />
+      <edge source="CIAT" target="Dysmetria" id="169" />
+      <edge source="CIAT" target="Dysarthria" id="170" />
+      <edge source="CIAT" target="Cerebellar atrophy seen on MRI" id="171" />
+      <edge source="CIAT" target="Attention deficit-hyperactivity disorder" id="172" />
+      <edge source="CIAT" target="Emotional lability" id="173" />
+      <edge source="Amblyopia" target="NYS6" id="174" />
+      <edge source="Global developmental delay" target="MRD34" id="175" />
+      <edge source="PITA5" target="Pituitary adenoma" id="176" />
+      <edge source="GIKANIS" target="Low-set ears" id="177" />
+      <edge source="GIKANIS" target="Posteriorly rotated ears" id="178" />
+      <edge source="GIKANIS" target="Fleshy ears" id="179" />
+      <edge source="GIKANIS" target="Hypertelorism" id="180" />
+      <edge source="GIKANIS" target="Polycystic kidneys" id="181" />
+      <edge source="GIKANIS" target="Skeletal dysplasia" id="182" />
+      <edge source="GIKANIS" target="Joint contractures" id="183" />
+      <edge source="GIKANIS" target="Thick occipital bone" id="184" />
+      <edge source="GIKANIS" target="Decreased ossification of the skull" id="185" />
+      <edge source="GIKANIS" target="Absent or decreased ossification of the vertebral bodies" id="186" />
+      <edge source="GIKANIS" target="Absent ossification of the pubic rami" id="187" />
+      <edge source="GIKANIS" target="Round pelvis" id="188" />
+      <edge source="GIKANIS" target="Ovoid ischia" id="189" />
+      <edge source="GIKANIS" target="Brachymelia" id="190" />
+      <edge source="GIKANIS" target="Short tubular bones" id="191" />
+      <edge source="GIKANIS" target="Metaphyseal broadening" id="192" />
+      <edge source="GIKANIS" target="Ulnar deviation of the hands" id="193" />
+      <edge source="GIKANIS" target="Brachycephaly" id="194" />
+      <edge source="GIKANIS" target="Micrognathia" id="195" />
+      <edge source="GIKANIS" target="Retrognathia" id="196" />
+      <edge source="GIKANIS" target="Flat philtrum" id="197" />
+      <edge source="GIKANIS" target="Beaked nose" id="198" />
+      <edge source="GIKANIS" target="Hypoplastic alae nasi" id="199" />
+      <edge source="GIKANIS" target="Congenital heart defects" id="200" />
+      <edge source="GIKANIS" target="Periportal fibrosis" id="201" />
+      <edge source="GIKANIS" target="Short neck" id="202" />
+      <edge source="GIKANIS" target="Lung hypoplasia" id="203" />
+      <edge source="GIKANIS" target="Abnormal lung lobation" id="204" />
+      <edge source="GIKANIS" target="Diaphragmatic hernia" id="205" />
+      <edge source="GIKANIS" target="Dilated pancreatic ducts" id="206" />
+      <edge source="GIKANIS" target="Abnormal feet position" id="207" />
+      <edge source="Hypertelorism" target="ISDNA" id="208" />
+      <edge source="BOS" target="Osteopoikilosis ('spotted bones') typically located in epiphyses and metaphyses of long bones, wrist, foot, ankle, pelvis, and scapula" id="209" />
+      <edge source="BOS" target="Stiff joints" id="210" />
+      <edge source="BOS" target="Osteosclerosis" id="211" />
+      <edge source="BOS" target="Melorheostosis, typically affect diaphyses" id="212" />
+      <edge source="BOS" target="Subcutaneous nontender firm nodules" id="213" />
+      <edge source="BOS" target="Subcutaneous connective tissue nevi" id="214" />
+      <edge source="BOS" target="Elastin-rich connective tissue nevi" id="215" />
+      <edge source="BOS" target="Collagen-rich connective tissue nevi" id="216" />
+      <edge source="MONA" target="Flexion contracture" id="217" />
+      <edge source="MONA" target="Flexion contractures" id="218" />
+      <edge source="MONA" target="Fusiform finger swelling" id="219" />
+      <edge source="MONA" target="Interphalangeal joint erosions" id="220" />
+      <edge source="MONA" target="Finger contractures" id="221" />
+      <edge source="MONA" target="Carpal osteolysis" id="222" />
+      <edge source="MONA" target="Widened metacarpal shaft" id="223" />
+      <edge source="MONA" target="Thin metacarpal cortices" id="224" />
+      <edge source="MONA" target="Subcutaneous nodules" id="225" />
+      <edge source="MONA" target="Hyperpigmented erythematous lesions" id="226" />
+      <edge source="MONA" target="Elevated antinuclear antibody (ANA)" id="227" />
+      <edge source="MONA" target="Elevated IL1-beta" id="228" />
+      <edge source="MONA" target="Elevated IL6" id="229" />
+      <edge source="MONA" target="Pes planus" id="230" />
+      <edge source="MONA" target="Pes cavus" id="231" />
+      <edge source="MONA" target="Tarsal osteolysis" id="232" />
+      <edge source="MONA" target="Widened metatarsal shaft" id="233" />
+      <edge source="MONA" target="Thin metatarsal cortices" id="234" />
+      <edge source="Pes cavus" target="HMSN2C" id="235" />
+      <edge source="MRD34" target="Hearing impairment" id="236" />
+      <edge source="MRD34" target="Epicanthus" id="237" />
+      <edge source="MRD34" target="Cortical vision impairment" id="238" />
+      <edge source="MRD34" target="Synophrys" id="239" />
+      <edge source="MRD34" target="Broad-based gait" id="240" />
+      <edge source="MRD34" target="Microcephaly, postnatal" id="241" />
+      <edge source="MRD34" target="Smooth philtrum" id="242" />
+      <edge source="MRD34" target="Anteverted nares" id="243" />
+      <edge source="MRD34" target="Bruxism" id="244" />
+      <edge source="MRD34" target="Widely-spaced teeth" id="245" />
+      <edge source="MRD34" target="Stereotypic behaviors" id="246" />
+      <edge source="MRD34" target="Small feet" id="247" />
+      <edge source="MRD34" target="2-3 toe syndactyly" id="248" />
+      <edge source="MRD34" target="Drooling" id="249" />
+      <edge source="IMD13" target="Recurrent otitis media" id="250" />
+      <edge source="IMD13" target="Recurrent shingles" id="251" />
+      <edge source="IMD13" target="Fungal dermatitis" id="252" />
+      <edge source="IMD13" target="Persistent severe fungal infections of fingernails and toenails" id="253" />
+      <edge source="IMD13" target="Partial loss of nails" id="254" />
+      <edge source="IMD13" target="Recurrent bacterial pneumonia" id="255" />
+      <edge source="IMD13" target="Bronchiolitis obliterans organizing pneumonia" id="256" />
+      <edge source="IMD13" target="Herpetic lesions" id="257" />
+      <edge source="IMD13" target="Recurrent sinusitis" id="258" />
+      <edge source="IMD13" target="Reduced CD4 T-lymphocyte counts" id="259" />
+      <edge source="IMD13" target="Reduced CD3 T-lymphocyte counts" id="260" />
+      <edge source="IMD13" target="Lymphopenia" id="261" />
+      <edge source="IMD13" target="Severely reduced response to mitogens" id="262" />
+      <edge source="IMD13" target="Severely reduced response to Candida and tetanus toxoid antigens" id="263" />
+      <edge source="IMD13" target="Normal levels of IgM, IgA, and IgG" id="264" />
+      <edge source="IMD13" target="Normal response to bacterial antigens" id="265" />
+      <edge source="RP58" target="Night blindness, progressive" id="266" />
+      <edge source="RP58" target="Loss of peripheral vision" id="267" />
+      <edge source="RP58" target="Waxy pale optic disc" id="268" />
+      <edge source="RP58" target="Attenuation of retinal arteries" id="269" />
+      <edge source="RP58" target="Bone spicule pigment deposits in midperiphery of retina" id="270" />
+      <edge source="RP58" target="Loss of rod and cone responses seen on ERG" id="271" />
+      <edge source="ISDNA" target="Short stature, disproportionate" id="272" />
+      <edge source="ISDNA" target="Premature craniosynostosis" id="273" />
+      <edge source="ISDNA" target="Microcephaly, progressive" id="274" />
+      <edge source="ISDNA" target="Platyspondyly, severe" id="275" />
+      <edge source="ISDNA" target="Cervical spine malformation" id="276" />
+      <edge source="ISDNA" target="Cervical instability" id="277" />
+      <edge source="ISDNA" target="Hypoplastic odontoid peg" id="278" />
+      <edge source="ISDNA" target="Kyphoscoliosis, progressive" id="279" />
+      <edge source="ISDNA" target="Sloping acetabular roof" id="280" />
+      <edge source="ISDNA" target="Trident-shaped acetabula" id="281" />
+      <edge source="ISDNA" target="Shallow lateral notches" id="282" />
+      <edge source="ISDNA" target="Narrow sciatic notches" id="283" />
+      <edge source="ISDNA" target="Coxa valga" id="284" />
+      <edge source="ISDNA" target="Radial head dislocation" id="285" />
+      <edge source="ISDNA" target="Small capital femoral epiphyses" id="286" />
+      <edge source="ISDNA" target="Epiphyseal dysplasia" id="287" />
+      <edge source="ISDNA" target="Metaphyseal dysplasia" id="288" />
+      <edge source="ISDNA" target="Delayed carpal ossification" id="289" />
+      <edge source="ISDNA" target="Lack of ossification of fifth-finger middle phalanx" id="290" />
+      <edge source="ISDNA" target="Intellectual disability, mild to severe" id="291" />
+      <edge source="ISDNA" target="Motor delay" id="292" />
+      <edge source="ISDNA" target="Truncal muscular hypotonia" id="293" />
+      <edge source="ISDNA" target="Hypertonia of limbs" id="294" />
+      <edge source="ISDNA" target="Single palmar crease" id="295" />
+      <edge source="ISDNA" target="Abnormal palmar crease" id="296" />
+      <edge source="ISDNA" target="Erythroderma" id="297" />
+      <edge source="ISDNA" target="Coarse facies" id="298" />
+      <edge source="ISDNA" target="Full cheeks" id="299" />
+      <edge source="ISDNA" target="Prominent nose" id="300" />
+      <edge source="ISDNA" target="Depressed nasal bridge" id="301" />
+      <edge source="ISDNA" target="Broad nasal tip" id="302" />
+      <edge source="ISDNA" target="Liver cysts" id="303" />
+      <edge source="ISDNA" target="Truncal hypotonia" id="304" />
+      <edge source="ISDNA" target="Hypertonia in limbs" id="305" />
+      <edge source="ISDNA" target="Frequent infections" id="306" />
+      <edge source="ISDNA" target="Extremely low or absent T cells" id="307" />
+      <edge source="ISDNA" target="Normal B cell levels" id="308" />
+      <edge source="ISDNA" target="Oligoclonal T-cell expansions" id="309" />
+      <edge source="ISDNA" target="CD4+ lymphopenia" id="310" />
+      <edge source="ISDNA" target="Eosinophilia" id="311" />
+      <edge source="ISDNA" target="Increased serum IgE levels" id="312" />
+      <edge source="ISDNA" target="Hypogammaglobulinemia" id="313" />
+      <edge source="ISDNA" target="Severe narrowing of laryngotracheal tract" id="314" />
+      <edge source="ISDNA" target="Pectus excavatum" id="315" />
+      <edge source="ISDNA" target="Rib deformity" id="316" />
+      <edge source="ISDNA" target="Anal atresia" id="317" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Developmental delay" id="318" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Gait abnormalities" id="319" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Incoordination" id="320" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Paresthesias" id="321" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Stroke" id="322" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Psychiatric disturbances" id="323" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Muscle weakness" id="324" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Methylenetetrahydrofolate reductase deficiency" id="325" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Low to normal plasma methionine" id="326" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Homocysteinemia" id="327" />
+      <edge source="HOMOCYSTINURIA DUE TO DEFICIENCY OF N(5,10)-METHYLENETETRAHYDROFOLATE REDUCTASE ACTIVITY" target="Homocystinuria" id="328" />
+      <edge source="DBA8" target="Widely spaced eyes" id="329" />
+      <edge source="DBA8" target="Growth retardation" id="330" />
+      <edge source="DBA8" target="Cathie facies" id="331" />
+      <edge source="DBA8" target="Short nose" id="332" />
+      <edge source="DBA8" target="Broad nasal bridge" id="333" />
+      <edge source="DBA8" target="Hepatic iron overload, mild" id="334" />
+      <edge source="DBA8" target="Mild hepatic iron overload" id="335" />
+      <edge source="DBA8" target="Elevated adenosine deaminase (ADA) activity" id="336" />
+      <edge source="DBA8" target="Elevated levels of reduced glutathione" id="337" />
+      <edge source="DBA8" target="Thick upper lip" id="338" />
+      <edge source="DBA8" target="Congenital anemia" id="339" />
+      <edge source="DBA8" target="Neutropenia" id="340" />
+      <edge source="HMSN2C" target="Hearing loss, sensorineural" id="341" />
+      <edge source="HMSN2C" target="Abducens nerve palsy" id="342" />
+      <edge source="HMSN2C" target="Oculomotor nerve palsy" id="343" />
+      <edge source="HMSN2C" target="Scoliosis" id="344" />
+      <edge source="HMSN2C" target="'Sloping' shoulders due to muscle atrophy" id="345" />
+      <edge source="HMSN2C" target="Shoulder girdle muscle atrophy" id="346" />
+      <edge source="HMSN2C" target="Neurogenic atrophy seen on muscle biopsy" id="347" />
+      <edge source="HMSN2C" target="Distal limb muscle weakness due to peripheral neuropathy" id="348" />
+      <edge source="HMSN2C" target="Distal limb muscle atrophy due to peripheral neuropathy" id="349" />
+      <edge source="HMSN2C" target="Both upper and lower limb involvement" id="350" />
+      <edge source="HMSN2C" target="Wasting of hand muscles often occurs early" id="351" />
+      <edge source="HMSN2C" target="Impaired manual dexterity" id="352" />
+      <edge source="HMSN2C" target="Proximal limb muscles may be involved in severe cases" id="353" />
+      <edge source="HMSN2C" target="Foot drop" id="354" />
+      <edge source="HMSN2C" target="Intercostal muscle involvement" id="355" />
+      <edge source="HMSN2C" target="Diaphragm involvement" id="356" />
+      <edge source="HMSN2C" target="Vocal cord paresis" id="357" />
+      <edge source="HMSN2C" target="Areflexia" id="358" />
+      <edge source="HMSN2C" target="Hyporeflexia" id="359" />
+      <edge source="HMSN2C" target="Distal sensory impairment" id="360" />
+      <edge source="HMSN2C" target="Decreased or absent distal sensory nerve action potential" id="361" />
+      <edge source="HMSN2C" target="Normal motor nerve conduction velocity (NCV)" id="362" />
+      <edge source="HMSN2C" target="Decreased compound muscle action potentials" id="363" />
+      <edge source="HMSN2C" target="Hammertoes" id="364" />
+      <edge source="HMSN2C" target="Respiratory failure due to intercostal muscle and diaphragm involvement" id="365" />
+      <edge source="HMSN2C" target="Obstructive sleep apnea" id="366" />
+      <edge source="HMSN2C" target="Stridor" id="367" />
+      <edge source="HMSN2C" target="Urinary urgency" id="368" />
+      <edge source="HMSN2C" target="Urinary incontinence" id="369" />
+      <edge source="HMSN2C" target="Hoarse voice due to vocal cord paresis" id="370" />
+      <edge source="VENTRICULAR TACHYCARDIA, FAMILIAL" target="Sudden cardiac death {SNOMEDCT:95281009,117361000119104} {ICD10CM:Z82.41} {ICD9CM:V17.41} {UMLS C0085298,C2825161 HP:0001645} {HPO HP:0001645}; Paroxysmal ventricular tachycardia {SNOMEDCT:66657009} {ICD9CM:427.1} {UMLS C0030591 HP:0004751} {HPO HP:0004751}; Right bundle branch block with left axis deviation on EKG; No cardiomyopathy {UMLS C1837350}; No repolarization abnormality" id="371" />
+      <edge source="VENTRICULAR TACHYCARDIA, FAMILIAL" target="No metabolic disorder" id="372" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Weight loss" id="373" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Nausea" id="374" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Vomiting" id="375" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Gestational hyperthyroidism" id="376" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Diffuse goiter" id="377" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Hyperemesis gravidarum" id="378" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Spontaneous abortion, recurrent" id="379" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Decreased TSH" id="380" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Increased serum free thyroxine" id="381" />
+      <edge source="HYPERTHYROIDISM, FAMILIAL GESTATIONAL" target="Increased serum triiodothyronine" id="382" />
+      <edge source="Weight loss" target="PARK4" id="383" />
+      <edge source="MTDPS19" target="Increased serum lactate" id="384" />
+      <edge source="MTDPS19" target="Hearing loss, unilateral" id="385" />
+      <edge source="MTDPS19" target="Poor eye tracking" id="386" />
+      <edge source="MTDPS19" target="Hypospadias" id="387" />
+      <edge source="MTDPS19" target="Hydrocele" id="388" />
+      <edge source="MTDPS19" target="Decreased mtDNA content in muscle tissue" id="389" />
+      <edge source="MTDPS19" target="Mitochondrial complex I deficiency in muscle tissue" id="390" />
+      <edge source="MTDPS19" target="Lack of spontaneous movements" id="391" />
+      <edge source="MTDPS19" target="Seizures, early-onset" id="392" />
+      <edge source="MTDPS19" target="Seizures are refractory" id="393" />
+      <edge source="MTDPS19" target="Multifocal epileptiform activity seen on EEG" id="394" />
+      <edge source="MTDPS19" target="Suppression-burst pattern" id="395" />
+      <edge source="MTDPS19" target="Spasticity" id="396" />
+      <edge source="MTDPS19" target="Quadriparesis" id="397" />
+      <edge source="MTDPS19" target="Dyskinesias" id="398" />
+      <edge source="MTDPS19" target="Normal intellectual development" id="399" />
+      <edge source="MTDPS19" target="White matter abnormalities seen on brain imaging" id="400" />
+      <edge source="MTDPS19" target="Anemia, iron-deficient" id="401" />
+      <edge source="NYS6" target="Congenital nystagmus, horizontal" id="402" />
+      <edge source="NYS6" target="Mottled retinal pigmentation" id="403" />
+      <edge source="NYS6" target="Foveal hypoplasia" id="404" />
+      <edge source="NYS6" target="Decreased visual acuity" id="405" />
+      <edge source="NYS6" target="Myopia" id="406" />
+      <edge source="NYS6" target="Astigmatism" id="407" />
+      <edge source="NYS6" target="Normal skin pigmentation" id="408" />
+      <edge source="NYS6" target="Normal hair pigmentation" id="409" />
+      <edge source="FCAS3" target="Urticaria, cold-induced" id="410" />
+      <edge source="FCAS3" target="Erythema, cold-induced" id="411" />
+      <edge source="FCAS3" target="Pruritis, cold-induced" id="412" />
+      <edge source="FCAS3" target="Increased mast cells" id="413" />
+      <edge source="FCAS3" target="Mast cell degranulation" id="414" />
+      <edge source="FCAS3" target="Granulomatous dermatitis" id="415" />
+      <edge source="FCAS3" target="Allergic rhinitis" id="416" />
+      <edge source="FCAS3" target="Asthma" id="417" />
+      <edge source="FCAS3" target="Recurrent infections" id="418" />
+      <edge source="FCAS3" target="Decreased serum IgA" id="419" />
+      <edge source="FCAS3" target="Decreased serum IgM" id="420" />
+      <edge source="FCAS3" target="Increased serum IgE" id="421" />
+      <edge source="FCAS3" target="Decreased circulating B cells" id="422" />
+      <edge source="FCAS3" target="Defective B cell class-switching" id="423" />
+      <edge source="FCAS3" target="Decreased circulating NK cells" id="424" />
+      <edge source="FCAS3" target="Autoimmune disease" id="425" />
+      <edge source="FCAS3" target="Positive antinuclear autoantibodies" id="426" />
+      <edge source="FCAS3" target="Vitiligo" id="427" />
+      <edge source="FCAS3" target="Hashimoto's thyroiditis" id="428" />
+      <edge source="FCAS3" target="Food allergies" id="429" />
+      <edge source="PARK2" target="Parkinsonism, early-onset" id="430" />
+      <edge source="PARK2" target="Bradykinesia" id="431" />
+      <edge source="PARK2" target="Rigidity" id="432" />
+      <edge source="PARK2" target="Postural instability" id="433" />
+      <edge source="PARK2" target="Gait disturbances" id="434" />
+      <edge source="PARK2" target="Dystonia" id="435" />
+      <edge source="PARK2" target="Hyperreflexia may occur" id="436" />
+      <edge source="PARK2" target="Diurnal fluctuations of symptoms" id="437" />
+      <edge source="PARK2" target="No dementia" id="438" />
+      <edge source="PARK2" target="Neuronal loss and gliosis in the substantia nigra pars compacta" id="439" />
+      <edge source="PARK2" target="Neuronal loss in the locus ceruleus" id="440" />
+      <edge source="PARK2" target="No Lewy bodies" id="441" />
+      <edge source="PARK4" target="Parkinsonism" id="442" />
+      <edge source="PARK4" target="Dementia" id="443" />
+      <edge source="PARK4" target="Diffuse Lewy body pathology" id="444" />
+      <edge source="PARK4" target="Alpha-synuclein immunoreactive neuronal and glial inclusions" id="445" />
+      <edge source="PARK4" target="Autonomic dysfunction" id="446" />
+      <edge source="PARK4" target="Hypotension, postural, due to autonomic dysfunction" id="447" />
+      <edge source="PARK4" target="Hallucinations" id="448" />
+      <edge source="PARK4" target="Paranoia" id="449" />
+    </edges>
+  </graph>
+</gexf>

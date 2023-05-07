@@ -1,0 +1,787 @@
+
+
+
+   _       ,/'
+  (_).  ,/'
+   _  ::       ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  
+  (_)'  `\.
+           `\.              [  G e n o P h e n o  ]
+                                        List Splitter
+
+
+Splitting list into separate OMIM API compatible lists of 20 maximum MIMs...
+
+Saving divided lists to directory:    ./TROUBLESHOOT_MIMBATCH88_MIM_directory/
+
+TROUBLESHOOT_MIMBATCH88_0.txt
+TROUBLESHOOT_MIMBATCH88_1.txt
+
+
+     ___|                       _ \   |
+    |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+   ______________________________________________________________|
+                                      (ツ)_/¯  - * Version 7.2 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+No ENSEMBL or Gene ID found...      MIM # :     500014
+No ENSEMBL ID found...           MIM # :     145500
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_0_genes.csv "
+  with  52  total rows 
+
+  Your clinical data table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_0_clinical-features.csv "
+  with  166  total rows 
+
+
+   20  of  20  MIMs contained phenotypic data.
+
+   18  of  20  MIMs contained ENSEMBL/Gene IDs.
+
+   No corresponding ENSEMBL IDs found for MIM#:
+
+     * 500014
+     * 145500
+
+   These gene IDs have been omitted from the output table.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+     ___|                       _ \   |
+    |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+   \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+   ______________________________________________________________|
+                                      (ツ)_/¯  - * Version 7.2 * -
+  [ O M I M   T a b l e   M a k e r ]
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+  ...Your genes table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_1_genes.csv "
+  with  8  total rows 
+
+  Your clinical data table was saved as " ./TROUBLESHOOT_MIMBATCH88_separate_tables/TROUBLESHOOT_MIMBATCH88_1_clinical-features.csv "
+  with  91  total rows 
+
+
+   4  of  4  MIMs contained phenotypic data.
+
+   4  of  4  MIMs contained ENSEMBL/Gene IDs.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+           c o n c a t . p y |
+           ------------------+
+                 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+                 ...Your combined table was saved as " TROUBLESHOOT_MIMBATCH88_clinical-features_concatenated.csv "
+                 with  257  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+           c o n c a t . p y |
+           ------------------+
+                 [ GenoPheno ]
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+                 ...Your combined table was saved as " TROUBLESHOOT_MIMBATCH88_genes_concatenated.csv "
+                 with  60  total rows.
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+      _______           __   ____      __                       __                 
+     / ____(_)___  ____/ /  /  _/___  / /____  _________ ______/ /_____  __________
+    / /_  / / __ \/ __  /   / // __ \/ __/ _ \/ ___/ __ `/ ___/ __/ __ \/ ___/ ___/
+   / __/ / / / / / /_/ /  _/ // / / / /_/  __/ /  / /_/ / /__/ /_/ /_/ / /  (__  ) 
+  /_/   /_/_/ /_/\__,_/  /___/_/ /_/\__/\___/_/   \__,_/\___/\__/\____/_/  /____/  
+
+                                                       [ G e n o P h e n o ]  v7.2                         
+
+
+--------------------------------------------------------------------
+
+	ʕっ•ᴥ•ʔっ        Your input:   
+
+
+             Superphenotype        Node_name  ... Gene_MIM_number  Parenthetical
+0                    SPGF33          CFAP251  ...          618146            NaN
+1                    HYDCC1           TRIM71  ...          618570            NaN
+2                      HFE1              HFE  ...          613609            NaN
+3                      HFE1             BMP2  ...          112261            NaN
+4                    BMND17             LGR4  ...          606666            NaN
+5                     DCBXA           SLC1A1  ...          133550            NaN
+6                    DFNB66            DCDC2  ...          605755            NaN
+7                      HH21            FLRT3  ...          604808            NaN
+8                      HH23              LHB  ...          152780            NaN
+9                    LDLCQ8            LIMA1  ...          608364            NaN
+10                    HOMG1            TRPM6  ...          607009            NaN
+11                    HPE13            STAG2  ...          300826            NaN
+12                    NDNC1             FZD6  ...          603409            NaN
+13                   IIAE11             DBR1  ...          607024            NaN
+14                   ATFB13            SCN1B  ...          600235            NaN
+15                   SPGF64           FBXO43  ...          609110            NaN
+16                     CCM4           PIK3CA  ...          171834            NaN
+17                    SQORD             SQOR  ...          617658            NaN
+18  HYPERTENSION, ESSENTIAL             ECE1  ...          600423            NaN
+19  HYPERTENSION, ESSENTIAL             RGS5  ...          603276            NaN
+20  HYPERTENSION, ESSENTIAL           ATP1B1  ...          182330            NaN
+21  HYPERTENSION, ESSENTIAL              AGT  ...          106150            NaN
+22  HYPERTENSION, ESSENTIAL            AGTR1  ...          106165            NaN
+23  HYPERTENSION, ESSENTIAL             ADD1  ...          102680            NaN
+24  HYPERTENSION, ESSENTIAL           CYP3A5  ...          605325            NaN
+25  HYPERTENSION, ESSENTIAL             NOS3  ...          163729            NaN
+26  HYPERTENSION, ESSENTIAL             GNB3  ...          139130            NaN
+27  HYPERTENSION, ESSENTIAL            PTGIS  ...          601699            NaN
+28                   RPRGL2               F2  ...          176930            NaN
+29                   SPGF33  ENSG00000158023  ...          618146            NaN
+30                   HYDCC1  ENSG00000206557  ...          618570            NaN
+31                     HFE1  ENSG00000010704  ...          613609            NaN
+32                     HFE1  ENSG00000125845  ...          112261            NaN
+33                   BMND17  ENSG00000205213  ...          606666            NaN
+34                    DCBXA  ENSG00000106688  ...          133550            NaN
+35                   DFNB66  ENSG00000146038  ...          605755            NaN
+36                     HH21  ENSG00000125848  ...          604808            NaN
+37                     HH23  ENSG00000104826  ...          152780            NaN
+38                   LDLCQ8  ENSG00000050405  ...          608364            NaN
+39                    HOMG1  ENSG00000119121  ...          607009            NaN
+40                    HPE13  ENSG00000101972  ...          300826            NaN
+41                    NDNC1  ENSG00000164930  ...          603409            NaN
+42                   IIAE11  ENSG00000138231  ...          607024            NaN
+43                   ATFB13  ENSG00000105711  ...          600235            NaN
+44                   SPGF64  ENSG00000156509  ...          609110            NaN
+45                     CCM4  ENSG00000121879  ...          171834            NaN
+46                    SQORD  ENSG00000137767  ...          617658            NaN
+47  HYPERTENSION, ESSENTIAL  ENSG00000117298  ...          600423            NaN
+48  HYPERTENSION, ESSENTIAL  ENSG00000232995  ...          603276            NaN
+49  HYPERTENSION, ESSENTIAL  ENSG00000143153  ...          182330            NaN
+50  HYPERTENSION, ESSENTIAL  ENSG00000135744  ...          106150            NaN
+51                   RPRGL2  ENSG00000180210  ...          176930            NaN
+52                    BFNS2            KCNQ3  ...          602232            NaN
+53                   NEDSGO          TBC1D2B  ...          619152            NaN
+54                   NPHP11           TMEM67  ...          609884            NaN
+55                    VEXAS             UBA1  ...          314370            NaN
+56                    BFNS2  ENSG00000184156  ...          602232            NaN
+57                   NEDSGO  ENSG00000167202  ...          619152            NaN
+58                   NPHP11  ENSG00000164953  ...          609884            NaN
+59                    VEXAS  ENSG00000130985  ...          314370            NaN
+
+[60 rows x 6 columns]
+
+----------------------------------------------------------------------------
+
+Extracting Gene MIM IDs from input:
+
+                                                  
+Gene MIMs extracted                           ✔   
+
+                                                  
+Conversion to UNIPROT complete                ✔   
+
+                                         ┌(◉ ͜ʖ◉)つ
+         +-----------------------------------------------------------------------+
+         |   Searching for proteins that interact with each OMIM gene product:   |
+         +-----------------------------------------------------------------------+
+
+   1 | Approved Gene ID: CFAP251 | Gene Product (UNIPROT ID): Q8TBY9 | Interactions: 1 | Total Interactions: 1
+
+   2 | Approved Gene ID: TRIM71 | Gene Product (UNIPROT ID): Q2Q1W2 | Interactions: 15 | Total Interactions: 16
+
+   3 | Approved Gene ID: HFE | Gene Product (UNIPROT ID): Q30201 | Interactions: 18 | Total Interactions: 34
+
+   4 | Approved Gene ID: BMP2 | Gene Product (UNIPROT ID): P12643 | Interactions: 50 | Total Interactions: 84
+
+   5 | Approved Gene ID: LGR4 | Gene Product (UNIPROT ID): Q9BXB1 | Interactions: 25 | Total Interactions: 109
+
+   6 | Approved Gene ID: SLC1A1 | Gene Product (UNIPROT ID): P43005 | Interactions: 68 | Total Interactions: 177
+
+   7 | Approved Gene ID: DCDC2 | Gene Product (UNIPROT ID): Q9UHG0 | Interactions: 82 | Total Interactions: 259
+
+   8 | Approved Gene ID: FLRT3 | Gene Product (UNIPROT ID): Q9NZU0 | Interactions: 17 | Total Interactions: 276
+
+   9 | Approved Gene ID: LHB | Gene Product (UNIPROT ID): P01229 | Interactions: 10 | Total Interactions: 286
+
+   10 | Approved Gene ID: LIMA1 | Gene Product (UNIPROT ID): Q9UHB6 | Interactions: 319 | Total Interactions: 605
+
+   11 | Approved Gene ID: TRPM6 | Gene Product (UNIPROT ID): Q9BX84 | Interactions: 3 | Total Interactions: 608
+
+   12 | Approved Gene ID: STAG2 | Gene Product (UNIPROT ID): Q8N3U4 | Interactions: 134 | Total Interactions: 742
+
+   13 | Approved Gene ID: FZD6 | Gene Product (UNIPROT ID): O60353 | Interactions: 23 | Total Interactions: 765
+
+   14 | Approved Gene ID: DBR1 | Gene Product (UNIPROT ID): Q9UK59 | Interactions: 13 | Total Interactions: 778
+
+   15 | Approved Gene ID: SCN1B | Gene Product (UNIPROT ID): Q07699 | Interactions: 5 | Total Interactions: 783
+
+   16 | Approved Gene ID: FBXO43 | Gene Product (UNIPROT ID): Q4G163 | Interactions: 7 | Total Interactions: 790
+
+   17 | Approved Gene ID: PIK3CA | Gene Product (UNIPROT ID): P42336 | Interactions: 176 | Total Interactions: 966
+
+   18 | Approved Gene ID: SQOR | Gene Product (UNIPROT ID): Q9Y6N5 | Interactions: 39 | Total Interactions: 1005
+
+   19 | Approved Gene ID: ECE1 | Gene Product (UNIPROT ID): P42892 | Interactions: 35 | Total Interactions: 1040
+
+   20 | Approved Gene ID: RGS5 | Gene Product (UNIPROT ID): O15539 | Interactions: 5 | Total Interactions: 1045
+
+   21 | Approved Gene ID: ATP1B1 | Gene Product (UNIPROT ID): P05026 | Interactions: 58 | Total Interactions: 1103
+
+   22 | Approved Gene ID: AGT | Gene Product (UNIPROT ID): P01019 | Interactions: 55 | Total Interactions: 1158
+
+   23 | Approved Gene ID: AGTR1 | Gene Product (UNIPROT ID): P30556 | Interactions: 91 | Total Interactions: 1249
+
+   24 | Approved Gene ID: ADD1 | Gene Product (UNIPROT ID): P35611 | Interactions: 62 | Total Interactions: 1311
+
+   25 | Approved Gene ID: CYP3A5 | Gene Product (UNIPROT ID): P20815 | Interactions: 12 | Total Interactions: 1323
+
+   26 | Approved Gene ID: NOS3 | Gene Product (UNIPROT ID): P29474 | Interactions: 194 | Total Interactions: 1517
+
+   27 | Approved Gene ID: GNB3 | Gene Product (UNIPROT ID): P16520 | Interactions: 13 | Total Interactions: 1530
+
+   28 | Approved Gene ID: PTGIS | Gene Product (UNIPROT ID): Q16647 | Interactions: 1 | Total Interactions: 1531
+
+   29 | Approved Gene ID: F2 | Gene Product (UNIPROT ID): P00734 | Interactions: 26 | Total Interactions: 1557
+
+   30 | Approved Gene ID: KCNQ3 | Gene Product (UNIPROT ID): O43525 | Interactions: 0 | Total Interactions: 1557
+
+   31 | Approved Gene ID: TBC1D2B | Gene Product (UNIPROT ID): Q9UPU7 | Interactions: 31 | Total Interactions: 1588
+
+   32 | Approved Gene ID: TMEM67 | Gene Product (UNIPROT ID): Q5HYA8 | Interactions: 93 | Total Interactions: 1681
+
+   33 | Approved Gene ID: UBA1 | Gene Product (UNIPROT ID): P22314 | Interactions: 171 | Total Interactions: 1852
+
+( ͡° ͜ʖ ͡°)ﾉ⌐■-■  We did it! ✔
+
+
+
+
+Saving output table:
+
+                ac  ...  searchChildInteractors
+0      EBI-6873241  ...                    None
+1     EBI-21742951  ...                    None
+2     EBI-21665473  ...                    None
+3     EBI-21740634  ...                    None
+4     EBI-21581572  ...                    None
+...            ...  ...                     ...
+1847  EBI-11105375  ...                    None
+1848  EBI-11156066  ...                    None
+1849  EBI-25637382  ...                    None
+1850  EBI-26955247  ...                    None
+1851  EBI-27116778  ...                    None
+
+[1852 rows x 99 columns]
+
+
+Process complete.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Your interactors list was saved as "TROUBLESHOOT_MIMBATCH88_interactors.csv" with  99  columns and  1852  rows.
+
+                                                    	⊂(◉‿◉)つ  ♡  
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+                ac  ...  searchChildInteractors
+0      EBI-6873241  ...                     NaN
+1     EBI-21742951  ...                     NaN
+2     EBI-21665473  ...                     NaN
+3     EBI-21740634  ...                     NaN
+4     EBI-21581572  ...                     NaN
+...            ...  ...                     ...
+1847  EBI-11105375  ...                     NaN
+1848  EBI-11156066  ...                     NaN
+1849  EBI-25637382  ...                     NaN
+1850  EBI-26955247  ...                     NaN
+1851  EBI-27116778  ...                     NaN
+
+[1852 rows x 99 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Creating labels... ✔
+Constructing network visualization... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+                        [  I n t e r a c t o r s  ]              \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+
+
+     ...image saved as "TROUBLESHOOT_MIMBATCH88_interactors.png" with  103  total nodes.
+
+     Summary file saved as "TROUBLESHOOT_MIMBATCH88_interactors_NETWORK_SUMMARY.txt"
+
+     GraphML file saved as "TROUBLESHOOT_MIMBATCH88_interactors.graphml  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+                ac  ...  searchChildInteractors
+0      EBI-6873241  ...                     NaN
+1     EBI-21742951  ...                     NaN
+2     EBI-21665473  ...                     NaN
+3     EBI-21740634  ...                     NaN
+4     EBI-21581572  ...                     NaN
+...            ...  ...                     ...
+1847  EBI-11105375  ...                     NaN
+1848  EBI-11156066  ...                     NaN
+1849  EBI-25637382  ...                     NaN
+1850  EBI-26955247  ...                     NaN
+1851  EBI-27116778  ...                     NaN
+
+[1852 rows x 99 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Creating labels... ✔
+Constructing network visualization... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Saving your output...
+
+
+
+
+     ...image saved as "TROUBLESHOOT_MIMBATCH88_omim_genes_interactions.png" with  3  total nodes.
+
+     Summary file saved as "TROUBLESHOOT_MIMBATCH88_omim_genes_interactions_NETWORK_SUMMARY.txt"
+
+     GraphML file saved as "TROUBLESHOOT_MIMBATCH88_omim_genes_interactions.graphml  *:･ﾟ✧
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+             Superphenotype        Node_name  ... Gene_MIM_number  Parenthetical
+0                    SPGF33          CFAP251  ...          618146            NaN
+1                    HYDCC1           TRIM71  ...          618570            NaN
+2                      HFE1              HFE  ...          613609            NaN
+3                      HFE1             BMP2  ...          112261            NaN
+4                    BMND17             LGR4  ...          606666            NaN
+5                     DCBXA           SLC1A1  ...          133550            NaN
+6                    DFNB66            DCDC2  ...          605755            NaN
+7                      HH21            FLRT3  ...          604808            NaN
+8                      HH23              LHB  ...          152780            NaN
+9                    LDLCQ8            LIMA1  ...          608364            NaN
+10                    HOMG1            TRPM6  ...          607009            NaN
+11                    HPE13            STAG2  ...          300826            NaN
+12                    NDNC1             FZD6  ...          603409            NaN
+13                   IIAE11             DBR1  ...          607024            NaN
+14                   ATFB13            SCN1B  ...          600235            NaN
+15                   SPGF64           FBXO43  ...          609110            NaN
+16                     CCM4           PIK3CA  ...          171834            NaN
+17                    SQORD             SQOR  ...          617658            NaN
+18  HYPERTENSION, ESSENTIAL             ECE1  ...          600423            NaN
+19  HYPERTENSION, ESSENTIAL             RGS5  ...          603276            NaN
+20  HYPERTENSION, ESSENTIAL           ATP1B1  ...          182330            NaN
+21  HYPERTENSION, ESSENTIAL              AGT  ...          106150            NaN
+22  HYPERTENSION, ESSENTIAL            AGTR1  ...          106165            NaN
+23  HYPERTENSION, ESSENTIAL             ADD1  ...          102680            NaN
+24  HYPERTENSION, ESSENTIAL           CYP3A5  ...          605325            NaN
+25  HYPERTENSION, ESSENTIAL             NOS3  ...          163729            NaN
+26  HYPERTENSION, ESSENTIAL             GNB3  ...          139130            NaN
+27  HYPERTENSION, ESSENTIAL            PTGIS  ...          601699            NaN
+28                   RPRGL2               F2  ...          176930            NaN
+29                   SPGF33  ENSG00000158023  ...          618146            NaN
+30                   HYDCC1  ENSG00000206557  ...          618570            NaN
+31                     HFE1  ENSG00000010704  ...          613609            NaN
+32                     HFE1  ENSG00000125845  ...          112261            NaN
+33                   BMND17  ENSG00000205213  ...          606666            NaN
+34                    DCBXA  ENSG00000106688  ...          133550            NaN
+35                   DFNB66  ENSG00000146038  ...          605755            NaN
+36                     HH21  ENSG00000125848  ...          604808            NaN
+37                     HH23  ENSG00000104826  ...          152780            NaN
+38                   LDLCQ8  ENSG00000050405  ...          608364            NaN
+39                    HOMG1  ENSG00000119121  ...          607009            NaN
+40                    HPE13  ENSG00000101972  ...          300826            NaN
+41                    NDNC1  ENSG00000164930  ...          603409            NaN
+42                   IIAE11  ENSG00000138231  ...          607024            NaN
+43                   ATFB13  ENSG00000105711  ...          600235            NaN
+44                   SPGF64  ENSG00000156509  ...          609110            NaN
+45                     CCM4  ENSG00000121879  ...          171834            NaN
+46                    SQORD  ENSG00000137767  ...          617658            NaN
+47  HYPERTENSION, ESSENTIAL  ENSG00000117298  ...          600423            NaN
+48  HYPERTENSION, ESSENTIAL  ENSG00000232995  ...          603276            NaN
+49  HYPERTENSION, ESSENTIAL  ENSG00000143153  ...          182330            NaN
+50  HYPERTENSION, ESSENTIAL  ENSG00000135744  ...          106150            NaN
+51                   RPRGL2  ENSG00000180210  ...          176930            NaN
+52                    BFNS2            KCNQ3  ...          602232            NaN
+53                   NEDSGO          TBC1D2B  ...          619152            NaN
+54                   NPHP11           TMEM67  ...          609884            NaN
+55                    VEXAS             UBA1  ...          314370            NaN
+56                    BFNS2  ENSG00000184156  ...          602232            NaN
+57                   NEDSGO  ENSG00000167202  ...          619152            NaN
+58                   NPHP11  ENSG00000164953  ...          609884            NaN
+59                    VEXAS  ENSG00000130985  ...          314370            NaN
+
+[60 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  O M I M  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+      ⚠ NO GRAPH WAS PRODUCED FOR THIS INPUT! ⚠
+
+      No connected nodes were found.
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+O---o    ___|                       _ \   |
+O---o   |       _ \  __ \    _ \   |   |  __ \    _ \  __ \    _ \   |
+ O-o    |   |   __/  |   |  (   |  ___/   | | |   __/  |   |  (   |  |
+  O    \____| \___| _|  _| \___/  _|     _| |_| \___| _|  _| \___/   |
+ o-O   ______________________________________________________________|---------+
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3  |    ✧ - ･ﾟ*
+O---o                               +------------------------------------------+ 
+ O-o                     (✿◠‿◠)     |  (c) 2022-01-27 Devin Keane              |
+  O                                 |  Feltus Lab                              |◉‿◉)つ
+ o-O                                |  Department of Genetics and Biochemistry |
+o---O                               |  Clemson University                      | 
+O---o                       .'✧     |                                          |
+                                    |  Last rev: 2022-10-05                    |
+                                    +------------------------------------------+
+                         , ⌒ *: ﾟ･✧* ･ﾟ✧ - *                      ─=≡Σ((( つ◕ل͜◕)つ
+    ╰( ͡° ͜ʖ ͡° )つ──☆*:・^'
+
+Processing your input table:
+
+    Superphenotype  ... Parenthetical
+0           SPGF33  ...           NaN
+1           SPGF33  ...           NaN
+2           SPGF33  ...           NaN
+3           SPGF33  ...           NaN
+4           SPGF33  ...           NaN
+..             ...  ...           ...
+252          VEXAS  ...           NaN
+253          VEXAS  ...           NaN
+254          VEXAS  ...           NaN
+255          VEXAS  ...           NaN
+256          VEXAS  ...           NaN
+
+[257 rows x 6 columns]
+
+Defining source and target nodes... ✔
+Creating layout... ✔
+Constructing network visualization... ✔
+Creating labels... ✔
+
+Calculating connectivity statistics for summary file:
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+
+
+                                                                 \   ,'|`-.   /
+                                                                  \,' _|_  ','
+                                                                  /'.' | `,' \
+                                                              -._/_/_'.|,'_\__\_,-
+                                                                 | | ,-*." |  |
+                                                              ___|,+' /|\`.|  |
+             [  O M I M  ]                                       \  \/ | \/`. |___
+                                                                  \ /`.|,'\  /
+                                                                   Y.  |   \/
+                                                                   | `.|_,'
+                                                                   |
+                                                                   |
+                  Network spun.                                 __ |
+                                                                __\|,-
+                                                                ,-`=--.       
+                                                                 /=8\
+
+      ⚠ NO GRAPH WAS PRODUCED FOR THIS INPUT! ⚠
+
+      No connected nodes were found.
+
+
+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+                              d8,        d8b
+                             `8P         ?88                                        d8P
+                                          88b                                    d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P    |
+  88b     d88   88P d88      d88 88b     d88   88P d88  d88  88P88b     d88   88P  88b    |
+  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+                                                                                          |
+  ----------------------------------------------------------------------------------------+
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v7.2
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  2287  100  2019  100   268   2418    321 --:--:-- --:--:-- --:--:--  2738
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  520k    0  520k  100   188   206k     74  0:00:02  0:00:02 --:--:--  206k
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Your output table:
+   Category  ...                                              Genes
+0   Disease  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+1   Disease  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+2   Disease  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+3   Disease  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+4    Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+5    Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+6    Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+7    Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+8    Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+9    Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+10   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+11   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+12   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+13   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+14   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+15   Pubmed  ...  [{'Entrez': 7317, 'Symbol': 'UBA1'}, {'Entrez'...
+16   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+17   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+18   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+19   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+20     Drug  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+21     Drug  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+22     Drug  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+23   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+24   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+25   Pubmed  ...  [{'Entrez': 118, 'Symbol': 'ADD1'}, {'Entrez':...
+26   Pubmed  ...  [{'Entrez': 2147, 'Symbol': 'F2'}, {'Entrez': ...
+27   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+28   Pubmed  ...  [{'Entrez': 2147, 'Symbol': 'F2'}, {'Entrez': ...
+29   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+30   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+31   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+32   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+33     Drug  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+34   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+35   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+36   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+37   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+38   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+39   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+40   Pubmed  ...  [{'Entrez': 118, 'Symbol': 'ADD1'}, {'Entrez':...
+41   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+42   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+43   Pubmed  ...  [{'Entrez': 118, 'Symbol': 'ADD1'}, {'Entrez':...
+44   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+45   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+46   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+47   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+48   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+49   Pubmed  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+50   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+51   Pubmed  ...  [{'Entrez': 4846, 'Symbol': 'NOS3'}, {'Entrez'...
+52  Disease  ...  [{'Entrez': 3972, 'Symbol': 'LHB'}, {'Entrez':...
+53     Drug  ...  [{'Entrez': 2784, 'Symbol': 'GNB3'}, {'Entrez'...
+
+[54 rows x 14 columns]
+
+     * Your enrichment analysis was saved as "TROUBLESHOOT_MIMBATCH88_genes_enrichment.csv"
+     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6
+
+-------------------------------------------------------------------------------------
+
+                        Thank you for using ₲Ɇ₦Ø₱ⱧɆ₦Ø    ❤
+
+-------------------------------------------------------------------------------------
+
+
+                              d8,        d8b
+                             `8P         ?88                                        d8P
+                                          88b                                    d888888P |
+   d8888b  88bd88b   88bd88b  88b d8888b  888888b   88bd8b,d88b  d8888b  88bd88b   ?88'   |
+  d8b_,dP  88P' ?8b  88P'  `  88Pd8P' `P  88P `?8b  88P'`?8P'?8bd8b_,dP  88P' ?8b  88P    |
+  88b     d88   88P d88      d88 88b     d88   88P d88  d88  88P88b     d88   88P  88b    |
+  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
+                                                                                          |
+  ----------------------------------------------------------------------------------------+
+                                                        ₲Ɇ₦Ø₱ⱧɆ₦Ø  v7.2
+
+
+Converting gene IDs to Entrez:
+------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 69287    0 61066  100  8221  47723   6424  0:00:01  0:00:01 --:--:-- 54172
+
+
+Performing enrichment analysis on Entrez IDs:
+---------------------------------------------
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 3825k    0 3820k  100  5445   281k    401  0:00:13  0:00:13 --:--:--  625k
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Your output table:
+                           Category  ...                                              Genes
+0                       Interaction  ...  [{'Entrez': 2060, 'Symbol': 'EPS15'}, {'Entrez...
+1                            Pubmed  ...  [{'Entrez': 10260, 'Symbol': 'DENND4A'}, {'Ent...
+2                       Interaction  ...  [{'Entrez': 2060, 'Symbol': 'EPS15'}, {'Entrez...
+3                       Interaction  ...  [{'Entrez': 2060, 'Symbol': 'EPS15'}, {'Entrez...
+4                            Pubmed  ...  [{'Entrez': 10273, 'Symbol': 'STUB1'}, {'Entre...
+...                             ...  ...                                                ...
+1040                         Domain  ...  [{'Entrez': 2064, 'Symbol': 'ERBB2'}, {'Entrez...
+1041                         Domain  ...  [{'Entrez': 2064, 'Symbol': 'ERBB2'}, {'Entrez...
+1042  GeneOntologyMolecularFunction  ...  [{'Entrez': 2339, 'Symbol': 'FNTA'}, {'Entrez'...
+1043              CoexpressionAtlas  ...  [{'Entrez': 200734, 'Symbol': 'SPRED2'}, {'Ent...
+1044                  Computational  ...  [{'Entrez': 81, 'Symbol': 'ACTN4'}, {'Entrez':...
+
+[1045 rows x 14 columns]
+
+     * Your enrichment analysis was saved as "TROUBLESHOOT_MIMBATCH88_interactors_enrichment.csv"
+     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6
+
+-------------------------------------------------------------------------------------
+
+                        Thank you for using ₲Ɇ₦Ø₱ⱧɆ₦Ø    ❤
+
+-------------------------------------------------------------------------------------
+

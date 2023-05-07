@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d3" for="node" attr.name="modularity" attr.type="long" />
+  <key id="d2" for="node" attr.name="eigenvector" attr.type="double" />
+  <key id="d1" for="node" attr.name="betweenness" attr.type="double" />
+  <key id="d0" for="node" attr.name="degree" attr.type="long" />
+  <graph edgedefault="undirected">
+    <node id="MADD">
+      <data key="d0">2</data>
+      <data key="d1">0.009662192247202996</data>
+      <data key="d2">0.07236832610429417</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Jaundice">
+      <data key="d0">2</data>
+      <data key="d1">0.0034330011074197126</data>
+      <data key="d2">0.057303711726566425</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Autosomal recessive">
+      <data key="d0">14</data>
+      <data key="d1">0.399462229885354</data>
+      <data key="d2">0.38403605204053115</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="COXPD38">
+      <data key="d0">8</data>
+      <data key="d1">0.09768810260123187</data>
+      <data key="d2">0.1620867964334232</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Failure to thrive">
+      <data key="d0">2</data>
+      <data key="d1">0.003013363118567991</data>
+      <data key="d2">0.059675726381920084</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Low-set ears">
+      <data key="d0">3</data>
+      <data key="d1">0.012870684490017896</data>
+      <data key="d2">0.07662669069591375</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Respiratory insufficiency">
+      <data key="d0">2</data>
+      <data key="d1">0.006007462964827307</data>
+      <data key="d2">0.07201503800981753</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Global developmental delay">
+      <data key="d0">2</data>
+      <data key="d1">0.004619940053942297</data>
+      <data key="d2">0.08040688497958774</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Speech delay">
+      <data key="d0">2</data>
+      <data key="d1">0.005081216925070745</data>
+      <data key="d2">0.04674229478680354</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Lactic acidosis">
+      <data key="d0">3</data>
+      <data key="d1">0.011923092771545983</data>
+      <data key="d2">0.134493532523902</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="Increased serum lactate">
+      <data key="d0">3</data>
+      <data key="d1">0.011923092771545983</data>
+      <data key="d2">0.134493532523902</data>
+      <data key="d3">4</data>
+    </node>
+    <node id="COXPD32">
+      <data key="d0">13</data>
+      <data key="d1">0.1609324764595051</data>
+      <data key="d2">0.32985274141227133</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Strabismus">
+      <data key="d0">2</data>
+      <data key="d1">0.002033601820807025</data>
+      <data key="d2">0.09952397248212547</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Nystagmus">
+      <data key="d0">2</data>
+      <data key="d1">0.002033601820807025</data>
+      <data key="d2">0.09952397248212547</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Optic atrophy">
+      <data key="d0">2</data>
+      <data key="d1">0.0023316615458735465</data>
+      <data key="d2">0.10791581945189567</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Hypotonia">
+      <data key="d0">5</data>
+      <data key="d1">0.028329681159699804</data>
+      <data key="d2">0.20503752322938631</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Spasticity">
+      <data key="d0">4</data>
+      <data key="d1">0.01805663777895143</data>
+      <data key="d2">0.15109756243623695</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Dystonia">
+      <data key="d0">3</data>
+      <data key="d1">0.008368131481918</data>
+      <data key="d2">0.1376988235872127</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Microcephaly">
+      <data key="d0">4</data>
+      <data key="d1">0.033564328424992115</data>
+      <data key="d2">0.1538184516436146</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Poor feeding">
+      <data key="d0">3</data>
+      <data key="d1">0.009055847217684782</data>
+      <data key="d2">0.1420457168985876</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Joint contractures">
+      <data key="d0">2</data>
+      <data key="d1">0.002033601820807025</data>
+      <data key="d2">0.09952397248212547</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Hyperreflexia">
+      <data key="d0">4</data>
+      <data key="d1">0.016304124920495065</data>
+      <data key="d2">0.1624049899273562</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="MDDGC4">
+      <data key="d0">3</data>
+      <data key="d1">0.00952042894098786</data>
+      <data key="d2">0.11335077819858756</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Increased serum creatine kinase">
+      <data key="d0">3</data>
+      <data key="d1">0.007441094596483068</data>
+      <data key="d2">0.10219854157266409</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="PARK14">
+      <data key="d0">7</data>
+      <data key="d1">0.06655053489912911</data>
+      <data key="d2">0.1816345805912859</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Bradykinesia">
+      <data key="d0">2</data>
+      <data key="d1">0.0018272425249169434</data>
+      <data key="d2">0.041216860639722</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="Tremor">
+      <data key="d0">3</data>
+      <data key="d1">0.012869348581069244</data>
+      <data key="d2">0.12904950098070958</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="ULNA AND FIBULA, ABSENCE OF, WITH SEVERE LIMB DEFICIENCY">
+      <data key="d0">4</data>
+      <data key="d1">0.03341069021363045</data>
+      <data key="d2">0.0970840738964531</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Hypospadias">
+      <data key="d0">2</data>
+      <data key="d1">0.0012094125881501297</data>
+      <data key="d2">0.03608366189201271</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Cryptorchidism">
+      <data key="d0">4</data>
+      <data key="d1">0.01992517756637358</data>
+      <data key="d2">0.09532286481883837</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="NPHP19">
+      <data key="d0">3</data>
+      <data key="d1">0.017084083628934127</data>
+      <data key="d2">0.09344352226256797</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Hepatomegaly">
+      <data key="d0">4</data>
+      <data key="d1">0.016230599695503403</data>
+      <data key="d2">0.13637921364712915</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Splenomegaly">
+      <data key="d0">2</data>
+      <data key="d1">0.0015609344512999002</data>
+      <data key="d2">0.04945202842963399</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="CDG1J">
+      <data key="d0">12</data>
+      <data key="d1">0.17167465228999765</data>
+      <data key="d2">0.2771039938647403</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="Seizures">
+      <data key="d0">3</data>
+      <data key="d1">0.010783179762594285</data>
+      <data key="d2">0.13236451015530634</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="AGS4">
+      <data key="d0">9</data>
+      <data key="d1">0.10747208039525868</data>
+      <data key="d2">0.20814453631290722</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Intrauterine growth retardation">
+      <data key="d0">2</data>
+      <data key="d1">0.002798377622493315</data>
+      <data key="d2">0.08795906935427333</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="Enlarged ventricles">
+      <data key="d0">2</data>
+      <data key="d1">0.002798377622493315</data>
+      <data key="d2">0.08795906935427333</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="HHHS">
+      <data key="d0">7</data>
+      <data key="d1">0.054264525156599665</data>
+      <data key="d2">0.20185148973561767</data>
+      <data key="d3">0</data>
+    </node>
+    <node id="HH8">
+      <data key="d0">3</data>
+      <data key="d1">0.022268451569705455</data>
+      <data key="d2">0.08417210847838667</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="Micropenis">
+      <data key="d0">2</data>
+      <data key="d1">0.0010256815904656435</data>
+      <data key="d2">0.03396645970381169</data>
+      <data key="d3">1</data>
+    </node>
+    <node id="PARK7">
+      <data key="d0">2</data>
+      <data key="d1">0.01353120854781984</data>
+      <data key="d2">0.0697304977985864</data>
+      <data key="d3">3</data>
+    </node>
+    <node id="COXPD3">
+      <data key="d0">14</data>
+      <data key="d1">0.19688745887048584</data>
+      <data key="d2">0.3282825023217708</data>
+      <data key="d3">2</data>
+    </node>
+    <node id="PHLS">
+      <data key="d0">6</data>
+      <data key="d1">0.0789202238140628</data>
+      <data key="d2">0.1229756817940568</data>
+      <data key="d3">1</data>
+    </node>
+    <edge source="MADD" target="Jaundice" />
+    <edge source="MADD" target="Autosomal recessive" />
+    <edge source="Jaundice" target="CDG1J" />
+    <edge source="Autosomal recessive" target="COXPD38" />
+    <edge source="Autosomal recessive" target="COXPD32" />
+    <edge source="Autosomal recessive" target="MDDGC4" />
+    <edge source="Autosomal recessive" target="PARK14" />
+    <edge source="Autosomal recessive" target="ULNA AND FIBULA, ABSENCE OF, WITH SEVERE LIMB DEFICIENCY" />
+    <edge source="Autosomal recessive" target="NPHP19" />
+    <edge source="Autosomal recessive" target="CDG1J" />
+    <edge source="Autosomal recessive" target="AGS4" />
+    <edge source="Autosomal recessive" target="HHHS" />
+    <edge source="Autosomal recessive" target="HH8" />
+    <edge source="Autosomal recessive" target="PARK7" />
+    <edge source="Autosomal recessive" target="COXPD3" />
+    <edge source="Autosomal recessive" target="PHLS" />
+    <edge source="COXPD38" target="Failure to thrive" />
+    <edge source="COXPD38" target="Low-set ears" />
+    <edge source="COXPD38" target="Respiratory insufficiency" />
+    <edge source="COXPD38" target="Global developmental delay" />
+    <edge source="COXPD38" target="Speech delay" />
+    <edge source="COXPD38" target="Lactic acidosis" />
+    <edge source="COXPD38" target="Increased serum lactate" />
+    <edge source="Failure to thrive" target="HHHS" />
+    <edge source="Low-set ears" target="ULNA AND FIBULA, ABSENCE OF, WITH SEVERE LIMB DEFICIENCY" />
+    <edge source="Low-set ears" target="AGS4" />
+    <edge source="Respiratory insufficiency" target="CDG1J" />
+    <edge source="Global developmental delay" target="COXPD3" />
+    <edge source="Speech delay" target="PHLS" />
+    <edge source="Lactic acidosis" target="COXPD32" />
+    <edge source="Lactic acidosis" target="COXPD3" />
+    <edge source="Increased serum lactate" target="COXPD32" />
+    <edge source="Increased serum lactate" target="COXPD3" />
+    <edge source="COXPD32" target="Strabismus" />
+    <edge source="COXPD32" target="Nystagmus" />
+    <edge source="COXPD32" target="Optic atrophy" />
+    <edge source="COXPD32" target="Hypotonia" />
+    <edge source="COXPD32" target="Spasticity" />
+    <edge source="COXPD32" target="Dystonia" />
+    <edge source="COXPD32" target="Microcephaly" />
+    <edge source="COXPD32" target="Poor feeding" />
+    <edge source="COXPD32" target="Joint contractures" />
+    <edge source="COXPD32" target="Hyperreflexia" />
+    <edge source="Strabismus" target="CDG1J" />
+    <edge source="Nystagmus" target="CDG1J" />
+    <edge source="Optic atrophy" target="COXPD3" />
+    <edge source="Hypotonia" target="MDDGC4" />
+    <edge source="Hypotonia" target="CDG1J" />
+    <edge source="Hypotonia" target="HHHS" />
+    <edge source="Hypotonia" target="COXPD3" />
+    <edge source="Spasticity" target="PARK14" />
+    <edge source="Spasticity" target="AGS4" />
+    <edge source="Spasticity" target="HHHS" />
+    <edge source="Dystonia" target="PARK14" />
+    <edge source="Dystonia" target="COXPD3" />
+    <edge source="Microcephaly" target="CDG1J" />
+    <edge source="Microcephaly" target="AGS4" />
+    <edge source="Microcephaly" target="PHLS" />
+    <edge source="Poor feeding" target="AGS4" />
+    <edge source="Poor feeding" target="COXPD3" />
+    <edge source="Joint contractures" target="CDG1J" />
+    <edge source="Hyperreflexia" target="PARK14" />
+    <edge source="Hyperreflexia" target="CDG1J" />
+    <edge source="Hyperreflexia" target="HHHS" />
+    <edge source="MDDGC4" target="Increased serum creatine kinase" />
+    <edge source="Increased serum creatine kinase" target="PARK14" />
+    <edge source="Increased serum creatine kinase" target="COXPD3" />
+    <edge source="PARK14" target="Bradykinesia" />
+    <edge source="PARK14" target="Tremor" />
+    <edge source="Bradykinesia" target="PARK7" />
+    <edge source="Tremor" target="CDG1J" />
+    <edge source="Tremor" target="COXPD3" />
+    <edge source="ULNA AND FIBULA, ABSENCE OF, WITH SEVERE LIMB DEFICIENCY" target="Hypospadias" />
+    <edge source="ULNA AND FIBULA, ABSENCE OF, WITH SEVERE LIMB DEFICIENCY" target="Cryptorchidism" />
+    <edge source="Hypospadias" target="PHLS" />
+    <edge source="Cryptorchidism" target="CDG1J" />
+    <edge source="Cryptorchidism" target="HH8" />
+    <edge source="Cryptorchidism" target="PHLS" />
+    <edge source="NPHP19" target="Hepatomegaly" />
+    <edge source="NPHP19" target="Splenomegaly" />
+    <edge source="Hepatomegaly" target="AGS4" />
+    <edge source="Hepatomegaly" target="HHHS" />
+    <edge source="Hepatomegaly" target="COXPD3" />
+    <edge source="Splenomegaly" target="AGS4" />
+    <edge source="CDG1J" target="Seizures" />
+    <edge source="Seizures" target="HHHS" />
+    <edge source="Seizures" target="COXPD3" />
+    <edge source="AGS4" target="Intrauterine growth retardation" />
+    <edge source="AGS4" target="Enlarged ventricles" />
+    <edge source="Intrauterine growth retardation" target="COXPD3" />
+    <edge source="Enlarged ventricles" target="COXPD3" />
+    <edge source="HH8" target="Micropenis" />
+    <edge source="Micropenis" target="PHLS" />
+  </graph>
+</graphml>

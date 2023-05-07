@@ -1,0 +1,151 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.3          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-11 01:08:36.885341
+
+Total Nodes:  89
+Total Edges:  181
+
+             Approximate node connectivity:   4.067E+00
+     Network diameter of largest component:   5
+                              Transitivity:   7.696E-02
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                            COL1A1           29
+                                              PPIB           25
+                                              P3H1           23
+                                            COL1A2           22
+                                          SERPINH1           22
+                                              MESD           15
+                                             CRTAP           15
+                                               SP7           13
+                                              BMP1            7
+                                            FKBP10            6
+                                             SPARC            5
+                                             TCTN1            5
+                                           CREB3L1            5
+                                             DISC1            4
+                                            EPHA10            4
+                                            UBQLN1            3
+                                              SGTB            3
+                                            COL5A1            3
+                                              BMI1            3
+                                             CDK18            3
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                            COL1A1    3.811E-01
+                                              P3H1    2.176E-01
+                                          SERPINH1    2.001E-01
+                                              PPIB    1.832E-01
+                                            COL1A2    1.446E-01
+                                              MESD    1.395E-01
+                                             CRTAP    9.679E-02
+                                               SP7    5.967E-02
+                                             SPARC    5.065E-02
+                                             TCTN1    3.322E-02
+                                            EPHA10    2.195E-02
+                                             ATXN1    2.157E-02
+                                            FKBP10    1.944E-02
+                                             HSPA5    1.691E-02
+                                               GEM    1.621E-02
+                                              BMP1    1.499E-02
+                                              SGTB    1.410E-02
+                                             DISC1    1.183E-02
+                                             WDR48    1.171E-02
+                                              YAF2    1.090E-02
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                            COL1A1    4.448E-01
+                                            COL1A2    2.897E-01
+                                             DISC1    1.223E-01
+                                             CDK18    1.210E-01
+                                              YAF2    9.778E-02
+                                              P4HB    9.680E-02
+                                             PDIA4    9.680E-02
+                                             PLOD2    9.680E-02
+                                            PRKCSH    9.680E-02
+                                            TFAP2A    9.081E-02
+
+CLASS 1:
+-------
+                                              PPIB    3.381E-01
+                                          SERPINH1    2.836E-01
+                                             TCTN1    1.352E-01
+                                              CALR    1.319E-01
+                                              BMI1    1.127E-01
+                                            FKBP10    1.042E-01
+                                           HSP90B1    9.680E-02
+                                            EPHA10    9.335E-02
+                                            NUDCD1    7.811E-02
+                                              CFTR    7.687E-02
+
+CLASS 2:
+-------
+                                              MESD    1.233E-01
+                                            UBQLN1    9.286E-02
+                                              TLE3    6.197E-02
+                                               SP7    5.636E-02
+                                               AXL    5.030E-02
+                                              ROS1    5.030E-02
+                                            TRIM24    4.877E-02
+                                            H2BC21    4.541E-02
+                                          MAP1LC3B    4.541E-02
+                                           SMARCD1    4.278E-02
+
+CLASS 3:
+-------
+                                              P3H1    2.440E-01
+                                             CRTAP    1.797E-01
+                                             WDR48    9.419E-02
+                                               MYC    6.523E-02
+                                              ALX3    5.238E-02
+                                              COLQ    5.238E-02
+                                            CSTF2T    5.238E-02
+                                               EDA    5.238E-02
+                                              HSCB    5.238E-02
+                                             INAVA    5.238E-02
+
+CLASS 4:
+-------
+                                            COL5A1    9.505E-02
+                                              SGTB    7.996E-02
+                                             HSPA5    6.157E-02
+                                               GEM    6.128E-02
+                                              BMP1    3.423E-02
+                                          SERPINF1    1.894E-02
+                                              PCNA    1.165E-02
+                                             YLPM1    1.120E-02
+
+CLASS 5:
+-------
+                                              COMT    3.753E-02
+                                              BET1    3.677E-02
+                                            COL8A2    2.393E-02
+                                           CREB3L1    1.386E-02

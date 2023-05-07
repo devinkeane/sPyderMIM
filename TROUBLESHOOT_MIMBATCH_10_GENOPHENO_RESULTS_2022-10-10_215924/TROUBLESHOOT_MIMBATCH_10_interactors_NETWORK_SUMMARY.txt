@@ -1,0 +1,178 @@
+                                            
+                                                __                               
+       /| |      /                   /         /                                 
+      ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+      | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+      | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                              /  
+                                                     ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.3          /
+    ------------------------------------------------------------------------------
+    
+
+Calculation date/time:   2022-10-10 21:58:33.987759
+
+Total Nodes:  148
+Total Edges:  345
+
+             Approximate node connectivity:   4.662E+00
+     Network diameter of largest component:   7
+                              Transitivity:   7.941E-02
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                              ETFA           47
+                                            MRPS34           42
+                                              ETFB           39
+                                            MRPS14           39
+                                          SLC25A11           27
+                                             PARK7           26
+                                              OPA3           17
+                                              TSFM           15
+                                             EIF4E           12
+                                             WNT7A            9
+                                           UGT1A10            9
+                                            UGT1A9            9
+                                            UGT1A3            9
+                                            UGT1A6            9
+                                            UGT1A7            9
+                                            UGT1A8            9
+                                            UGT1A1            9
+                                          RNASEH2A            8
+                                            EPS8L2            7
+                                            UGT1A4            7
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                              ETFA    2.359E-01
+                                            MRPS34    1.955E-01
+                                            MRPS14    1.678E-01
+                                          SLC25A11    1.627E-01
+                                              ETFB    1.595E-01
+                                             PARK7    1.161E-01
+                                              OPA3    6.060E-02
+                                             WNT7A    5.213E-02
+                                             EIF4E    5.071E-02
+                                             LRRK2    4.484E-02
+                                            EPS8L2    4.191E-02
+                                              TSFM    3.445E-02
+                                             HSPD1    2.259E-02
+                                          RNASEH2A    1.881E-02
+                                              CFTR    1.815E-02
+                                             FGFR3    1.771E-02
+                                             CNGA3    1.752E-02
+                                             MGST3    1.702E-02
+                                              PDK1    1.702E-02
+                                           TRMT61B    1.702E-02
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                              ETFA    3.927E-01
+                                              ETFB    3.422E-01
+                                             HSPD1    1.558E-01
+                                             MGST3    1.404E-01
+                                              PDK1    1.404E-01
+                                           TRMT61B    1.404E-01
+                                          AURKAIP1    1.290E-01
+                                              TSFM    1.192E-01
+                                              SCO1    1.149E-01
+                                             IKBKE    9.949E-02
+
+CLASS 1:
+-------
+                                          SLC25A11    1.353E-01
+                                             PARK7    1.061E-01
+                                             LRRK2    9.443E-02
+                                               MYC    7.988E-02
+                                              ESR1    7.527E-02
+                                              RYBP    7.506E-02
+                                              BMI1    7.249E-02
+                                            MAP2K2    6.052E-02
+                                          SLC16A11    5.391E-02
+                                             COX15    5.039E-02
+
+CLASS 2:
+-------
+                                            MRPS34    3.090E-01
+                                            MRPS14    3.076E-01
+                                               JUN    1.092E-01
+                                            MRPL58    1.092E-01
+                                             SSBP1    8.439E-02
+                                            ATAD3A    7.176E-02
+                                             PTPRR    7.176E-02
+                                              MTA2    6.897E-02
+                                             MAST1    6.102E-02
+                                             FGFR3    6.031E-02
+
+CLASS 3:
+-------
+                                             HSPA8    3.793E-02
+                                               GSN    3.082E-02
+                                            UBQLN1    3.082E-02
+                                             WNT7A    1.535E-02
+                                              CALR    1.438E-02
+                                            TUBA1A    1.438E-02
+                                            EPS8L2    1.324E-02
+                                              NEK4    1.308E-02
+                                             KIF1B    1.139E-02
+                                              DKC1    1.029E-02
+
+CLASS 4:
+-------
+                                              OPA3    1.615E-01
+                                            IMMP2L    8.456E-02
+                                            CHCHD2    6.580E-02
+                                              SOD1    5.820E-02
+                                            LRPPRC    5.159E-02
+                                           NDUFAB1    4.807E-02
+                                             MRPS6    4.491E-02
+                                              H3C1    3.167E-02
+                                             TRAP1    2.554E-02
+                                          RNASEH2A    2.283E-02
+
+CLASS 5:
+-------
+                                           UGT1A10    9.452E-06
+                                            UGT1A9    9.452E-06
+                                            UGT1A3    9.452E-06
+                                            UGT1A6    9.452E-06
+                                            UGT1A7    9.452E-06
+                                            UGT1A8    9.452E-06
+                                            UGT1A1    9.452E-06
+                                            UGT1A4    8.388E-06
+
+CLASS 6:
+-------
+                                            HNRNPU    5.970E-02
+                                              ATL3    3.351E-02
+                                             CNGA3    8.980E-03
+                                               WLS    1.487E-03
+                                             ARRB1    8.785E-04
+                                               SMO    2.257E-04
+
+CLASS 7:
+-------
+                                              GCDH    3.308E-02
+                                              COQ9    1.333E-02
+                                             ETFDH    4.429E-03
+
+CLASS 8:
+-------
+                                             C5AR2    1.314E-02
+                                             DCTN1    1.160E-02
+                                             DCDC2    2.361E-03

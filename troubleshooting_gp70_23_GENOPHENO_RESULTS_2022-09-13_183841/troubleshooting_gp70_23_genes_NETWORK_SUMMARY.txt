@@ -1,0 +1,59 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-13 18:37:58.777899
+
+Total Nodes:  4
+Total Edges:  2
+
+             Approximate node connectivity:   1.000E+00
+     Network diameter of largest component:   1
+                              Transitivity:   0.000E+00
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                 VENTRICULAR TACHYCARDIA, FAMILIAL            1
+                                             GNAI2            1
+                                             PARK4            1
+                                              SNCA            1
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                 VENTRICULAR TACHYCARDIA, FAMILIAL    0.000E+00
+                                             GNAI2    0.000E+00
+                                             PARK4    0.000E+00
+                                              SNCA    0.000E+00
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                 VENTRICULAR TACHYCARDIA, FAMILIAL    5.000E-01
+                                             GNAI2    5.000E-01
+
+CLASS 1:
+-------
+                                             PARK4    5.000E-01
+                                              SNCA    5.000E-01

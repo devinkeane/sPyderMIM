@@ -1,0 +1,173 @@
+                                            
+                                            __                               
+   /| |      /                   /         /                                 
+  ( | | ___ (___       ___  ___ (         (___       _ _  _ _  ___  ___      
+  | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
+  | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
+                                                                          /  
+                                                 ₲Ɇ₦Ø₱ⱧɆ₦Ø v7.2          /
+------------------------------------------------------------------------------
+
+
+Calculation date/time:   2022-09-12 20:39:25.475333
+
+Total Nodes:  105
+Total Edges:  206
+
+             Approximate node connectivity:   3.924E+00
+     Network diameter of largest component:   7
+                              Transitivity:   7.543E-02
+
+  ____        _             _      
+   L|op  20  [|\|odes  by  [|)egree 
+   ---------------------------------
+
+                                              Node |     Degree
+
+                                            COL1A1           28
+                                              PPIB           27
+                                              P3H1           22
+                                            COL1A2           21
+                                          SERPINH1           18
+                                               SP7           17
+                                              MESD           15
+                                             CRTAP           15
+                                            COL3A1            9
+                                              BMP1            8
+                                             SPARC            6
+                                              TNXB            6
+                                             DISC1            5
+                                             TCTN1            5
+                                           CREB3L1            5
+                                            TFAP2C            4
+                                            FKBP10            4
+                                            FKBP14            4
+                                            UBQLN1            3
+                                              SGTB            3
+
+
+  ____        _             _              _ 
+   L|op  20  [|\|odes  by  [|}etweenness  ((entrality
+   --------------------------------------------------
+
+                                              Node | Betweenness Centrality
+
+                                            COL1A1    3.152E-01
+                                              PPIB    2.278E-01
+                                              P3H1    1.715E-01
+                                              MESD    1.674E-01
+                                               SP7    1.429E-01
+                                            COL1A2    1.371E-01
+                                          SERPINH1    1.284E-01
+                                             CRTAP    8.985E-02
+                                             SPARC    5.725E-02
+                                             TCTN1    4.696E-02
+                                             ATXN1    2.938E-02
+                                             TCTN3    2.759E-02
+                                              YAF2    2.346E-02
+                                              BMP1    2.300E-02
+                                            TRIM24    2.194E-02
+                                               GEM    2.141E-02
+                                               APP    1.998E-02
+                                             L1TD1    1.886E-02
+                                               IDS    1.881E-02
+                                            COL8A2    1.876E-02
+
+   _ _             _      
+  //\/\odularity  ((lasses (with top 10 nodes listed by Eigenvector centrality)
+ -------------------------------------------------------------------------------
+
+                                              Node | Eigenvector Centrality
+
+
+CLASS 0:
+-------
+                                              MESD    1.025E-01
+                                            UBQLN1    9.307E-02
+                                              TLE3    6.355E-02
+                                               SP7    6.077E-02
+                                            TRIM24    5.143E-02
+                                           SMARCD1    4.402E-02
+                                            H2BC21    4.143E-02
+                                             QARS1    2.036E-02
+                                             ASH2L    2.036E-02
+                                              CLP1    2.036E-02
+
+CLASS 1:
+-------
+                                              PPIB    3.516E-01
+                                          SERPINH1    2.526E-01
+                                              CALR    1.313E-01
+                                              BMI1    1.118E-01
+                                              P4HB    1.060E-01
+                                             PDIA4    9.982E-02
+                                           HSP90B1    9.982E-02
+                                             PLOD2    9.982E-02
+                                             PDIA3    8.747E-02
+                                             L1TD1    7.654E-02
+
+CLASS 2:
+-------
+                                              P3H1    2.296E-01
+                                             CRTAP    1.808E-01
+                                             TCTN1    1.275E-01
+                                             WDR48    9.504E-02
+                                            FKBP10    8.560E-02
+                                             CPSF3    7.249E-02
+                                            NUDCD1    7.082E-02
+                                               MYC    6.014E-02
+                                              ALX3    5.119E-02
+                                              COLQ    5.119E-02
+
+CLASS 3:
+-------
+                                            COL1A1    4.487E-01
+                                            COL1A2    2.922E-01
+                                             DISC1    1.390E-01
+                                             CDK18    1.210E-01
+                                            TFAP2C    1.112E-01
+                                               LOX    1.050E-01
+                                             ERAL1    1.050E-01
+                                              PAX3    1.050E-01
+                                            COL3A1    1.009E-01
+                                              YAF2    9.999E-02
+
+CLASS 4:
+-------
+                                             SPARC    9.226E-02
+                                              SGTB    8.280E-02
+                                             HSPA5    6.477E-02
+                                          SERPINF1    2.015E-02
+                                              RYBP    1.909E-02
+                                               APP    1.795E-02
+                                              PCNA    1.402E-02
+                                            KDELR2    2.239E-03
+
+CLASS 5:
+-------
+                                            COL5A1    9.869E-02
+                                               GEM    6.292E-02
+                                              BMP1    5.038E-02
+                                             YLPM1    1.386E-02
+                                            PCOLCE    1.245E-02
+
+CLASS 6:
+-------
+                                              COMT    3.816E-02
+                                              BET1    3.322E-02
+                                            COL8A2    2.523E-02
+                                           CREB3L1    1.377E-02
+
+CLASS 7:
+-------
+                                             TCTN3    4.456E-02
+                                           TMEM38B    5.702E-03
+                                             TCTN2    1.156E-03
+
+CLASS 8:
+-------
+                                              WNT1    1.830E-25
+
+CLASS 9:
+-------
+                                            MBTPS2    1.830E-25
