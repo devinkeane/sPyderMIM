@@ -8,7 +8,7 @@
 #   (__  ) ____/ /_/ / /_/ /  __/ /  / /  / // // /  / /
 #  /____/_/    \__, /\__,_/\___/_/  /_/  /_/___/_/  /_/
 #             /____/
-#                                     (ツ)_/¯  - * Version 7.3.1 * -
+#                                     (ツ)_/¯  - * Version 7.3.2 * -
 #  [ O m i m   T a b l e   M a k e r ]
 #
 # Last rev: 2022-09-14
@@ -43,7 +43,7 @@ logo = """
   /____/_/    \__, /\__,_/\___/_/  /_/  /_/___/_/  /_/         |
              /____/                                            |
   _____________________________________________________________|
-                                (ツ)_/¯  - * Version 7.3.1 * -
+                                (ツ)_/¯  - * Version 7.3.2 * -
   [ O M I M   T a b l e   M a k e r ]                 :
                                                       :
                                                   /\('')/\\
@@ -144,10 +144,9 @@ for i in range(len(df2_transposed.columns)):
     if 'entry.clinicalSynopsis.inheritance' in df2_transposed.index:
         pass
     else:
-        if 'entry.clinicalSynopsis.oldFormat.Inheritance' in df2_transposed.index:
-            print('Old OMIM format detected.  Some data may be missing for MIM # :    ', df2_transposed[i]['entry.mimNumber'])
-            bad_mim_count += 1
-            no_ENSEMBL_list += [df_geneMap2_transposed[i]['entry.mimNumber']]
+        print('Old OMIM format detected.  Some data may be missing for MIM # :    ', df2_transposed[i]['entry.mimNumber'])
+        bad_mim_count += 1
+        no_ENSEMBL_list += [df_geneMap2_transposed[i]['entry.mimNumber']]
 
 
 # ----------------------------------------------------------------------------------------------+
@@ -257,40 +256,35 @@ gpn.drop(columns='Node_name_temp',inplace=True)
 gpn2 = pd.DataFrame(index=gpn,columns=['Superphenotype', 'Node_name', 'Node_type', 'Phenotype_MIM_number', 'Gene_MIM_number', 'Parenthetical','Node_name_temp'])
 
 bad_mim_count2 = 0
-
-print()
-k = 0
-
-i=0
-j=0
+no_ENSEMBL_list = []
 
 for i in range(len(df_geneMap2_transposed.columns)):
-
-    if isinstance(df_geneMap2_transposed[i]['entry.phenotypeMapList'],float):
-        print('No ENSEMBL or Gene ID found...      MIM # :    ',df_geneMap2_transposed[i]['entry.mimNumber'])
+    if isinstance(df_geneMap2_transposed[i]['entry.phenotypeMapList'], float):
+        print('No ENSEMBL or Gene ID found...      MIM # :    ', df_geneMap2_transposed[i]['entry.mimNumber'])
         bad_mim_count2 += 1
-        no_ENSEMBL_list += [df_geneMap2_transposed[i]['entry.mimNumber']]
+        no_ENSEMBL_list.append(df_geneMap2_transposed[i]['entry.mimNumber'])
     else:
         for j in range(len(df_geneMap2_transposed[i]['entry.phenotypeMapList'])):
             if 'ensemblIDs' in df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']:
-                gpn2['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['ensemblIDs'].split(',')[0]
-                gpn2['Node_type'][k] = 'phenotypeMap.ensemblIDs'
-                gpn2['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
-                gpn2['Phenotype_MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
-                gpn2['Gene_MIM_number'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['mimNumber']
-                k += 1
+                new_row = pd.DataFrame({
+                    'Node_name': [df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['ensemblIDs'].split(',')[0]],
+                    'Node_type': ['phenotypeMap.ensemblIDs'],
+                    'Superphenotype': [df2_transposed[i][3].split('; ')[-1]],
+                    'Phenotype_MIM_number': [df_geneMap2_transposed[i]['entry.mimNumber']],
+                    'Gene_MIM_number': [df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['mimNumber']]
+                })
+                gpn2 = pd.concat([gpn2, new_row], ignore_index=True)
             else:
                 print('No ENSEMBL ID found...           MIM # :    ', df_geneMap2_transposed[i]['entry.mimNumber'])
                 bad_mim_count2 += 1
-                no_ENSEMBL_list += [df_geneMap2_transposed[i]['entry.mimNumber']]
+                no_ENSEMBL_list.append(df_geneMap2_transposed[i]['entry.mimNumber'])
                 break
 
 
 
 
-
 # Parsing HUGO gene symbol IDs from df_geneMap2_transposed and other data from df2_transposed to write into gpn2
-gpn3 = pd.DataFrame(index=gpn,columns=['Superphenotype', 'Node_name', 'Node_type', 'Phenotype_MIM_number', 'Gene_MIM_number', 'Parenthetical','Node_name_temp'])
+gpn3 = pd.DataFrame(columns=['Superphenotype', 'Node_name', 'Node_type', 'Phenotype_MIM_number', 'Gene_MIM_number', 'Parenthetical','Node_name_temp'])
 k = 0
 for i in range(len(df_geneMap2_transposed.columns)):
     if isinstance(df_geneMap2_transposed[i]['entry.phenotypeMapList'],float):
@@ -298,13 +292,16 @@ for i in range(len(df_geneMap2_transposed.columns)):
     else:
         for j in range(len(df_geneMap2_transposed[i]['entry.phenotypeMapList'])):
             if 'geneSymbols' in df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap'].keys():
-
-                gpn3['Node_name'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['geneSymbols'].split(',')[0]
-                gpn3['Node_type'][k] = 'phenotypeMap.approvedGeneSymbols'
-                gpn3['Superphenotype'][k] = df2_transposed[i][3].split('; ')[-1]
-                gpn3['Phenotype_MIM_number'][k] = df_geneMap2_transposed[i]['entry.mimNumber']
-                gpn3['Gene_MIM_number'][k] = df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['mimNumber']
-                k += 1
+                new_row = pd.DataFrame({'Node_name': [
+                    df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap']['geneSymbols'].split(',')[
+                        0]],
+                                        'Node_type': ['phenotypeMap.approvedGeneSymbols'],
+                                        'Superphenotype': [df2_transposed[i][3].split('; ')[-1]],
+                                        'Phenotype_MIM_number': [df_geneMap2_transposed[i]['entry.mimNumber']],
+                                        'Gene_MIM_number': [
+                                            df_geneMap2_transposed[i]['entry.phenotypeMapList'][j]['phenotypeMap'][
+                                                'mimNumber']]})
+                gpn3 = pd.concat([gpn3, new_row], ignore_index=True)
             else:
                 pass
 # Concatenate by appending ENSEMBL IDs (gpn2) and HUGO symbols (gpn3) to original data frame (gpn)
