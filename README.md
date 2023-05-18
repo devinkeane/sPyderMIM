@@ -63,13 +63,15 @@ MIM numbers" beginning with "#" prefix).</font>
 the OMIM (Online Mendelian Inheritance in Man) database in order to construct a relationship graph that
 links diseases by genes and phenotypic outcomes.  The workflow also utilizes the IntAct API, which
 allows the user to find the protein products for the genes associated with each MIM number and the
-proteins known to interact with each of these.  Additionally, sPyderMIM uses the ToppGene API in order
-to perform enrichment analysis on all the genes that encode for these products.  By the end of the
-workflow, sPyderMIM.sh automatically generates two enrichment analyses:</font>
+proteins known to interact with each of these.  Additionally, sPyderMIM uses the Enrichr API in order
+to perform enrichment analysis on ranked and clustered genes derived from summary statistics files generated
+by the graphl.py script.  By the end of the workflow, sPyderMIM.sh automatically generates three enrichment analysis folders:</font>
 
-    1)  for the genes obtained from OMIM
+    1)  top_betweenness (top nodes ranked by betweenness centrality)
 
-    2)  for the clinical data obtained from OMIM
+    2)  top_degree  (top nodes ranked by degree connectivity)
+
+    3)  top_eigenvector_classes  (top three clusters of nodes grouped by Eigenvector centrality)
 
 
 <font size="4"><font color="aqua"> A single workflow run using sPyderMIM.sh features the following output, saved to a date/time-stamped folder: </font></font>
