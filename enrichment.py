@@ -13,20 +13,15 @@
 #
 #  -----------------------------------------------------------------------------------------
 
-import numpy as np
-import pandas as pd
-import argparse
+import os
+import re
 import json
 import requests
-import ast
-import matplotlib.pyplot as plt
-from io import BytesIO
-import itertools
-import threading
-import time
-import sys
-import os
 import csv
+import time
+import shutil
+
+
 
 logo = """
                               d8,        d8b
@@ -38,175 +33,205 @@ logo = """
   `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
                                                                                           |
   ----------------------------------------------------------------------------------------+
-                                                        丂尸丫ᗪ🝗尺爪工爪  v7.3.2
+                                                        丂尸丫ᗪ🝗尺爪工爪  v7.4.0
 """
+
 print(logo)
 
-# Parse command line input and options
-parser = argparse.ArgumentParser(description="	ʕっ•ᴥ•ʔっ  * Perform enrichment analysis on your protein interactors edge list! * ")
-parser.add_argument('-i', '--input', type=str, help='<INPUT_FILENAME.csv>  (protein interactors table from interactors.py \"geno\" mode)')
-parser.add_argument('-m', '--mode', type=str, help='\"omim\" (table.py output) or \"interactors\" (interactors.py output)')
-parser.add_argument('-o', '--output', type=str, help='<OUTPUT_FILENAME.csv>')
-args = parser.parse_args()
+OUTPUT_DIR = 'enrichment_results'
 
-# Assign parsed arguments into local variables
-input = args.input
-output = args.output
-mode = args.mode
+def process_all_files(gene_set_library):
+    filenames = [filename for filename in os.listdir('.') if re.match(r'.+(genes|interactors|omim_genes_interactions)_NETWORK_SUMMARY\.txt$', filename)]
+    for filename in filenames:
+        process_file(gene_set_library, filename)
 
 
-sys.stdout.flush()
-print()
-print('Converting gene IDs to Entrez:')
-print('------------------------------')
-print()
-toppGene_command = ''
+def process_file(gene_set_library, filename):
+    gene_lists = get_gene_lists(filename)
+    if not gene_lists:  # skip if the gene lists are empty
+        print(f'No genes found in {filename}. Skipping...')
+        return
 
-if mode == 'omim':
-    gpn = pd.read_csv(args.input)
-    gene_ids_list = []
-    gene_ids_list_unique = []
-    for i in range(len(gpn[gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols'].reset_index())):
-        gene_ids_list += [gpn[gpn['Node_type'] == 'phenotypeMap.approvedGeneSymbols'].reset_index()['Node_name'][i]]
+    for gene_list_name, genes in gene_lists.items():
+        if not genes:  # skip if the gene list is empty
+            continue
 
-    for i in gene_ids_list:
-        if i in gene_ids_list_unique:
-            pass
-        else:
-            gene_ids_list_unique += [i]
+        genes_str = '\n'.join(genes)
 
-    toppGene_command = 'curl -H \'Content-Type: text/json\' -d \'{\"Symbols\":['
+        # Extract the network summary type from the filename
+        network_summary_type = re.search(r'(.+)_NETWORK_SUMMARY\.txt', filename).group(1)
 
-    for i in range(len(gene_ids_list_unique)):
-        toppGene_command += '\"'
-        toppGene_command += gene_ids_list_unique[i]
-        if i < len(gene_ids_list_unique)-1:
-            toppGene_command += '\",'
-        else:
-            toppGene_command += '\"'
+        output_filename = os.path.join(OUTPUT_DIR, f"{network_summary_type}_{gene_list_name}_{gene_set_library}.csv")
 
-    toppGene_command += ']}\' https://toppgene.cchmc.org/API/lookup > '
-    toppGene_command += 'id_conversion.json'
+        print(f'Processing {filename} ({gene_list_name})...')
+        user_list_id = add_gene_list(genes_str)
+        result = run_enrichment(user_list_id, gene_set_library)
 
-        #r = requests.post(toppGene_url)
-        #response = r.json()
-        #dictionary.update(response)
 
-sys.stdout.flush()
+        # Print enrichment results as a table
+        print('Enrichment Results:')
+        table_header = ["Rank", "Term name", "P-value", "Z-score", "Combined score", "Overlapping genes",
+                        "Adjusted p-value", "Old p-value", "Old adjusted p-value"]
+        table_data = []
+        for item in result[gene_set_library]:
+            rank, term_name, p_value, z_score, combined_score, overlapping_genes, adjusted_p_value, old_p_value, old_adjusted_p_value = item
+            table_data.append([rank, term_name, p_value, z_score, combined_score, overlapping_genes,
+                               adjusted_p_value, old_p_value, old_adjusted_p_value])
 
-if mode == 'interactors':
-    interactors_df = pd.read_csv(input)
+        print("\t".join(table_header))
+        for i, row in enumerate(table_data):
+            if i >= 5:  # Stop after printing 5 rows
+                break
+            print("\t".join(str(cell) for cell in row))
 
-    interactors_list_unique = []
+        print()
 
-    interactors_list_A = list(interactors_df['moleculeA'])
-    interactors_list_B = list(interactors_df['moleculeB'])
+
+        # Export enrichment results to CSV
+        with open(output_filename, 'w', newline='') as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(table_header)
+            writer.writerows(table_data)
+
+        print(f"Enrichment results exported to {output_filename}")
+        print()
 
 
 
-    interactors_list_total = interactors_list_A + interactors_list_B
+def add_gene_list(genes):
 
-    for i in interactors_list_total:
-        if i in interactors_list_unique:
-            pass
-        else:
-            interactors_list_unique += [i]
+    ENRICHR_URL = 'https://maayanlab.cloud/Enrichr/addList'
+    description = 'Example gene list'
 
-    toppGene_command = 'curl -H \'Content-Type: text/json\' -d \'{\"Symbols\":['
+    payload = {
+        'list': (None, genes),
+        'description': (None, description)
+    }
 
-    for i in range(len(interactors_list_unique)):
-        toppGene_command += '\"'
-        toppGene_command += interactors_list_unique[i]
-        if i < len(interactors_list_unique)-1:
-            toppGene_command += '\",'
-        else:
-            toppGene_command += '\"'
+    while True:  # loop indefinitely until a successful request
+        time.sleep(2)
+        response = requests.post(ENRICHR_URL, files=payload)
+        if response.status_code == 429:  # Too Many Requests
+            print("Received 429 response. Sleeping and retrying.")
+            time.sleep(10)  # wait 10 seconds before retrying
+            continue
+        elif not response.ok:  # any other unsuccessful status
+            response.raise_for_status()
 
-    toppGene_command += ']}\' https://toppgene.cchmc.org/API/lookup > '
-    toppGene_command += 'id_conversion.json'
-
-        #r = requests.post(toppGene_url)
-        #response = r.json()
-        #dictionary.update(response)
-
-os.system(toppGene_command)
-sys.stdout.flush()
-print()
-data = pd.read_json('id_conversion.json')
-
-entrez_list = []
-for i in range(len(data['Genes'])):
-    entrez_list += [data['Genes'][i]['Entrez']]
-
-sys.stdout.flush()
-
-print()
-print('Performing enrichment analysis on Entrez IDs:')
-print('---------------------------------------------')
-print()
-
-final_df = pd.DataFrame()
-
-chunked_list = []
-chunk_size = 1000
-
-for i in range(0, len(entrez_list), chunk_size):
-    chunked_list.append(entrez_list[i:i+chunk_size])
+        data = json.loads(response.text)
+        return data['userListId']
 
 
-#  ** ** ADD LIMIT AND CHUNK LOOP HERE ** **
-for j in range(len(chunked_list)):
-    toppGene_command2 = 'curl -H \'Content-Type: text/json\' -d \'{\"Genes\":['
-    for i in range(len(chunked_list[j])):
-        toppGene_command2 += str(chunked_list[j][i])
-        if i < len(chunked_list[j])-1:
-            toppGene_command2 += ','
-        else:
-            pass
+def run_enrichment(user_list_id, gene_set_library):
+    ENRICHR_URL = 'https://maayanlab.cloud/Enrichr/enrich'
+    query_string = '?userListId=%s&backgroundType=%s'
 
-    toppGene_command2 += ']}\' https://toppgene.cchmc.org/API/enrich > ToppGene_response.json'
-    sys.stdout.flush()
-    os.system(toppGene_command2)
-    sys.stdout.flush()
-    data2 = pd.read_json('ToppGene_response.json')
+    while True:  # loop indefinitely until a successful request
+        time.sleep(2)
+        response = requests.get(
+            ENRICHR_URL + query_string % (user_list_id, gene_set_library)
+        )
+        if response.status_code == 429:  # Too Many Requests
+            print("Received 429 response. Sleeping and retrying.")
+            time.sleep(10)  # wait 10 seconds before retrying
+            continue
+        elif not response.ok:  # any other unsuccessful status
+            response.raise_for_status()
 
-    data3 = pd.json_normalize(data2['Annotations'])
+        data = json.loads(response.text)
+        return data
 
-    chunk_df = data3[data3['QValueFDRBH'] < 0.000001].sort_values(by='QValueFDRBH')
 
-    final_df = pd.concat([final_df,chunk_df])
+def get_gene_lists(filename):
+    gene_lists = {
+        'degree': [],
+        'betweenness': [],
+    }
 
-sys.stdout.flush()
+    with open(filename, 'r') as file:
+        content = file.readlines()
 
-deletion_command = 'rm ToppGene_response.json id_conversion.json'
-os.system(deletion_command)
-sys.stdout.flush()
+    current_section = None
+    eigenvector_class = None
 
-if len(final_df) == 0:
-    print('-------------------------------------------------------------------------------------')
-    print()
-    print('          Sorry, your enrichment analysis did not produce results meeting the')
-    print('                     minimum threshold for statistical significance.')
-    print()
-    print('-------------------------------------------------------------------------------------')
+    for line in content:
+        # Remove leading/trailing whitespace
+        line = line.strip()
 
-else:
-    print()
-    print('-------------------------------------------------------------------------------------')
-    print('-------------------------------------------------------------------------------------')
-    print()
-    print('Your output table:')
+        # Check if we are in the Degree or Betweenness section
+        if 'Node |     Degree' in line:
+            current_section = 'degree'
+        elif 'Node | Betweenness Centrality' in line:
+            current_section = 'betweenness'
+        elif 'Node | Eigenvector Centrality' in line:
+            current_section = 'eigenvector'
+        elif re.match(r'CLASS \d+:', line):
+            # If we encounter a CLASS line in Eigenvector section, create a new list
+            if current_section == 'eigenvector':
+                eigenvector_class = re.search(r'CLASS (\d+):', line).group(1)
+                gene_lists[f'eigenvector_class_{eigenvector_class}'] = []
+        elif current_section and line and not line.startswith('-'):
+            # If we're in a section, and this is a line with gene data
+            # (not empty, not a '---' line), add gene to the appropriate list
+            gene_match = re.match(r'\w+', line)
+            if gene_match:
+                gene_name = gene_match.group(0)
+                if current_section != 'eigenvector':
+                    gene_lists[current_section].append(gene_name)
+                elif eigenvector_class is not None:
+                    gene_lists[f'eigenvector_class_{eigenvector_class}'].append(gene_name)
 
-    final_df = final_df.reset_index(drop=True)
-    final_df.to_csv(output)
-
-    print(final_df)
-    print()
+    return gene_lists
 
 
 
-    print('     * Your enrichment analysis was saved as \"'+output+'\"')
-    print('     * Your table was filtered and sorted in ascending order by B&H/FDR Q Value < 10e-6')
+def move_files_to_directories():
+    base_directory = "./enrichment_results/"  # The directory where your files are located
+    files = os.listdir(base_directory)
+
+    # Define the subdirectories
+    subdirs = ['top_degree', 'top_betweenness', 'top_eigenvector_classes']
+
+    # Create directories if they don't exist
+    for subdir in subdirs:
+        if not os.path.exists(os.path.join(base_directory, subdir)):
+            os.makedirs(os.path.join(base_directory, subdir))
+
+    for file in files:
+        # Only move csv files
+        if file.endswith('.csv'):
+            if "degree" in file:
+                shutil.move(os.path.join(base_directory, file), os.path.join(base_directory, 'top_degree', file))
+            elif "betweenness" in file:
+                shutil.move(os.path.join(base_directory, file), os.path.join(base_directory, 'top_betweenness', file))
+            elif "eigenvector" in file:
+                shutil.move(os.path.join(base_directory, file),
+                            os.path.join(base_directory, 'top_eigenvector_classes', file))
+
+
+
+if __name__ == "__main__":
+    gene_set_library_list = [
+        "GO_Biological_Process_2021",
+        "GO_Molecular_Function_2021",
+        "KEGG_2021_Human",
+        "PPI_Hub_Proteins",
+        "DrugMatrix",
+        "MAGMA_Drugs_and_Diseases",
+        "IDG_Drug_Targets_2022"
+    ]
+
+    filenames = [filename for filename in os.listdir('.') if
+                 re.match(r'.+(genes|interactors|omim_genes_interactions)_NETWORK_SUMMARY\.txt$',
+                          filename)]
+
+    for filename in filenames:
+        for gene_set_library in gene_set_library_list:
+            process_file(gene_set_library, filename)
+
+    # Organize files into directories
+    move_files_to_directories()
+
     print()
     print('-------------------------------------------------------------------------------------')
     print()
@@ -215,10 +240,120 @@ else:
     print('-------------------------------------------------------------------------------------')
     print()
 
-
 """
-final_output = pd.DataFrame()
-for i in range(len(data2)):
-    tempdf =  pd.DataFrame.from_dict(data2[i])
-    final_output = pd.concat([final_output,tempdf], axis=0, ignore_index=True)
+
+-------------------+
+Gene set libraries |
+-------------------+
+
+_______________________________________________________________________________________________
+
+Diseases / Drugs
+
+    COVID-19_Related_Gene_Sets_2021
+    Orphanet_Augmented_2021
+    LINCS_L1000_Chem_Pert_Consensus_Sigs
+    LINCS_L1000_CRISPR_KO_Consensus_Sigs
+    GTEx_Aging_Signatures_2021
+    ClinVar_2019
+    HDSigDB_Human_2021
+    HDSigDB_Mouse_2021
+    DepMap_WG_CRISPR_Screens_Sanger_CellLines_2019
+    PheWeb_2019
+    PhenGenI_Association_2021
+    Proteomics_Drug_Atlas_2023
+    DepMap_WG_CRISPR_Screens_Broad_CellLines_2019
+    TG_GATES_2020
+    GWAS_Catalog_2019
+    UK_Biobank_GWAS_v1
+    DisGeNET
+    DSigDB
+    ARCHS4_IDG_Coexp
+    DrugMatrix
+    Old_CMAP_up
+    Old_CMAP_down
+    GeneSigDB
+    OMIM_Disease
+    OMIM_Expanded
+    VirusMINT
+    MSigDB_Computational
+    MSigDB_Oncogenic_Signatures
+    Virus_Perturbations_from_GEO_up
+    Virus_Perturbations_from_GEO_down
+    dbGaP
+    Tunica_Media
+    Achilles_fitness_increase
+    Achilles_fitness_decrease
+    Rare_Diseases_AutoRIF_ARCHS4_Predictions
+    Rare_Diseases_GeneRIF_ARCHS4_Predictions
+    Rare_Diseases_GeneRIF_Gene_Lists
+    Rare_Diseases_AutoRIF_Gene_Lists
+    MAGMA_Drugs_and_Diseases
+    Diabetes_Perturbations_GEO_2022
+    IDG_Drug_Targets_2022
+
+Pathways:
+
+    Reactome_2022
+    BioPlanet_2019
+    WikiPathway_2021_Human
+    KEGG_2021_Human
+    ARCHS4_Kinases_Coexp
+    Elsevier_Pathway_Collection
+    MSigDB_Hallmark_2020
+    BioCarta_2016
+    HumanCyc_2016
+    NCI-Nature_2016
+    Panther_2016
+    BioPlex_2017
+    huMAP
+    PPI_Hub_Proteins
+    KEA_2015
+    Kinase_Perturbations_from_GEO_down
+    Kinase_Perturbations_from_GEO_up
+    Virus-Host_PPI_P-HIPSTer_2020
+    NURSA_Human_Endogenous_Complexome
+    CORUM
+    SILAC_Phosphoproteomics
+    HMS_LINCS_KinomeScan
+    Phosphatase_Substrates_from_DEPOD
+    SubCell_BarCode
+    PFOCR_Pathways
+    Metabolomics_Workbench_Metabolites_2022
+    GlyGen_Glycosylated_Proteins_2022
+    The_Kinase_Library_2023
+
+Ontologies:
+
+    GO_Biological_Process_2021
+    GO_Molecular_Function_2021
+    GO_Cellular_Component_2021
+    MGI_Mammalian_Phenotype_Level_4_2021
+    Human_Phenotype_Ontology
+    Jensen_TISSUES
+    Jensen_COMPARTMENTS
+    Jensen_DISEASES
+    SynGO_2022
+    KOMP2_Mouse_Phenotypes_2022
+
+Transcription:
+
+    ChEA_2022
+    ENCODE_and_ChEA_Consensus_TFs_from_ChIP-X
+    ARCHS4_TFs_Coexp
+    TF_Perturbations_Followed_by_Expression
+    TRRUST_Transcription_Factors_2019
+    FANTOM6_lncRNA_KD_DEGs
+    lncHUB_lncRNA_Co-Expression
+    Enrichr_Submissions_TF-Gene_Coocurrence
+    TRANSFAC_and_JASPAR_PWMs
+    Epigenomics_Roadmap_HM_ChIP-seq
+    TargetScan_microRNA_2017
+    miRTarBase_2017
+    ENCODE_TF_ChIP-seq_2015
+    TF-LOF_Expression_from_GEO
+    ENCODE_Histone_Modifications_2015
+    Transcription_Factor_PPIs
+    Genome_Browser_PWMs
+
 """

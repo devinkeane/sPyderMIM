@@ -67,7 +67,7 @@ O---o       (__  ) ____/ /_/ / /_/ /  __/ /  / /  / // // /  / /     |
  O-o       /____/_/    \__, /\__,_/\___/_/  /_/  /_/___/_/  /_/      |
   O                   /____/                                         |
  o-O    _____________________________________________________________|----------+
-o---O   High Performance Computing Genomic Network Analysis    |  Version 7.3.2 |   ✧ - ･ﾟ*
+o---O   High Performance Computing Genomic Network Analysis    |  Version 7.4.0 |   ✧ - ･ﾟ*
 O---o   :". /  /  /                          +------------------------------------------+ 
  O-o    :.-". /  /                           |  (c) 2022-01-27 Devin Keane              |
   O     : _.-". /                            |  Feltus Lab                              |
@@ -503,7 +503,7 @@ if not any(G.adj.values()):
       | | )|___)|    |   )|   )|   )|___)         )|   )| | )| | )|   )|   )\   )
       | |/ |__  |__  |/\/ |__/ |    | \        __/ |__/ |  / |  / |__/||     \_/ 
                                                                               /  
-                                                     𝕤ℙ𝕪𝕕𝕖𝕣𝕄𝕀𝕄 v7.3.2         /
+                                                     𝕤ℙ𝕪𝕕𝕖𝕣𝕄𝕀𝕄 v7.4.0         /
     ------------------------------------------------------------------------------
     """
     summary_file = open(output + '_NETWORK_SUMMARY.txt', 'w')
@@ -514,7 +514,7 @@ if not any(G.adj.values()):
     print('Total Nodes:  0', file=summary_file)
     print('Total Edges:  0', file=summary_file)
     print('', file=summary_file)
-    print('             Approximate node connectivity:  0', file=summary_file)
+    print('             Average degree connectivity:  0', file=summary_file)
     print('     Network diameter of largest component:  0', file=summary_file)
     print('                              Transitivity:  0', file=summary_file)
     print('', file=summary_file)
@@ -574,7 +574,7 @@ else:
     print('Total Nodes:  '+str(G.number_of_nodes()), file= summary_file)
     print('Total Edges:  '+str(G.number_of_edges()), file= summary_file)
     print('', file= summary_file)
-    print('             Approximate node connectivity:  ', format(node_connectivity,'.3E'), file = summary_file)
+    print('             Average degree connectivity:  ', format(node_connectivity,'.3E'), file = summary_file)
     print('     Network diameter of largest component:  ', diameter, file = summary_file)
     print('                              Transitivity:  ', format(transitivity,'.3E'), file = summary_file)
     print('', file= summary_file)
