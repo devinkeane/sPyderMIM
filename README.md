@@ -29,19 +29,19 @@ In the latest update to the Github repository (v7.4.0), we have modified the `en
 
 The change to the Enrichr API provides access to a wider, more diverse array of gene-set libraries.  This allows for an expanded range of potential enrichments.  The main gene-set libraries now include:
 
-1. GO_Biological_Process_2021
-2. GO_Molecular_Function_2021
-3. KEGG_2021_Human
-4. PPI_Hub_Proteins
+1. GO Biological Process 2021
+2. GO Molecular Function 2021
+3. KEGG 2021 Human
+4. PPI Hub Proteins
 5. DrugMatrix
-6. MAGMA_Drugs_and_Diseases
-7. IDG_Drug_Targets_2022
+6. MAGMA Drugs and Diseases
+7. IDG Drug Targets 2022
 
 Additionally, the program's file handling has been enhanced.  Resulting files from the enrichment process are now automatically organized into directories, ensuring improved management and accessibility. 
 
 ### Advancements in Drug and Mechanism Discovery
 
-With the incorporation of the Enrichr API, the program now functions as a more comprehensive drug and mechanism in silico discovery engine.  The platform can now utilize vast amounts of biological data including drug-protein interactions (DrugMatrix and IDG_Drug_Targets_2022) and disease-genetic associations (MAGMA_Drugs_and_Diseases).  This allows for potential discovery of novel drug targets and mechanism elucidation.
+With the incorporation of the Enrichr API, the program now functions as a more comprehensive drug and mechanism in silico discovery engine.  The platform can now utilize vast amounts of biological data including drug-protein interactions (DrugMatrix and IDG Drug Targets 2022) and disease-genetic associations (MAGMA Drugs and Diseases).  This allows for potential discovery of novel drug targets and mechanism elucidation.
 
 
     --------------------------------------------------------------------------------------------
