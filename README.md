@@ -317,7 +317,7 @@ and the program will crash if these types of MIM numbers are used.</font>
    * project_name_genes.graphml  (OMIM disease gene overlap network GraphML)
    * project_name_omim_genes_interactions.graphml  (OMIM disease gene interactions network graph GraphML)
    * project_name_interactors.graphml  (Protein interactor network graph GraphML)
-   * Three folders of CSV files are created:
+   * Three folders of gene set enrichment results as CSV files are created:
      * top_degree
      * top_betweenness
      * top_eigenvector_classes
