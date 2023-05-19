@@ -7,10 +7,10 @@
 #  `?888P'd88'   88bd88'     d88' `?888P'd88'   88bd88' d88'  88b`?888P'd88'   88b  `?8b   |
 #                                                                                          |
 #  ----------------------------------------------------------------------------------------+
-#                                                        丂尸丫ᗪ🝗尺爪工爪  7.3.2
+#                                                        丂尸丫ᗪ🝗尺爪工爪  7.4.0
 #
-#                                                        Created: 2022-03-15
-#
+#                                                        Created:      2022-03-15
+#                                                     Redesigned:      2023-05-18
 #  -----------------------------------------------------------------------------------------
 
 import os
@@ -152,7 +152,7 @@ def get_gene_lists(filename):
         content = file.readlines()
 
     current_section = None
-    eigenvector_class = None
+    modularity_class = None
 
     for line in content:
         # Remove leading/trailing whitespace
@@ -164,22 +164,22 @@ def get_gene_lists(filename):
         elif 'Node | Betweenness Centrality' in line:
             current_section = 'betweenness'
         elif 'Node | Eigenvector Centrality' in line:
-            current_section = 'eigenvector'
+            current_section = 'modularity_class'
         elif re.match(r'CLASS \d+:', line):
-            # If we encounter a CLASS line in Eigenvector section, create a new list
-            if current_section == 'eigenvector':
-                eigenvector_class = re.search(r'CLASS (\d+):', line).group(1)
-                gene_lists[f'eigenvector_class_{eigenvector_class}'] = []
+            # If we encounter a CLASS line in Modularity section, create a new list
+            if current_section == 'modularity_class':
+                modularity_class = re.search(r'CLASS (\d+):', line).group(1)
+                gene_lists[f'modularity_class_{modularity_class}'] = []
         elif current_section and line and not line.startswith('-'):
             # If we're in a section, and this is a line with gene data
             # (not empty, not a '---' line), add gene to the appropriate list
             gene_match = re.match(r'\w+', line)
             if gene_match:
                 gene_name = gene_match.group(0)
-                if current_section != 'eigenvector':
+                if current_section != 'modularity_class':
                     gene_lists[current_section].append(gene_name)
-                elif eigenvector_class is not None:
-                    gene_lists[f'eigenvector_class_{eigenvector_class}'].append(gene_name)
+                elif modularity_class is not None:
+                    gene_lists[f'modularity_class_{modularity_class}'].append(gene_name)
 
     return gene_lists
 
@@ -190,7 +190,7 @@ def move_files_to_directories():
     files = os.listdir(base_directory)
 
     # Define the subdirectories
-    subdirs = ['top_degree', 'top_betweenness', 'top_eigenvector_classes']
+    subdirs = ['top_degree', 'top_betweenness', 'modularity_classes']
 
     # Create directories if they don't exist
     for subdir in subdirs:
@@ -204,9 +204,9 @@ def move_files_to_directories():
                 shutil.move(os.path.join(base_directory, file), os.path.join(base_directory, 'top_degree', file))
             elif "betweenness" in file:
                 shutil.move(os.path.join(base_directory, file), os.path.join(base_directory, 'top_betweenness', file))
-            elif "eigenvector" in file:
+            elif "modularity" in file:
                 shutil.move(os.path.join(base_directory, file),
-                            os.path.join(base_directory, 'top_eigenvector_classes', file))
+                            os.path.join(base_directory, 'modularity_classes', file))
 
 
 

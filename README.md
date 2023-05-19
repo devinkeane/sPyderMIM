@@ -71,7 +71,7 @@ by the graphl.py script.  By the end of the workflow, sPyderMIM.sh automatically
 
     2)  top_degree  (top nodes ranked by degree connectivity)
 
-    3)  top_eigenvector_classes  (top three clusters of nodes grouped by Eigenvector centrality)
+    3)  modularity_classes  (communities of clustered nodes, ranked by Eigenvector centrality)
 
 
 <font size="4"><font color="aqua"> A single workflow run using sPyderMIM.sh features the following output, saved to a date/time-stamped folder: </font></font>
@@ -179,9 +179,14 @@ graph.py uses the [NetworkX](https://networkx.org/documentation/stable/index.htm
 
 <font size="3"><font color="aqua"><b>[ e n r i c h m e n t . p y ]</b></span></font></font> runs enrichment analysis of gene sets obtained from
 the summary statistics output calculated by graph.py.  graph.py ranks the top 20 nodes by degree connectivity and the top
-20 nodes by betweenness centrality.  Additionally, graph.py clusters nodes into modularity classes by their eigenvector centrality.
-enrichment.py will run analyses on both sets of ranked genes and on each gene set comprised of genes in the top three eigenvector modularity
-classes.
+20 nodes by betweenness centrality.  Additionally, graph.py clusters nodes into modularity classes, ranked by their Eigenvector centrality.
+enrichment.py will run enrichment analyses on both sets of ranked genes and on each set of genes in each  modularity
+class.
+
+Modularity quantifies the community structure within a network, where a community is defined as a group of nodes with high internal and low external connections.
+On the other hand, eigenvector centrality measures a node's influence based on its connections to other influential nodes. By utilizing these metrics, we identify
+the key communities in the network and the most influential nodes within those communities. This approach is particularly useful in contexts such as gene networks
+or protein-protein interaction networks, potentially aiding in the discovery of functional modules such as biological pathways.
 
 
 enrichment.py utilizes the [Enrichr API](https://maayanlab.cloud/Enrichr/help#terms) in order to perform enrichment analysis.
@@ -320,7 +325,7 @@ and the program will crash if these types of MIM numbers are used.</font>
    * Three folders of gene set enrichment results as CSV files are created:
      * top_degree
      * top_betweenness
-     * top_eigenvector_classes
+     * modularity_classes
 
     --------------------------------------------------------------------------------------------
      [ s p l i t _ l i s t . p y ]  |   Due to OMIM API call limits, sPyderMIM.sh uses
@@ -467,7 +472,7 @@ List mode will be repaired in the future or deprecated, depending on if there is
 <font color="aqua">
   * /top_betweenness/
   * /top_degree/
-  * /top_eigenvector_classes/ </font>
+  * /modularity_classes/ </font>
 
 ---
 
