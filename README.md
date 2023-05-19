@@ -23,11 +23,11 @@
 
 ## What's New? (Last Update: May 18, 2023)
 
-In the latest update to the Github repository (v7.4.0), we have modified the `enrichment.py` script to utilize the **Enrichr API**, replacing the previous usage of the ToppGene API. 
+In the latest update to the Github repository (v7.4.0), we have modified the `enrichment.py` script to utilize the **[Enrichr API](https://maayanlab.cloud/Enrichr/help#terms)**, replacing the previous usage of the ToppGene API. 
 
 ### Enrichr API Integration
 
-The change to the Enrichr API provides access to a wider, more diverse array of gene-set libraries.  This allows for an expanded range of potential enrichments. The main gene-set libraries now include:
+The change to the Enrichr API provides access to a wider, more diverse array of gene-set libraries.  This allows for an expanded range of potential enrichments.  The main gene-set libraries now include:
 
 1. GO_Biological_Process_2021
 2. GO_Molecular_Function_2021
@@ -41,7 +41,7 @@ Additionally, the program's file handling has been enhanced.  Resulting files fr
 
 ### Advancements in Drug and Mechanism Discovery
 
-With the incorporation of the Enrichr API, our program functions as a more comprehensive drug and mechanism in silico discovery engine. This engine can analyze vast amounts of biological data including drug-protein interactions (DrugMatrix and IDG_Drug_Targets_2022) and disease-genetic associations (MAGMA_Drugs_and_Diseases).  This allows for potential discovery of novel drug targets and mechanism elucidation, providing valuable insights in the field of in silico drug discovery.
+With the incorporation of the Enrichr API, the program now functions as a more comprehensive drug and mechanism in silico discovery engine.  The platform can now utilize vast amounts of biological data including drug-protein interactions (DrugMatrix and IDG_Drug_Targets_2022) and disease-genetic associations (MAGMA_Drugs_and_Diseases).  This allows for potential discovery of novel drug targets and mechanism elucidation.
 
 
     --------------------------------------------------------------------------------------------
