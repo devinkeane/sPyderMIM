@@ -27,6 +27,8 @@ In the latest update to the Github repository (v7.4.0), we have modified the `en
 
 ### Enrichr API Integration
 
+ 
+
 The change to the Enrichr API provides access to a wider, more diverse array of gene-set libraries.  This allows for an expanded range of potential enrichments.  The main gene-set libraries now include:
 
 1. GO Biological Process 2021
@@ -43,6 +45,8 @@ Additionally, the program's file handling has been enhanced.  Resulting files fr
 
 With the incorporation of the Enrichr API, the program now functions as a more comprehensive drug and mechanism in silico discovery engine.  The platform can now utilize vast amounts of biological data including drug-protein interactions (DrugMatrix and IDG Drug Targets 2022) and disease-genetic associations (MAGMA Drugs and Diseases).  This allows for potential discovery of novel drug targets and mechanism elucidation.
 
+## Future plans
+We are assembling a backend architecture and experimenting with the implementation of a graphical web app.  The web app has now been uploaded to the repository, but this is not intended for widespread use.  Rather, these are the materials we will use on our own server to implement the website.
 
     --------------------------------------------------------------------------------------------
       .-. . . .  . .  . .-. .-. . . |
