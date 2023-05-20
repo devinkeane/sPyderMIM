@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sPyderMIM Web App</title>
+    <style>
+        body {
+            background-color: black;
+            color: lightgreen;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .alert-success {
+            color: green;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #container label,
+        #container input,
+        #container textarea {
+            margin-bottom: 10px;
+        }
+
+        #container input,
+        #container textarea {
+            width: 300px;
+        }
+
+        #container img {
+            margin-top: 10px;
+        }
+
+        #loading_text {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var downloadLink = document.getElementById("download_link");
+            var submitButton = document.getElementById("submit_button");
+            var loadingGif = document.getElementById("loading_gif");
+            var resultImage = document.getElementById("result_image");
+            var loadingText = document.getElementById("loading_text");
+            var feedbackText = document.getElementById("feedback_text");
+
+            // Attach event listener for form submit
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevent the form from being submitted in the traditional way
+                loadingGif.classList.remove("hidden");
+                resultImage.classList.add("hidden");
+                downloadLink.classList.add("hidden");
+                loadingText.classList.remove("hidden");
+                feedbackText.innerHTML = "Processing...";
+
+                // Use AJAX to submit the form
+                fetch("/", {
+                    method: "POST",
+                    body: new FormData(event.target)  // event.target is the form
+                }).then(response => response.json()).then(data => {
+                    if (data.download_ready) {
+                        loadingGif.classList.add("hidden");
+                        resultImage.classList.remove("hidden");
+                        downloadLink.setAttribute("href", "/return-files/" + data.download_file);
+                        downloadLink.classList.remove("hidden");
+                        loadingText.classList.add("hidden");
+                        feedbackText.innerHTML = "Process completed.";
+                    }
+                });
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='sPyderMIM_logo.png') }}" alt="sPyderMIM Web App Logo">
+    <form action="/" method="post" enctype="multipart/form-data">
+        <div id="container">
+            <label for="mim_numbers">MIM Numbers (separated by new lines):</label>
+            <textarea id="mim_numbers" name="mim_numbers" rows="4" cols="50"></textarea>
+            <div>
+                <label for="project_name"><br>Project Name:<br></label>
+                <input type="text" id="project_name" name="project_name">
+            </div>
+            <input id="submit_button" type="submit" value="Submit">
+            <img id="loading_gif" class="hidden" src="{{ url_for('static', filename='spider.gif') }}" alt="Loading...">
+            <img id="result_image" class="hidden" src="{{ url_for('static', filename='spider2.jpg') }}" alt="Result">
+            <span id="loading_text" class="hidden"></span>
+            <span id="feedback_text"></span>
+        </div>
+    </form>
+    <a id="download_link" class="hidden" href="/return-files/{{download_file}}">
+        <button>Download Results</button>
+    </a>
+</body>
+</html>
